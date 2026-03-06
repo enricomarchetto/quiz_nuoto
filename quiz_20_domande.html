@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz 1000 Domande - Attività Acquatiche</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#2563eb;--primary-dark:#1d4ed8;--success:#16a34a;--danger:#dc2626;--bg:#f1f5f9;--card:#fff;--text:#1e293b;--border:#e2e8f0;--radius:12px}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:20px}
+header{text-align:center;padding:30px 0 20px;margin-bottom:10px}
+header h1{font-size:1.8rem;color:var(--primary-dark);margin-bottom:6px}
+header p{color:#64748b;font-size:1rem}
+.stats-bar{display:flex;justify-content:center;gap:20px;margin-bottom:24px;flex-wrap:wrap}
+.stat{background:var(--card);padding:12px 24px;border-radius:var(--radius);box-shadow:0 1px 3px rgba(0,0,0,.08);text-align:center;min-width:120px}
+.stat .num{font-size:1.6rem;font-weight:700;color:var(--primary)}
+.stat .label{font-size:.8rem;color:#64748b;margin-top:2px}
+.progress-bar{width:100%;height:8px;background:var(--border);border-radius:4px;margin-bottom:24px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),#7c3aed);border-radius:4px;transition:width .3s ease}
+.question-card{background:var(--card);border-radius:var(--radius);padding:28px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:all .3s}
+.question-card.answered-correct{border-left:4px solid var(--success)}
+.question-card.answered-wrong{border-left:4px solid var(--danger)}
+.q-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.q-number{background:var(--primary);color:#fff;min-width:44px;height:36px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;padding:0 12px}
+.q-text{font-size:1.05rem;font-weight:500;line-height:1.5}
+.options{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.option{display:flex;align-items:center;gap:12px;padding:14px 18px;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:all .15s;font-size:.95rem;line-height:1.4}
+.option:hover:not(.disabled){border-color:var(--primary);background:#eff6ff}
+.option.selected{border-color:var(--primary);background:#dbeafe}
+.option.correct{border-color:var(--success);background:#dcfce7}
+.option.wrong{border-color:var(--danger);background:#fee2e2}
+.option.disabled{cursor:default;opacity:.85}
+.option .letter{background:var(--border);color:var(--text);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0;transition:all .15s}
+.option.selected .letter{background:var(--primary);color:#fff}
+.option.correct .letter{background:var(--success);color:#fff}
+.option.wrong .letter{background:var(--danger);color:#fff}
+.feedback{margin-top:10px;padding:10px 16px;border-radius:8px;font-size:.9rem;font-weight:500;display:none}
+.feedback.show{display:block}
+.feedback.correct{background:#dcfce7;color:#15803d}
+.feedback.wrong{background:#fee2e2;color:#b91c1c}
+.btn-area{display:flex;justify-content:center;gap:16px;margin:30px 0;flex-wrap:wrap}
+.btn{padding:14px 36px;font-size:1rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+.btn-success{background:var(--success);color:#fff}
+.btn-success:hover{background:#15803d;transform:translateY(-1px)}
+.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+.btn-outline:hover{background:#eff6ff}
+.results-panel{background:var(--card);border-radius:var(--radius);padding:36px;text-align:center;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.results-panel h2{font-size:1.8rem;margin-bottom:8px}
+.score-circle{width:160px;height:160px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:24px auto;font-size:2.8rem;font-weight:700;color:#fff}
+.score-circle .pct{font-size:1rem;font-weight:400;margin-top:-4px}
+.score-pass{background:linear-gradient(135deg,var(--success),#22d3ee)}
+.score-fail{background:linear-gradient(135deg,var(--danger),#f97316)}
+.score-mid{background:linear-gradient(135deg,#f59e0b,#f97316)}
+@media(max-width:600px){.container{padding:12px}.question-card{padding:18px}.btn{padding:12px 24px;font-size:.9rem}header h1{font-size:1.4rem}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Quiz Attività Acquatiche</h1>
+    <p>1000 domande — Test da 20 domande casuali</p>
+  </header>
+  <div id="app"><p style="text-align:center;padding:40px;color:#64748b">Caricamento domande...</p></div>
+</div>
+<script src="quiz_data.js"></script>
+<script>
+var QUIZ_SIZE = 20;
+var app = document.getElementById('app');
+var currentQuiz = [];
+var userAnswers = {};
+var submitted = false;
+var startTime;
+
+function shuffle(arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+
+function escHtml(s) {
+  var d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function startQuiz() {
+  currentQuiz = shuffle(ALL_QUESTIONS).slice(0, QUIZ_SIZE);
+  userAnswers = {};
+  submitted = false;
+  startTime = Date.now();
+  renderQuiz();
+  window.scrollTo(0, 0);
+}
+
+function renderQuiz() {
+  var answered = Object.keys(userAnswers).length;
+  var pct = (answered / QUIZ_SIZE * 100).toFixed(0);
+  var letters = ['A','B','C','D'];
+  var h = '';
+
+  h += '<div class="stats-bar">';
+  h += '<div class="stat"><div class="num" id="sa">' + answered + '</div><div class="label">Risposte</div></div>';
+  h += '<div class="stat"><div class="num">' + QUIZ_SIZE + '</div><div class="label">Domande</div></div>';
+  h += '<div class="stat"><div class="num" id="sr">' + (QUIZ_SIZE - answered) + '</div><div class="label">Rimanenti</div></div>';
+  h += '</div>';
+  h += '<div class="progress-bar"><div class="progress-fill" id="pf" style="width:' + pct + '%"></div></div>';
+
+  for (var i = 0; i < currentQuiz.length; i++) {
+    var q = currentQuiz[i];
+    h += '<div class="question-card" id="q' + q.id + '">';
+    h += '<div class="q-header"><div class="q-number">' + q.id + '</div>';
+    h += '<div class="q-text">' + escHtml(q.question) + '</div></div>';
+    h += '<div class="options">';
+    for (var j = 0; j < 4; j++) {
+      var l = letters[j];
+      var optText = q.options[l] || '';
+      h += '<div class="option" data-qid="' + q.id + '" data-letter="' + l + '">';
+      h += '<span class="letter">' + l + '</span>';
+      h += '<span>' + escHtml(optText) + '</span></div>';
+    }
+    h += '</div></div>';
+  }
+
+  h += '<div class="btn-area" id="qb">';
+  h += '<button class="btn btn-primary" id="btn-submit">Correggi Test</button>';
+  h += '<button class="btn btn-outline" id="btn-new">Nuovo Test</button>';
+  h += '</div>';
+
+  app.innerHTML = h;
+
+  // Event delegation
+  app.addEventListener('click', handleClick);
+}
+
+function handleClick(e) {
+  var opt = e.target.closest('.option');
+  if (opt && !submitted) {
+    var qid = parseInt(opt.getAttribute('data-qid'));
+    var letter = opt.getAttribute('data-letter');
+    userAnswers[qid] = letter;
+    var card = document.getElementById('q' + qid);
+    var opts = card.querySelectorAll('.option');
+    for (var k = 0; k < opts.length; k++) opts[k].className = 'option';
+    opt.className = 'option selected';
+    var answered = Object.keys(userAnswers).length;
+    document.getElementById('sa').textContent = answered;
+    document.getElementById('sr').textContent = QUIZ_SIZE - answered;
+    document.getElementById('pf').style.width = (answered / QUIZ_SIZE * 100) + '%';
+    return;
+  }
+
+  var btn = e.target.closest('#btn-submit');
+  if (btn) { submitQuiz(); return; }
+
+  var btnNew = e.target.closest('#btn-new');
+  if (btnNew) {
+    if (submitted || confirm('Sei sicuro? Perderai le risposte attuali.')) startQuiz();
+    return;
+  }
+
+  var btnNew2 = e.target.closest('#btn-new2');
+  if (btnNew2) { startQuiz(); return; }
+
+  var btnReview = e.target.closest('#btn-review');
+  if (btnReview) {
+    var el = document.querySelector('.answered-wrong');
+    if (el) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+    return;
+  }
+}
+
+function submitQuiz() {
+  if (Object.keys(userAnswers).length === 0) {
+    alert('Rispondi ad almeno una domanda prima di correggere!');
+    return;
+  }
+  submitted = true;
+  var elapsed = Math.floor((Date.now() - startTime) / 1000);
+  var mins = Math.floor(elapsed / 60);
+  var secs = elapsed % 60;
+  var correct = 0, wrong = 0, skipped = 0;
+
+  for (var i = 0; i < currentQuiz.length; i++) {
+    var q = currentQuiz[i];
+    var card = document.getElementById('q' + q.id);
+    var ua = userAnswers[q.id];
+    var opts = card.querySelectorAll('.option');
+
+    for (var k = 0; k < opts.length; k++) {
+      opts[k].classList.add('disabled');
+    }
+
+    if (!ua) {
+      skipped++;
+      for (var k = 0; k < opts.length; k++) {
+        if (opts[k].querySelector('.letter').textContent === q.answer) opts[k].classList.add('correct');
+      }
+      card.classList.add('answered-wrong');
+      addFb(card, 'wrong', 'Non risposta — Risposta corretta: <strong>' + q.answer + '</strong>');
+    } else if (ua === q.answer) {
+      correct++;
+      card.classList.add('answered-correct');
+      for (var k = 0; k < opts.length; k++) {
+        if (opts[k].querySelector('.letter').textContent === q.answer) opts[k].classList.add('correct');
+      }
+      addFb(card, 'correct', 'Corretta!');
+    } else {
+      wrong++;
+      card.classList.add('answered-wrong');
+      for (var k = 0; k < opts.length; k++) {
+        var lt = opts[k].querySelector('.letter').textContent;
+        if (lt === q.answer) opts[k].classList.add('correct');
+        if (lt === ua) opts[k].classList.add('wrong');
+      }
+      addFb(card, 'wrong', 'Sbagliata — Risposta corretta: <strong>' + q.answer + '</strong>');
+    }
+  }
+
+  var score = (correct / QUIZ_SIZE * 100).toFixed(1);
+  var sc = score >= 70 ? 'score-pass' : score >= 50 ? 'score-mid' : 'score-fail';
+
+  var rh = '<div class="results-panel"><h2>Risultato del Test</h2>';
+  rh += '<div class="score-circle ' + sc + '">' + correct + '/' + QUIZ_SIZE;
+  rh += '<div class="pct">' + score + '%</div></div>';
+  rh += '<div class="stats-bar" style="justify-content:center;margin-top:20px">';
+  rh += '<div class="stat"><div class="num" style="color:var(--success)">' + correct + '</div><div class="label">Corrette</div></div>';
+  rh += '<div class="stat"><div class="num" style="color:var(--danger)">' + wrong + '</div><div class="label">Sbagliate</div></div>';
+  rh += '<div class="stat"><div class="num" style="color:#64748b">' + skipped + '</div><div class="label">Non risposte</div></div>';
+  rh += '<div class="stat"><div class="num">' + mins + ':' + (secs < 10 ? '0' : '') + secs + '</div><div class="label">Tempo</div></div>';
+  rh += '</div><div class="btn-area">';
+  rh += '<button class="btn btn-success" id="btn-new2">Nuovo Test (20 domande)</button>';
+  rh += '<button class="btn btn-outline" id="btn-review">Rivedi Errori</button>';
+  rh += '</div></div>';
+
+  var sb = document.querySelector('.stats-bar');
+  sb.insertAdjacentHTML('beforebegin', rh);
+  var qb = document.getElementById('qb');
+  if (qb) qb.remove();
+  window.scrollTo(0, 0);
+}
+
+function addFb(card, type, msg) {
+  var fb = document.createElement('div');
+  fb.className = 'feedback ' + type + ' show';
+  fb.innerHTML = msg;
+  card.appendChild(fb);
+}
+
+startQuiz();
+</script>
+</body>
+</html>
