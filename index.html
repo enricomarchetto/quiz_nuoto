@@ -47,6 +47,9 @@ header p{color:#64748b;font-size:.9rem}
 .feedback.show{display:block}
 .feedback.correct{background:#dcfce7;color:#15803d}
 .feedback.wrong{background:#fee2e2;color:#b91c1c}
+.explanation{margin-top:8px;padding:12px 14px;border-radius:8px;font-size:.85rem;line-height:1.5;background:#fef3c7;color:#92400e;border-left:3px solid #f59e0b;display:none}
+.explanation.show{display:block}
+.explanation strong{color:#78350f}
 .btn-area{display:flex;justify-content:center;gap:12px;margin:24px 0;flex-wrap:wrap}
 .btn{padding:14px 32px;font-size:1rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;-webkit-user-select:none;user-select:none}
 .btn:active{transform:scale(.97)}
@@ -219,6 +222,7 @@ function submitQuiz() {
       }
       card.classList.add('answered-wrong');
       addFb(card, 'wrong', 'Non risposta — Risposta corretta: <strong>' + q.answer + '</strong>');
+      if (q.explanation) addExplanation(card, q.explanation);
     } else if (ua === q.answer) {
       correct++;
       card.classList.add('answered-correct');
@@ -235,6 +239,7 @@ function submitQuiz() {
         if (lt === ua) opts[k].classList.add('wrong');
       }
       addFb(card, 'wrong', 'Sbagliata — Risposta corretta: <strong>' + q.answer + '</strong>');
+      if (q.explanation) addExplanation(card, q.explanation);
     }
   }
 
@@ -267,6 +272,13 @@ function addFb(card, type, msg) {
   fb.className = 'feedback ' + type + ' show';
   fb.innerHTML = msg;
   card.appendChild(fb);
+}
+
+function addExplanation(card, text) {
+  var ex = document.createElement('div');
+  ex.className = 'explanation show';
+  ex.innerHTML = '📖 <strong>Spiegazione:</strong> ' + escHtml(text);
+  card.appendChild(ex);
 }
 
 showMenu();
