@@ -88,6 +88,9 @@
   .option.opt-wrong .letter { color: #e53e3e; }
   @media (hover: hover) { .option:hover:not(.locked):not(.picked) { border-color: #90cdf4; background: #f7fafc; } }
 
+  .explanation-box { margin-top: 10px; padding: 14px 16px; border-radius: 10px; background: #fff7ed; border: 1px solid #fed7aa; color: #92400e; font-size: 0.9em; line-height: 1.6; }
+  .explanation-box strong { color: #78350f; }
+
   /* Actions */
   .actions { max-width: 800px; margin: 0 auto; padding: 0 16px 30px; display: flex; flex-direction: column; gap: 10px; }
   .action-btn { width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 1.05em; font-weight: 700; cursor: pointer; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
@@ -314,7 +317,17 @@ function render() {
       h += '<span class="option-text">' + esc(q.options[l]) + '</span>';
       h += '</div>';
     });
-    h += '</div></div>';
+    h += '</div>';
+    if (corrected && (!a || a !== q.answer)) {
+      var correctText = q.options[q.answer] || '';
+      h += '<div class="explanation-box">';
+      h += '<strong>Spiegazione:</strong> La risposta corretta è <strong>' + q.answer + '</strong> — ' + esc(correctText) + '.';
+      if (q.explanation) {
+        h += '<br>' + esc(q.explanation);
+      }
+      h += '</div>';
+    }
+    h += '</div>';
   });
   c.innerHTML = h;
   const done = questions.filter(q => answers[q.id]).length;
