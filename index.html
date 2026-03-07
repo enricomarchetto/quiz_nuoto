@@ -99,11 +99,11 @@
     <button id="modeQuiz" class="active" onclick="setMode('quiz')">Quiz</button>
     <button id="modeStudy" onclick="setMode('study')">Studio</button>
   </div>
-  <select id="perPageSelect">
-    <option value="10">10 per pagina</option>
-    <option value="20">20 per pagina</option>
-    <option value="50">50 per pagina</option>
-  </select>
+  <div class="mode-toggle" id="perPageToggle">
+    <button class="active" onclick="setPerPage(10)">10</button>
+    <button onclick="setPerPage(20)">20</button>
+    <button onclick="setPerPage(50)">50</button>
+  </div>
   <button class="secondary" onclick="resetAll()">Reset</button>
 </div>
 
@@ -142,11 +142,14 @@
     });
     sel.addEventListener('change', () => { filterQuestions(); });
 
-    document.getElementById('perPageSelect').addEventListener('change', (e) => {
-      questionsPerPage = parseInt(e.target.value);
-      currentPage = 0;
-      render();
-    });
+  }
+
+  function setPerPage(n) {
+    questionsPerPage = n;
+    currentPage = 0;
+    const btns = document.querySelectorAll('#perPageToggle button');
+    btns.forEach(b => b.classList.toggle('active', parseInt(b.textContent) === n));
+    render();
   }
 
   function filterQuestions() {
