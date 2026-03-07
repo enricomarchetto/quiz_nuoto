@@ -15647,16 +15647,16 @@ const quizData = [
       "C": "Le fasi delle bracciate nei diversi stili",
       "D": "Le capacità coordinative"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. Le capacità coordinative.",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. Gli schemi motori di base. Il manuale (pag. 182) dice: ‘Gli schemi motori di base rappresentano le basi della motricità. Nel patrimonio genetico vi sono appunto i codici delle unità primarie del movimento.’",
     "category": "Metodologia",
     "manualPages": [
-      14,
       182,
+      14,
       12
     ],
-    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
-    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
+    "manualSection": "1.4. LE ATTIVITÀ MOTORIE",
+    "manualExcerpt": "Gli schemi motori di base rappresentano le basi della motricità. Nel patrimonio genetico vi sono appunto i codici delle unità primarie del movimento."
   },
   {
     "id": 784,

@@ -226,6 +226,13 @@ function markAsSeen(questionIds, cat) {
   saveSeenQuestions();
 }
 
+function unmarkWrongQuestions(wrongIds, cat) {
+  const key = cat || 'all';
+  if (!seenQuestions[key]) return;
+  seenQuestions[key] = seenQuestions[key].filter(id => !wrongIds.includes(id));
+  saveSeenQuestions();
+}
+
 function formatTime(sec) {
   const m = Math.floor(sec / 60);
   const s = sec % 60;
@@ -386,6 +393,9 @@ function correggi() {
   const ok = questions.filter(q => answers[q.id] === q.answer).length;
   const ko = done - ok;
   const empty = tot - done;
+  // Rimetti in gioco le domande sbagliate o non risposte
+  const wrongIds = questions.filter(q => answers[q.id] !== q.answer).map(q => q.id);
+  if (wrongIds.length > 0) unmarkWrongQuestions(wrongIds, category);
   const pct = Math.round(ok / tot * 100);
   const icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
   document.getElementById('rIcon').textContent = icon;
