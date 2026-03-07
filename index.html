@@ -194,6 +194,38 @@
 let amount = null, category = 'all', questions = [], answers = {}, corrected = false;
 let timerStart = null, timerInterval = null;
 
+// Sistema anti-ripetizione: tiene traccia delle domande già fatte per categoria
+let seenQuestions = {};
+try {
+  const saved = localStorage.getItem('quizSeenQuestions');
+  if (saved) seenQuestions = JSON.parse(saved);
+} catch(e) {}
+
+function saveSeenQuestions() {
+  try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {}
+}
+
+function getUnseenPool(pool, cat) {
+  const key = cat || 'all';
+  if (!seenQuestions[key]) seenQuestions[key] = [];
+  let seen = new Set(seenQuestions[key]);
+  let unseen = pool.filter(q => !seen.has(q.id));
+  // Se le domande non viste sono meno di quelle richieste, resetta
+  if (unseen.length < amount) {
+    seenQuestions[key] = [];
+    saveSeenQuestions();
+    unseen = pool;
+  }
+  return unseen;
+}
+
+function markAsSeen(questionIds, cat) {
+  const key = cat || 'all';
+  if (!seenQuestions[key]) seenQuestions[key] = [];
+  seenQuestions[key] = seenQuestions[key].concat(questionIds);
+  saveSeenQuestions();
+}
+
 function formatTime(sec) {
   const m = Math.floor(sec / 60);
   const s = sec % 60;
@@ -250,17 +282,21 @@ function pickCat(c) {
 function updateStart() {
   const btn = document.getElementById('startBtn');
   if (!amount) { btn.disabled = true; btn.textContent = 'Scegli il numero di domande'; return; }
-  const pool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
-  const n = Math.min(amount, pool.length);
+  const fullPool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
+  const unseen = getUnseenPool(fullPool, category);
+  const n = Math.min(amount, unseen.length);
   btn.disabled = false;
-  btn.textContent = 'Inizia — ' + n + ' domande';
+  const remaining = unseen.length;
+  btn.textContent = 'Inizia — ' + n + ' domande (' + remaining + ' ancora da fare su ' + fullPool.length + ')';
 }
 
 function shuffle(a) { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
 
 function startQuiz() {
-  const pool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
+  const fullPool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
+  const pool = getUnseenPool(fullPool, category);
   questions = shuffle(pool).slice(0, amount);
+  markAsSeen(questions.map(q => q.id), category);
   answers = {};
   corrected = false;
   document.getElementById('homePage').style.display = 'none';
@@ -332,15 +368,6 @@ function render() {
         h += '<span class="exp-wrong">✗ Non hai risposto</span><br>';
       }
       h += '<span class="exp-correct">✓ Risposta corretta: <strong>' + q.answer + '</strong> — ' + esc(correctText) + '</span>';
-      if (q.manualExcerpt) {
-        h += '<span class="exp-excerpt">"' + esc(q.manualExcerpt) + '"</span>';
-      }
-      if (q.manualPages && q.manualPages.length > 0) {
-        h += '<span class="exp-pages">📖 Manuale: pag. ' + q.manualPages.join(', ') + '</span>';
-      }
-      if (q.manualSection) {
-        h += ' <span style="font-size:0.9em;color:#a0aec0;">(' + esc(q.manualSection) + ')</span>';
-      }
       h += '</div>';
     }
     h += '</div>';
