@@ -2,286 +2,285 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="theme-color" content="#2563eb">
-<title>Quiz Attività Acquatiche</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Istruttore di Nuoto - 1000 Domande</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-:root{--primary:#2563eb;--primary-dark:#1d4ed8;--success:#16a34a;--danger:#dc2626;--bg:#f1f5f9;--card:#fff;--text:#1e293b;--border:#e2e8f0;--radius:12px}
-body{font-family:-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;min-height:100dvh;padding-bottom:env(safe-area-inset-bottom)}
-.container{max-width:900px;margin:0 auto;padding:16px}
-header{text-align:center;padding:24px 0 16px}
-header h1{font-size:1.6rem;color:var(--primary-dark);margin-bottom:4px}
-header p{color:#64748b;font-size:.9rem}
-.mode-select{display:flex;justify-content:center;gap:12px;margin:20px 0;flex-wrap:wrap}
-.mode-btn{padding:12px 28px;font-size:.95rem;font-weight:600;border:2px solid var(--primary);border-radius:10px;cursor:pointer;transition:all .2s;background:transparent;color:var(--primary)}
-.mode-btn:hover,.mode-btn.active{background:var(--primary);color:#fff}
-.stats-bar{display:flex;justify-content:center;gap:12px;margin-bottom:20px;flex-wrap:wrap}
-.stat{background:var(--card);padding:10px 18px;border-radius:var(--radius);box-shadow:0 1px 3px rgba(0,0,0,.08);text-align:center;min-width:90px}
-.stat .num{font-size:1.4rem;font-weight:700;color:var(--primary)}
-.stat .label{font-size:.75rem;color:#64748b;margin-top:2px}
-.progress-bar{width:100%;height:6px;background:var(--border);border-radius:3px;margin-bottom:20px;overflow:hidden}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),#7c3aed);border-radius:3px;transition:width .3s ease}
-.question-card{background:var(--card);border-radius:var(--radius);padding:20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:all .3s}
-.question-card.answered-correct{border-left:4px solid var(--success)}
-.question-card.answered-wrong{border-left:4px solid var(--danger)}
-.q-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px}
-.q-number{background:var(--primary);color:#fff;min-width:40px;height:32px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;padding:0 10px}
-.q-text{font-size:.95rem;font-weight:500;line-height:1.5}
-.options{display:flex;flex-direction:column;gap:8px}
-.option{display:flex;align-items:center;gap:10px;padding:12px 14px;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:all .15s;font-size:.9rem;line-height:1.4;-webkit-user-select:none;user-select:none}
-.option:hover:not(.disabled){border-color:var(--primary);background:#eff6ff}
-.option:active:not(.disabled){transform:scale(.98)}
-.option.selected{border-color:var(--primary);background:#dbeafe}
-.option.correct{border-color:var(--success);background:#dcfce7}
-.option.wrong{border-color:var(--danger);background:#fee2e2}
-.option.disabled{cursor:default;opacity:.85}
-.option .letter{background:var(--border);color:var(--text);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;flex-shrink:0;transition:all .15s}
-.option.selected .letter{background:var(--primary);color:#fff}
-.option.correct .letter{background:var(--success);color:#fff}
-.option.wrong .letter{background:var(--danger);color:#fff}
-.feedback{margin-top:8px;padding:8px 14px;border-radius:8px;font-size:.85rem;font-weight:500;display:none}
-.feedback.show{display:block}
-.feedback.correct{background:#dcfce7;color:#15803d}
-.feedback.wrong{background:#fee2e2;color:#b91c1c}
-.explanation{margin-top:8px;padding:12px 14px;border-radius:8px;font-size:.85rem;line-height:1.5;background:#fef3c7;color:#92400e;border-left:3px solid #f59e0b;display:none}
-.explanation.show{display:block}
-.explanation strong{color:#78350f}
-.btn-area{display:flex;justify-content:center;gap:12px;margin:24px 0;flex-wrap:wrap}
-.btn{padding:14px 32px;font-size:1rem;font-weight:600;border:none;border-radius:10px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;-webkit-user-select:none;user-select:none}
-.btn:active{transform:scale(.97)}
-.btn-primary{background:var(--primary);color:#fff}
-.btn-primary:hover{background:var(--primary-dark)}
-.btn-success{background:var(--success);color:#fff}
-.btn-success:hover{background:#15803d}
-.btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
-.btn-outline:hover{background:#eff6ff}
-.results-panel{background:var(--card);border-radius:var(--radius);padding:28px;text-align:center;margin:16px 0;box-shadow:0 4px 12px rgba(0,0,0,.1)}
-.results-panel h2{font-size:1.5rem;margin-bottom:8px}
-.score-circle{width:140px;height:140px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:20px auto;font-size:2.4rem;font-weight:700;color:#fff}
-.score-circle .pct{font-size:.9rem;font-weight:400;margin-top:-4px}
-.score-pass{background:linear-gradient(135deg,var(--success),#22d3ee)}
-.score-fail{background:linear-gradient(135deg,var(--danger),#f97316)}
-.score-mid{background:linear-gradient(135deg,#f59e0b,#f97316)}
-.back-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);display:none;align-items:center;justify-content:center;z-index:100}
-.back-top.show{display:flex}
-@media(max-width:600px){.container{padding:12px}.question-card{padding:16px}.btn{padding:12px 24px;font-size:.9rem}header h1{font-size:1.3rem}.stat{padding:8px 14px;min-width:75px}.stat .num{font-size:1.2rem}}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; }
+
+  .header { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+  .header h1 { font-size: 1.4em; margin-bottom: 6px; }
+  .header .stats { font-size: 0.85em; opacity: 0.9; }
+
+  .controls { background: white; padding: 15px 20px; border-bottom: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: center; }
+  .controls select, .controls input, .controls button { padding: 8px 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 0.9em; outline: none; }
+  .controls select:focus, .controls input:focus { border-color: #0077b6; box-shadow: 0 0 0 2px rgba(0,119,182,0.2); }
+  .controls button { background: #0077b6; color: white; border: none; cursor: pointer; font-weight: 600; transition: background 0.2s; }
+  .controls button:hover { background: #005f8a; }
+  .controls button.secondary { background: #718096; }
+  .controls button.secondary:hover { background: #4a5568; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+  .question-card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: box-shadow 0.2s; }
+  .question-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+
+  .question-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; gap: 10px; }
+  .question-number { font-weight: 700; color: #0077b6; font-size: 1em; white-space: nowrap; }
+  .category-badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 3px 10px; border-radius: 20px; font-size: 0.75em; font-weight: 600; white-space: nowrap; }
+
+  .category-badge[data-cat="Attività speciali"] { background: #fef3c7; color: #92400e; }
+  .category-badge[data-cat="Biofisiologia"] { background: #fce7f3; color: #9d174d; }
+  .category-badge[data-cat="Fitness in acqua"] { background: #d1fae5; color: #065f46; }
+  .category-badge[data-cat="La cultura"] { background: #ede9fe; color: #5b21b6; }
+  .category-badge[data-cat="La scuola nuoto"] { background: #e0f2fe; color: #0369a1; }
+  .category-badge[data-cat="Metodologia"] { background: #ffedd5; color: #9a3412; }
+  .category-badge[data-cat="Psicopedagogia"] { background: #f0fdf4; color: #166534; }
+
+  .question-text { font-size: 1.05em; line-height: 1.5; margin-bottom: 16px; font-weight: 500; }
+
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option { padding: 12px 16px; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; transition: all 0.2s; display: flex; align-items: flex-start; gap: 10px; }
+  .option:hover { border-color: #90cdf4; background: #f7fafc; }
+  .option .letter { font-weight: 700; color: #4a5568; min-width: 24px; }
+  .option.selected { border-color: #0077b6; background: #ebf8ff; }
+  .option.correct { border-color: #38a169; background: #f0fff4; }
+  .option.correct .letter { color: #38a169; }
+  .option.wrong { border-color: #e53e3e; background: #fff5f5; }
+  .option.wrong .letter { color: #e53e3e; }
+  .option.disabled { pointer-events: none; }
+  .option.show-correct { border-color: #38a169; background: #f0fff4; }
+
+  .explanation { margin-top: 12px; padding: 12px 16px; background: #f7fafc; border-left: 3px solid #0077b6; border-radius: 4px; font-size: 0.9em; color: #4a5568; display: none; }
+  .explanation.visible { display: block; }
+
+  .result-bar { display: none; margin-top: 14px; padding: 10px 16px; border-radius: 8px; font-weight: 600; text-align: center; }
+  .result-bar.correct { display: block; background: #f0fff4; color: #276749; }
+  .result-bar.wrong { display: block; background: #fff5f5; color: #c53030; }
+
+  .pagination { display: flex; justify-content: center; align-items: center; gap: 12px; padding: 20px; flex-wrap: wrap; }
+  .pagination button { padding: 10px 20px; }
+  .page-info { font-weight: 600; color: #4a5568; }
+
+  .summary-bar { background: white; padding: 10px 20px; text-align: center; border-top: 1px solid #e2e8f0; position: sticky; bottom: 0; font-size: 0.85em; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .summary-bar .stat { display: flex; align-items: center; gap: 4px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .dot.green { background: #38a169; }
+  .dot.red { background: #e53e3e; }
+  .dot.gray { background: #a0aec0; }
+
+  .mode-toggle { display: flex; border-radius: 8px; overflow: hidden; border: 1px solid #cbd5e0; }
+  .mode-toggle button { border: none; border-radius: 0; padding: 8px 16px; font-size: 0.85em; }
+  .mode-toggle button.active { background: #0077b6; color: white; }
+  .mode-toggle button:not(.active) { background: white; color: #4a5568; cursor: pointer; }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.1em; }
+    .controls { padding: 10px; gap: 6px; }
+    .container { padding: 12px; }
+    .question-card { padding: 16px; }
+  }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <h1>Quiz Attività Acquatiche</h1>
-    <p>1000 domande a risposta multipla</p>
-  </header>
-  <div id="app"></div>
+
+<div class="header">
+  <h1>Istruttore di Nuoto in 1000 Domande</h1>
+  <div class="stats" id="headerStats"></div>
 </div>
-<button class="back-top" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<div class="controls">
+  <select id="categoryFilter">
+    <option value="all">Tutte le categorie</option>
+  </select>
+  <input type="number" id="goToQuestion" placeholder="Vai alla domanda..." min="1" max="1000" style="width:160px">
+  <button onclick="goToQuestion()">Vai</button>
+  <div class="mode-toggle">
+    <button id="modeQuiz" class="active" onclick="setMode('quiz')">Quiz</button>
+    <button id="modeStudy" onclick="setMode('study')">Studio</button>
+  </div>
+  <select id="perPageSelect">
+    <option value="10">10 per pagina</option>
+    <option value="20">20 per pagina</option>
+    <option value="50">50 per pagina</option>
+  </select>
+  <button class="secondary" onclick="resetAll()">Reset</button>
+</div>
+
+<div class="container" id="quizContainer"></div>
+
+<div class="pagination">
+  <button class="secondary" onclick="changePage(-1)" id="prevBtn">Precedente</button>
+  <span class="page-info" id="pageInfo"></span>
+  <button onclick="changePage(1)" id="nextBtn">Successiva</button>
+</div>
+
+<div class="summary-bar" id="summaryBar">
+  <div class="stat"><span class="dot green"></span> Corrette: <strong id="correctCount">0</strong></div>
+  <div class="stat"><span class="dot red"></span> Errate: <strong id="wrongCount">0</strong></div>
+  <div class="stat"><span class="dot gray"></span> Rimanenti: <strong id="remainingCount">0</strong></div>
+  <div class="stat">Punteggio: <strong id="scorePercent">0%</strong></div>
+</div>
+
 <script src="quiz_data.js"></script>
 <script>
-var app = document.getElementById('app');
-var btt = document.getElementById('btt');
-var QUIZ_SIZE = 10;
-var currentQuiz = [];
-var userAnswers = {};
-var submitted = false;
-var startTime;
+  let questionsPerPage = 10;
+  let currentPage = 0;
+  let filteredQuestions = [...quizData];
+  let userAnswers = {};
+  let mode = 'quiz';
 
-window.addEventListener('scroll', function() {
-  btt.classList.toggle('show', window.scrollY > 400);
-});
+  // Init categories
+  function initCategories() {
+    const cats = [...new Set(quizData.map(q => q.category))].sort();
+    const sel = document.getElementById('categoryFilter');
+    cats.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = c + ' (' + quizData.filter(q => q.category === c).length + ')';
+      sel.appendChild(opt);
+    });
+    sel.addEventListener('change', () => { filterQuestions(); });
 
-function shuffle(arr) {
-  var a = arr.slice();
-  for (var i = a.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
-  }
-  return a;
-}
-
-function escHtml(s) {
-  var d = document.createElement('div');
-  d.textContent = s;
-  return d.innerHTML;
-}
-
-function showMenu() {
-  app.innerHTML = '<div class="mode-select">' +
-    '<button class="mode-btn" onclick="setMode(10)">10 Domande</button>' +
-    '<button class="mode-btn" onclick="setMode(20)">20 Domande</button>' +
-    '<button class="mode-btn" onclick="setMode(50)">50 Domande</button>' +
-    '</div>';
-}
-
-function setMode(n) {
-  QUIZ_SIZE = n;
-  startQuiz();
-}
-
-function startQuiz() {
-  currentQuiz = shuffle(ALL_QUESTIONS).slice(0, QUIZ_SIZE);
-  userAnswers = {};
-  submitted = false;
-  startTime = Date.now();
-  renderQuiz();
-  window.scrollTo(0, 0);
-}
-
-function renderQuiz() {
-  var answered = Object.keys(userAnswers).length;
-  var pct = (answered / QUIZ_SIZE * 100).toFixed(0);
-  var letters = ['A','B','C','D'];
-  var h = '';
-
-  h += '<div class="stats-bar">';
-  h += '<div class="stat"><div class="num" id="sa">' + answered + '</div><div class="label">Risposte</div></div>';
-  h += '<div class="stat"><div class="num">' + QUIZ_SIZE + '</div><div class="label">Domande</div></div>';
-  h += '<div class="stat"><div class="num" id="sr">' + (QUIZ_SIZE - answered) + '</div><div class="label">Rimanenti</div></div>';
-  h += '</div>';
-  h += '<div class="progress-bar"><div class="progress-fill" id="pf" style="width:' + pct + '%"></div></div>';
-
-  for (var i = 0; i < currentQuiz.length; i++) {
-    var q = currentQuiz[i];
-    h += '<div class="question-card" id="q' + q.id + '">';
-    h += '<div class="q-header"><div class="q-number">' + q.id + '</div>';
-    h += '<div class="q-text">' + escHtml(q.question) + '</div></div>';
-    h += '<div class="options">';
-    for (var j = 0; j < 4; j++) {
-      var l = letters[j];
-      var optText = q.options[l] || '';
-      h += '<div class="option" data-qid="' + q.id + '" data-letter="' + l + '">';
-      h += '<span class="letter">' + l + '</span>';
-      h += '<span>' + escHtml(optText) + '</span></div>';
-    }
-    h += '</div></div>';
+    document.getElementById('perPageSelect').addEventListener('change', (e) => {
+      questionsPerPage = parseInt(e.target.value);
+      currentPage = 0;
+      render();
+    });
   }
 
-  h += '<div class="btn-area" id="qb">';
-  h += '<button class="btn btn-primary" id="btn-submit">Correggi Test</button>';
-  h += '<button class="btn btn-outline" id="btn-menu">Cambia Modalità</button>';
-  h += '</div>';
-
-  app.innerHTML = h;
-}
-
-document.addEventListener('click', function(e) {
-  var opt = e.target.closest('.option');
-  if (opt && !submitted) {
-    var qid = parseInt(opt.getAttribute('data-qid'));
-    var letter = opt.getAttribute('data-letter');
-    userAnswers[qid] = letter;
-    var card = document.getElementById('q' + qid);
-    var opts = card.querySelectorAll('.option');
-    for (var k = 0; k < opts.length; k++) opts[k].className = 'option';
-    opt.className = 'option selected';
-    var answered = Object.keys(userAnswers).length;
-    document.getElementById('sa').textContent = answered;
-    document.getElementById('sr').textContent = QUIZ_SIZE - answered;
-    document.getElementById('pf').style.width = (answered / QUIZ_SIZE * 100) + '%';
-    return;
+  function filterQuestions() {
+    const cat = document.getElementById('categoryFilter').value;
+    filteredQuestions = cat === 'all' ? [...quizData] : quizData.filter(q => q.category === cat);
+    currentPage = 0;
+    render();
   }
 
-  if (e.target.closest('#btn-submit')) { submitQuiz(); return; }
-  if (e.target.closest('#btn-menu')) { showMenu(); return; }
-  if (e.target.closest('#btn-new2')) { startQuiz(); return; }
-  if (e.target.closest('#btn-review')) {
-    var el = document.querySelector('.answered-wrong');
-    if (el) el.scrollIntoView({behavior:'smooth',block:'center'});
-    return;
+  function setMode(m) {
+    mode = m;
+    document.getElementById('modeQuiz').classList.toggle('active', m === 'quiz');
+    document.getElementById('modeStudy').classList.toggle('active', m === 'study');
+    render();
   }
-  if (e.target.closest('#btn-menu2')) { showMenu(); return; }
-});
 
-function submitQuiz() {
-  if (Object.keys(userAnswers).length === 0) {
-    alert('Rispondi ad almeno una domanda prima di correggere!');
-    return;
+  function goToQuestion() {
+    const num = parseInt(document.getElementById('goToQuestion').value);
+    if (!num) return;
+    const idx = filteredQuestions.findIndex(q => q.id === num);
+    if (idx === -1) { alert('Domanda non trovata nel filtro attuale'); return; }
+    currentPage = Math.floor(idx / questionsPerPage);
+    render();
+    setTimeout(() => {
+      const el = document.getElementById('q-' + num);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
   }
-  submitted = true;
-  var elapsed = Math.floor((Date.now() - startTime) / 1000);
-  var mins = Math.floor(elapsed / 60);
-  var secs = elapsed % 60;
-  var correct = 0, wrong = 0, skipped = 0;
 
-  for (var i = 0; i < currentQuiz.length; i++) {
-    var q = currentQuiz[i];
-    var card = document.getElementById('q' + q.id);
-    var ua = userAnswers[q.id];
-    var opts = card.querySelectorAll('.option');
+  function selectOption(questionId, letter) {
+    if (userAnswers[questionId]) return;
+    userAnswers[questionId] = letter;
+    render();
+  }
 
-    for (var k = 0; k < opts.length; k++) opts[k].classList.add('disabled');
+  function changePage(dir) {
+    const maxPage = Math.ceil(filteredQuestions.length / questionsPerPage) - 1;
+    currentPage = Math.max(0, Math.min(maxPage, currentPage + dir));
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-    if (!ua) {
-      skipped++;
-      for (var k = 0; k < opts.length; k++) {
-        if (opts[k].querySelector('.letter').textContent === q.answer) opts[k].classList.add('correct');
+  function resetAll() {
+    if (!confirm('Vuoi resettare tutte le risposte?')) return;
+    userAnswers = {};
+    currentPage = 0;
+    render();
+  }
+
+  function render() {
+    const container = document.getElementById('quizContainer');
+    const start = currentPage * questionsPerPage;
+    const pageQuestions = filteredQuestions.slice(start, start + questionsPerPage);
+    const maxPage = Math.ceil(filteredQuestions.length / questionsPerPage) - 1;
+
+    let html = '';
+    pageQuestions.forEach(q => {
+      const answered = userAnswers[q.id];
+      const isCorrect = answered === q.answer;
+      const showAnswer = answered || mode === 'study';
+
+      html += '<div class="question-card" id="q-' + q.id + '">';
+      html += '<div class="question-header">';
+      html += '<span class="question-number">Domanda ' + q.id + '</span>';
+      html += '<span class="category-badge" data-cat="' + q.category + '">' + q.category + '</span>';
+      html += '</div>';
+      html += '<div class="question-text">' + escapeHtml(q.question) + '</div>';
+      html += '<div class="options">';
+
+      ['A', 'B', 'C', 'D'].forEach(letter => {
+        if (!q.options[letter]) return;
+        let cls = 'option';
+        if (showAnswer) {
+          cls += ' disabled';
+          if (letter === q.answer) cls += ' correct show-correct';
+          if (answered && letter === answered && !isCorrect) cls += ' wrong';
+          if (!answered && mode === 'study' && letter === q.answer) cls += ' correct';
+        }
+        if (answered === letter) cls += ' selected';
+
+        html += '<div class="' + cls + '" onclick="selectOption(' + q.id + ',\'' + letter + '\')">';
+        html += '<span class="letter">' + letter + '</span>';
+        html += '<span>' + escapeHtml(q.options[letter]) + '</span>';
+        html += '</div>';
+      });
+
+      html += '</div>';
+
+      if (answered) {
+        if (isCorrect) {
+          html += '<div class="result-bar correct">Corretto!</div>';
+        } else {
+          html += '<div class="result-bar wrong">Sbagliato. La risposta corretta era ' + q.answer + '</div>';
+        }
       }
-      card.classList.add('answered-wrong');
-      addFb(card, 'wrong', 'Non risposta — Risposta corretta: <strong>' + q.answer + '</strong>');
-      if (q.explanation) addExplanation(card, q.explanation);
-    } else if (ua === q.answer) {
-      correct++;
-      card.classList.add('answered-correct');
-      for (var k = 0; k < opts.length; k++) {
-        if (opts[k].querySelector('.letter').textContent === q.answer) opts[k].classList.add('correct');
+
+      if (showAnswer && q.explanation) {
+        html += '<div class="explanation visible">' + escapeHtml(q.explanation) + '</div>';
       }
-      addFb(card, 'correct', 'Corretta!');
-    } else {
-      wrong++;
-      card.classList.add('answered-wrong');
-      for (var k = 0; k < opts.length; k++) {
-        var lt = opts[k].querySelector('.letter').textContent;
-        if (lt === q.answer) opts[k].classList.add('correct');
-        if (lt === ua) opts[k].classList.add('wrong');
-      }
-      addFb(card, 'wrong', 'Sbagliata — Risposta corretta: <strong>' + q.answer + '</strong>');
-      if (q.explanation) addExplanation(card, q.explanation);
-    }
+
+      html += '</div>';
+    });
+
+    container.innerHTML = html;
+
+    // Pagination
+    document.getElementById('pageInfo').textContent = (currentPage + 1) + ' / ' + (maxPage + 1);
+    document.getElementById('prevBtn').disabled = currentPage === 0;
+    document.getElementById('nextBtn').disabled = currentPage >= maxPage;
+
+    // Stats
+    const answeredInFilter = filteredQuestions.filter(q => userAnswers[q.id]);
+    const correctInFilter = answeredInFilter.filter(q => userAnswers[q.id] === q.answer);
+    const wrongInFilter = answeredInFilter.length - correctInFilter.length;
+
+    document.getElementById('correctCount').textContent = correctInFilter.length;
+    document.getElementById('wrongCount').textContent = wrongInFilter;
+    document.getElementById('remainingCount').textContent = filteredQuestions.length - answeredInFilter.length;
+    document.getElementById('scorePercent').textContent = answeredInFilter.length > 0
+      ? Math.round(correctInFilter.length / answeredInFilter.length * 100) + '%' : '0%';
+
+    document.getElementById('headerStats').textContent = filteredQuestions.length + ' domande' +
+      (document.getElementById('categoryFilter').value !== 'all' ? ' in questa categoria' : ' totali');
   }
 
-  var score = (correct / QUIZ_SIZE * 100).toFixed(1);
-  var sc = score >= 70 ? 'score-pass' : score >= 50 ? 'score-mid' : 'score-fail';
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
 
-  var rh = '<div class="results-panel"><h2>Risultato del Test</h2>';
-  rh += '<div class="score-circle ' + sc + '">' + correct + '/' + QUIZ_SIZE;
-  rh += '<div class="pct">' + score + '%</div></div>';
-  rh += '<div class="stats-bar" style="justify-content:center;margin-top:16px">';
-  rh += '<div class="stat"><div class="num" style="color:var(--success)">' + correct + '</div><div class="label">Corrette</div></div>';
-  rh += '<div class="stat"><div class="num" style="color:var(--danger)">' + wrong + '</div><div class="label">Sbagliate</div></div>';
-  rh += '<div class="stat"><div class="num" style="color:#64748b">' + skipped + '</div><div class="label">Non risposte</div></div>';
-  rh += '<div class="stat"><div class="num">' + mins + ':' + (secs < 10 ? '0' : '') + secs + '</div><div class="label">Tempo</div></div>';
-  rh += '</div><div class="btn-area">';
-  rh += '<button class="btn btn-success" id="btn-new2">Nuovo Test (' + QUIZ_SIZE + ')</button>';
-  rh += '<button class="btn btn-outline" id="btn-review">Rivedi Errori</button>';
-  rh += '<button class="btn btn-outline" id="btn-menu2">Cambia Modalità</button>';
-  rh += '</div></div>';
-
-  var sb = document.querySelector('.stats-bar');
-  sb.insertAdjacentHTML('beforebegin', rh);
-  var qb = document.getElementById('qb');
-  if (qb) qb.remove();
-  window.scrollTo(0, 0);
-}
-
-function addFb(card, type, msg) {
-  var fb = document.createElement('div');
-  fb.className = 'feedback ' + type + ' show';
-  fb.innerHTML = msg;
-  card.appendChild(fb);
-}
-
-function addExplanation(card, text) {
-  var ex = document.createElement('div');
-  ex.className = 'explanation show';
-  ex.innerHTML = '📖 <strong>Spiegazione:</strong> ' + escHtml(text);
-  card.appendChild(ex);
-}
-
-showMenu();
+  // Init
+  initCategories();
+  render();
 </script>
 </body>
 </html>
