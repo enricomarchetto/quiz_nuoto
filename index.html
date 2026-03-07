@@ -315,7 +315,7 @@ function correggi() {
   if (ko || empty) document.getElementById('btnErrori').classList.remove('hidden');
   document.getElementById('btnHome').classList.remove('hidden');
   render();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('resultsCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function rivediErrori() {
