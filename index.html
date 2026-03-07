@@ -12,17 +12,17 @@
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; line-height: 1.5; }
 
-  /* ===== HOME PAGE ===== */
+  /* ===== HOME ===== */
   .home { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .home-logo { font-size: 3em; margin-bottom: 12px; }
   .home-title { font-size: 1.6em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
-  .home-subtitle { font-size: 0.95em; color: #718096; text-align: center; margin-bottom: 32px; }
-  .home-logo { font-size: 3em; margin-bottom: 16px; }
+  .home-subtitle { font-size: 0.95em; color: #718096; text-align: center; margin-bottom: 36px; }
 
   .home-section { width: 100%; max-width: 500px; margin-bottom: 28px; }
-  .home-section-title { font-size: 0.85em; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; text-align: center; }
+  .section-label { font-size: 0.82em; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; text-align: center; }
 
   .amount-buttons { display: flex; gap: 12px; justify-content: center; }
-  .amount-btn { flex: 1; max-width: 140px; padding: 20px 10px; border: 2px solid #e2e8f0; border-radius: 14px; background: white; cursor: pointer; text-align: center; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
+  .amount-btn { flex: 1; max-width: 140px; padding: 22px 10px; border: 2px solid #e2e8f0; border-radius: 14px; background: white; cursor: pointer; text-align: center; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
   .amount-btn:active { transform: scale(0.96); }
   .amount-btn.selected { border-color: #0077b6; background: #ebf8ff; box-shadow: 0 0 0 3px rgba(0,119,182,0.15); }
   .amount-btn .num { font-size: 2em; font-weight: 700; color: #0077b6; display: block; line-height: 1; }
@@ -41,30 +41,27 @@
   .start-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
   @media (hover: hover) { .start-btn:hover:not(:disabled) { box-shadow: 0 6px 20px rgba(0,119,182,0.4); } }
 
-  .mode-row { display: flex; gap: 10px; justify-content: center; margin-bottom: 6px; }
-  .mode-btn { flex: 1; max-width: 200px; padding: 14px 10px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; cursor: pointer; text-align: center; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
-  .mode-btn:active { transform: scale(0.96); }
-  .mode-btn.selected { border-color: #0077b6; background: #ebf8ff; }
-  .mode-btn .mode-icon { font-size: 1.4em; display: block; margin-bottom: 2px; }
-  .mode-btn .mode-label { font-size: 0.85em; font-weight: 600; color: #1a202c; }
-  .mode-btn .mode-desc { font-size: 0.72em; color: #718096; margin-top: 2px; }
-  @media (hover: hover) { .mode-btn:hover:not(.selected) { border-color: #90cdf4; } }
-
-  /* ===== QUIZ PAGE ===== */
+  /* ===== QUIZ ===== */
   .quiz-page { display: none; }
 
-  .quiz-header { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); display: flex; justify-content: space-between; align-items: center; }
-  .quiz-header-left h2 { font-size: 1.1em; font-weight: 700; }
+  .quiz-header { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .quiz-header-left h2 { font-size: 1.05em; font-weight: 700; }
   .quiz-header-left .quiz-info { font-size: 0.78em; opacity: 0.9; margin-top: 2px; }
-  .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 14px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; transition: background 0.15s; -webkit-user-select: none; user-select: none; }
+  .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 14px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; white-space: nowrap; -webkit-user-select: none; user-select: none; }
   .back-btn:active { transform: scale(0.96); }
   @media (hover: hover) { .back-btn:hover { background: rgba(255,255,255,0.3); } }
 
-  .quiz-container { max-width: 800px; margin: 0 auto; padding: 16px; padding-bottom: 80px; }
+  .quiz-container { max-width: 800px; margin: 0 auto; padding: 16px; padding-bottom: 20px; }
 
-  .question-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  /* Question card */
+  .question-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); transition: border-color 0.3s, box-shadow 0.3s; border: 2px solid transparent; }
+  .question-card.error-highlight { border-color: #e53e3e; box-shadow: 0 0 0 3px rgba(229,62,62,0.15); }
+  .question-card.correct-highlight { border-color: #38a169; box-shadow: 0 0 0 3px rgba(56,161,105,0.15); }
+  .question-card.unanswered-highlight { border-color: #dd6b20; box-shadow: 0 0 0 3px rgba(221,107,32,0.15); }
+
   .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; flex-wrap: wrap; }
   .question-number { font-weight: 700; color: #0077b6; font-size: 0.95em; white-space: nowrap; }
+  .question-number .orig-num { font-weight: 600; color: #4a5568; font-size: 0.9em; }
   .category-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.72em; font-weight: 600; white-space: nowrap; }
 
   .category-badge[data-cat="Attività speciali"] { background: #fef3c7; color: #92400e; }
@@ -83,60 +80,64 @@
   .option .letter { font-weight: 700; color: #4a5568; min-width: 22px; flex-shrink: 0; }
   .option .option-text { flex: 1; }
   .option.selected { border-color: #0077b6; background: #ebf8ff; }
-  .option.correct { border-color: #38a169; background: #f0fff4; }
-  .option.correct .letter { color: #38a169; }
-  .option.wrong { border-color: #e53e3e; background: #fff5f5; }
-  .option.wrong .letter { color: #e53e3e; }
-  .option.disabled { pointer-events: none; opacity: 0.85; }
-  .option.disabled.correct, .option.disabled.show-correct { opacity: 1; }
-  .option.show-correct { border-color: #38a169; background: #f0fff4; }
-  @media (hover: hover) { .option:hover:not(.disabled) { border-color: #90cdf4; background: #f7fafc; } }
+  .option.disabled { pointer-events: none; }
+  .option.correct-answer { border-color: #38a169; background: #f0fff4; }
+  .option.correct-answer .letter { color: #38a169; }
+  .option.wrong-answer { border-color: #e53e3e; background: #fff5f5; }
+  .option.wrong-answer .letter { color: #e53e3e; }
+  @media (hover: hover) { .option:hover:not(.disabled):not(.selected) { border-color: #90cdf4; background: #f7fafc; } }
 
-  .explanation { margin-top: 12px; padding: 12px 14px; background: #f7fafc; border-left: 3px solid #0077b6; border-radius: 4px; font-size: 0.88em; color: #4a5568; line-height: 1.5; display: none; }
-  .explanation.visible { display: block; }
+  /* Bottom actions */
+  .actions-bar { max-width: 800px; margin: 0 auto; padding: 0 16px 100px 16px; display: flex; flex-direction: column; gap: 10px; }
 
-  .result-bar { display: none; margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-weight: 600; text-align: center; font-size: 0.95em; }
-  .result-bar.correct { display: block; background: #f0fff4; color: #276749; }
-  .result-bar.wrong { display: block; background: #fff5f5; color: #c53030; }
+  .action-btn { width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 1.05em; font-weight: 700; cursor: pointer; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
+  .action-btn:active { transform: scale(0.97); }
 
-  /* Summary bar */
-  .summary-bar { background: white; padding: 10px 16px; text-align: center; border-top: 1px solid #e2e8f0; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; font-size: 0.8em; display: none; justify-content: center; gap: 14px; flex-wrap: wrap; box-shadow: 0 -2px 8px rgba(0,0,0,0.06); }
-  .summary-bar.visible { display: flex; }
-  .summary-bar .stat { display: flex; align-items: center; gap: 4px; white-space: nowrap; }
-  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
-  .dot.green { background: #38a169; }
-  .dot.red { background: #e53e3e; }
-  .dot.gray { background: #a0aec0; }
+  .btn-correggi { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; box-shadow: 0 4px 14px rgba(0,119,182,0.3); }
+  @media (hover: hover) { .btn-correggi:hover { box-shadow: 0 6px 20px rgba(0,119,182,0.4); } }
 
-  /* End card */
-  .end-card { background: white; border-radius: 14px; padding: 28px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 16px; }
-  .end-card .end-icon { font-size: 2.5em; margin-bottom: 8px; }
-  .end-card h3 { font-size: 1.2em; color: #1a202c; margin-bottom: 6px; }
-  .end-card .end-score { font-size: 2em; font-weight: 700; color: #0077b6; margin: 10px 0; }
-  .end-card .end-detail { font-size: 0.9em; color: #718096; }
-  .end-card button { margin-top: 16px; padding: 12px 28px; border: none; border-radius: 10px; background: #0077b6; color: white; font-size: 1em; font-weight: 600; cursor: pointer; }
-  .end-card button:active { transform: scale(0.96); }
+  .btn-errori { background: #e53e3e; color: white; box-shadow: 0 4px 14px rgba(229,62,62,0.3); }
+  @media (hover: hover) { .btn-errori:hover { box-shadow: 0 6px 20px rgba(229,62,62,0.4); } }
+
+  .btn-nuovo { background: white; color: #0077b6; border: 2px solid #0077b6 !important; }
+  @media (hover: hover) { .btn-nuovo:hover { background: #ebf8ff; } }
+
+  .btn-hidden { display: none; }
+
+  /* Results card */
+  .results-card { max-width: 800px; margin: 0 auto 16px; padding: 28px; background: white; border-radius: 14px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none; }
+  .results-card.visible { display: block; }
+  .results-icon { font-size: 2.5em; margin-bottom: 8px; }
+  .results-card h3 { font-size: 1.2em; margin-bottom: 4px; }
+  .results-score { font-size: 2.2em; font-weight: 700; color: #0077b6; margin: 8px 0; }
+  .results-detail { font-size: 0.9em; color: #718096; line-height: 1.6; }
+  .results-detail span { font-weight: 600; }
+  .results-detail .green { color: #38a169; }
+  .results-detail .red { color: #e53e3e; }
+  .results-detail .orange { color: #dd6b20; }
+
+  /* Progress bar in header */
+  .progress-bar { width: 100%; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+  .progress-fill { height: 100%; background: white; border-radius: 2px; transition: width 0.3s; }
 
   /* Mobile */
   @media (max-width: 600px) {
     .home { padding: 20px 16px; }
     .home-title { font-size: 1.3em; }
-    .amount-btn { padding: 16px 8px; }
+    .amount-btn { padding: 18px 8px; }
     .amount-btn .num { font-size: 1.6em; }
     .cat-grid { gap: 6px; }
     .cat-btn { padding: 10px 8px; font-size: 0.8em; }
     .quiz-header { padding: 10px 14px; }
     .quiz-header-left h2 { font-size: 0.95em; }
-    .quiz-container { padding: 10px; padding-bottom: 70px; }
+    .quiz-container { padding: 10px; }
     .question-card { padding: 14px; margin-bottom: 12px; }
     .option { padding: 12px 14px; }
-    .summary-bar { gap: 10px; font-size: 0.75em; padding: 8px 12px; }
+    .actions-bar { padding: 0 10px 90px 10px; }
   }
   @media (max-width: 380px) {
     .amount-btn .num { font-size: 1.4em; }
     .cat-grid { grid-template-columns: 1fr; }
-    .mode-row { flex-direction: column; align-items: center; }
-    .mode-btn { max-width: 100%; }
   }
 </style>
 </head>
@@ -149,7 +150,7 @@
   <div class="home-subtitle">1000 Domande</div>
 
   <div class="home-section">
-    <div class="home-section-title">Quante domande?</div>
+    <div class="section-label">Quante domande?</div>
     <div class="amount-buttons">
       <div class="amount-btn" onclick="selectAmount(10)">
         <span class="num">10</span>
@@ -167,24 +168,8 @@
   </div>
 
   <div class="home-section">
-    <div class="home-section-title">Categoria</div>
+    <div class="section-label">Categoria</div>
     <div class="cat-grid" id="catGrid"></div>
-  </div>
-
-  <div class="home-section">
-    <div class="home-section-title">Modalità</div>
-    <div class="mode-row">
-      <div class="mode-btn selected" onclick="selectMode('quiz')">
-        <span class="mode-icon">✍️</span>
-        <span class="mode-label">Quiz</span>
-        <span class="mode-desc">Rispondi e verifica</span>
-      </div>
-      <div class="mode-btn" onclick="selectMode('study')">
-        <span class="mode-icon">📖</span>
-        <span class="mode-label">Studio</span>
-        <span class="mode-desc">Risposte visibili</span>
-      </div>
-    </div>
   </div>
 
   <button class="start-btn" id="startBtn" disabled onclick="startQuiz()">Scegli il numero di domande</button>
@@ -196,28 +181,36 @@
     <div class="quiz-header-left">
       <h2 id="quizTitle"></h2>
       <div class="quiz-info" id="quizInfo"></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
     </div>
-    <button class="back-btn" onclick="goHome()">← Indietro</button>
+    <button class="back-btn" onclick="goHome()">← Home</button>
   </div>
-  <div class="quiz-container" id="quizContainer"></div>
-</div>
 
-<div class="summary-bar" id="summaryBar">
-  <div class="stat"><span class="dot green"></span> Corrette: <strong id="correctCount">0</strong></div>
-  <div class="stat"><span class="dot red"></span> Errate: <strong id="wrongCount">0</strong></div>
-  <div class="stat"><span class="dot gray"></span> Rimaste: <strong id="remainingCount">0</strong></div>
-  <div class="stat">Punteggio: <strong id="scorePercent">—</strong></div>
+  <div class="quiz-container" id="quizContainer"></div>
+
+  <div class="results-card" id="resultsCard">
+    <div class="results-icon" id="resultsIcon"></div>
+    <h3>Risultato</h3>
+    <div class="results-score" id="resultsScore"></div>
+    <div class="results-detail" id="resultsDetail"></div>
+  </div>
+
+  <div class="actions-bar" id="actionsBar">
+    <button class="action-btn btn-correggi" id="btnCorreggi" onclick="correggi()">Correggi</button>
+    <button class="action-btn btn-errori btn-hidden" id="btnErrori" onclick="rivediErrori()">Rivedi gli errori</button>
+    <button class="action-btn btn-nuovo btn-hidden" id="btnNuovo" onclick="goHome()">Nuovo quiz</button>
+  </div>
 </div>
 
 <script src="quiz_data.js"></script>
 <script>
   let selectedAmount = null;
   let selectedCategory = 'all';
-  let selectedMode = 'quiz';
   let activeQuestions = [];
   let userAnswers = {};
+  let corrected = false;
 
-  // Build category grid
+  // === HOME ===
   function initHome() {
     const cats = [...new Set(quizData.map(q => q.category))].sort();
     const grid = document.getElementById('catGrid');
@@ -256,13 +249,6 @@
     updateStartButton();
   }
 
-  function selectMode(m) {
-    selectedMode = m;
-    document.querySelectorAll('.mode-btn').forEach((b, i) => {
-      b.classList.toggle('selected', (i === 0 && m === 'quiz') || (i === 1 && m === 'study'));
-    });
-  }
-
   function updateStartButton() {
     const btn = document.getElementById('startBtn');
     if (!selectedAmount) {
@@ -274,7 +260,7 @@
     const actual = Math.min(selectedAmount, pool.length);
     btn.disabled = false;
     const catLabel = selectedCategory === 'all' ? 'tutte le categorie' : selectedCategory;
-    btn.textContent = 'Inizia — ' + actual + ' domande (' + catLabel + ')';
+    btn.textContent = 'Inizia — ' + actual + ' domande';
   }
 
   function shuffle(arr) {
@@ -286,18 +272,25 @@
     return a;
   }
 
+  // === QUIZ ===
   function startQuiz() {
     const pool = selectedCategory === 'all' ? quizData : quizData.filter(q => q.category === selectedCategory);
     activeQuestions = shuffle(pool).slice(0, selectedAmount);
     userAnswers = {};
+    corrected = false;
 
     document.getElementById('homePage').style.display = 'none';
     document.getElementById('quizPage').style.display = 'block';
-    document.getElementById('summaryBar').classList.add('visible');
 
     const catLabel = selectedCategory === 'all' ? 'Tutte le categorie' : selectedCategory;
     document.getElementById('quizTitle').textContent = catLabel;
-    document.getElementById('quizInfo').textContent = activeQuestions.length + ' domande — ' + (selectedMode === 'quiz' ? 'Modalità Quiz' : 'Modalità Studio');
+    document.getElementById('quizInfo').textContent = activeQuestions.length + ' domande';
+
+    // Reset UI
+    document.getElementById('resultsCard').classList.remove('visible');
+    document.getElementById('btnCorreggi').classList.remove('btn-hidden');
+    document.getElementById('btnErrori').classList.add('btn-hidden');
+    document.getElementById('btnNuovo').classList.add('btn-hidden');
 
     renderQuiz();
     window.scrollTo({ top: 0 });
@@ -305,26 +298,14 @@
 
   function goHome() {
     document.getElementById('quizPage').style.display = 'none';
-    document.getElementById('summaryBar').classList.remove('visible');
     document.getElementById('homePage').style.display = 'flex';
     window.scrollTo({ top: 0 });
   }
 
   function selectOption(questionId, letter) {
-    if (userAnswers[questionId]) return;
+    if (corrected) return;
     userAnswers[questionId] = letter;
     renderQuiz();
-
-    // Scroll to keep current question in view
-    setTimeout(() => {
-      const el = document.getElementById('q-' + questionId);
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.bottom > window.innerHeight - 60) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
-    }, 50);
   }
 
   function renderQuiz() {
@@ -333,12 +314,21 @@
 
     activeQuestions.forEach((q, idx) => {
       const answered = userAnswers[q.id];
-      const isCorrect = answered === q.answer;
-      const showAnswer = answered || selectedMode === 'study';
+      let cardClass = 'question-card';
 
-      html += '<div class="question-card" id="q-' + q.id + '">';
+      if (corrected) {
+        if (!answered) {
+          cardClass += ' unanswered-highlight';
+        } else if (answered === q.answer) {
+          cardClass += ' correct-highlight';
+        } else {
+          cardClass += ' error-highlight';
+        }
+      }
+
+      html += '<div class="' + cardClass + '" id="q-' + q.id + '">';
       html += '<div class="question-header">';
-      html += '<span class="question-number">Domanda ' + (idx + 1) + ' <span style="font-weight:400;color:#a0aec0;font-size:0.85em">(#' + q.id + ')</span></span>';
+      html += '<span class="question-number">Domanda ' + (idx + 1) + ' <span class="orig-num">(n.' + q.id + ')</span></span>';
       html += '<span class="category-badge" data-cat="' + q.category + '">' + q.category + '</span>';
       html += '</div>';
       html += '<div class="question-text">' + escapeHtml(q.question) + '</div>';
@@ -347,63 +337,82 @@
       ['A', 'B', 'C', 'D'].forEach(letter => {
         if (!q.options[letter]) return;
         let cls = 'option';
-        if (showAnswer) {
+
+        if (corrected) {
           cls += ' disabled';
-          if (letter === q.answer) cls += ' correct show-correct';
-          if (answered && letter === answered && !isCorrect) cls += ' wrong';
-          if (!answered && selectedMode === 'study' && letter === q.answer) cls += ' correct';
+          if (letter === q.answer) cls += ' correct-answer';
+          if (answered && letter === answered && answered !== q.answer) cls += ' wrong-answer';
+        } else {
+          if (answered === letter) cls += ' selected';
         }
-        if (answered === letter) cls += ' selected';
 
         html += '<div class="' + cls + '" onclick="selectOption(' + q.id + ',\'' + letter + '\')">';
         html += '<span class="letter">' + letter + '</span>';
         html += '<span class="option-text">' + escapeHtml(q.options[letter]) + '</span>';
         html += '</div>';
       });
+
       html += '</div>';
-
-      if (answered) {
-        html += isCorrect
-          ? '<div class="result-bar correct">Corretto!</div>'
-          : '<div class="result-bar wrong">Sbagliato — la risposta corretta era ' + q.answer + '</div>';
-      }
-
-      if (showAnswer && q.explanation) {
-        html += '<div class="explanation visible">' + escapeHtml(q.explanation) + '</div>';
-      }
-
       html += '</div>';
     });
 
-    // End card when all answered in quiz mode
-    const answeredCount = activeQuestions.filter(q => userAnswers[q.id]).length;
-    if (selectedMode === 'quiz' && answeredCount === activeQuestions.length) {
-      const correctCount = activeQuestions.filter(q => userAnswers[q.id] === q.answer).length;
-      const pct = Math.round(correctCount / activeQuestions.length * 100);
-      const icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '💪';
-      html += '<div class="end-card">';
-      html += '<div class="end-icon">' + icon + '</div>';
-      html += '<h3>Quiz completato!</h3>';
-      html += '<div class="end-score">' + pct + '%</div>';
-      html += '<div class="end-detail">' + correctCount + ' corrette su ' + activeQuestions.length + '</div>';
-      html += '<button onclick="goHome()">Torna alla Home</button>';
-      html += '</div>';
-    }
-
     container.innerHTML = html;
-    updateStats();
+
+    // Update progress
+    const answeredCount = activeQuestions.filter(q => userAnswers[q.id]).length;
+    const pct = Math.round(answeredCount / activeQuestions.length * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('quizInfo').textContent = answeredCount + ' / ' + activeQuestions.length + ' risposte';
   }
 
-  function updateStats() {
-    const answered = activeQuestions.filter(q => userAnswers[q.id]);
-    const correct = answered.filter(q => userAnswers[q.id] === q.answer);
-    const wrong = answered.length - correct.length;
+  // === CORREGGI ===
+  function correggi() {
+    corrected = true;
 
-    document.getElementById('correctCount').textContent = correct.length;
-    document.getElementById('wrongCount').textContent = wrong;
-    document.getElementById('remainingCount').textContent = activeQuestions.length - answered.length;
-    document.getElementById('scorePercent').textContent = answered.length > 0
-      ? Math.round(correct.length / answered.length * 100) + '%' : '—';
+    const total = activeQuestions.length;
+    const answered = activeQuestions.filter(q => userAnswers[q.id]).length;
+    const correct = activeQuestions.filter(q => userAnswers[q.id] === q.answer).length;
+    const wrong = answered - correct;
+    const unanswered = total - answered;
+    const pct = total > 0 ? Math.round(correct / total * 100) : 0;
+
+    // Show results
+    const icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
+    document.getElementById('resultsIcon').textContent = icon;
+    document.getElementById('resultsScore').textContent = pct + '%';
+
+    let detail = '<span class="green">✓ ' + correct + ' corrette</span>';
+    if (wrong > 0) detail += ' · <span class="red">✗ ' + wrong + ' errate</span>';
+    if (unanswered > 0) detail += ' · <span class="orange">— ' + unanswered + ' senza risposta</span>';
+    document.getElementById('resultsDetail').innerHTML = detail;
+
+    document.getElementById('resultsCard').classList.add('visible');
+
+    // Toggle buttons
+    document.getElementById('btnCorreggi').classList.add('btn-hidden');
+    if (wrong > 0 || unanswered > 0) {
+      document.getElementById('btnErrori').classList.remove('btn-hidden');
+    }
+    document.getElementById('btnNuovo').classList.remove('btn-hidden');
+
+    renderQuiz();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // === RIVEDI ERRORI ===
+  function rivediErrori() {
+    // Find first error or unanswered
+    for (let i = 0; i < activeQuestions.length; i++) {
+      const q = activeQuestions[i];
+      const ans = userAnswers[q.id];
+      if (!ans || ans !== q.answer) {
+        const el = document.getElementById('q-' + q.id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+    }
   }
 
   function escapeHtml(text) {
