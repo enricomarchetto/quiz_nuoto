@@ -88,8 +88,12 @@
   .option.opt-wrong .letter { color: #e53e3e; }
   @media (hover: hover) { .option:hover:not(.locked):not(.picked) { border-color: #90cdf4; background: #f7fafc; } }
 
-  .explanation-box { margin-top: 10px; padding: 14px 16px; border-radius: 10px; background: #fff7ed; border: 1px solid #fed7aa; color: #92400e; font-size: 0.9em; line-height: 1.6; }
-  .explanation-box strong { color: #78350f; }
+  .explanation-box { margin-top: 12px; padding: 16px 18px; border-radius: 10px; background: #fff7ed; border: 1px solid #fed7aa; color: #78350f; font-size: 0.88em; line-height: 1.7; }
+  .explanation-box strong { color: #92400e; }
+  .explanation-box .exp-wrong { color: #b91c1c; }
+  .explanation-box .exp-correct { color: #166534; font-weight: 600; }
+  .explanation-box .exp-pages { display: inline-block; margin-top: 6px; padding: 4px 10px; background: #fef3c7; border-radius: 6px; font-size: 0.92em; color: #92400e; font-weight: 600; }
+  .explanation-box .exp-excerpt { display: block; margin-top: 10px; padding: 12px 14px; background: #fffbeb; border-left: 3px solid #f59e0b; border-radius: 0 6px 6px 0; font-style: italic; color: #78350f; font-size: 0.95em; }
 
   /* Actions */
   .actions { max-width: 800px; margin: 0 auto; padding: 0 16px 30px; display: flex; flex-direction: column; gap: 10px; }
@@ -321,9 +325,21 @@ function render() {
     if (corrected && (!a || a !== q.answer)) {
       var correctText = q.options[q.answer] || '';
       h += '<div class="explanation-box">';
-      h += '<strong>Spiegazione:</strong> La risposta corretta è <strong>' + q.answer + '</strong> — ' + esc(correctText) + '.';
-      if (q.explanation) {
-        h += '<br>' + esc(q.explanation);
+      if (a) {
+        var wrongText = q.options[a] || '';
+        h += '<span class="exp-wrong">✗ Hai risposto <strong>' + a + '</strong>: ' + esc(wrongText) + '</span><br>';
+      } else {
+        h += '<span class="exp-wrong">✗ Non hai risposto</span><br>';
+      }
+      h += '<span class="exp-correct">✓ Risposta corretta: <strong>' + q.answer + '</strong> — ' + esc(correctText) + '</span>';
+      if (q.manualExcerpt) {
+        h += '<span class="exp-excerpt">"' + esc(q.manualExcerpt) + '"</span>';
+      }
+      if (q.manualPages && q.manualPages.length > 0) {
+        h += '<span class="exp-pages">📖 Manuale: pag. ' + q.manualPages.join(', ') + '</span>';
+      }
+      if (q.manualSection) {
+        h += ' <span style="font-size:0.9em;color:#a0aec0;">(' + esc(q.manualSection) + ')</span>';
       }
       h += '</div>';
     }

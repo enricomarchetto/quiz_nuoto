@@ -10,7 +10,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ambientamento e scivolamento con attività ludiche finalizzate.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      185,
+      279,
+      372
+    ],
+    "manualSection": "4.1.4. DA NON FARE",
+    "manualExcerpt": "Nello svolgimento delle attività è utile evitare alcune proposte : • Svolgimento delle nuotate a secco - Un tempo si riteneva che si potesse apprendere la tecnica del nuoto, solo mimando il gesto...."
   },
   {
     "id": 2,
@@ -23,7 +30,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È un riflesso arcaico che viene perso verso i 7-9 mesi dopo la nascita per trasformarsi in acqua in apnea volontaria.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      375,
+      214
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 3,
@@ -36,7 +50,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il gioco e l’imitazione.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      83,
+      80,
+      248
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Nei corsi di nuoto con i bambini l’istrut tore diviene la figura di riferimento adulta che sostituisce il genitore nell’arco della lezione...."
   },
   {
     "id": 4,
@@ -49,7 +70,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Un’attività motoria che favorisce uno sviluppo armonico dei bambini.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      384,
+      375,
+      163
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 5,
@@ -62,7 +90,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’esercizio fisico lavora sulle caratteristiche residue del disabile, non sul danno fisico.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      350,
+      349
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 6,
@@ -75,7 +110,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. In acqua.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      246,
+      247,
+      245
+    ],
+    "manualSection": "4.8.2. INSEGNAMENTO/APPRENDIMENTO",
+    "manualExcerpt": "Per come è stato definito ed illustrato, appare evidente come l’ambientamento sia un percorso da riservare ai bambini e ragazzi...."
   },
   {
     "id": 7,
@@ -88,7 +130,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il raggiungimento dell’autonomia rispetto al genitore.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      375,
+      163,
+      20
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 8,
@@ -101,7 +150,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      106,
+      248,
+      98
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "I bambini di questa generazione presentano un maggi or numero di problemi emozionali a differenza di quelle precedenti : sono più irrequieti ed hanno maggiore difficoltà nel concentrarsi, alcuni sof frono di depressione, solitudine, disturbi d’ansia ...."
   },
   {
     "id": 9,
@@ -114,7 +170,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Eseguire apnee guidate.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      362,
+      31
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 10,
@@ -127,7 +190,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’adattamento all’acqua.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      20,
+      182,
+      375
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 11,
@@ -140,7 +210,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      182,
+      22,
+      181
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 12,
@@ -153,7 +230,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Riduce le possibilità di eventi traumatici.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      185,
+      169
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 13,
@@ -166,7 +250,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. In quattro fasce d’età (dai 4 ai 10 mesi, dai 10 ai 18 mesi, dai 18 ai 24 mesi e dai 24 ai 36 mesi).",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      22,
+      295,
+      182
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "• A chi è rivolta? - A tutti, dai baby alla terza età • Come deve essere pianificata?..."
   },
   {
     "id": 14,
@@ -179,7 +270,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Suggeritore, guida, supporto ed animatore.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      375,
+      20,
+      161
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Ruolo e figura dell’insegnante di fitness in acqua L’insegnante di fitness e l’istruttore di nuoto operano nello stesso ambiente, ma hanno competenze differenti...."
   },
   {
     "id": 15,
@@ -192,7 +290,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Soprattutto nelle prime due fasce d’eta (dai 4 ai 18 mesi).",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      293,
+      182,
+      344
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 16,
@@ -205,7 +310,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dividere i bambini in fasce d’età.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      106,
+      344,
+      355
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "6.3.2.1. 3 -4 ANNI A quest’età il bambino è nel pieno dell’ egocentrismo. Questo significa che l’unica realtà che conosce è quella che sperimenta personalmente...."
   },
   {
     "id": 17,
@@ -218,7 +330,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Favorire lo sviluppo psicomotorio, cognitivo e socio – affettivo del bambino.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      375,
+      163,
+      356
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 18,
@@ -231,7 +350,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Favorisce il formarsi di una migliore coordinazione acquatica dovuta alla plasticità del sistema nervoso.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      182,
+      183,
+      54
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 19,
@@ -244,7 +370,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esercizi di tonificazione per tutto il corpo con ritmi blandi, con prevalenza di esercizi che ricercano l’extra-rotazione delle anche. Esercizi di rilassamento e di respirazione.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      332,
+      132
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Nell’acqua la ginnastica non solo è meno faticosa ma, grazie alla parziale assenza di peso, anche meno pericolosa per la colonna vertebrale e gli arti inferiori...."
   },
   {
     "id": 20,
@@ -257,7 +390,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’attività sportiva praticata dai soggetti diversamente abili.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      367,
+      163,
+      116
+    ],
+    "manualSection": "6.4.5.2.1. AMBIENTAMENTO",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 21,
@@ -270,7 +410,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La pressione venosa agli arti inferiori, con miglioramento del ritorno venoso al cuore.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      19,
+      28
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 22,
@@ -283,7 +430,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Psico-fisica.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      350,
+      163,
+      360
+    ],
+    "manualSection": "6.4.3. LE TIPOLOGIE DI HANDICAP",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 23,
@@ -296,7 +450,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dipende dalla personalità del bambino e dal contesto educativo in cui è inserito.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      89,
+      92,
+      91
+    ],
+    "manualSection": "2.3.1. PREMESSA",
+    "manualExcerpt": "dell’autore questo periodo viene identificato presentando al bambino vari materiali e compiti da eseguire evidenz iando scoperte di invarianze quantitative • Dai 12 anni: s tadio del pensiero formale o ipotetico -deduttivo: Il pensiero diventa sempre più..."
   },
   {
     "id": 24,
@@ -309,7 +470,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. È composta da 12 classi.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      350,
+      349,
+      368
+    ],
+    "manualSection": "6.4.3. LE TIPOLOGIE DI HANDICAP",
+    "manualExcerpt": "strumento di lavor o efficiente e versatile, che pone l’accento sugli aspetti multidimensionali della disabilità, fenomeno dinamico, interattivo e in evoluzione, tra salute e fattori contestuali, e che supera definitivamente il concetto di disabilità..."
   },
   {
     "id": 25,
@@ -322,7 +490,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti 3.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      93,
+      358,
+      212
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "o trisomia 21 , causata dalla presenza di una terza copia (o una sua parte) del cromosoma 21. Questa patologia provoca, oltre alle caratteristiche sembianze del viso, anche un ritardo nella crescita fisica e nelle capacità cognitive, con QI inferiore a 70...."
   },
   {
     "id": 26,
@@ -335,7 +510,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Lesione cervicale.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      225,
+      226,
+      351
+    ],
+    "manualSection": "4.7.2.5. TRAUMA SPINALE",
+    "manualExcerpt": "Cosa non si deve fare? Se non ci sono pericoli secondari ed immediati per il traumatizzato, non si deve fare alcuna manovra ma si deve provvedere ad avvertire immediatamente il servi zio di emergenza territoriale (118)...."
   },
   {
     "id": 27,
@@ -348,7 +530,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Mettersi in ascolto dell’allievo.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      20,
+      128
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 28,
@@ -361,7 +550,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Tra 27 e 30°C.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      375,
+      306
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 29,
@@ -374,7 +570,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Rendere l’anziano il più autosufficiente possibile.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      20,
+      182,
+      183
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 30,
@@ -387,7 +590,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Uno degli obiettivi è il rallentamento del decadimento organico dovuto all’invecchiamento.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      22,
+      74,
+      278
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "5.1.2.5. MOTIVAZIONI La motivazione allo sport, ultimo e più importante fattore della prestazione, appartiene all’area psico-pedagogica e psicologica. Se non viene sviluppata adeguatamente, crea i presupposti per l’ abbandono precoce dell’attività natatoria e sportiva in genere...."
   },
   {
     "id": 31,
@@ -400,7 +610,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gioco ed imitazione.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      344,
+      182,
+      346
+    ],
+    "manualSection": "6.3.2.2. 5 -6 ANNI",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 32,
@@ -413,7 +630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      182,
+      358,
+      298
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 33,
@@ -426,7 +650,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Adattamento degli schemi motori terrestri all’ambiente acquatico.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      182,
+      20,
+      163
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 34,
@@ -439,7 +670,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il gioco strutturato.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      20,
+      278,
+      275
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 35,
@@ -452,7 +690,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti 4.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      364,
+      67,
+      246
+    ],
+    "manualSection": "6.4.4. INTEGRAZIONE",
+    "manualExcerpt": "La pratica della pedagogia i nclusiva è stata tradotta in un nuovo approccio, la didattica inclusiva , che si pone come obiettivo primario la personalizzazione e l’individualizzazione delle proposte didattiche, indipendentemente dallo stato fisico, psichico e sociale della persona a cu i è..."
   },
   {
     "id": 36,
@@ -465,7 +710,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Egocentrismo.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      344,
+      91,
+      92
+    ],
+    "manualSection": "6.3.2.2. 5 -6 ANNI",
+    "manualExcerpt": "Il periodo evolutivo che va dai tre ai sei anni necessita a livello acquatico -natatorio di un progetto pensato ad hoc, questo per rispondere al meglio ai bisogni e alle caratteristiche di questa fascia d’età...."
   },
   {
     "id": 37,
@@ -478,7 +730,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Favorire la relazione della coppia genitore-bambino attraverso l’elemento acqua.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      307,
+      78
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 38,
@@ -491,7 +750,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Aumento della mobilità articolare..",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      375,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 39,
@@ -504,7 +770,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La donna in gravidanza può condurre una vita pressoché normale, tranne in quei casi ove subentrano problematiche particolari o vere e proprie patologie.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      73,
+      74,
+      75
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "La pratica delle attività sportive in acqua e fuori sono normate da una serie di leggi che si possono ritrovare sintetizzate all’interno della circolare normativa che la FIN pubblica ogni anno. Va considerato che la tutela della salute viene inquadrata ai sensi dell’art...."
   },
   {
     "id": 40,
@@ -517,7 +790,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      334,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Riassumendo, le finalità dell’attività acquatica in gravidanza possono essere: • Allenamento aerobico vascolare • Migliore tonicità muscolare del tronco per l’aiuto alla colonna vertebrale • Controllo e consapevolezza della respir azione • Decontrazione del bacino per un travaglio meno..."
   },
   {
     "id": 41,
@@ -530,7 +810,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Marcato sviluppo coordinativo.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      20,
+      375,
+      22
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 42,
@@ -543,7 +830,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sviluppo delle capacità coordinative.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      20,
+      375
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 43,
@@ -556,7 +850,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Riduzione dell’attività neuro- muscolare.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      20,
+      119,
+      163
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "L'adolescenza rappresenta il periodo della vita di un individuo caratterizzato da grande instabilità e turbolenza. Difficoltà e malesseri sono affiancati da entusiasmo e vitalità...."
   },
   {
     "id": 44,
@@ -569,7 +870,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’inadeguatezza della proposta, della struttura e la rigidità.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      203,
+      20,
+      22
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 45,
@@ -582,7 +890,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Gestanti, neonatale, prescolare, terza età, disabili.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      350,
+      22,
+      98
+    ],
+    "manualSection": "6.4.3. LE TIPOLOGIE DI HANDICAP",
+    "manualExcerpt": "strumento di lavor o efficiente e versatile, che pone l’accento sugli aspetti multidimensionali della disabilità, fenomeno dinamico, interattivo e in evoluzione, tra salute e fattori contestuali, e che supera definitivamente il concetto di disabilità..."
   },
   {
     "id": 46,
@@ -595,7 +910,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Ambientamento e scivolamento con attività ludiche finalizzate.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      185,
+      124,
+      279
+    ],
+    "manualSection": "4.1.4. DA NON FARE",
+    "manualExcerpt": "Per delineare le opportune strategie consideriamo il cosiddetto life course approach, che ci indica le linee guida rispetto agli obiettivi da porsi nel programmare attività con le persone...."
   },
   {
     "id": 47,
@@ -608,7 +930,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Riduzione della funzionalità cardio- respiratoria e muscolare.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      147,
+      378,
+      163
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Adattamenti centrali e periferici derivanti dall’attività di fitness in acqua Oltre a quanto sopra, il fitness è costituito da: • Resistenza cardio -respiratoria • Forza muscolare • Resistenza muscolare • Mobilità articolare È necessario essere consape voli che solo alcune possono essere..."
   },
   {
     "id": 48,
@@ -621,7 +950,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 8.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      350,
+      65,
+      163
+    ],
+    "manualSection": "6.4.3. LE TIPOLOGIE DI HANDICAP",
+    "manualExcerpt": "Operare con un soggetto disabile, però, consiste anche nel conoscere alcune specifiche della sua patologia; al di là dell’aspetto medico che non ci compete, una simile conoscenza è utile anche per individuare una sua possibile, futura partecipazione a un’attività di tipo agonistico...."
   },
   {
     "id": 49,
@@ -634,7 +970,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gioco strutturato, gioco simbolico e di movimento.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      346,
+      11
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Il gioco simbolico, per la cui analisi il riferimento è lo psicologo J. Piaget, è una fase fondamentale della vita del bambino che, a partire dai 12/15 mesi d’età, costruisce attraverso il gioco il proprio sviluppo cognitivo, sociale, affettivo...."
   },
   {
     "id": 50,
@@ -647,7 +990,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Migliora il livello delle capacità motorie e la componente psicologica.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      14,
+      18,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 51,
@@ -660,7 +1010,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Perdita di massa magra e riduzione percentuale dell’acqua intracellulare.",
-    "category": "Attività speciali"
+    "category": "Attività speciali",
+    "manualPages": [
+      163,
+      277,
+      280
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Ovviamente, i primi prerequisiti necessari per l’apprendimento della nuotata sul dorso sono: la capacità di saper galleggiare in posizione supina ( galleggiamento a stella ) e lo scivolamento con le braccia lungo i fianchi ( siluro , soldatino )...."
   },
   {
     "id": 52,
@@ -673,7 +1030,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Rimane costante il carico 6.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      18,
+      67
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• Contrazione isometrica : è un tipo di contrazione statica. Non viene effettuato movimento delle leve ossee. Il muscolo sviluppa tensione contro una resistenza tale da impedire il movimento. L’entità della forza muscolare raggiungibile è una delle più elevate in assoluto...."
   },
   {
     "id": 53,
@@ -686,7 +1050,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dalle vene cave.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      59,
+      278
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 54,
@@ -699,7 +1070,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Le tre dimensioni sono nello stesso ordine di grandezza.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      304,
+      64,
+      47
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "Sistemi organici simili Allenamento simile alla gara o a una sua parte/fra zione Fig...."
   },
   {
     "id": 55,
@@ -712,7 +1090,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Lunghezza domina sulle altre due dimensioni.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      304,
+      64,
+      47
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "Per lo svolgimento di manifestazioni omologabili, in Italia sono ammessi campi di gara con le seguenti caratteristiche: • Tipo A: lunghezza m. 50 – larghezza m. 21 • Tipo B: lunghezza m. 33,33 – larghezza m. 15 • Tipo C: lunghezza m. 25 – larghezza m...."
   },
   {
     "id": 56,
@@ -725,7 +1110,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Lunghezza e larghezza sono assai prevalenti rispetto allo spessore.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      304,
+      47
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Per lo svolgimento di manifestazioni omologabili, in Italia sono ammessi campi di gara con le seguenti caratteristiche: • Tipo A: lunghezza m. 50 – larghezza m. 21 • Tipo B: lunghezza m. 33,33 – larghezza m. 15 • Tipo C: lunghezza m. 25 – larghezza m...."
   },
   {
     "id": 57,
@@ -738,7 +1130,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Parti terminali dell’apparato respiratorio attraverso i quali avvengono gli scambi gassosi.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      57,
+      64,
+      20
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema respiratorio costituisce il mezzo attraverso cui viene fatta entrare l’aria nei polmoni per poi uscire nuovamente (ventilazione polmonare)...."
   },
   {
     "id": 58,
@@ -751,7 +1150,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Di proteggere cuore e polmoni e permettere la respirazione.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      231,
+      57
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "Il sistema respiratorio costituisce il mezzo attraverso cui viene fatta entrare l’aria nei polmoni per poi uscire nuovamente (ventilazione polmonare)...."
   },
   {
     "id": 59,
@@ -764,7 +1170,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Cartilagine articolare, liquido sinoviale, legamenti, capsula articolare.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      65,
+      19,
+      66
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Il tessuto di unione delle articolazioni può essere fibroso, cartilagineo e/o sinoviale, come nelle diartrosi, che è anche il più complesso...."
   },
   {
     "id": 60,
@@ -777,7 +1190,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Cartilagine articolare, legamenti e disco cartilagineo.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      65,
+      19,
+      66
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Il tessuto di unione delle articolazioni può essere fibroso, cartilagineo e/o sinoviale, come nelle diartrosi, che è anche il più complesso...."
   },
   {
     "id": 61,
@@ -790,7 +1210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il numero di contrazioni ventricolari nell’unità di tempo (minuto).",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      61,
+      146
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "Gli effetti dell’immersione sono studiati da molto tempo per valutare le funzioni dell’organismo in assenza (o meglio in forte riduzione) della forza di gravità. I primi studi risalgono agli anni Cinquanta ed erano legati ai programmi aerospaziali che le grandi potenze stavano preparando...."
   },
   {
     "id": 62,
@@ -803,7 +1230,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il numero degli atti respiratori che si eseguono in un minuto.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      160,
+      20,
+      58
+    ],
+    "manualSection": "7.4.5. LA MUSICA",
+    "manualExcerpt": "Atti respiratori Un atto respiratorio è composto da una fase di inspirazione, una di espirazione e da una breve pausa frapposta (figura 5). Ad ogni atto respiratorio corrisponde una quantità d’aria immessa nei polmoni e poi espirata, detta volume corrente...."
   },
   {
     "id": 63,
@@ -816,7 +1250,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Impulsi nervosi.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      59,
+      230,
+      222
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "L’apparato circolatorio svolge il compito di trasportare alle cellule ossigeno, sostanze nutritive, anticorpi, ormoni e di allontanare i prodotti di rifiuto. É formato dal cuore, dalle arterie, dalle vene e dai capillari...."
   },
   {
     "id": 64,
@@ -829,7 +1270,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Parti terminali dell’apparato respiratorio attraverso le quali avvengono gli scambi gassosi.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      57,
+      64,
+      20
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema respiratorio costituisce il mezzo attraverso cui viene fatta entrare l’aria nei polmoni per poi uscire nuovamente (ventilazione polmonare)...."
   },
   {
     "id": 65,
@@ -842,7 +1290,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dei miofilamenti che costituiscono le miofibrille muscolari.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      66,
+      67
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 66,
@@ -855,7 +1310,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Punti di collegamento tra due ossa.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      155,
+      210
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "impedire il fatto. Il fondamento della responsabilità previ sta dall’art.20 48 è costituito quindi dalla cosiddetta culpa in vigilando, presunta dal legislatore, con una cosiddetta prescriptio iuris tantum, al fine evidente di agevolare il danneggiato...."
   },
   {
     "id": 67,
@@ -868,7 +1330,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’unità fondamentale del vivente.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      53,
+      54,
+      172
+    ],
+    "manualSection": "3.1.1. ELEMENTI DI CITOLOGIA",
+    "manualExcerpt": "La citologia è la scienza biologica che studia la cellula dal punto di vista morfologico (struttura) e funzionale (studio dei processi fondamentali), dal greco kytos (contenitore) e logos (studio)...."
   },
   {
     "id": 68,
@@ -881,7 +1350,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Struttura connettiva che mantiene in contatto due capi ossei.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      65,
+      155
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Il tessuto di unione delle articolazioni può essere fibroso, cartilagineo e/o sinoviale, come nelle diartrosi, che è anche il più complesso...."
   },
   {
     "id": 69,
@@ -894,7 +1370,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La struttura di tessuti organizzati per svolgere una funzione.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      53,
+      194,
+      54
+    ],
+    "manualSection": "3.1.1. ELEMENTI DI CITOLOGIA",
+    "manualExcerpt": "Ci sono due tipi di cellule, la cellula procariote e la cellula eucariote ; la prima, tipica dei batteri e delle a lghe procariote, si differenzia dall a seconda, la cellula eucariote: la prima e più importante differenza sta nella mancanza di strutture, le membrane, che delimitano un nucleo,..."
   },
   {
     "id": 70,
@@ -907,7 +1390,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Parti che compongono il sistema scheletrico.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      70,
+      71
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 71,
@@ -920,7 +1410,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Sistema di organi che ha la funzione di sostegno del corpo e protezione degli organi interni.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      278,
+      71
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 72,
@@ -933,7 +1430,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La struttura complessa composta da organi diversi per soddisfare una funzione superiore.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      54,
+      53,
+      194
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Ci sono due tipi di cellule, la cellula procariote e la cellula eucariote ; la prima, tipica dei batteri e delle a lghe procariote, si differenzia dall a seconda, la cellula eucariote: la prima e più importante differenza sta nella mancanza di strutture, le membrane, che delimitano un nucleo,..."
   },
   {
     "id": 73,
@@ -946,7 +1450,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tessuto connettivo che collega il muscolo all’osso.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      155,
+      278
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 74,
@@ -959,7 +1470,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’unione funzionale di cellule simili.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      53,
+      54,
+      63
+    ],
+    "manualSection": "3.1.1. ELEMENTI DI CITOLOGIA",
+    "manualExcerpt": "Ci sono due tipi di cellule, la cellula procariote e la cellula eucariote ; la prima, tipica dei batteri e delle a lghe procariote, si differenzia dall a seconda, la cellula eucariote: la prima e più importante differenza sta nella mancanza di strutture, le membrane, che delimitano un nucleo,..."
   },
   {
     "id": 75,
@@ -972,7 +1490,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Attività muscolare riflessa e costante che mantiene l'assetto posturale del corpo opponendosi alla forza di gravità.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      66,
+      67
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 76,
@@ -985,7 +1510,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 2-3%.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      163,
+      72,
+      280
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "o alcune ghiandole endocrine . Alcuni ormoni sono prodotti durante una prolungata esposizione al freddo. Essi sono gli ormoni prodotti da lla tiroide e l’adrenalina prodotta dalla midollare del surrene...."
   },
   {
     "id": 77,
@@ -998,7 +1530,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Nelle orecchie e serve ad informare sulla posizione della testa.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      253,
+      238,
+      277
+    ],
+    "manualSection": "4.9.4. GALLEGGIAMENTO",
+    "manualExcerpt": "In questa fase l’allievo sperimenta la spinta idrostatica...."
   },
   {
     "id": 78,
@@ -1011,7 +1550,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il diaframma si abbassa.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      58,
+      59
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "Fig. 5: respirazione Cenni di meccanica respiratoria In condizioni di normale respirazione il diaframma si abbassa causando un aumento del diametro verticale del torace, mentre dalla contrazione dei muscoli intercostali esterni consegue un movimento delle coste in fuori e verso l’alto, con un..."
   },
   {
     "id": 79,
@@ -1024,7 +1570,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Membrana cellulare, citoplasma, organuli cellulari.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      53,
+      54,
+      55
+    ],
+    "manualSection": "3.1.1. ELEMENTI DI CITOLOGIA",
+    "manualExcerpt": "mitocondrio interviene: regolazione dello stato redox della cellula, sintesi dell’eme, sintesi del colesterolo, produzione di calore, regolazione del ciclo cellulare • Reticolo endoplasmatico: il nome deriva dal fatto di consistere di un fitto intreccio di..."
   },
   {
     "id": 80,
@@ -1037,7 +1590,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capillari e alveoli.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      57,
+      59
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "Il sistema respiratorio costituisce il mezzo attraverso cui viene fatta entrare l’aria nei polmoni per poi uscire nuovamente (ventilazione polmonare)...."
   },
   {
     "id": 81,
@@ -1050,7 +1610,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Negli alveoli.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      57,
+      58,
+      208
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema respiratorio costituisce il mezzo attraverso cui viene fatta entrare l’aria nei polmoni per poi uscire nuovamente (ventilazione polmonare)...."
   },
   {
     "id": 82,
@@ -1063,7 +1630,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Endogeni ed esogeni.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      300,
+      291,
+      15
+    ],
+    "manualSection": "4.13.8.6. COMPORTAMENTO NELLE RELAZIONI CON GLI ALLIEVI",
+    "manualExcerpt": "Negli impianti natatori e nelle società sportive uno degli obiettivi è la creazione di gruppi agonistici delle varie discipline; si pone quindi il problema di come organizzare questa attività , che obiettivi avere, i criteri e gli strumenti da adottare...."
   },
   {
     "id": 83,
@@ -1076,7 +1650,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Permettono il movimento di allontanamento dalla linea mediana.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      131,
+      67,
+      148
+    ],
+    "manualSection": "7.2 ",
+    "manualExcerpt": "I movimenti vengono descritti con una terminologia specifica e convenzionale e spess o azioni contrarie sono definite con termini opposti...."
   },
   {
     "id": 84,
@@ -1089,7 +1670,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Hanno la funzione dinamica di movimento e contengono più fibre bianche per cui più rapide.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      66,
+      67
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 85,
@@ -1102,7 +1690,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. I tendini.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      66,
+      65
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 86,
@@ -1115,7 +1710,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Sono quelli scheletrici.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      66,
+      67,
+      68
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 87,
@@ -1128,7 +1730,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Afferenti.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      54,
+      379,
+      56
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 88,
@@ -1141,7 +1750,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Inferiori a 140/90.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      61,
+      226,
+      62
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "Nella meccanica della circolazione (emodinamica) affinché il sangue giunga ai tessuti periferici in sufficiente quantità deve avere un’adeguata pressione. Il sangue tende a scorrere da una zona a pressione maggiore verso una a pressio ne minore...."
   },
   {
     "id": 89,
@@ -1154,7 +1770,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Quattro cavità separate tra loro (atri e ventricoli).",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      59,
+      60,
+      121
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "L’apparato circolatorio svolge il compito di trasportare alle cellule ossigeno, sostanze nutritive, anticorpi, ormoni e di allontanare i prodotti di rifiuto. É formato dal cuore, dalle arterie, dalle vene e dai capillari...."
   },
   {
     "id": 90,
@@ -1167,7 +1790,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un muscolo striato involontario.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      59,
+      69
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 91,
@@ -1180,7 +1810,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Un organo muscolare, cavo, contrattile.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      66,
+      59,
+      60
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 92,
@@ -1193,7 +1830,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un muscolo respiratorio.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      169,
+      18
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "7.5.3. VERIFICHE PRELIMINARI I benefici dell’immersione e dell’esercizio fisico svolto in acqua sono a livello vascolare, respiratorio, muscolo scheletrico e sul sistema nervoso...."
   },
   {
     "id": 93,
@@ -1206,7 +1850,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un glucide complesso immagazzinato nel fegato 10.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      10,
+      71,
+      70
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": ""
   },
   {
     "id": 94,
@@ -1219,7 +1870,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Il complesso di reazioni chimiche vitali dell’organismo umano.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      375,
+      20,
+      163
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 95,
@@ -1232,7 +1890,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. In fasci, fascicoli, fibre e miofibrille.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      66,
+      69
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 96,
@@ -1245,7 +1910,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Due parti, il parasimpatico e l’ortosimpatico.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      56,
+      55,
+      54
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema nervoso a utonomo regola l’attività degli organi interni quali il cuore: i vasi sanguigni, il canale digerente e l’apparato riproduttivo. Si compone di due parti che svolgono funzioni opposte: il parasimpatico e l’ortosimpatico...."
   },
   {
     "id": 97,
@@ -1258,7 +1930,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Encefalo e midollo spinale.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      55,
+      54,
+      56
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "e conduzione di impulsi. Si tratta di impulsi elettrici, che sono il linguaggio di comunicazione delle cellule nervose (neuroni) tra loro e tra loro e cellule non nervose...."
   },
   {
     "id": 98,
@@ -1271,7 +1950,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Il più importante sistema di regolazione e coordinazione: è la sede di tutte le funzioni mentali compresi il pensiero.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      54,
+      71,
+      379
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema nervoso rappresenta il più importante sistema di regolazione e di coordinazione: è la sede di tu tte le funzioni mentali compresi il pensiero, la coscienza, la memoria...."
   },
   {
     "id": 99,
@@ -1284,7 +1970,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Centrale e periferico.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      54,
+      351,
+      147
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema nervoso rappresenta il più importante sistema di regolazione e di coordinazione: è la sede di tu tte le funzioni mentali compresi il pensiero, la coscienza, la memoria...."
   },
   {
     "id": 100,
@@ -1297,7 +1990,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Protezione, sostegno e movimento.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      54,
+      169,
+      231
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "7.5.3. VERIFICHE PRELIMINARI I benefici dell’immersione e dell’esercizio fisico svolto in acqua sono a livello vascolare, respiratorio, muscolo scheletrico e sul sistema nervoso...."
   },
   {
     "id": 101,
@@ -1310,7 +2010,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Recettori, centro termoregolatore, organi effettori.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      71,
+      379,
+      15
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "per grado di temperatura...."
   },
   {
     "id": 102,
@@ -1323,7 +2030,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gli eritrociti (globuli rossi).",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      61,
+      62,
+      20
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "la frequenza del cuore, e quindi il polso, è ritmica, con una frequenza compresa tra i 60 ed i 100 battiti al minuto. Principali funzioni del sangue : • trasporto dell’ossigeno e dell’anidride carbonica attraverso i globuli rossi...."
   },
   {
     "id": 103,
@@ -1336,7 +2050,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Colpo di calore.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      71,
+      70,
+      226
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Il calore che il nostro organismo produce deve essere dissipato affinché la temperatura corporea possa essere mantenuta costante...."
   },
   {
     "id": 104,
@@ -1349,7 +2070,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 70-80 battiti al minuto.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      62,
+      146
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 105,
@@ -1362,7 +2090,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Si abbassa.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      58,
+      253,
+      34
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Fig. 5: respirazione Cenni di meccanica respiratoria In condizioni di normale respirazione il diaframma si abbassa causando un aumento del diametro verticale del torace, mentre dalla contrazione dei muscoli intercostali esterni consegue un movimento delle coste in fuori e verso l’alto, con un..."
   },
   {
     "id": 106,
@@ -1375,7 +2110,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si contrae mantenendo la stessa lunghezza.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      66,
+      18
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 107,
@@ -1388,7 +2130,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La velocità angolare.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      18,
+      378
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• Contrazione isometrica : è un tipo di contrazione statica. Non viene effettuato movimento delle leve ossee. Il muscolo sviluppa tensione contro una resistenza tale da impedire il movimento. L’entità della forza muscolare raggiungibile è una delle più elevate in assoluto...."
   },
   {
     "id": 108,
@@ -1401,7 +2150,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 500 ml di aria.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      58,
+      262,
+      281
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Atti respiratori Un atto respiratorio è composto da una fase di inspirazione, una di espirazione e da una breve pausa frapposta (figura 5). Ad ogni atto respiratorio corrisponde una quantità d’aria immessa nei polmoni e poi espirata, detta volume corrente...."
   },
   {
     "id": 109,
@@ -1414,7 +2170,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Energetiche.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      300,
+      183,
+      355
+    ],
+    "manualSection": "4.13.8.6. COMPORTAMENTO NELLE RELAZIONI CON GLI ALLIEVI",
+    "manualExcerpt": ""
   },
   {
     "id": 110,
@@ -1427,7 +2190,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Trasporto.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      281,
+      377
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "La prestazione è definita come l’esito misurabile di un’azione sportiva completa . L’azione è determinata dalla funzione e dalla struttura , e si costruisce attraverso l’interazione fra di esse. G...."
   },
   {
     "id": 111,
@@ -1440,7 +2210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ossa, articolazioni e muscoli scheletrici.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      66,
+      10
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 112,
@@ -1453,7 +2230,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ha la funzione di permettere l’ingresso di ossigeno nell’organismo e l’espulsione dell’anidride carbonica, al fine di fornire ossigeno da utilizzare nel processo di respirazione cellulare..",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      20,
+      375,
+      31
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 113,
@@ -1466,7 +2250,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È costituito da cuore, vasi sanguigni, in cui scorre il sangue.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      61,
+      59
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 114,
@@ -1479,7 +2270,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La scienza che studia l’accrescimento e la maturazione somatica.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      67,
+      147,
+      24
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Leve ossee e movimento Il movimento dei capi ossei può essere assimilato a quello di una leva. La leva è una macchina costituita da un’asta rigida (l’osso), g irevole intorno ad un asse perpendicolare. Il fulcro (l’articolazione) è il punto d’incontro tra asse e leva...."
   },
   {
     "id": 115,
@@ -1492,7 +2290,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dalla scissione dell’adenosintrifosfato.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      163,
+      20
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• lo stimolo per la contrazione muscolare arriva dal sistema nervoso centrale condotto da un motoneurone fino alla placca motrice, che è in connessione con la fibra muscolare (unità motoria) • dalla placca motrice lo stimolo si trasmette alla fibra muscolare..."
   },
   {
     "id": 116,
@@ -1505,7 +2310,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Termico, traumatico, allergico e digestivo.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      183,
+      280,
+      278
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 117,
@@ -1518,7 +2330,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Il massimo volume di aria che viene inspirato ed espirato durante un atto respiratorio forzato.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      378,
+      58,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "Atti respiratori Un atto respiratorio è composto da una fase di inspirazione, una di espirazione e da una breve pausa frapposta (figura 5). Ad ogni atto respiratorio corrisponde una quantità d’aria immessa nei polmoni e poi espirata, detta volume corrente...."
   },
   {
     "id": 118,
@@ -1531,7 +2350,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La contrattilità 12.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      163,
+      64,
+      375
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 119,
@@ -1544,7 +2370,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. All’avvicinamento e sovrapposizione reciproca dei filamenti di actina e miosina.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      66,
+      277
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 120,
@@ -1557,7 +2390,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È rigenerata durante il riposo.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      147,
+      49,
+      71
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Le serie allenanti Noi abbiamo tre vie in grado di produrre energia per il movimento: • Sistema aerobico , che utilizz a ossigeno • Sistema anaerobico lattacido , che non utilizza ossigeno e produce acido lattico • Sistema anaerobico alattacido , che non utilizza ossigeno e non produce..."
   },
   {
     "id": 121,
@@ -1570,7 +2410,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il numero di atti respiratori al minuto.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      58,
+      146,
+      160
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Atti respiratori Un atto respiratorio è composto da una fase di inspirazione, una di espirazione e da una breve pausa frapposta (figura 5). Ad ogni atto respiratorio corrisponde una quantità d’aria immessa nei polmoni e poi espirata, detta volume corrente...."
   },
   {
     "id": 122,
@@ -1583,7 +2430,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Trasportare l’ossigeno.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      61,
+      230
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 123,
@@ -1596,7 +2450,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Terza specie.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      67,
+      132,
+      182
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Leve ossee e movimento Il movimento dei capi ossei può essere assimilato a quello di una leva. La leva è una macchina costituita da un’asta rigida (l’osso), g irevole intorno ad un asse perpendicolare. Il fulcro (l’articolazione) è il punto d’incontro tra asse e leva...."
   },
   {
     "id": 124,
@@ -1609,7 +2470,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 60-80.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      146,
+      62
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 125,
@@ -1622,7 +2490,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 10-12%.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      165,
+      149,
+      67
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 126,
@@ -1635,7 +2510,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 15-20%.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      165,
+      149,
+      67
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 127,
@@ -1648,7 +2530,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Cuore e polmoni.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      59,
+      61
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 128,
@@ -1661,7 +2550,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 8%.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      71,
+      165,
+      60
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "per grado di temperatura...."
   },
   {
     "id": 129,
@@ -1674,7 +2570,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La contrazione del diaframma e dei muscoli intercostali.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      66,
+      68
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 130,
@@ -1687,7 +2590,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Vasi sanguigni che vanno dal cuore ai capillari 13.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      61,
+      59
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 131,
@@ -1700,7 +2610,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gli arti, il torace e l’addome.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      31,
+      32,
+      262
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "5.2.1.3.3. RANA I dettami del regol amento tecnico di questo stile sono decisamente articolati : • Si deve nuotare sul petto, sia gli arti superiori che quelli inferiori devono muoversi simultaneamente e sullo stesso piano orizzon tale, senza movimenti alternati • Le mani non possono..."
   },
   {
     "id": 132,
@@ -1713,7 +2630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Quelle bianche.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      378,
+      18
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 133,
@@ -1726,7 +2650,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sono più lente e più resistenti.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      160,
+      28
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 134,
@@ -1739,7 +2670,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Bianche e rosse in ogni muscolo.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      66,
+      69
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 135,
@@ -1752,7 +2690,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Esterocettiva.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      379,
+      362,
+      111
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 136,
@@ -1765,7 +2710,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Aminoacidi.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      49,
+      50,
+      68
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 137,
@@ -1778,7 +2730,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Naso, bocca, faringe, laringe, trachea, bronchi.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      57,
+      238,
+      60
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Sono costituite da naso, bocca, faringe, laringe, trachea e bronchi (figura 4). L’aria entra dalle prime vie aeree (naso e bocca) dove viene depurata, scaldata, umidificata...."
   },
   {
     "id": 138,
@@ -1791,7 +2750,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Scambio gassoso con i capillari polmonari.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      70,
+      57
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 139,
@@ -1804,7 +2770,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Si devono reintegrare liquidi e carboidrati.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      67,
+      73,
+      74
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Leve ossee e movimento Il movimento dei capi ossei può essere assimilato a quello di una leva. La leva è una macchina costituita da un’asta rigida (l’osso), g irevole intorno ad un asse perpendicolare. Il fulcro (l’articolazione) è il punto d’incontro tra asse e leva...."
   },
   {
     "id": 140,
@@ -1817,7 +2790,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Si accorcia.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      66,
+      18
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• Contrazione isometrica : è un tipo di contrazione statica. Non viene effettuato movimento delle leve ossee. Il muscolo sviluppa tensione contro una resistenza tale da impedire il movimento. L’entità della forza muscolare raggiungibile è una delle più elevate in assoluto...."
   },
   {
     "id": 141,
@@ -1830,7 +2810,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. I muscoli intercostali e il diaframma si rilasciano.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      58,
+      66,
+      57
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Fig. 5: respirazione Cenni di meccanica respiratoria In condizioni di normale respirazione il diaframma si abbassa causando un aumento del diametro verticale del torace, mentre dalla contrazione dei muscoli intercostali esterni consegue un movimento delle coste in fuori e verso l’alto, con un..."
   },
   {
     "id": 142,
@@ -1843,7 +2830,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Povero di ossigeno.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      61,
+      71
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 143,
@@ -1856,7 +2850,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La quantità di sangue pompato al ventricolo al minuto.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      62,
+      146
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 144,
@@ -1869,7 +2870,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Cellula, tessuto, organo, sistema.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      53,
+      54,
+      55
+    ],
+    "manualSection": "3.1.1. ELEMENTI DI CITOLOGIA",
+    "manualExcerpt": "Ci sono due tipi di cellule, la cellula procariote e la cellula eucariote ; la prima, tipica dei batteri e delle a lghe procariote, si differenzia dall a seconda, la cellula eucariote: la prima e più importante differenza sta nella mancanza di strutture, le membrane, che delimitano un nucleo,..."
   },
   {
     "id": 145,
@@ -1882,7 +2890,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La caloria.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      71,
+      46,
+      292
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "per grado di temperatura...."
   },
   {
     "id": 146,
@@ -1895,7 +2910,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il ventricolo sinistro.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      60,
+      59,
+      305
+    ],
+    "manualSection": "3.1.2.3. SISTEMA CIRCOLATORIO",
+    "manualExcerpt": "quando il ventricolo si rilascia (diastole) viene riempito di sangue (circa 70 ml per il ventricolo sinistro). La quantità di sangue spinta in circolo ad ogni sistole si chiama gittata sistolica...."
   },
   {
     "id": 147,
@@ -1908,7 +2930,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Alveoli.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      57,
+      58,
+      305
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema respiratorio costituisce il mezzo attraverso cui viene fatta entrare l’aria nei polmoni per poi uscire nuovamente (ventilazione polmonare)...."
   },
   {
     "id": 148,
@@ -1921,7 +2950,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Le fibre rosse sono meno forti ma più resistenti delle bianche.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      68,
+      60,
+      61
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 149,
@@ -1934,7 +2970,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sistema nervoso simpatico.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      54,
+      56,
+      146
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il sistema nervoso a utonomo regola l’attività degli organi interni quali il cuore: i vasi sanguigni, il canale digerente e l’apparato riproduttivo. Si compone di due parti che svolgono funzioni opposte: il parasimpatico e l’ortosimpatico...."
   },
   {
     "id": 150,
@@ -1947,7 +2990,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Diaframma.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      58,
+      66
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Fig. 5: respirazione Cenni di meccanica respiratoria In condizioni di normale respirazione il diaframma si abbassa causando un aumento del diametro verticale del torace, mentre dalla contrazione dei muscoli intercostali esterni consegue un movimento delle coste in fuori e verso l’alto, con un..."
   },
   {
     "id": 151,
@@ -1960,7 +3010,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Trasmissione di impulsi.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      62,
+      61
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 152,
@@ -1973,7 +3030,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Striato.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      66,
+      68
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 153,
@@ -1986,7 +3050,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Proteine.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      163,
+      245,
+      249
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Come si può notare dal percorso appena esposto l’apprendimento del nuoto inizia sott’acqua ! Da questa affermazione si deduce un principio fondamentale per l’apprendimento del nuoto: prima di imparare a nuotare bisogna imparare ad immergersi."
   },
   {
     "id": 154,
@@ -1999,7 +3070,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      18,
+      68,
+      378
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 155,
@@ -2012,7 +3090,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Proteine - grassi o lipidi - glucidi o carboidrati - sali minerali - vitamine - acqua.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      163,
+      245,
+      185
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Per come è stato definito ed illustrato, appare evidente come l’ambientamento sia un percorso da riservare ai bambini e ragazzi...."
   },
   {
     "id": 156,
@@ -2025,7 +3110,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Lunghe, piatte e corte.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      350,
+      65
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 157,
@@ -2038,7 +3130,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Tricipite, gastrocnemio, gran dorsale.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      27,
+      71,
+      70
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "• Dimezza la resistenza offerta dall’acqua all’avanzamento, in quanto soltanto u na metà del corpo resta immersa • Permette l’intervento dei grandi muscoli del tronco, in particolare il gran dorsale che viene allungato in fase di presa ed il pettorale ch e..."
   },
   {
     "id": 158,
@@ -2051,7 +3150,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Fegato cuore, intestino, stomaco.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      71,
+      70,
+      27
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "per grado di temperatura...."
   },
   {
     "id": 159,
@@ -2064,7 +3170,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Omero, ulna, radio, sterno.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      64,
+      70,
+      27
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "struttura inanimata ed anche se formato per il 56% da materiale inorganico (fosfato di calcio, a cui deve la propria durezza), per il restante 44% è formato da sostanza organica ed acqua: ed è proprio questo 44% che determina la sua elasticità...."
   },
   {
     "id": 160,
@@ -2077,7 +3190,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 0,30 litri.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      71,
+      62,
+      60
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "per grado di temperatura...."
   },
   {
     "id": 161,
@@ -2090,7 +3210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dalla fase d’inspirazione, d’espirazione e dalla breve pausa frapposta.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      281,
+      27,
+      268
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "La più grande difficoltà per l’apprendimento del crawl è costituita dalla respirazione. L’inspirazione deve coincidere con il momento in cui si termina la spinta di un braccio, la testa è completamente ruotata sul suo asse e l’appoggio viene trasferito al braccio opposto...."
   },
   {
     "id": 162,
@@ -2103,7 +3230,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 4,2 Joule.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      70,
+      61,
+      86
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Gli scambi di calore Il corpo umano è sottoposto continuamente a scambi di calore con l’ambiente che lo circonda. Il corpo acquista o perde calore per: • Convezione. La convezione è il passaggio di calore fra un corpo e un fluido in movimento intorno ad esso...."
   },
   {
     "id": 163,
@@ -2116,7 +3250,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Concentrica esplosiva.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      18,
+      67
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• Contrazione isometrica : è un tipo di contrazione statica. Non viene effettuato movimento delle leve ossee. Il muscolo sviluppa tensione contro una resistenza tale da impedire il movimento. L’entità della forza muscolare raggiungibile è una delle più elevate in assoluto...."
   },
   {
     "id": 164,
@@ -2129,7 +3270,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il muscolo si contrae ma non si accorcia.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      66,
+      18
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• Contrazione isometrica : è un tipo di contrazione statica. Non viene effettuato movimento delle leve ossee. Il muscolo sviluppa tensione contro una resistenza tale da impedire il movimento. L’entità della forza muscolare raggiungibile è una delle più elevate in assoluto...."
   },
   {
     "id": 165,
@@ -2142,7 +3290,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Isometrica.",
-    "category": "Biofisiologia"
+    "category": "Biofisiologia",
+    "manualPages": [
+      69,
+      18,
+      319
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "• Contrazione isometrica : è un tipo di contrazione statica. Non viene effettuato movimento delle leve ossee. Il muscolo sviluppa tensione contro una resistenza tale da impedire il movimento. L’entità della forza muscolare raggiungibile è una delle più elevate in assoluto...."
   },
   {
     "id": 166,
@@ -2155,7 +3310,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Aquathletic.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      155,
+      154,
+      153
+    ],
+    "manualSection": "7.4.3. ATTREZZI",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 167,
@@ -2168,7 +3330,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. All’amatore.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      44,
+      155,
+      278
+    ],
+    "manualSection": "5.3.3. LA DINAMICA CARICO -RECUPERO",
+    "manualExcerpt": "7.4.3. ATTREZZI Dedicandosi all’insegnamento dell’aquafitness, si capisce presto come l’allenamento in acqua possa essere tanto interessante e vario quanto, se non più, dell’allenamento svolto a secco...."
   },
   {
     "id": 168,
@@ -2181,7 +3350,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. A chi cerca l’allenamento e la performance.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      278,
+      155,
+      277
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 169,
@@ -2194,7 +3370,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. I tempi minimi e massimi di esecuzione del gesto.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      163,
+      375,
+      245
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 170,
@@ -2207,7 +3390,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Attrezzi galleggianti, di resistenza, e per il galleggiamento.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      157,
+      156,
+      155
+    ],
+    "manualSection": "7.4.4. STRUTTURA DELLA LEZIONE DI AQUAFITNESS",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 171,
@@ -2220,7 +3410,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Aquafitness e aquatraining.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      154,
+      155,
+      153
+    ],
+    "manualSection": "7.4.2. CLASSIFICAZIONE E DESCRIZIONE",
+    "manualExcerpt": "L’aspetto commerciale di questa attività ci obbliga ad utilizzare numerose terminologie per identificare le differenti tipologie di lezione ma, prima di tutto, è necessario suddividerlo in due grandi categorie: aquafitness e aquatraining...."
   },
   {
     "id": 172,
@@ -2233,7 +3430,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Tipologia delle esercitazioni proposte.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      128,
+      163,
+      155
+    ],
+    "manualSection": "2.9.2. STRATEGIE  DIDATTICHE",
+    "manualExcerpt": "Per un completo percorso di informazione -formazione di operatori e fruitori che vede come centrale lo stare bene in acqua, un’attività come il fitness acquatico rappresenta un patrimonio di sicuro valore ed uno strumento di crescita e sviluppo...."
   },
   {
     "id": 173,
@@ -2246,7 +3450,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’utilizzo della musica come elemento determinante la velocità di esecuzione degli esercizi.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      160,
+      30,
+      159
+    ],
+    "manualSection": "7.4.5. LA MUSICA",
+    "manualExcerpt": "Ma come si misura la velocità della musica? Innanzi tutto bisogna individuare l’unità di base del tempo e cioè della velocità della musica, la quale si misura in battiti per minuto o bpm...."
   },
   {
     "id": 174,
@@ -2259,7 +3470,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Di intensità medio-alta, rivolta a chi ricerca l’allenamento e la performance.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      153,
+      163,
+      160
+    ],
+    "manualSection": "7.4.1. AQUAFITNESS E AQUATRAINING:",
+    "manualExcerpt": "L’aspetto commerciale di questa attività ci obbliga ad utilizzare numerose terminologie per identificare le differenti tipologie di lezione ma, prima di tutto, è necessario suddividerlo in due grandi categorie: aquafitness e aquatraining...."
   },
   {
     "id": 175,
@@ -2272,7 +3490,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Acqua bassa-media-alta.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      154,
+      28,
+      246
+    ],
+    "manualSection": "7.4.2. CLASSIFICAZIONE E DESCRIZIONE",
+    "manualExcerpt": "Entrambe le attività di aquafitness e aquatraining possono esser e suddivise e classificate con differenti terminologie, che indicano e definiscono in modo più specifico i contenuti della lezione e gli attrezzi da utilizzare...."
   },
   {
     "id": 176,
@@ -2285,7 +3510,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sì.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      128,
+      155,
+      163
+    ],
+    "manualSection": "2.9.2. STRATEGIE  DIDATTICHE",
+    "manualExcerpt": "Per un completo percorso di informazione -formazione di operatori e fruitori che vede come centrale lo stare bene in acqua, un’attività come il fitness acquatico rappresenta un patrimonio di sicuro valore ed uno strumento di crescita e sviluppo...."
   },
   {
     "id": 177,
@@ -2298,7 +3530,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È di notevole importanza nel mantenimento della postura e dell’equilibrio.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      163,
+      149,
+      132
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 178,
@@ -2311,7 +3550,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. A terra si spinge verso l’alto contro la forza di gravità, in acqua verso il basso contro la spinta idrostatica.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      165,
+      31,
+      132
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "Una delle proprietà specifiche delle attività motorie acquatiche è proprio quella di far lavorare in modo equilibrato i muscoli agonisti ed antagonisti, ma è possibile comunque individuare il gruppo muscolare che maggiormente agisce su un determinato movimento..."
   },
   {
     "id": 179,
@@ -2324,7 +3570,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Posizione degli arti superiori.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      282,
+      31,
+      28
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 180,
@@ -2337,7 +3590,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti sono corrette.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      159,
+      158,
+      275
+    ],
+    "manualSection": "7.4.5. LA MUSICA",
+    "manualExcerpt": "Solitamente la durata delle lezioni varia da un minimo di 40 minuti ad un massimo di 60; abitualmente, come accennato in apertura, i tempi più utilizzati per singola unità didattica si aggirano intorno ai 50 minuti...."
   },
   {
     "id": 181,
@@ -2350,7 +3610,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Spingendo in alto e in basso in alternanza.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      132,
+      163,
+      155
+    ],
+    "manualSection": "7.2 ",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 182,
@@ -2363,7 +3630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La profondità, la tipologia di allievi, la temperatura dell’acqua.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      160,
+      172,
+      159
+    ],
+    "manualSection": "7.4.5. LA MUSICA",
+    "manualExcerpt": "tempi di lavoro e di recupero. Gli stimoli dovranno essere incrementati in modo sistematico al fine di ottenere sempre dei nuovi adattamenti organici generali...."
   },
   {
     "id": 183,
@@ -2376,7 +3650,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La massa corporea non condiziona l’esecuzione di un esercizio a terra.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      163,
+      332,
+      149
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 184,
@@ -2389,7 +3670,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Capacità di mostrare un gesto tecnico.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      160,
+      367,
+      159
+    ],
+    "manualSection": "7.4.5. LA MUSICA",
+    "manualExcerpt": "tempi di lavoro e di recupero. Gli stimoli dovranno essere incrementati in modo sistematico al fine di ottenere sempre dei nuovi adattamenti organici generali...."
   },
   {
     "id": 185,
@@ -2402,7 +3690,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. L’aerobica in acqua.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      154,
+      163,
+      155
+    ],
+    "manualSection": "7.4.2. CLASSIFICAZIONE E DESCRIZIONE",
+    "manualExcerpt": "Entrambe le attività di aquafitness e aquatraining possono esser e suddivise e classificate con differenti terminologie, che indicano e definiscono in modo più specifico i contenuti della lezione e gli attrezzi da utilizzare...."
   },
   {
     "id": 186,
@@ -2415,7 +3710,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Riscaldamento, fase centrale, defaticamento e/o stretching.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      30,
+      158,
+      268
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Solitamente la durata delle lezioni varia da un minimo di 40 minuti ad un massimo di 60; abitualmente, come accennato in apertura, i tempi più utilizzati per singola unità didattica si aggirano intorno ai 50 minuti...."
   },
   {
     "id": 187,
@@ -2428,7 +3730,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Movimenti di transizione.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      163,
+      280,
+      149
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 188,
@@ -2441,7 +3750,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Con l’acqua ad un’altezza tra l’ombelico e il petto.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      163,
+      154,
+      149
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Entrambe le attività di aquafitness e aquatraining possono esser e suddivise e classificate con differenti terminologie, che indicano e definiscono in modo più specifico i contenuti della lezione e gli attrezzi da utilizzare...."
   },
   {
     "id": 189,
@@ -2454,7 +3770,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Graduale e crescente.",
-    "category": "Fitness in acqua"
+    "category": "Fitness in acqua",
+    "manualPages": [
+      11,
+      321,
+      129
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "Si possono variare le esercitazioni semplicemente cambiando il senso di rotazione, le posizioni delle braccia, la posizione della testa e il numero di azioni eseguite in ogni posizione, creando sequenze di livello coordinativo crescente."
   },
   {
     "id": 190,
@@ -2467,7 +3790,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. In acqua andranno creati presupposti differenti per poter apprendere nuove abilità 18.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      183,
+      185,
+      163
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 191,
@@ -2480,7 +3810,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Deve fare esperienze motorie specifiche.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      12,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Tale distinzione è prevalentemente organizzativa o didattica, poiché l’azione motoria è quanto di più unitario possa esser e espresso dall’uomo...."
   },
   {
     "id": 192,
@@ -2493,7 +3830,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Unità primarie del movimento umano.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      182,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 193,
@@ -2506,7 +3850,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Favorendo, attraverso la variazione degli stimoli positivi, l’esplorazione del ventaglio di esperienze motorie acquatiche, con consapevolezza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      128,
+      201
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "Per un completo percorso di informazione -formazione di operatori e fruitori che vede come centrale lo stare bene in acqua, un’attività come il fitness acquatico rappresenta un patrimonio di sicuro valore ed uno strumento di crescita e sviluppo...."
   },
   {
     "id": 194,
@@ -2519,7 +3870,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Le abilità motorie acquatiche devono essere apprese dall’individuo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      12,
+      381,
+      20
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "Questa considerazione, apparentemente banale, porta alla definizione del concetto chiave per il perseguimento di qualsivoglia o biettivo didattico: le abilità motorie acquatiche devono essere apprese, e se ne possiedono tante quante se ne apprendono . Maturazione Sviluppo Apprendimento"
   },
   {
     "id": 195,
@@ -2532,7 +3890,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Al momento del loro tesseramento SIT.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      116,
+      300,
+      359
+    ],
+    "manualSection": "2.7.2. CLIMA  PSICOLOGICO",
+    "manualExcerpt": "2.7.2. CLIMA PSICOLOGICO È importante saper creare un buon clima psicologico fatto di progettualità, divertimento, apertura, collaborazione e dialogo...."
   },
   {
     "id": 196,
@@ -2545,7 +3910,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Rispetto delle fasi sensibili- ampliamento mappa motoria- multilateralità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      309,
+      194
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "È evidente come l’avviamento alla pratica dello sport della pallanuoto sia molto facilitata d alla strutturazione delle abilità prima descritte...."
   },
   {
     "id": 197,
@@ -2558,7 +3930,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      379,
+      14,
+      377
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 198,
@@ -2571,7 +3950,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Delle abilità motorie apprese in forma cosciente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      12,
+      20,
+      182
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 199,
@@ -2584,7 +3970,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Presupposti, potenzialità funzionali e motorie per l’apprendimento di abilità motorie.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      12,
+      14,
+      20
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 200,
@@ -2597,7 +3990,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Continua diversificazione degli stimolii.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      33,
+      87,
+      273
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "4.11 DIVERSIFICAZIONI DIDATTICHE"
   },
   {
     "id": 201,
@@ -2610,7 +4010,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Fasi dello sviluppo psicofisico durante le quali si può lavorare con più efficacia sulle funzioni psicomotorie, sulle capacità fisiche, coordinative e cognitivo-affettive.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      18,
+      378,
+      14
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 202,
@@ -2623,7 +4030,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dalle peculiarità del mezzo e dal fatto che l’uomo non è un animale acquatico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      83,
+      182
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Chiariti questi concetti, diventa più agevole definire il percorso di quella che, per comodità, continuiamo a chiamare scuola nuoto ma che, più correttamente, andrebbe definita scuola d’acqua : • Esplorare il nuovo ambiente • Prendere confidenza con un mondo nu ovo • Stare in acqua bene,..."
   },
   {
     "id": 203,
@@ -2636,7 +4050,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Fattori endogeni ed esogeni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      15,
+      13,
+      349
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "differenziazione degli interventi muscolari, rivolta a mantenere la postura utile per la realizzazione dell’azione pre vista o Reazione : può essere suddivisa in due fasi: !..."
   },
   {
     "id": 204,
@@ -2649,7 +4070,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Raccolta di tutte le esperienze motorie vissute che hanno lasciato una traccia nel sistema nervoso centrale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      14,
+      15
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 205,
@@ -2662,7 +4090,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Qualsiasi procedimento non rigoroso (a carattere approssimativo, intuitivo, analogico, ecc) che consente di prevedere e rendere plausibile un risultato 20.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      379,
+      40,
+      73
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Lo sviluppo delle capacità coordinative avviene tra i 4 e i 12 anni circa ed è reso possibile dalla maturazione del sistema nervoso centrale. Lo schema di D...."
   },
   {
     "id": 206,
@@ -2675,7 +4110,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Essere una figura di riferimento in piano vasca.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      203,
+      212,
+      362
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 207,
@@ -2688,7 +4130,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Nella modifica del comportamento di fronte ad un problema.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      109,
+      30,
+      112
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Non esiste possibilità di educare se non si stimol a un’elevata capacità di apprendere . Se la qualità dell’apprendimento è elevata si crea l'effettiva possibilità di adattamento ai mutamenti dell'ambiente ed interni all’essere umano...."
   },
   {
     "id": 208,
@@ -2701,7 +4150,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Riscaldamento – rinforzo lezione precedente – nucleo didattico – rinforzo nucleo didattico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      287,
+      158
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 209,
@@ -2714,7 +4170,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Educare attraverso l’acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      246,
+      305
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Su questo punto non sono ammessi equivoci: saper nuotare significa saper nuotare dove non si tocca, cioè in acqua alta...."
   },
   {
     "id": 210,
@@ -2727,7 +4190,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Capacità di esercitare un controllo dinamico dell’azione motoria all’interno di una situazione, che può presentare continue variazioni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      22,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 211,
@@ -2740,7 +4210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Elasticità e trasferibilità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      113,
+      109,
+      112
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "L’allievo cerca di comprendere le molteplici prospettive tramite le sue interazioni con il mondo esterno. Su più punti la posizione dei costruttivisti è simile a quella dei cognitivisti p iù recenti (Reda, Guidano, Mahoney)...."
   },
   {
     "id": 212,
@@ -2753,7 +4230,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È un processo psichico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      350,
+      15
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Normalmente vengono descritti i metodi per il miglioramento del le capacità condizionali e tecniche. Assume grande importanza il processo di apprendimento ed insegnamento...."
   },
   {
     "id": 213,
@@ -2766,7 +4250,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Multilateralità e polivalenza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      48,
+      47,
+      112
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico d’allenamento determina effetti successivi nel tempo che sono immediati, permanenti e cumulativi: • L’effetto immediato del carico riguarda aspetti biochimici e aspetti funzionali (capacità di reclutare una maggior quantità di fibre muscolari da coinvolgere nei ges ti e nell’azione..."
   },
   {
     "id": 214,
@@ -2779,7 +4270,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Educazione al nuoto - educazione attraverso il nuoto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      281,
+      78
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "2.1.2. GLI ATTREZZI DEL MESTIERE DELL’ ISTRUTTORE In qualsiasi tipo di attività professionale si posson o distinguere l’aspetto tecnico, inerente i compiti specifici che l’attività comporta, e l’aspetto relazionale , relativo ai rapporti interpersonali che l’attività richiede o impone...."
   },
   {
     "id": 215,
@@ -2792,7 +4290,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il corpo e la psiche del bambino.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      147,
+      375
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 216,
@@ -2805,7 +4310,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È la vera età psicofisica e rispecchia il livello di maturazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      278,
+      22,
+      383
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "5.1.2.3. ETÀ BIOLOGICA"
   },
   {
     "id": 217,
@@ -2818,7 +4330,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Esplorazione, galleggiamento, propulsione grezza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      20,
+      26
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Chiariti questi concetti, diventa più agevole definire il percorso di quella che, per comodità, continuiamo a chiamare scuola nuoto ma che, più correttamente, andrebbe definita scuola d’acqua : • Esplorare il nuovo ambiente • Prendere confidenza con un mondo nu ovo • Stare in acqua bene,..."
   },
   {
     "id": 218,
@@ -2831,7 +4350,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. C - Può essere generale, specifica e mirata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 219,
@@ -2844,7 +4370,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Della scuola delle abilità acquatiche.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      384,
+      298
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Con questo approccio, definibile come euristico , si vuole superare la concezione meccanicistica che ha imperato negli scorsi decenni e che costr ingeva l’allievo in un percorso obbligato di avviamento (pseudo -ambientamento) – propulsione grezza – correzioni – progressione didattica dei quattro..."
   },
   {
     "id": 220,
@@ -2857,7 +4390,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esito misurabile di un’azione sportiva completa.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      378,
+      377,
+      28
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "La prestazione è definita come l’esito misurabile di un’azione sportiva completa . L’azione è determinata dalla funzione e dalla struttura , e si costruisce attraverso l’interazione fra di esse. G...."
   },
   {
     "id": 221,
@@ -2870,7 +4410,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Schema corporeo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      277,
+      182,
+      181
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA L’attività prenatatoria si rivolge, teoricamente, ad ogni tipologia di utente, tenendo in considerazione peculiarità e necessità. In generale è possibile individuare alcuni obiettivi primari: 1...."
   },
   {
     "id": 222,
@@ -2883,7 +4430,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La sensopercezione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      376,
+      163,
+      28
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Per perseguire efficacemente tale obiettivo è indispensabile la padronanza di due concetti chiave: • Multilateralità : le occasioni di ampliare il proprio bagaglio motorio non si distribuiscono uniformemente durante l’esistenza, ma si conce ntrano in alcune finestre temporali definite fasi..."
   },
   {
     "id": 223,
@@ -2896,7 +4450,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Attività conoscitiva che permette di percepire gli stimoli provenienti dagli analizzatori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      379,
+      14,
+      160
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 224,
@@ -2909,7 +4470,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Multilateralità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      376,
+      273,
+      158
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Per perseguire efficacemente tale obiettivo è indispensabile la padronanza di due concetti chiave: • Multilateralità : le occasioni di ampliare il proprio bagaglio motorio non si distribuiscono uniformemente durante l’esistenza, ma si conce ntrano in alcune finestre temporali definite fasi..."
   },
   {
     "id": 225,
@@ -2922,7 +4490,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sono identificabili come tecniche sportive.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      20,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 226,
@@ -2935,7 +4510,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sono dei presupposti di prestazione che con il tempo si automatizzano.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      12,
+      20
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 227,
@@ -2948,7 +4530,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sistema nervoso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 228,
@@ -2961,7 +4550,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Abilità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      19,
+      377
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 229,
@@ -2974,7 +4570,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Al fatto che le virate devono essere apprese come insieme di abilità motorie semplici integrate fra loro attraverso lo stimolo e l’adattamento consapevole.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      300,
+      20,
+      358
+    ],
+    "manualSection": "4.13.8.6. COMPORTAMENTO NELLE RELAZIONI CON GLI ALLIEVI",
+    "manualExcerpt": "4.13.8.6. COMPORTAMENTO NELLE RELAZIONI CON GLI ALLIEVI Nel relazioni con gli allievi – giovani, adulti, anziani - gli istruttori devono porsi sempre in una posizione di dialogo, soprattutto nella fase dell’accoglienza e in tutte le occasioni in cui sia manifesta una situazione di disagio o di..."
   },
   {
     "id": 230,
@@ -2987,7 +4590,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Periodi dello sviluppo caratterizzati da significativi miglioramenti per determinate capacità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      18,
+      17
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le fasi sensibili Una fase sensibile rappresenta il periodo o fascia di età in cui allenando una capacità fisica si assiste ad un miglioramento più fruttuoso che se la stessa venisse allenata in un’altra età...."
   },
   {
     "id": 231,
@@ -3000,7 +4610,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Devono affiliarsi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      303,
+      298
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Un’organizzazione è un’associazione di persone collegate tra loro in una struttura organica per cooperare a un fine comune...."
   },
   {
     "id": 232,
@@ -3013,7 +4630,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Abilità motorie.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      20,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 233,
@@ -3026,7 +4650,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Rappresentazione e consapevolezza della posizione e dell’estensione del corpo nello spazio.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      375,
+      163,
+      362
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 234,
@@ -3039,7 +4670,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Precede il talento sportivo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      386,
+      375
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Lo sviluppo della competenza motoria precede e favorisce il talento sportivo: una specializzazione precoce (addestramento) porta risultati migliori nel breve periodo ma non consente lo sviluppo del pieno potenziale nel “momento migliore” dal punto di vista delle capacità coordinative del..."
   },
   {
     "id": 235,
@@ -3052,7 +4690,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capacità coordinative.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      18,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 236,
@@ -3065,7 +4710,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un percorso acquatico dove multilateralità, senso percezione e abilità sono i punti fondamentali 23.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      245,
+      384,
+      163
+    ],
+    "manualSection": "4.8.1. L’AMBIENTAMENTO",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 10 1.6 EVOLUZIONE DEL COMPORTAMENTO ACQUATICO. SVILUPPO DELLA SENSOPERCEZIONE. COSTRUZIONE DI ABILITÀ MOTORIE NEGLI SPORT ACQUATICI"
   },
   {
     "id": 237,
@@ -3078,7 +4730,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Buon ambientamento acquatico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 238,
@@ -3091,7 +4750,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’apprendimento del maggior numero di processi motori differenziando le esercitazioni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      293,
+      29
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 239,
@@ -3104,7 +4770,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 3 anni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      208,
+      203,
+      212
+    ],
+    "manualSection": "4.6.2.1. LA RESPONSABILITÀ CIVILE",
+    "manualExcerpt": "Si è già evidenziato come l’allievo segue le direttive indicategli dal proprio istruttore in virtù del fatto che egli rappresenta, per lui, sicurezza ed esperienza...."
   },
   {
     "id": 240,
@@ -3117,7 +4790,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Flessibilità e trasferibilità delle abilità apprese – Strutturazione di una mappa motoria ricca ed elastica – Sviluppo di una competenza motoria.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      14,
+      273
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Chiariti questi concetti, diventa più agevole definire il percorso di quella che, per comodità, continuiamo a chiamare scuola nuoto ma che, più correttamente, andrebbe definita scuola d’acqua : • Esplorare il nuovo ambiente • Prendere confidenza con un mondo nu ovo • Stare in acqua bene,..."
   },
   {
     "id": 241,
@@ -3130,7 +4810,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Corsi istituzionali, inquadramento nelle società sportive, aggiornamenti obbligatori, specializzazioni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      74,
+      366
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Un’altra alternativa è l’integrazione con gli allievi normodotati, argomento piuttosto delicato...."
   },
   {
     "id": 242,
@@ -3143,7 +4830,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Irrigidimento della mappa motoria.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      163,
+      245
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Con questo approccio, definibile come euristico , si vuole superare la concezione meccanicistica che ha imperato negli scorsi decenni e che costr ingeva l’allievo in un percorso obbligato di avviamento (pseudo -ambientamento) – propulsione grezza – correzioni – progressione didattica dei quattro..."
   },
   {
     "id": 243,
@@ -3156,7 +4850,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Conoscere le caratteristiche psicofisiche di chi deve apprendere.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      26,
+      85,
+      299
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 244,
@@ -3169,7 +4870,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il settore salvamento è un organo del SIT.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      194,
+      368
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Il GUG è un organo tecnic o della FIN che gode di autonomia funzionale per l’attuazione dei propri compiti istituzionali...."
   },
   {
     "id": 245,
@@ -3182,7 +4890,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Maturazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      381,
+      12
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Questa considerazione, apparentemente banale, porta alla definizione del concetto chiave per il perseguimento di qualsivoglia o biettivo didattico: le abilità motorie acquatiche devono essere apprese, e se ne possiedono tante quante se ne apprendono . Maturazione Sviluppo Apprendimento"
   },
   {
     "id": 246,
@@ -3195,7 +4910,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Abilità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      20,
+      349
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "In sintesi, l’obiettivo della scuola di abilità acquatiche, ma in generale di qualsiasi percorso educativo motorio, prevede prima l’acquisizione della competenza motoria e successivamente lo sviluppo del talento sportivo, lungo un percorso che sarà tanto più efficace quanto più sarà ricco il..."
   },
   {
     "id": 247,
@@ -3208,7 +4930,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Lo sviluppo di capacità sensopercettive e coordinative speciali.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      18,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 248,
@@ -3221,7 +4950,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Cronometristi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      368,
+      300
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Durante ogni manifestazione natatoria, affinché i risultati possano essere regolarmente omologati, deve essere presente sul campo gara una regolare giuria composta da ufficiali di gara convocati dal GUG (nazionale o regional e) e da un gruppo di cronometristi convocati dalla Federazione Italiana..."
   },
   {
     "id": 249,
@@ -3234,7 +4970,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. morfologico-funzionale, intellettivo- cognitiva affettivo-emotiva, sociale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      375,
+      93,
+      89
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 250,
@@ -3247,7 +4990,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Organizzare i campionati del mondo di nuoto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      303,
+      195
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Data per scontata una definizione realistica degli obiet tivi, il momento cruciale e fondativo è la scelta delle persone: i questionari distribuiti in numerose scuole nuoto federali mostrano infatti come la percezione di qualità dell’utenza dipenda quasi esclusivamente dalla competenza e..."
   },
   {
     "id": 251,
@@ -3260,7 +5010,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Cronometristi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      300,
+      74
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "La Federazione Italiana Nuoto (FIN), fondata a Como nel 1899, ha lo scopo di promuovere, organizzare e disciplinare gli sport acquatici del nuoto, dei tuffi, della pallanuoto, del nuoto sincronizzato, del nuoto di fondo, del nuoto per salvamento...."
   },
   {
     "id": 252,
@@ -3273,7 +5030,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Assetti e posture, livello del tono muscolare, coordinazione volontaria, organizzazione motoria.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      278,
+      362,
+      22
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 253,
@@ -3286,7 +5050,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Stimolare le capacità coordinative con nuove esperienze motorie da trasformare in abilità motorie 25.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      83,
+      212
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 254,
@@ -3299,7 +5070,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’assemblea nazionale, il presidente, il consiglio federale, il consiglio di presidenza, il collegio dei revisori dei conti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      194,
+      288
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Il GUG è un organo tecnic o della FIN che gode di autonomia funzionale per l’attuazione dei propri compiti istituzionali...."
   },
   {
     "id": 255,
@@ -3312,7 +5090,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’assemblea nazionale, il presidente, il consiglio federale, il consiglio di presidenza, il collegio dei revisori dei conti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      194,
+      288
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Il GUG è un organo tecnic o della FIN che gode di autonomia funzionale per l’attuazione dei propri compiti istituzionali...."
   },
   {
     "id": 256,
@@ -3325,7 +5110,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Promuovere, organizzare, disciplinare e diffondere le discipline natatorie.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      303,
+      298
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Un’organizzazione è un’associazione di persone collegate tra loro in una struttura organica per cooperare a un fine comune...."
   },
   {
     "id": 257,
@@ -3338,7 +5130,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Di esercitare con lealtà sportiva le loro attività, osservando i principi, le norme e le consuetudini sportive nonché il Codice di comportamento sportivo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      74,
+      73,
+      75
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Allo stato attuale no n esiste più alcun obbligo legale, rimane però ferma la facoltà del gestore dell’impianto di richiedere una certificazione sanitar ia (per fini assicurativi, ecc )...."
   },
   {
     "id": 258,
@@ -3351,7 +5150,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Evitare interventi tardivi, permettere il miglior risultato, consentire la gratificazione del miglioramento evidente, evitare stress funzionali o emotivi derivanti da un lavoro non idoneo o dalla frustrazione di non ottenere miglioramenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      365,
+      278
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "poter evitare gli sforzi fisici o le attività più impegnative. Ha così la possibilità di scoprire situazioni nuove, in cui deve utilizzare tutte le parti valide del proprio corpo, sfruttando ogni loro potenzialità...."
   },
   {
     "id": 259,
@@ -3364,7 +5170,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Capo istituzionale del gruppo, motivatore.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      203,
+      20,
+      85
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 260,
@@ -3377,7 +5190,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nuoto – pallanuoto – tuffi – nuoto sincronizzato – nuoto per salvamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      303,
+      195
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Un’organizzazione è un’associazione di persone collegate tra loro in una struttura organica per cooperare a un fine comune...."
   },
   {
     "id": 261,
@@ -3390,7 +5210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Più di 50.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      12,
+      14
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 262,
@@ -3403,7 +5230,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Tante quante se ne apprendono.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      12,
+      305,
+      20
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 263,
@@ -3416,7 +5250,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Uno schema motorio di base.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      182,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 264,
@@ -3429,7 +5270,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Un’abilità appresa.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      350,
+      12,
+      384
+    ],
+    "manualSection": "6.4.3. LE TIPOLOGIE DI HANDICAP",
+    "manualExcerpt": "In sintesi, l’obiettivo della scuola di abilità acquatiche, ma in generale di qualsiasi percorso educativo motorio, prevede prima l’acquisizione della competenza motoria e successivamente lo sviluppo del talento sportivo, lungo un percorso che sarà tanto più efficace quanto più sarà ricco il..."
   },
   {
     "id": 265,
@@ -3442,7 +5290,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Fasi sensibili.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      17,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le fasi sensibili Una fase sensibile rappresenta il periodo o fascia di età in cui allenando una capacità fisica si assiste ad un miglioramento più fruttuoso che se la stessa venisse allenata in un’altra età...."
   },
   {
     "id": 266,
@@ -3455,7 +5310,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. In opposizione, un braccio entra in acqua e l’altro esce.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      29,
+      27
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "sulla loro funzione ( ad esempio: nuotare a pugni chiusi) • Esercizi di combinazione : in cui si combinano elementi di due o più nuotate, per mettere in crisi la coordinazione o per esaltare alcuni a spetti particolari ( ad esempio: braccia crawl con gambe..."
   },
   {
     "id": 267,
@@ -3468,7 +5330,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 15 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      306,
+      26
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 268,
@@ -3481,7 +5350,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Che sia ben rilassato.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      249,
+      266,
+      97
+    ],
+    "manualSection": "4.9.2. PERMANENZA IN ACQUA",
+    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell’acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
   },
   {
     "id": 269,
@@ -3494,7 +5370,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’ambientamento è legato a caratteristiche psicologiche, l’acquaticità a caratteristiche tecniche.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      25,
+      172,
+      29
+    ],
+    "manualSection": "5.2.1 2. PROPULSIONE",
+    "manualExcerpt": "ciclo. Pertanto l’ ampiezza di bracciata è una buona misura dell’efficienza di prop ulsione e può essere misurata anche dal numero di bracciate necessarie a percorrere la vasca...."
   },
   {
     "id": 270,
@@ -3507,7 +5390,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Acquisire un rapporto naturale con l’acqua e stare bene in acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      249,
+      245,
+      275
+    ],
+    "manualSection": "4.9.2. PERMANENZA IN ACQUA",
+    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell’acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
   },
   {
     "id": 271,
@@ -3520,7 +5410,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Attivazione del 118 – RCP – defibrillazione – trattamenti avanzati.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      231,
+      230,
+      232
+    ],
+    "manualSection": "4.7.3. RIANIMAZIONE CARDIO -POLMONARE DI BASE",
+    "manualExcerpt": "La forza di una catena corrisponde a quella del suo anello più debole . La mancata o scorretta effettuazione di uno o più di questi interventi provoca il fallimento dell'intera procedura di soccorso...."
   },
   {
     "id": 272,
@@ -3533,7 +5430,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’insieme delle tecniche da usare nella rianimazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      231,
+      232
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "In caso di arresto respiratorio o cardiaco, la mancanza di apporto di ossigeno al cervello ed al cuore causa in pochissimi minuti danni irreversibili, compromettendo le possibilità di ripresa del paziente. L'unico intervento che può rallentare questo processo è la rianimazione cardiorespiratoria...."
   },
   {
     "id": 273,
@@ -3546,7 +5450,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Si inspira dalla bocca si espira dalla bocca o dal naso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      183,
+      280,
+      252
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 274,
@@ -3559,7 +5470,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sussidi didattici.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      200,
+      157,
+      117
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Gli attrezzi non specifici sono quelli che abitualmente vengono utilizzati come sussidi per la scuola nuoto, sono facilmente reperibili in tutte le strutture e possono facilmente essere adattati all’aquafitness: • Tavolette • Braccioli • Salvagenti • Palette • Pull-buoy • Palloni"
   },
   {
     "id": 275,
@@ -3572,7 +5490,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Far uscire gli allievi mettendoli in fila, contandoli e accompagnandoli verso l’uscita d’emergenza 28.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      272,
+      201,
+      97
+    ],
+    "manualSection": "4.10.4.4. ERRORI COMUNI",
+    "manualExcerpt": "mantenendo sempre un atteggiamento proattivo (individuare e suggerire la correzione di eventuali criticità)...."
   },
   {
     "id": 276,
@@ -3585,7 +5510,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tamponare la ferita e avvisare il pronto soccorso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      220,
+      215,
+      218
+    ],
+    "manualSection": "4.7.2.2. EMORRAGIE",
+    "manualExcerpt": "• Emorragia dal naso (epistassi): le cause possono essere traumatiche o patologiche. Se c’è stato un pregresso trauma cranico o facciale non si deve mai provvedere a manovre di tamponamento delle cavità nasali per non provocare l’aggravamento di eventu ali fratture delle ossa nasali...."
   },
   {
     "id": 277,
@@ -3598,7 +5530,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si telefona fornendo i propri dati anagrafici, località e caratteristiche dell’incidente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      375,
+      362,
+      299
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 278,
@@ -3611,7 +5550,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Definendo degli obiettivi appropriati e scegliendo esercizi orientati per raggiungerli.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      83,
+      29,
+      172
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "persona al trattamento aumentando i rischi per la stessa persona, per l’operatore e per la struttura...."
   },
   {
     "id": 279,
@@ -3624,7 +5570,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Stabilendo una scaletta usando degli indicatori e immaginando esercizi adeguati agli obiettivi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      154,
+      159
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "tempi di lavoro e di recupero. Gli stimoli dovranno essere incrementati in modo sistematico al fine di ottenere sempre dei nuovi adattamenti organici generali...."
   },
   {
     "id": 280,
@@ -3637,7 +5590,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Attraverso gare sociali, istruttori e allenatori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      300,
+      284,
+      107
+    ],
+    "manualSection": "4.13.8.6. COMPORTAMENTO NELLE RELAZIONI CON GLI ALLIEVI",
+    "manualExcerpt": "A tal proposito ultimamente sono stati sviluppati in ambito formativo programmi per insegnare nelle struttu re educative a riconoscere e gestire le emozioni...."
   },
   {
     "id": 281,
@@ -3650,7 +5610,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Stendendo un protocollo della sicurezza a cui tutti devono attenersi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      370,
+      87,
+      117
+    ],
+    "manualSection": "6.5.3.1. PREMESSE",
+    "manualExcerpt": "La sicurezza degli utenti deve rappresentare la principale preoccupazione...."
   },
   {
     "id": 282,
@@ -3663,7 +5630,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Ogni 2 bracciate.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      272,
+      32
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 283,
@@ -3676,7 +5650,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Circuiti e giochi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      183,
+      182,
+      181
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 284,
@@ -3689,7 +5670,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un organo tecnico della F.I.N..",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      87,
+      197
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Il GUG è un organo tecnic o della FIN che gode di autonomia funzionale per l’attuazione dei propri compiti istituzionali...."
   },
   {
     "id": 285,
@@ -3702,7 +5690,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Settore istruzione tecnica.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      229,
+      25
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "cominciano ad avere anche una valenza metabolica : oltre alla tecnica si tengono presenti anche le int ensità di esecuzione...."
   },
   {
     "id": 286,
@@ -3715,7 +5710,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un organo tecnico della FIN.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      359,
+      50
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Il GUG è un organo tecnic o della FIN che gode di autonomia funzionale per l’attuazione dei propri compiti istituzionali...."
   },
   {
     "id": 287,
@@ -3728,7 +5730,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La continuità delle azioni, evitando pause a fine ed inizio bracciata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      271,
+      281,
+      284
+    ],
+    "manualSection": "4.10.4.3. DIDATTICA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 288,
@@ -3741,7 +5750,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un sistema per immaginare e seguire un percorso formativo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      375,
+      160,
+      212
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 289,
@@ -3754,7 +5770,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Un insieme di norme e comportamenti standard a cui attenersi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      301,
+      200
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "4.13.8.7. COMPORTAMENTO SUL PIANO FORMALE Tutti i componenti della scuola nuoto contribuiscono con i propri comportamenti alla formazione del patrimonio etico comune e condiviso, impegnandosi non solo a rispettarlo, ma altresì a incrementarlo come bene essenziale di quanti – a diverso titolo – ..."
   },
   {
     "id": 290,
@@ -3767,7 +5790,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Poche norme ma chiare ed efficaci.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      87,
+      287,
+      85
+    ],
+    "manualSection": "2.2.6. LE PAURE DELL’ISTRUTTORE",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 291,
@@ -3780,7 +5810,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      215,
+      216,
+      243
+    ],
+    "manualSection": "4.7.1. NORME C OMPORTAMENTALI",
+    "manualExcerpt": "In quasi tutte le realtà sportive le attività quotidiane si svolgono senza la presenza di personale medico e per la maggior parte delle situazioni è necessario un intervento immediato...."
   },
   {
     "id": 292,
@@ -3793,7 +5830,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Federazioni e istituzioni sportive alle quali la FIN è affiliata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      163,
+      194
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "La Federazione Italiana Nuoto (FIN), fondata a Como nel 1899, ha lo scopo di promuovere, organizzare e disciplinare gli sport acquatici del nuoto, dei tuffi, della pallanuoto, del nuoto sincronizzato, del nuoto di fondo, del nuoto per salvamento...."
   },
   {
     "id": 293,
@@ -3806,7 +5850,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Si valuta la situazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      208,
+      363
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 294,
@@ -3819,7 +5870,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Abbia un buon rilassamento corporeo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      249,
+      245
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell’acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
   },
   {
     "id": 295,
@@ -3832,7 +5890,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Mani che toccano il muro in modo non contemporaneo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      305,
+      306
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "5.2.1.3.3. RANA I dettami del regol amento tecnico di questo stile sono decisamente articolati : • Si deve nuotare sul petto, sia gli arti superiori che quelli inferiori devono muoversi simultaneamente e sullo stesso piano orizzon tale, senza movimenti alternati • Le mani non possono..."
   },
   {
     "id": 296,
@@ -3845,7 +5910,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La lunga esperienza motoria che porta un allievo a padroneggiare i suoi movimenti in acqua, vivendo desideri, superando paure, incontrando relazioni positive e scoprendo nuove cognizioni di sé.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      163,
+      384
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 297,
@@ -3858,7 +5930,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Effetto lesivo provocato su un organismo vivente da parte di un’azione meccanica esterna.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      219,
+      221,
+      60
+    ],
+    "manualSection": "4.7.2.2. EMORRAGIE",
+    "manualExcerpt": "• emorragia capillare: il sangue, d i colore rosso vivo, stilla tutto intorno alla ferita. La perdita di sangue è in genere trascurabile...."
   },
   {
     "id": 298,
@@ -3871,7 +5950,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Entro 15 metri con il capo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      165,
+      31
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 299,
@@ -3884,7 +5970,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Colpo di sole.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      71,
+      70,
+      72
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "per grado di temperatura...."
   },
   {
     "id": 300,
@@ -3897,7 +5990,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il petto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      32,
+      282
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 301,
@@ -3910,7 +6010,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Far superare fastidi fobie e paure.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      121,
+      98,
+      245
+    ],
+    "manualSection": "2.8.2. STRATEGIE  DIDATTICHE",
+    "manualExcerpt": "La resilienza è la capacità dell'uomo di affrontare e superare le avversità della vita...."
   },
   {
     "id": 302,
@@ -3923,7 +6030,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Un’errata percezione di tutti i feed- back da parte dell’allievo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      212,
+      20
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "Normalmente vengono descritti i metodi per il miglioramento del le capacità condizionali e tecniche. Assume grande importanza il processo di apprendimento ed insegnamento...."
   },
   {
     "id": 303,
@@ -3936,7 +6050,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Sfrutta inizialmente gli schemi motori terrestri nell’ambiente acquatico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      275,
+      29
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 304,
@@ -3949,7 +6070,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La bocca.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      238,
+      271,
+      237
+    ],
+    "manualSection": "4.7.3. RIANIMAZIONE CARDIO -POLMONARE DI BASE",
+    "manualExcerpt": "La ventilazione bocca -bocca è la tecnica standard per le respirazione artificiale con aria espirata. Ha il vantaggio di poter essere messa in atto in qualunque circostanza senza alcun uso di strumenti...."
   },
   {
     "id": 305,
@@ -3962,7 +6090,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Deve provvedere a far conoscere il nuovo ambiente (spogliatoi, piscina, istruttore ecc.) ai nuovi arrivati..",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      245,
+      367,
+      246
+    ],
+    "manualSection": "4.8.1. L’AMBIENTAMENTO",
+    "manualExcerpt": "Per come è stato definito ed illustrato, appare evidente come l’ambientamento sia un percorso da riservare ai bambini e ragazzi...."
   },
   {
     "id": 306,
@@ -3975,7 +6110,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capacità di: controllo motorio, apprendimento, capacità di adattamento e trasformazione del movimento..",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      14,
+      378
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 307,
@@ -3988,7 +6130,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. A specchio fuori dall’acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      31,
+      305
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 308,
@@ -4001,7 +6150,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sì, perché trasmette sicurezza all’allievo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      247,
+      246,
+      269
+    ],
+    "manualSection": "4.8.3.1. L’ISTRUTTORE",
+    "manualExcerpt": "Non è importante la tecnica: questo è l’esercizio fondamentale per la sicurezza , in quanto garantisce che l’allievo è in grado di tornare a bordo vasca (ed eventualmente di chiedere aiuto) quale che sia la situazione di partenza...."
   },
   {
     "id": 309,
@@ -4014,7 +6170,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Fermare le braccia davanti alla testa per effettuare il secondo colpo di gambe.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      34,
+      269
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 310,
@@ -4027,7 +6190,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Presa, trazione, spinta, recupero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      27,
+      30
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 311,
@@ -4040,7 +6210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Direttore sportivo- coordinatore – istruttori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      196,
+      297,
+      195
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Direttore sportivo Coordinatore scuola nuoto Istruttori nuoto Coordinatore altre attività Istruttori altre attività Capo allenatore Allenatori Amministra zione Servizi esterni Assistenti bagnanti Reception"
   },
   {
     "id": 312,
@@ -4053,7 +6230,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Propulsivo, di galleggiamento e stabilizzante.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      30,
+      284
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 313,
@@ -4066,7 +6250,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il lavoro di tipo multilaterale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      146,
+      147,
+      192
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Gli effetti dell’immersione sono studiati da molto tempo per valutare le funzioni dell’organismo in assenza (o meglio in forte riduzione) della forza di gravità. I primi studi risalgono agli anni Cinquanta ed erano legati ai programmi aerospaziali che le grandi potenze stavano preparando...."
   },
   {
     "id": 314,
@@ -4079,7 +6270,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Lunghi e ripetitivi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      30,
+      272
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 315,
@@ -4092,7 +6290,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Brevi e molto differenziati.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      29,
+      30
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 316,
@@ -4105,7 +6310,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Brevi e poco differenziati.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      30,
+      29
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 317,
@@ -4118,7 +6330,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Ciò che l’allievo deve provare davanti ad una situazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      208,
+      362,
+      212
+    ],
+    "manualSection": "4.6.2.1. LA RESPONSABILITÀ CIVILE",
+    "manualExcerpt": "Si è già evidenziato come l’allievo segue le direttive indicategli dal proprio istruttore in virtù del fatto che egli rappresenta, per lui, sicurezza ed esperienza...."
   },
   {
     "id": 318,
@@ -4131,7 +6350,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ciò che l’allievo deve sapere.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      208,
+      116
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "2.7.2. CLIMA PSICOLOGICO È importante saper creare un buon clima psicologico fatto di progettualità, divertimento, apertura, collaborazione e dialogo...."
   },
   {
     "id": 319,
@@ -4144,7 +6370,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Controllo delle apnee, delle inspirazioni/espirazioni in acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      375,
+      280
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 320,
@@ -4157,7 +6390,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Obiettivi esposti in termini generali che si possono raggiungere in tempi lunghi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      116,
+      115,
+      163
+    ],
+    "manualSection": "2.7.2. CLIMA  PSICOLOGICO",
+    "manualExcerpt": "Mortificare gli allievi è utile solo a distruggerne l'autostima e a render e un istruttore non degno del propri o ruolo educativo. Un'altra strategia didattica è quella di programmare le attività , che non possono certo essere frutto d\u0001improvvisazione...."
   },
   {
     "id": 321,
@@ -4170,7 +6410,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Obiettivi espressi con una certa specificità che si possono ottenere in periodi valutabili in mesi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      116,
+      115,
+      289
+    ],
+    "manualSection": "2.7.2. CLIMA  PSICOLOGICO",
+    "manualExcerpt": "Mortificare gli allievi è utile solo a distruggerne l'autostima e a render e un istruttore non degno del propri o ruolo educativo. Un'altra strategia didattica è quella di programmare le attività , che non possono certo essere frutto d\u0001improvvisazione...."
   },
   {
     "id": 322,
@@ -4183,7 +6430,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Ciò che l’allievo deve saper fare.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      182,
+      12
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 323,
@@ -4196,7 +6450,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Obiettivi espressi in operazioni concrete raggiungibili nei tempi di una unità didattica.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      115,
+      116,
+      298
+    ],
+    "manualSection": "2.7.1. STRATEGIE  DIDATTICHE",
+    "manualExcerpt": "2.7.1. STRATEGIE DIDATTICHE Le strategie didattiche da adottare devono tener conto principalmente dell'et à dell'allievo, delle caratteristiche psicofisiche, delle motivazioni, dell'atteggiamento verso lo sport. Tali informazioni ci illustrano risorse e limiti dei nostri allievi...."
   },
   {
     "id": 324,
@@ -4209,7 +6470,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Gli organi centrali, periferici e di giustizia.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      194,
+      163
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "La Federazione Italiana Nuoto (FIN), fondata a Como nel 1899, ha lo scopo di promuovere, organizzare e disciplinare gli sport acquatici del nuoto, dei tuffi, della pallanuoto, del nuoto sincronizzato, del nuoto di fondo, del nuoto per salvamento...."
   },
   {
     "id": 325,
@@ -4222,7 +6490,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Principio di Archimede.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      165,
+      149,
+      163
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "7.5.2.2. CENTRO DI GALLEGGIAMENTO È il punto di riferimento sul quale agiscono le forze verticali della spinta di galleggiamento (spinta idrostatica). Per mantenere un corpo in equilibrio la forza di gravità e la spinta idrostatica oltre ad essere di pari entità devono essere collineari...."
   },
   {
     "id": 326,
@@ -4235,7 +6510,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. 5.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      197,
+      195,
+      194
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "4.4 LIVELLI TECNICI NELLA SCUOLA NUOTO FEDERALE"
   },
   {
     "id": 327,
@@ -4248,7 +6530,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Saper effettuare la capovolta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      26,
+      198
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "4.14.7.3. NUOTATA A FARFALLA Dall’inizio della prima bracciata, dopo la partenza e dopo ogni virata, il corpo deve essere tenuto sul petto . In immersione è consentito effettuare colpi di gambe con il corpo posizionato sul fianco...."
   },
   {
     "id": 328,
@@ -4261,7 +6550,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sviluppo degli schemi motori di base, sviluppo dello schema corporeo, miglioramento delle capacità coordinative.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      182,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 329,
@@ -4274,7 +6570,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Pone in essere le indicazioni della direzione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      196,
+      288,
+      298
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "• Il direttore sportivo rappresenta la società, definisce gli obiettivi sulla base delle risorse disponibili e ad esso fanno riferimento i diversi settori di attività • Il coordinatore della scuola nuoto pone in essere le indicazioni della direzione; seleziona gli istruttori e li inserisce nei..."
   },
   {
     "id": 330,
@@ -4287,7 +6590,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Alternati.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      11,
+      306,
+      150
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "Fig. 27 : remata stazionaria Questo movimento base serve a sostenere e bilanciare il corpo durante il mantenimento del galleggiamento in verticale...."
   },
   {
     "id": 331,
@@ -4300,7 +6610,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dalla quantità di aria nei polmoni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      71,
+      149,
+      70
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 332,
@@ -4313,7 +6630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La posizione di equilibrio tra baricentro e centro di gravità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      165,
+      148,
+      149
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "7.5.2.2. CENTRO DI GALLEGGIAMENTO È il punto di riferimento sul quale agiscono le forze verticali della spinta di galleggiamento (spinta idrostatica). Per mantenere un corpo in equilibrio la forza di gravità e la spinta idrostatica oltre ad essere di pari entità devono essere collineari...."
   },
   {
     "id": 333,
@@ -4326,7 +6650,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Flessione, spinta e scivolamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      282,
+      31,
+      284
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 334,
@@ -4339,7 +6670,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il soggetto in acqua è rilassato e padroneggia in modo elementare il suo corpo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      245,
+      375
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 335,
@@ -4352,7 +6690,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Veloce 34.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      269,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "• Gambata a rana con braccia distese in avanti/lungo i fianchi • Gambata a rana sul dorso (braccia lungo i fianchi) • Gambata a rana in verticale • Gambata a rana in subacquea • Bracciata a rana e colpo di gambe a delfino/a stile • Nuotata completa modificando il ritmo durante la vasca..."
   },
   {
     "id": 336,
@@ -4365,7 +6710,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Alla fine della spinta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      270,
+      268
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 337,
@@ -4378,7 +6730,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Nello stile libero e nel dorso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      31,
+      305
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 338,
@@ -4391,7 +6750,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Nel Salvamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      368,
+      194,
+      350
+    ],
+    "manualSection": "6.4.5.2.2. ADATTAMENTO DEI QUATTRO STILI OLIMPICI",
+    "manualExcerpt": "Un’organizzazione è un’associazione di persone collegate tra loro in una struttura organica per cooperare a un fine comune...."
   },
   {
     "id": 339,
@@ -4404,7 +6770,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Una nuotata a crawl, ma con le gambe che effettuano un colpo di gambe a rana o sforbiciano.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      34,
+      32,
+      284
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "Tutto il corpo si muove con un movimento ondulatorio, ma un punto (il baricentro) si muove in linea retta . Non è difficile capir e la ragione di questa regola, dalla geometria elementare: la distanza più breve tra due punti è la linea retta ...."
   },
   {
     "id": 340,
@@ -4417,7 +6790,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Luogo, condizioni del pericolante e recapito telefonico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      216,
+      293
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 341,
@@ -4428,9 +6808,16 @@ const quizData = [
       "C": "117",
       "D": "118"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. 118.",
-    "category": "La cultura dell'acqua"
+    "answer": "A",
+    "explanation": "La risposta corretta è A. 112.",
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      231,
+      230,
+      216
+    ],
+    "manualSection": "4.7.3. RIANIMAZIONE CARDIO -POLMONARE DI BASE",
+    "manualExcerpt": "La forza di una catena corrisponde a quella del suo anello più debole . La mancata o scorretta effettuazione di uno o più di questi interventi provoca il fallimento dell'intera procedura di soccorso...."
   },
   {
     "id": 342,
@@ -4443,7 +6830,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Rielaborazione degli elementi che si ritengono migliorabili.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      83,
+      289,
+      293
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 343,
@@ -4456,7 +6850,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Più in alto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      264,
+      30
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Anche in questo caso, come nello stile libero, si possono individuare quattro fasi della bracciata (è bene ricordare però che tale divisione è solo nella teoria, il movimento in realtà è unico ): • Presa : l’entrata in acqua della mano avviene il più lontano possibile, con il braccio teso in..."
   },
   {
     "id": 344,
@@ -4469,7 +6870,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      306,
+      284
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "4.14.7.3. NUOTATA A FARFALLA Dall’inizio della prima bracciata, dopo la partenza e dopo ogni virata, il corpo deve essere tenuto sul petto . In immersione è consentito effettuare colpi di gambe con il corpo posizionato sul fianco...."
   },
   {
     "id": 345,
@@ -4482,7 +6890,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dorso – rana – farfalla – stile libero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      305,
+      279
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 346,
@@ -4495,7 +6910,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Crawl e dorso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      198,
+      279
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Livello 3. Perf ezionamento delle nuotate a dorso e crawl, impostazione delle nuotate a rana e farfalla"
   },
   {
     "id": 347,
@@ -4508,7 +6930,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Chi assume su di sé l’onere del rischio e delle conseguenze provocate dal proprio comportamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      203,
+      212,
+      214
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 348,
@@ -4521,7 +6950,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Due.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      284,
+      262
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 349,
@@ -4534,7 +6970,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 80 -100 colpi al minuto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      236,
+      232,
+      60
+    ],
+    "manualSection": "4.7.3. RIANIMAZIONE CARDIO -POLMONARE DI BASE",
+    "manualExcerpt": "• posizionare la base del palmo della mano al centro del torace della vittima • sovrapporre l'altra mano alla prima • intrecciare le dita, per concentrare la forza sullo sterno ed evitare di comprimere le coste; non applicare alcuna pre ssione sulla parte superiore dell'addome o sulla parte..."
   },
   {
     "id": 350,
@@ -4547,7 +6990,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Alla partenza ed alle virate, per un massimo di 15 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      26,
+      306
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 351,
@@ -4560,7 +7010,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nuotare uno stile che non sia la farfalla, il dorso, la rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      305,
+      26
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 352,
@@ -4573,7 +7030,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Una (comunque valida).",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      297,
+      303,
+      368
+    ],
+    "manualSection": "4.13.7.4. ALTRE ATTIVITÀ",
+    "manualExcerpt": "• Che caratteristiche ha? - È un’ attività di nuoto praticato utenti senza l’ausilio di un istruttore ( nuoto libero ) o con un istruttore che può dare consigli e indicazioni, su richiesta e in maniera sporadica e occasionale ( nuoto controllato) • A chi è rivolta?..."
   },
   {
     "id": 353,
@@ -4586,7 +7050,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. In qualsiasi modo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      26,
+      305
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 354,
@@ -4599,7 +7070,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Solo nello stile libero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      279,
+      283
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 355,
@@ -4612,7 +7090,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Stato di tensione generale, rigidità, silenzio, ritardo nelle reazioni, esagerata percezione del freddo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      229,
+      227,
+      72
+    ],
+    "manualSection": "4.7.2.9. EPILESSIA",
+    "manualExcerpt": "La manifestazione più frequente che si verifica è la comparsa di una variazione dello stato di coscienza che può essere seguita o meno da una crisi convulsiva ...."
   },
   {
     "id": 356,
@@ -4625,7 +7110,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esperienza diretta negativa dell’acqua, esperienze indirette, imitazione dei comportamenti di altri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      375,
+      245
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Per come è stato definito ed illustrato, appare evidente come l’ambientamento sia un percorso da riservare ai bambini e ragazzi...."
   },
   {
     "id": 357,
@@ -4638,7 +7130,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Utilizzarlo come strumento didattico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      158,
+      201,
+      87
+    ],
+    "manualSection": "7.4.4. STRUTTURA DELLA LEZIONE DI AQUAFITNESS",
+    "manualExcerpt": "mantenendo sempre un atteggiamento proattivo (individuare e suggerire la correzione di eventuali criticità)...."
   },
   {
     "id": 358,
@@ -4651,7 +7150,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. BLS.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      236,
+      243,
+      232
+    ],
+    "manualSection": "4.7.3. RIANIMAZIONE CARDIO -POLMONARE DI BASE",
+    "manualExcerpt": "La defibrillazione Il DM 24/04/2013 preved e che le società s portive si debbano dotare del defibrillatore e che abbiano personale adeguatamente formato all’ utilizzo Come detto precedentemente, la defibrillazione consente di ripristinare un battito cardiaco efficace nel caso in cui l’arresto..."
   },
   {
     "id": 359,
@@ -4664,7 +7170,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Stimola maggiormente la ricerca degli equilibri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      149,
+      148
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "Durante le lezioni in acqua alta è necessaria una maggior attivazione della muscolatura posturale per mantenere il corretto allineamento del corpo in modo da superare la grande spinta idrostatica esercitata dall’acqua che lo circonda e per ricercare l’equilibrio tra il centro di galleggiamento (a..."
   },
   {
     "id": 360,
@@ -4677,7 +7190,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È la fase fondamentale della scuola nuoto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      287,
+      345
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 361,
@@ -4690,7 +7210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si analizza il contesto per fare delle scelte.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      362,
+      208
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 362,
@@ -4703,7 +7230,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È inutile, vista la posizione del corpo e la diversa densità dell’aria rispetto all’acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      277,
+      283
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Ovviamente, i primi prerequisiti necessari per l’apprendimento della nuotata sul dorso sono: la capacità di saper galleggiare in posizione supina ( galleggiamento a stella ) e lo scivolamento con le braccia lungo i fianchi ( siluro , soldatino )...."
   },
   {
     "id": 363,
@@ -4716,7 +7250,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Al termine della fase di trazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      282,
+      268
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 364,
@@ -4729,7 +7270,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il gioco.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      29,
+      281,
+      248
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Le favole dicono più che la verità. E non solo perché dicono che i draghi esistono, ma anche perché afferm ano che si possono sconfiggere (Gilbert Keith Chesterton ) La fabulazione è l’arte di creare e raccontare storie...."
   },
   {
     "id": 365,
@@ -4742,7 +7290,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sapere, saper fare, saper far fare, saper essere, saper comunicare.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      86,
+      85,
+      288
+    ],
+    "manualSection": "2.2.3. GESTIRE LA COMPLESSITÀ",
+    "manualExcerpt": "Fig.1: gestione del singolo e del gruppo – requisiti dell’istruttore Lo stile dell’istruttore incide in una gestione efficiente della corsia: quindi, l’istruttore dovrà impostare una didattica attiva e individualizzata all’interno di un gruppo quanto più possibile omogeneo, dimostrando di..."
   },
   {
     "id": 366,
@@ -4755,7 +7310,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Vigilare sull’esecuzione corretta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      287,
+      281
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 367,
@@ -4768,7 +7330,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Concentrarsi sull’esercizio.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      281,
+      287
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "• Esercizi di pe rfezionamento o Un solo braccio, l’altro in alto: in questo esercizio si pone l’accento sul rollio corrispondente con la fine della spinta e sull’appoggio della mano in alto...."
   },
   {
     "id": 368,
@@ -4781,7 +7350,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Essere attento alla relazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      281,
+      367
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "La fase più importante e difficile nel cammino didattico di un nuotatore, specialmente se ha una disabilità, è quella iniziale, del primo contatto con la piscina. Il percorso di adattamento all’ambie nte acquatico è un’esperienza globale, che coinvolge l’intera personalità del soggetto...."
   },
   {
     "id": 369,
@@ -4794,7 +7370,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Formulato in positivo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      185,
+      160
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "cominciano ad avere anche una valenza metabolica : oltre alla tecnica si tengono presenti anche le int ensità di esecuzione...."
   },
   {
     "id": 370,
@@ -4807,7 +7390,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sviluppare capacità senso-percettive e coordinative speciali.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 371,
@@ -4820,7 +7410,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Non deve mai avere il requisito dell’estemporaneità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      158,
+      287
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "Il primo passaggio è sempre la verifica del livello di partenza del singolo allievo e del gruppo...."
   },
   {
     "id": 372,
@@ -4833,7 +7430,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Introduzione, consolidamento, apprendimento e conclusiva/ricreativa.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      268,
+      287,
+      27
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 373,
@@ -4846,7 +7450,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Una procedura flessibile che controlla e verifica il lavoro per stabilire tempi e modi dell’intervento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      293,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 374,
@@ -4859,7 +7470,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Una nuotata sul fianco.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      34,
+      284,
+      269
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "Esercizi • Esercizi di perfezionamento: o Gambe delfino sul dorso : questo esercizio limita la flessione delle cosce nella gambata...."
   },
   {
     "id": 375,
@@ -4872,7 +7490,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’arte di creare e raccontare storie.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      113,
+      305,
+      283
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 376,
@@ -4885,7 +7510,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nessuna delle risposte precedenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      31,
+      284
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 377,
@@ -4898,7 +7530,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La fase discendente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      269,
+      268
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 378,
@@ -4911,7 +7550,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La fase ascensionale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      269,
+      268
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 379,
@@ -4924,7 +7570,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Si manifesta ed è bilanciata dalla spinta idrostatica.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      165,
+      163,
+      148
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "7.5.2.2. CENTRO DI GALLEGGIAMENTO È il punto di riferimento sul quale agiscono le forze verticali della spinta di galleggiamento (spinta idrostatica). Per mantenere un corpo in equilibrio la forza di gravità e la spinta idrostatica oltre ad essere di pari entità devono essere collineari...."
   },
   {
     "id": 380,
@@ -4937,7 +7590,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il sollevamento del bacino del nuotatore.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      33,
+      282
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 381,
@@ -4950,7 +7610,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. È proponibile in tutte le fasce d’età.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      183,
+      18
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 382,
@@ -4963,7 +7630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Ciclica.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      34,
+      32,
+      262
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "Tutto il corpo si muove con un movimento ondulatorio, ma un punto (il baricentro) si muove in linea retta . Non è difficile capir e la ragione di questa regola, dalla geometria elementare: la distanza più breve tra due punti è la linea retta ...."
   },
   {
     "id": 383,
@@ -4976,7 +7650,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      269,
+      283
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Poiché nella rana la gambata riveste un’importanza fondamentale per l’avanzamento e soltanto la sua corretta esecuzione garantisce un apprendimento efficace della coordinazione tipica di questo stile, l’insegnante dovrà porre molta attenzione agli esercizi per il suo apprendimento...."
   },
   {
     "id": 384,
@@ -4989,7 +7670,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Non è cosciente ma presenta spontaneamente attività respiratorie e cardiache.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      355,
+      163,
+      349
+    ],
+    "manualSection": "6.4.3.2.3. Deficit dell’attenzione/iperattività (ADHD)",
+    "manualExcerpt": "I livelli di gravità sono definiti sulla base del funzioname nto adattivo e non più sui punteggi di quoziente intellettivo (QI): 1...."
   },
   {
     "id": 385,
@@ -5002,7 +7690,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La socializzazione e la cooperazione, lo sviluppo di abilità motorie.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      19,
+      12,
+      20
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 386,
@@ -5015,7 +7710,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Effettuare le manovre di rianimazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      215,
+      232,
+      216
+    ],
+    "manualSection": "4.7.1. NORME C OMPORTAMENTALI",
+    "manualExcerpt": "precisa non viene individuata. L'arresto cardiaco improvviso è una delle principali cause di morte in Europa, dove sono colpite circa 700.000 persone ogni anno...."
   },
   {
     "id": 387,
@@ -5028,7 +7730,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Forzata e cosciente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      280,
+      252
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Bambini: • Soffiare sopra l’acqua • Il motoscafo che affonda (soffiare a pelo dell’acqua e affondare) • Soffiare cercando di spostare delle palline galleggianti • Soffiare dentro l’acqua con il naso o con la bocca • Soffiare dentro l’acqua imitando una rana o un delfino • Gonfiare dei..."
   },
   {
     "id": 388,
@@ -5041,7 +7750,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. All’inizio della trazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      31,
+      268
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 389,
@@ -5054,7 +7770,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Si valutano i risultati ottenuti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      275,
+      30,
+      115
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 390,
@@ -5067,7 +7790,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Si scelgono le strategie migliori per arrivare agli obiettivi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      289,
+      275
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "Per sviluppare coerentemente ed efficacemente le proprie competenze, un istruttore deve essere inserito in una struttura ben funzionante. L’organizzazione della scuola nuoto riprende, a un livello superiore, le fasi della corretta programmazione, con qualche fase supplementare: 1...."
   },
   {
     "id": 391,
@@ -5080,7 +7810,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Introduzione, consolidamento, apprendimento e conclusione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      287,
+      288
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 392,
@@ -5093,7 +7830,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Annegamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      80,
+      204,
+      84
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "se conta molto ciò che si dice conta ancora di più come lo si dice"
   },
   {
     "id": 393,
@@ -5106,7 +7850,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti sono corrette.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      279,
+      26
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "Stile Distanze individuali (metri ) Distanze a staffetta (metri ) Libero 50-100-200-400-800-1500 4x100 – 4x200 Dorso 50-100-200 Non previste Rana 50-100-200 Non previste Farfalla 50-100-200 Non previste Misti 200-400* 4x100**"
   },
   {
     "id": 394,
@@ -5119,7 +7870,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Scoperta, conoscenza e consolidamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      287,
+      375
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "La durata delle singole fasi è variabile in base al tipo di corso, al numero e al livello tecnico degli allievi e così via; indicativamente, il riscaldamento non dovrebbe superare i cinque minuti e la chiusura i dieci, con il tempo rimanente diviso in modo equo tra apprendimento e consolidamento..."
   },
   {
     "id": 395,
@@ -5132,7 +7890,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. A livello generale sono presa, trazione, spinta e recupero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      32,
+      27
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 396,
@@ -5145,7 +7910,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Presa, trazione, spinta e recupero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      30,
+      31
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 397,
@@ -5158,7 +7930,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Farfalla e rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      198,
+      274
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "4.12.2.4. FARFALLA Gli stili rana e farfalla sono considerati , oramai, nuotate simultanee e non più simmetriche. In poche parole i movimenti devono essere effettuati contemporaneamente e non necessariamente sullo stesso piano ...."
   },
   {
     "id": 398,
@@ -5171,7 +7950,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Affinare la sensibilità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      384,
+      280,
+      294
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "contemporaneamente o un unico esercizio in forma semplifi cata per gli allievi meno abili - tenendo semp re presente che è buona norma spostare in un altro gruppo più idoneo gli allievi che per proprie capacità o per maggior e frequenza diventano più abili ...."
   },
   {
     "id": 399,
@@ -5184,7 +7970,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Movimenti degli arti superiori utili per il mantenimento dell’equilibrio.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      132,
+      28,
+      31
+    ],
+    "manualSection": "7.2 ",
+    "manualExcerpt": "Corsa Schema motorio terrestre di base, movimento ad azione ciclic a degli arti inferiori, si effettua flettendo la coscia sul bacino ed elevando il ginocchio per poi ridistendere l’arto in avanti basso, trasferendo il peso del corpo sullo stesso ed iniziando la medesima azione con l’altro arto...."
   },
   {
     "id": 400,
@@ -5197,7 +7990,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Fissativa.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      274,
+      32,
+      282
+    ],
+    "manualSection": "4.11.4. CHI PIÙ NE HA PIÙ NE METTA",
+    "manualExcerpt": "Con quinto stile si intende il movimento del corpo in subacquea, l’obiettivo è quello di proporre una serie di esercitazioni che permettano ai nostri allievi di sperimentare il mondo sommerso...."
   },
   {
     "id": 401,
@@ -5210,7 +8010,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il gioco.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      307,
+      346,
+      345
+    ],
+    "manualSection": "4.15.1. LE VALENZE EDUCATIVE",
+    "manualExcerpt": "L’apprendimento e lo sviluppo intellettivo nel periodo che va dalla nascita alla preadolescenza evolvono prevalentemente grazie al movimento e al gioco...."
   },
   {
     "id": 402,
@@ -5223,7 +8030,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Analisi della situazione di partenza, definizione degli obiettivi, scelta di mezzi e metodi, valutazione finale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      289,
+      288,
+      290
+    ],
+    "manualSection": "4.13.3. ORGANIZZAZIONE DI UNA STRUTTURA DIDATTICA",
+    "manualExcerpt": "Una lezione ben organizzata perde molta della propria efficacia se non è inserita in un percorso razionale. Quando riceve in affidamento un gruppo l’istruttore deve rispettare le fasi di una corretta programmazione: 1...."
   },
   {
     "id": 403,
@@ -5236,7 +8050,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esperienze positive.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      363,
+      362,
+      203
+    ],
+    "manualSection": "6.4.3.3.2. SORDITÀ",
+    "manualExcerpt": "6.4.3.3.2. SORDITÀ Il termine sordità identifica una perdita di funzionalità importante, che comporta problemi nello sviluppo sociale, cognitivo e del linguaggio...."
   },
   {
     "id": 404,
@@ -5249,7 +8070,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sei battute di gambe.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      34,
+      269
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 405,
@@ -5262,7 +8090,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La spinta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      30,
+      268
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 406,
@@ -5275,7 +8110,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Gomito flesso sia nel recupero che nella fase subacquea.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      279,
+      31
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 407,
@@ -5288,7 +8130,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il recupero avviene fuori dall’acqua, con il braccio flesso, i muscoli decontratti , il gomito alto e la mano che sfiora l’acqua 41.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      31,
+      279
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 408,
@@ -5301,7 +8150,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. È importante la posizione del gomito alto e avanzato nella fase di trazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      31,
+      277
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 409,
@@ -5314,7 +8170,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tra spinta e recupero ci deve essere continuità..",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      277,
+      279,
+      32
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 410,
@@ -5327,7 +8190,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Fermare la bracciata lungo i fianchi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      279,
+      34
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 411,
@@ -5340,7 +8210,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gomito disteso nella fase aerea e flesso in quella subacquea.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      27,
+      31
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 412,
@@ -5353,7 +8230,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È corretto ritmarla ed automatizzarla per avere scambio d’aria frequente e assicurare una buona ossigenazione del sangue.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      305,
+      283
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell’acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
   },
   {
     "id": 413,
@@ -5366,7 +8250,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Con il palmo della mano rivolto verso l’esterno.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      264,
+      27,
+      30
+    ],
+    "manualSection": "4.10.2.2. AVANZAMENTO E PROPULSIONE",
+    "manualExcerpt": "Anche in questo caso, come nello stile libero, si possono individuare quattro fasi della bracciata (è bene ricordare però che tale divisione è solo nella teoria, il movimento in realtà è unico ): • Presa : l’entrata in acqua della mano avviene il più lontano possibile, con il braccio teso in..."
   },
   {
     "id": 414,
@@ -5379,7 +8270,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Contrapposta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      269,
+      32
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 415,
@@ -5392,7 +8290,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esprimere il massimo della forza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      268,
+      264,
+      31
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "Anche in questo caso, come nello stile libero, si possono individuare quattro fasi della bracciata (è bene ricordare però che tale divisione è solo nella teoria, il movimento in realtà è unico ): • Presa : l’entrata in acqua della mano avviene il più lontano possibile, con il braccio teso in..."
   },
   {
     "id": 416,
@@ -5405,7 +8310,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. In fuori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      277,
+      31
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Battuta di gambe con le mani lungo i fianchi, dietro la testa o in alt o: questo esercizio si può fare anche con un solo braccio in alto e l’altro lungo i fianchi o dietro la nuca...."
   },
   {
     "id": 417,
@@ -5418,7 +8330,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. A rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      321,
+      274,
+      284
+    ],
+    "manualSection": "4.16.4. RANA",
+    "manualExcerpt": "La nuotata a rana è quella che favorisce maggiormente l'interazione con le tecniche del nuoto sincronizzato, infatti l'azione delle braccia e quella delle gambe vengono utilizzate contemporanea mente o separatamente nelle esercitazioni tecniche e nelle coreografie...."
   },
   {
     "id": 418,
@@ -5431,7 +8350,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Sia proni che supini.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      305,
+      321
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "La bicicletta è la tecnica utilizzata nella pallanuoto e nel nuoto sincronizzato per spostare e sostenere il corpo in posizione verticale, con il busto al di sopra della superficie dell'acqua...."
   },
   {
     "id": 419,
@@ -5444,7 +8370,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Immersione-rilassamento-educazione respiratoria-galleggiamento- scivolamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      249,
+      278,
+      245
+    ],
+    "manualSection": "4.9.2. PERMANENZA IN ACQUA",
+    "manualExcerpt": "L’ambientamento in acqua si sviluppa in maniera progressiva nelle seguenti fasi: 1. Permanenza in acqua (immersione del corpo) 2. Permanenza sott’acqua (immersione delle parti del corpo) 3. Galleggiamento 4. Scivolamento 5. Propulsione 6. Cadute in acqua 7. Rotolamenti e capovolte"
   },
   {
     "id": 420,
@@ -5457,7 +8390,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Flettere la testa in avanti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      285,
+      257,
+      280
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Le cadute in acqua rappresenta no una proposta altamente formativa sia a livello motorio che a livello psicologico...."
   },
   {
     "id": 421,
@@ -5470,7 +8410,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Si può utilizzare un approccio maggiormente cognitivo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      248,
+      246,
+      73
+    ],
+    "manualSection": "4.8.3.3. LA FABULAZIONE",
+    "manualExcerpt": "Su questo punto non sono ammessi equivoci: saper nuotare significa saper nuotare dove non si tocca, cioè in acqua alta...."
   },
   {
     "id": 422,
@@ -5483,7 +8430,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Fuori dall’acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      246,
+      280,
+      367
+    ],
+    "manualSection": "4.8.2. INSEGNAMENTO/APPRENDIMENTO",
+    "manualExcerpt": "Su questo punto non sono ammessi equivoci: saper nuotare significa saper nuotare dove non si tocca, cioè in acqua alta...."
   },
   {
     "id": 423,
@@ -5496,7 +8450,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. L’impostazione della attività in maniera giocosa.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      74,
+      185,
+      275
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Allo stato attuale no n esiste più alcun obbligo legale, rimane però ferma la facoltà del gestore dell’impianto di richiedere una certificazione sanitar ia (per fini assicurativi, ecc )...."
   },
   {
     "id": 424,
@@ -5509,7 +8470,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Complesso articolare del ginocchio.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      19,
+      181
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 425,
@@ -5522,7 +8490,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Strumento per sviluppare la motricità innata dell’individuo e come mezzo per l’apprendimento di tecniche motorie più complesse.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      275,
+      283
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 426,
@@ -5535,7 +8510,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il recupero venga effettuato a braccio disteso e ben alto, con mano rilassata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      279,
+      30
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 427,
@@ -5548,7 +8530,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Con brevi tratti molto veloci.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      198,
+      34
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Tutto il corpo si muove con un movimento ondulatorio, ma un punto (il baricentro) si muove in linea retta . Non è difficile capir e la ragione di questa regola, dalla geometria elementare: la distanza più breve tra due punti è la linea retta ...."
   },
   {
     "id": 428,
@@ -5561,7 +8550,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      279,
+      31
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 429,
@@ -5574,7 +8570,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Struttura di base, ritmo ed accoppiamento dei movimenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      271,
+      14,
+      11
+    ],
+    "manualSection": "4.10.4.3. DIDATTICA",
+    "manualExcerpt": "L’insegnamento della nuotata a farfalla inizia già nella fase di ambientamento attraverso movimenti ondulatori del corpo e lo sviluppo della pinneggiata subacquea...."
   },
   {
     "id": 430,
@@ -5587,7 +8590,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La fase di apprendimento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      287,
+      275
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "cominciano ad avere anche una valenza metabolica : oltre alla tecnica si tengono presenti anche le int ensità di esecuzione...."
   },
   {
     "id": 431,
@@ -5600,7 +8610,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. No.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      34,
+      32
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 432,
@@ -5611,9 +8628,16 @@ const quizData = [
       "C": "La bracciata, che è il principale fattore di avanzamento",
       "D": "È indifferente perché è uno stile facile da imparare"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": "La risposta corretta è C. La bracciata, che è il principale fattore di avanzamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      269,
+      284,
+      31
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 433,
@@ -5626,7 +8650,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Gli esercizi da proporre per ottenere un movimento ondulatorio del corpo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      272,
+      281,
+      282
+    ],
+    "manualSection": "4.10.4.4. ERRORI COMUNI",
+    "manualExcerpt": "o Gli allievi conoscono già il movimento circolatorio della bracciata perché lo possiedono, sebbene in forma alternata, dallo stile libero. Agli inizi deve essere proposta con le braccia distese o Far provare la bracciata in piedi in acqua...."
   },
   {
     "id": 434,
@@ -5639,7 +8670,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Non c’è nessun obbligo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      284,
+      306
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 435,
@@ -5652,7 +8690,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Non va insegnato, si definisce con l’evoluzione della nuotata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      269,
+      271
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Gambata a rana con braccia distese in avanti/lungo i fianchi • Gambata a rana sul dorso (braccia lungo i fianchi) • Gambata a rana in verticale • Gambata a rana in subacquea • Bracciata a rana e colpo di gambe a delfino/a stile • Nuotata completa modificando il ritmo durante la vasca..."
   },
   {
     "id": 436,
@@ -5665,7 +8710,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Simmetrica, simultanea anche se con i piedi non alla stessa altezza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      34,
+      271
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "4.12.2.4. FARFALLA Gli stili rana e farfalla sono considerati , oramai, nuotate simultanee e non più simmetriche. In poche parole i movimenti devono essere effettuati contemporaneamente e non necessariamente sullo stesso piano ...."
   },
   {
     "id": 437,
@@ -5678,7 +8730,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Durante la fase di spinta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      284,
+      281
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 438,
@@ -5691,7 +8750,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. I fianchi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      30,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "5.2.1.3.3. RANA I dettami del regol amento tecnico di questo stile sono decisamente articolati : • Si deve nuotare sul petto, sia gli arti superiori che quelli inferiori devono muoversi simultaneamente e sullo stesso piano orizzon tale, senza movimenti alternati • Le mani non possono..."
   },
   {
     "id": 439,
@@ -5704,7 +8770,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Tutti i movimenti devono essere eseguiti simmetricamente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      284,
+      32
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "4.12.2.4. FARFALLA Gli stili rana e farfalla sono considerati , oramai, nuotate simultanee e non più simmetriche. In poche parole i movimenti devono essere effettuati contemporaneamente e non necessariamente sullo stesso piano ...."
   },
   {
     "id": 440,
@@ -5717,7 +8790,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Si memorizza la soluzione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      19,
+      276
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 441,
@@ -5730,7 +8810,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Si sperimenta la soluzione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      19,
+      276,
+      268
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "1. Fase della comprensione del compito : coinvolgimento affettivo del soggetto, scoperta vera e propria di una o più azioni motorie possibili, primi tentativi per risolvere problemi motori, modello approssimativo u tilizzato per eseguire il gesto 2...."
   },
   {
     "id": 442,
@@ -5743,7 +8830,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si incontra il problema da risolvere.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      19,
+      276,
+      275
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "1. Fase della comprensione del compito : coinvolgimento affettivo del soggetto, scoperta vera e propria di una o più azioni motorie possibili, primi tentativi per risolvere problemi motori, modello approssimativo u tilizzato per eseguire il gesto 2...."
   },
   {
     "id": 443,
@@ -5756,7 +8850,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Aumenta l’attenzione degli allievi perché aumentano le difficoltà in modo da predisporli alla fase successiva.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      158,
+      293
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE DELLA LEZIONE I contenuti di una lezione di scuola nuoto variano in base al livello tecnico degli allievi e agli obiettivi del corso...."
   },
   {
     "id": 444,
@@ -5769,7 +8870,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Più alto rispetto alla mano.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      31,
+      30
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Il rollio del corpo : nel dorso questa azione è ancora più ef ficace e presenta dei vantaggi maggiori che nel crawl...."
   },
   {
     "id": 445,
@@ -5782,7 +8890,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La continuità delle azioni e l’assenza di pause.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      30,
+      268
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Indicazioni metodologiche Come per gli altri stili, anche per quanto riguarda l’insegnamento della rana è importante presentare proposte didattiche che prevedano dei movimenti di apprendimento globale uniti a momenti di apprendimento analitico...."
   },
   {
     "id": 446,
@@ -5795,7 +8910,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Spinta dal bordo, bracciata, colpo di gambe a delfino, recupero delle braccia, gambata rana.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      32,
+      269
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "5.2.1.3.3. RANA I dettami del regol amento tecnico di questo stile sono decisamente articolati : • Si deve nuotare sul petto, sia gli arti superiori che quelli inferiori devono muoversi simultaneamente e sullo stesso piano orizzon tale, senza movimenti alternati • Le mani non possono..."
   },
   {
     "id": 447,
@@ -5808,7 +8930,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È importante perché questa struttura svolge il ruolo di asse portante per il capo, il tronco e per gli arti superiori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      19,
+      65,
+      225
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "4.7.2.5. TRAUMA SPINALE Qualunque sia l’evento traumatico, i traumi della colonna vertebrale si possono classificare in: • traumi senza interessam ento del midollo spinale: solo lesioni oss ee • traumi con interessamento del midollo spi nale: lesioni ossee e midollari II midollo spinale può essere..."
   },
   {
     "id": 448,
@@ -5821,7 +8950,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La mobilità articolare.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      182,
+      18,
+      14
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 449,
@@ -5834,7 +8970,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Alternato e ciclico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      65,
+      28,
+      143
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Fig. 22 : twist in acqua alta Spinte degli arti inferiori In galleggiamento dalla posizione verticale con arti inferiori flessi e raccolti a 90° rispetto al busto, si effettuano dei movimenti simultanei di spinta e distensione degli arti in avanti e successivo ritorno in flessione...."
   },
   {
     "id": 450,
@@ -5847,7 +8990,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. All’altezza della coscia.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      26,
+      264,
+      25
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 451,
@@ -5860,7 +9010,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Liberatoria.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      281,
+      25
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "• Esercizi di pe rfezionamento o Un solo braccio, l’altro in alto: in questo esercizio si pone l’accento sul rollio corrispondente con la fine della spinta e sull’appoggio della mano in alto...."
   },
   {
     "id": 452,
@@ -5873,7 +9030,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Durante tutta la prima fase della bracciata si deve mantenere il gomito più alto della mano e del polso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      264,
+      31
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "• Esercizi di pe rfezionamento o Un solo braccio, l’altro in alto: in questo esercizio si pone l’accento sul rollio corrispondente con la fine della spinta e sull’appoggio della mano in alto...."
   },
   {
     "id": 453,
@@ -5886,7 +9050,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Appoggio-presa/trazione/ spinta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      30,
+      284
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 454,
@@ -5899,7 +9070,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nessuna delle risposte precedenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      271,
+      34
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Tutto il corpo si muove con un movimento ondulatorio, ma un punto (il baricentro) si muove in linea retta . Non è difficile capir e la ragione di questa regola, dalla geometria elementare: la distanza più breve tra due punti è la linea retta ...."
   },
   {
     "id": 455,
@@ -5912,7 +9090,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Simultanei e simmetrici.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      65,
+      282,
+      143
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 456,
@@ -5925,7 +9110,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Propulsiva.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      269,
+      271
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "• Gambata a rana con braccia distese in avanti/lungo i fianchi • Gambata a rana sul dorso (braccia lungo i fianchi) • Gambata a rana in verticale • Gambata a rana in subacquea • Bracciata a rana e colpo di gambe a delfino/a stile • Nuotata completa modificando il ritmo durante la vasca..."
   },
   {
     "id": 457,
@@ -5938,7 +9130,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Il capo esce per la respirazione dopo che la mani oltrepassano la linea delle spalle.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      284,
+      269
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 458,
@@ -5951,7 +9150,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Le spalle si trovano sopra la superficie dell’acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      282,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 459,
@@ -5964,7 +9170,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Alla fine del recupero delle braccia.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      31,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 460,
@@ -5977,7 +9190,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Presa, trazione, recupero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      31,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 461,
@@ -5990,7 +9210,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Frontale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      274,
+      321,
+      262
+    ],
+    "manualSection": "4.11.4. CHI PIÙ NE HA PIÙ NE METTA",
+    "manualExcerpt": "La nuotata a rana è quella che favorisce maggiormente l'interazione con le tecniche del nuoto sincronizzato, infatti l'azione delle braccia e quella delle gambe vengono utilizzate contemporanea mente o separatamente nelle esercitazioni tecniche e nelle coreografie...."
   },
   {
     "id": 462,
@@ -6003,7 +9230,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Simmetricamente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      282,
+      306,
+      65
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 463,
@@ -6016,7 +9250,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Bicicletta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      274,
+      284,
+      34
+    ],
+    "manualSection": "4.11.4. CHI PIÙ NE HA PIÙ NE METTA",
+    "manualExcerpt": "• Esercizi in posizione di galleggiamento verticale o Gambe a bicicletta spostamento in avanti/all’indietro /laterale o Gambe a delfino braccia al petto o Kick-pull-kick o Gambe incrociate , un braccio effettua una rotazione sopra la testa in senso antiorario e l’altro braccio segue la..."
   },
   {
     "id": 464,
@@ -6029,7 +9270,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Appoggio/presa, trazione e spinta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      28,
+      281
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Il rollio del corpo : nel dorso questa azione è ancora più ef ficace e presenta dei vantaggi maggiori che nel crawl...."
   },
   {
     "id": 465,
@@ -6042,7 +9290,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. I lanci, gli spostamenti e i tiri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      287,
+      158
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 466,
@@ -6055,7 +9310,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Lanci – spostamento – tiro.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      18,
+      378,
+      67
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "Leve ossee e movimento Il movimento dei capi ossei può essere assimilato a quello di una leva. La leva è una macchina costituita da un’asta rigida (l’osso), g irevole intorno ad un asse perpendicolare. Il fulcro (l’articolazione) è il punto d’incontro tra asse e leva...."
   },
   {
     "id": 467,
@@ -6068,7 +9330,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Trudgen.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      269,
+      279,
+      304
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "Il SIT è un organo tecnico della FIN. Il SIT raggruppa tutti i tecnici di nuoto, tuffi, pallanuoto, nuoto sincronizzato, nu oto di fondo, nuoto per salvamento e provvede con la propria organizzazione centrale e periferica all’istruzione, alla nomina, all’aggiornamento dei tecnici mediante..."
   },
   {
     "id": 468,
@@ -6081,7 +9350,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Una.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      34,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 469,
@@ -6094,7 +9370,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Primo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      212,
+      275,
+      163
+    ],
+    "manualSection": "4.6.2.1.6. CONCLUSIONI",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 470,
@@ -6107,7 +9390,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Sì, perché è una caratteristica essenziale dello stile.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      269,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 471,
@@ -6120,7 +9410,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. In accelerazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      269,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "• Gambata a rana con braccia distese in avanti/lungo i fianchi • Gambata a rana sul dorso (braccia lungo i fianchi) • Gambata a rana in verticale • Gambata a rana in subacquea • Bracciata a rana e colpo di gambe a delfino/a stile • Nuotata completa modificando il ritmo durante la vasca..."
   },
   {
     "id": 472,
@@ -6133,7 +9430,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Subacquea.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      284,
+      31
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 473,
@@ -6146,7 +9450,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È presente dopo alcuni particolari movimenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      268,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 474,
@@ -6159,7 +9470,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Frontale 47.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      274,
+      281
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "Con quinto stile si intende il movimento del corpo in subacquea, l’obiettivo è quello di proporre una serie di esercitazioni che permettano ai nostri allievi di sperimentare il mondo sommerso...."
   },
   {
     "id": 475,
@@ -6172,7 +9490,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La remata verso l’interno.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      27,
+      260,
+      270
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Lo stile libero o crawl è lo stile che assicura la massima velocità di spostamento in acqua e la maggior continuità d’azione."
   },
   {
     "id": 476,
@@ -6185,7 +9510,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La fase attiva della gambata avviene mentre le braccia si estendono in avanti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      284,
+      269
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 477,
@@ -6198,7 +9530,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. In flessione dorsale con le dita più alte rispetto al polso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      312,
+      318,
+      279
+    ],
+    "manualSection": "4.16.2. DORSO",
+    "manualExcerpt": "Remata standard - Le braccia sono flesse lungo i fianchi con le mani all'altezza del bacino, ed eseguono un movimento a pendolo in fuori e in dentro che parte dal gomito e coinvolge avambraccio, polso e mano...."
   },
   {
     "id": 478,
@@ -6211,7 +9550,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Muovere le gambe.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      306,
+      269
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Prima del segnale di partenza i concorrenti devono allinearsi nell’acqua, rivolti verso la testata di partenza, con entrambe le mani agg rappate alle maniglie di partenza. È vietato posizionare i piedi dentro o sopra la canaletta di sfioro o piegare le dita sopra il bordo della stessa...."
   },
   {
     "id": 479,
@@ -6224,7 +9570,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Simultaneamente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      306,
+      31
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Dopo la partenza e dopo ogni virata, il concorrente può effettuare una sola bracciata completa all’indietro fino alle gambe, durante la quale può rimanere completamente immerso. Durante la prima bra cciata è consentito un singolo calcio a farfalla, seguito da un calcio a rana...."
   },
   {
     "id": 480,
@@ -6237,7 +9590,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È consentito toccare il bordo con le mani a differenti altezze.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      31,
+      32,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "5.2.1.3.3. RANA I dettami del regol amento tecnico di questo stile sono decisamente articolati : • Si deve nuotare sul petto, sia gli arti superiori che quelli inferiori devono muoversi simultaneamente e sullo stesso piano orizzon tale, senza movimenti alternati • Le mani non possono..."
   },
   {
     "id": 481,
@@ -6250,7 +9610,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 200 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      284,
+      198
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 482,
@@ -6263,7 +9630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Respirare frontalmente invece che lateralmente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      263,
+      34,
+      274
+    ],
+    "manualSection": "4.10.1.4. ERRORI COMUNI",
+    "manualExcerpt": "• Respirazione con testa alta, invece che con rotazione laterale/bocca serrata. È necessario riproporre esercizi per il controllo del ritmo re spiratorio • Pausa della bracciata quando viene inserita la respirazione...."
   },
   {
     "id": 483,
@@ -6276,7 +9650,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Diligenza, prudenza, perizia.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      375,
+      20,
+      203
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 484,
@@ -6289,7 +9670,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Avere ben chiari gli obiettivi che si vogliono perseguire.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      287,
+      30,
+      273
+    ],
+    "manualSection": "4.13.1. ORGANIZZAZIONE E REALIZZAZIONE",
+    "manualExcerpt": "La visione classica della scuola nuoto si fonda su una concezione meccanicistica dell’acquisizione della tecnica dei quattro stili...."
   },
   {
     "id": 485,
@@ -6302,7 +9690,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Svuotare completamente i polmoni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      378,
+      238,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 486,
@@ -6315,7 +9710,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Perdere di vista gli allievi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      288,
+      87,
+      201
+    ],
+    "manualSection": "4.13.2. ORGANIZZAZIONE DEL CORSO DI NUOTO",
+    "manualExcerpt": "Una lezione ben organizzata perde molta della propria efficacia se non è inserita in un percorso razionale. Quando riceve in affidamento un gruppo l’istruttore deve rispettare le fasi di una corretta programmazione: 1...."
   },
   {
     "id": 487,
@@ -6328,7 +9730,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le voci precedenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      301,
+      208,
+      288
+    ],
+    "manualSection": "4.13.8.7. COMPORTAMENTO SUL PIANO FORMALE",
+    "manualExcerpt": "Si è già evidenziato come l’allievo segue le direttive indicategli dal proprio istruttore in virtù del fatto che egli rappresenta, per lui, sicurezza ed esperienza...."
   },
   {
     "id": 488,
@@ -6341,7 +9750,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Distesi e rilassati.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      132,
+      165
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Una delle proprietà specifiche delle attività motorie acquatiche è proprio quella di far lavorare in modo equilibrato i muscoli agonisti ed antagonisti, ma è possibile comunque individuare il gruppo muscolare che maggiormente agisce su un determinato movimento..."
   },
   {
     "id": 489,
@@ -6354,7 +9770,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Per livello tecnico/capacità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      306,
+      31
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 490,
@@ -6367,7 +9790,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 15 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      306,
+      26
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 491,
@@ -6380,7 +9810,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Perché necessita di buoni livelli di forza e resistenza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      18,
+      378,
+      67
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 492,
@@ -6393,7 +9830,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Per evitare un eccessivo innalzamento delle spalle.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      31,
+      262
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 493,
@@ -6406,7 +9850,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Pallanuoto-nuoto sincronizzato- salvamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      195,
+      199
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Livelli successivi Al termine di questo ciclo base di apprendimento si potranno impostare cicli di approfondimento delle attività acquatiche, suddivisi per discipline o comprendenti elementi di tutti gli sport della piscina: • Fondamentali della pallanuoto: o Palleggi elementari o Nuotate..."
   },
   {
     "id": 494,
@@ -6419,7 +9870,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il rilassamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      203,
+      300,
+      362
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 495,
@@ -6432,7 +9890,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Due.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      306,
+      32,
+      262
+    ],
+    "manualSection": "4.14.7.5. LE NUOTATE A STILE MISTO, INDIVIDUALI O A STAFFETTA",
+    "manualExcerpt": "Dopo la partenza e dopo ogni virata, il concorrente può effettuare una sola bracciata completa all’indietro fino alle gambe, durante la quale può rimanere completamente immerso. Durante la prima bra cciata è consentito un singolo calcio a farfalla, seguito da un calcio a rana...."
   },
   {
     "id": 496,
@@ -6445,7 +9910,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Per effettuare un corretto intervento in caso di necessità 49.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      103,
+      215,
+      216
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "In quasi tutte le realtà sportive le attività quotidiane si svolgono senza la presenza di personale medico e per la maggior parte delle situazioni è necessario un intervento immediato...."
   },
   {
     "id": 497,
@@ -6458,7 +9930,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Per conoscere lo spazio sottostante e sentire che l’acqua spinge verso l’alto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      246,
+      252
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• La respirazione (inspirare solo con la bocca, per evitare che l’acqua invada le vie aeree superiori; espirare con bocca o naso – ma anche imparare a tratten ere l’aria nei polmoni per facilitare il galleggiamento) • L’entrata in acqua dall’alto (tuffo) ..."
   },
   {
     "id": 498,
@@ -6471,7 +9950,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Perché è uno stile discontinuo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      306,
+      31,
+      268
+    ],
+    "manualSection": "4.14.7.5. LE NUOTATE A STILE MISTO, INDIVIDUALI O A STAFFETTA",
+    "manualExcerpt": "4.10.3.3. DIDATTICA La rana s olitamente è insegnata come ultimo stile perché si tratta di uno stile discontinuo (implica delle pause) e che richiede una posizione del piede differente rispetto a quella che è stata richiesta fino a questo momento agli allievi (il piede deve essere tenu to a..."
   },
   {
     "id": 499,
@@ -6484,7 +9970,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Posizione in acqua seduta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      269,
+      280
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 500,
@@ -6497,7 +9990,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Spinta delle braccia sufficiente per la propulsione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      269,
+      272
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 501,
@@ -6510,7 +10010,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Impostazione della posizione dei piedi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      269,
+      32
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 502,
@@ -6523,7 +10030,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Coordinazione tra bracciata e respirazione laterale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      279,
+      269
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 503,
@@ -6536,7 +10050,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La continuità delle azioni.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      279,
+      27
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Il rollio del corpo : nel dorso questa azione è ancora più ef ficace e presenta dei vantaggi maggiori che nel crawl...."
   },
   {
     "id": 504,
@@ -6549,7 +10070,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Nel cambio tra un turno e l’altro.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      305,
+      245
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Per come è stato definito ed illustrato, appare evidente come l’ambientamento sia un percorso da riservare ai bambini e ragazzi...."
   },
   {
     "id": 505,
@@ -6562,7 +10090,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Controllare lo sbilanciamento in avanti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      30,
+      285,
+      31
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Eseguire nella fase di ambientamento esercizi che insegnano la propulsione del corpo, come; • Il delfino : gli allievi imitano il movimento del delfino, con le bracci a lungo i fianchi o in avant i • Lo squalo: si chiede agli allievi di avanzare muovendo lateralmente a destra e sinistra le..."
   },
   {
     "id": 506,
@@ -6575,7 +10110,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Respirazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      283,
+      279,
+      269
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "Poiché nella rana la gambata riveste un’importanza fondamentale per l’avanzamento e soltanto la sua corretta esecuzione garantisce un apprendimento efficace della coordinazione tipica di questo stile, l’insegnante dovrà porre molta attenzione agli esercizi per il suo apprendimento...."
   },
   {
     "id": 507,
@@ -6588,7 +10130,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La strutturazione e la realizzazione di un progetto di total quality.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      194,
+      197
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "La Scuola Nuoto Federale (SNF) è un progetto di total quality promosso dalla FIN per uniformare verso l’a lto gli standard organizzativi e didattici delle scuole che decidono di partecipare al progetto, così da garantire all’utenza un servizio eccellente e omogeneo sull’intero territorio..."
   },
   {
     "id": 508,
@@ -6601,7 +10150,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Farfalla – dorso – rana – crawl.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      305,
+      26
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 509,
@@ -6614,7 +10170,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La spinta.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      268,
+      27
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 510,
@@ -6627,7 +10190,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Stabilizzatrice.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      269,
+      279,
+      305
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 511,
@@ -6640,7 +10210,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Mani.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      31,
+      269
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "o Gli allievi provano la gambata distesi proni sul bordo, le gambe in acqua. È importante inserire la pausa tra un colpo di gambe e il successivo. Con i bambini è importante f are in modo che contino almeno tre secondi...."
   },
   {
     "id": 512,
@@ -6653,7 +10230,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. In linea con il corpo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      279,
+      28
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Prima del segnale di partenza i concorrenti devono allinearsi nell’acqua, rivolti verso la testata di partenza, con entrambe le mani agg rappate alle maniglie di partenza. È vietato posizionare i piedi dentro o sopra la canaletta di sfioro o piegare le dita sopra il bordo della stessa...."
   },
   {
     "id": 513,
@@ -6666,7 +10250,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Orizzontale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      278,
+      362,
+      212
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "• Stendersi sul materassino : si può passare dai tappetini di materiale espanso, più spess i, a quelli sottili da palestra • Usare una ciamb ella o un tubo galleggiante come cuscino: rispetto al tubo la ciambella presenta il vantaggio di poter essere sgonfiata progressivamente...."
   },
   {
     "id": 514,
@@ -6679,7 +10270,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Approccio con l’acqua, immersione del viso e respirazione, galleggiamenti, gli scivolamenti, prime propulsioni..",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      245,
+      384
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Con questo approccio, definibile come euristico , si vuole superare la concezione meccanicistica che ha imperato negli scorsi decenni e che costr ingeva l’allievo in un percorso obbligato di avviamento (pseudo -ambientamento) – propulsione grezza – correzioni – progressione didattica dei quattro..."
   },
   {
     "id": 515,
@@ -6692,7 +10290,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dorso, rana, farfalla, stile libero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      26,
+      304
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 516,
@@ -6705,7 +10310,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Farfalla – dorso – rana – stile libero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      26,
+      304
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 517,
@@ -6718,7 +10330,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il crawl.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      279,
+      26
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 518,
@@ -6731,7 +10350,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La flessibilità a fronte di particolari problematiche individuali.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      195,
+      194,
+      359
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Data per scontata una definizione realistica degli obiet tivi, il momento cruciale e fondativo è la scelta delle persone: i questionari distribuiti in numerose scuole nuoto federali mostrano infatti come la percezione di qualità dell’utenza dipenda quasi esclusivamente dalla competenza e..."
   },
   {
     "id": 519,
@@ -6744,7 +10370,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. L’ampliamento delle abilità motorie.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      12,
+      375
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 520,
@@ -6757,7 +10390,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      13,
+      303,
+      93
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "Questi cinque fattori ci forniscono lo stimolo ad approfondire le conoscenze negli ambiti che sottintendono...."
   },
   {
     "id": 521,
@@ -6770,7 +10410,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Bacino leggermente affondato.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      277,
+      306
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Ovviamente, i primi prerequisiti necessari per l’apprendimento della nuotata sul dorso sono: la capacità di saper galleggiare in posizione supina ( galleggiamento a stella ) e lo scivolamento con le braccia lungo i fianchi ( siluro , soldatino )...."
   },
   {
     "id": 522,
@@ -6783,7 +10430,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Superare la linea dei 15 metri durante la fase subacquea di nuotata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      306,
+      31,
+      305
+    ],
+    "manualSection": "4.14.7.5. LE NUOTATE A STILE MISTO, INDIVIDUALI O A STAFFETTA",
+    "manualExcerpt": "Dopo la partenza e dopo ogni virata, il concorrente può effettuare una sola bracciata completa all’indietro fino alle gambe, durante la quale può rimanere completamente immerso. Durante la prima bra cciata è consentito un singolo calcio a farfalla, seguito da un calcio a rana...."
   },
   {
     "id": 523,
@@ -6796,7 +10450,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tuffi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      269,
+      246,
+      278
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "Esercizi di sviluppo e consolidamento Gli esercizi proposti qui di seguito hanno lo scopo di consolidare ed ottimizzare la tecnica di nuotata in vista di una maggiore efficienza, devono essere propo sti nel momento in cui l’allievo abbia acquisito con sicurezza una tecnica di base della nuotata."
   },
   {
     "id": 524,
@@ -6809,7 +10470,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 1/2.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      271,
+      272,
+      282
+    ],
+    "manualSection": "4.10.4.3. DIDATTICA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 525,
@@ -6822,7 +10490,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 1/1.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      274,
+      32,
+      282
+    ],
+    "manualSection": "4.11.4. CHI PIÙ NE HA PIÙ NE METTA",
+    "manualExcerpt": "• Esercizi in posizione di galleggiamento verticale o Gambe a bicicletta spostamento in avanti/all’indietro /laterale o Gambe a delfino braccia al petto o Kick-pull-kick o Gambe incrociate , un braccio effettua una rotazione sopra la testa in senso antiorario e l’altro braccio segue la..."
   },
   {
     "id": 526,
@@ -6835,7 +10510,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La T nera disegnata sul fondo della vasca a 2 metri dal bordo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      172,
+      246
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Prima del segnale di partenza i concorrenti devono allinearsi nell’acqua, rivolti verso la testata di partenza, con entrambe le mani agg rappate alle maniglie di partenza. È vietato posizionare i piedi dentro o sopra la canaletta di sfioro o piegare le dita sopra il bordo della stessa...."
   },
   {
     "id": 527,
@@ -6848,7 +10530,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Continuità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      25,
+      26,
+      284
+    ],
+    "manualSection": "5.2.1 2. PROPULSIONE",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 528,
@@ -6861,7 +10550,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Apprendimento delle componenti gestuali delle nuotate.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      375,
+      183
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 529,
@@ -6874,7 +10570,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Staffetta 4x400 metri stile libero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      26,
+      279
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 530,
@@ -6887,7 +10590,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Usare 5/6 metri di corsia, rimanere fuori dall’acqua e non perdere di vista il gruppo. 52.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      85,
+      246,
+      247
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "Non è importante la tecnica: questo è l’esercizio fondamentale per la sicurezza , in quanto garantisce che l’allievo è in grado di tornare a bordo vasca (ed eventualmente di chiedere aiuto) quale che sia la situazione di partenza...."
   },
   {
     "id": 531,
@@ -6900,7 +10610,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Si ordinano gli allievi in fila e si controlla che l’area sia sgombra.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      201,
+      208,
+      283
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "mantenendo sempre un atteggiamento proattivo (individuare e suggerire la correzione di eventuali criticità)...."
   },
   {
     "id": 532,
@@ -6913,7 +10630,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le precedenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      83,
+      74
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Un’organizzazione è un’associazione di persone collegate tra loro in una struttura organica per cooperare a un fine comune...."
   },
   {
     "id": 533,
@@ -6926,7 +10650,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Un errore di ritmo respiratorio.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      28,
+      284
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 534,
@@ -6939,7 +10670,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Comportamentali.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      203,
+      212,
+      20
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 535,
@@ -6952,7 +10690,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ricreativa, agonistica, didattica.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      194,
+      297,
+      195
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Un’organizzazione è un’associazione di persone collegate tra loro in una struttura organica per cooperare a un fine comune...."
   },
   {
     "id": 536,
@@ -6965,7 +10710,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Controllo dell’apnea e degli scambi respiratori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      158,
+      305
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 537,
@@ -6978,7 +10730,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sviluppa le capacità motorie, eleva il tono funzionale di base dei sistemi organici centrali, prepara le strutture muscolare e articolare e stimola lo sviluppo di alcune caratteristiche delle diverse aree della personalità.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      182,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 538,
@@ -6991,7 +10750,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Forza, resistenza, mobilità articolare.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      378,
+      18,
+      19
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "5.1.2.1.3. MOBILITÀ ARTICOLARE Detta anche flessibilità, articolarità, articola bilità, estensibilità ecc, è la capacità di una o di un insieme di articolazioni, di muoversi liberamente per tutto il proprio range di mobilità ; la capacità di un soggetto di..."
   },
   {
     "id": 539,
@@ -7004,7 +10770,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Cadute, urti, affondamenti.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      232,
+      70,
+      71
+    ],
+    "manualSection": "4.7.3. RIANIMAZIONE CARDIO -POLMONARE DI BASE",
+    "manualExcerpt": "precisa non viene individuata. L'arresto cardiaco improvviso è una delle principali cause di morte in Europa, dove sono colpite circa 700.000 persone ogni anno...."
   },
   {
     "id": 540,
@@ -7017,7 +10790,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 25x16,50 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      297,
+      304,
+      172
+    ],
+    "manualSection": "4.13.7.4. ALTRE ATTIVITÀ",
+    "manualExcerpt": "• Che caratteristiche ha? - È un’ attività di nuoto praticato utenti senza l’ausilio di un istruttore ( nuoto libero ) o con un istruttore che può dare consigli e indicazioni, su richiesta e in maniera sporadica e occasionale ( nuoto controllato) • A chi è rivolta?..."
   },
   {
     "id": 541,
@@ -7030,7 +10810,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 50, 100 e 200 m.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      305,
+      172
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "I primati nazionali, come le gare, si dividono in individuali e collettivi (a staffetta); per stile di gara; tra le sezioni maschile e femminile. Per i primati nazionali assoluti in vasca di m. 50, sono riconosciute le seguenti distanze e stili per entrambi i sessi:"
   },
   {
     "id": 542,
@@ -7043,7 +10830,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 50, 100 e 200 m.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      201,
+      172
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "I primati nazionali, come le gare, si dividono in individuali e collettivi (a staffetta); per stile di gara; tra le sezioni maschile e femminile. Per i primati nazionali assoluti in vasca di m. 50, sono riconosciute le seguenti distanze e stili per entrambi i sessi:"
   },
   {
     "id": 543,
@@ -7056,7 +10850,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. 100, 200 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      305,
+      199
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "Stile Distanze individuali (metri ) Distanze a staffetta (metri ) Libero 50-100-200-400-800-1500 4x100 – 4x200 Dorso 50-100-200 Non previste Rana 50-100-200 Non previste Farfalla 50-100-200 Non previste Misti 200-400* 4x100**"
   },
   {
     "id": 544,
@@ -7069,7 +10870,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Analisi della situazione - Definizione dell’obiettivo - Scelta dei metodi - Verifica dei risultati.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      289,
+      20,
+      163
+    ],
+    "manualSection": "4.13.3. ORGANIZZAZIONE DI UNA STRUTTURA DIDATTICA",
+    "manualExcerpt": "Per sviluppare coerentemente ed efficacemente le proprie competenze, un istruttore deve essere inserito in una struttura ben funzionante. L’organizzazione della scuola nuoto riprende, a un livello superiore, le fasi della corretta programmazione, con qualche fase supplementare: 1...."
   },
   {
     "id": 545,
@@ -7082,7 +10890,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Piede - caviglia - gamba.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      269,
+      32,
+      283
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "Poiché nella rana la gambata riveste un’importanza fondamentale per l’avanzamento e soltanto la sua corretta esecuzione garantisce un apprendimento efficace della coordinazione tipica di questo stile, l’insegnante dovrà porre molta attenzione agli esercizi per il suo apprendimento...."
   },
   {
     "id": 546,
@@ -7095,7 +10910,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Presa e Trazione in accelerazione, Recupero veloce e scivolamento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      28,
+      31
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 547,
@@ -7108,7 +10930,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nuotatore stanco, presa al petto, presa al capo, trasporto laterale.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      27,
+      320
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Dimezza la resistenza offerta dall’acqua all’avanzamento, in quanto soltanto u na metà del corpo resta immersa • Permette l’intervento dei grandi muscoli del tronco, in particolare il gran dorsale che viene allungato in fase di presa ed il pettorale ch e..."
   },
   {
     "id": 548,
@@ -7121,7 +10950,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Presa, trazione, recupero.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      32,
+      31,
+      27
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 549,
@@ -7134,7 +10970,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Lo sviluppo di capacità senso- percettive e coordinative.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      14,
+      18,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 550,
@@ -7147,7 +10990,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Respirazioni e forme elementari di propulsione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      281,
+      262
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "La più grande difficoltà per l’apprendimento del crawl è costituita dalla respirazione. L’inspirazione deve coincidere con il momento in cui si termina la spinta di un braccio, la testa è completamente ruotata sul suo asse e l’appoggio viene trasferito al braccio opposto...."
   },
   {
     "id": 551,
@@ -7160,7 +11010,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Fattori termoregolatori.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      291,
+      14,
+      378
+    ],
+    "manualSection": "4.13.3. ORGANIZZAZIONE DI UNA STRUTTURA DIDATTICA",
+    "manualExcerpt": "Negli impianti natatori e nelle società sportive uno degli obiettivi è la creazione di gruppi agonistici delle varie discipline; si pone quindi il problema di come organizzare questa attività , che obiettivi avere, i criteri e gli strumenti da adottare...."
   },
   {
     "id": 552,
@@ -7173,7 +11030,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Quando l’allievo ha imparato la bracciata in forma grezza.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      262,
+      272,
+      279
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "Esercizi di sviluppo e consolidamento Gli esercizi proposti qui di seguito hanno lo scopo di consolidare ed ottimizzare la tecnica di nuotata in vista di una maggiore efficienza, devono essere proposti nel momento in cui l’allievo abbia acquisito con sicurezza una tecnica di base della nuotata...."
   },
   {
     "id": 553,
@@ -7186,7 +11050,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Quando l’allievo immerge il capo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      362,
+      20,
+      261
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "La respirazione avviene alla fine della fase di spinta, il capo viene leggermente ruotato lateralmente (non sollevato) mantenendo immersa la guancia dal lato in cui avviene l’inspirazion e con la bocca...."
   },
   {
     "id": 554,
@@ -7199,7 +11070,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Alla fine della trazione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      284,
+      268,
+      270
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 555,
@@ -7212,7 +11090,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Quando l’allievo galleggia sul petto e sul dorso, affonda e si sa spostare con il corpo rilassato.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      305,
+      249
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell’acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
   },
   {
     "id": 556,
@@ -7225,7 +11110,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. In ambienti eccessivamente caldi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      71,
+      70,
+      226
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Il calore che il nostro organismo produce deve essere dissipato affinché la temperatura corporea possa essere mantenuta costante...."
   },
   {
     "id": 557,
@@ -7238,7 +11130,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. 4.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      279,
+      267,
+      272
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 558,
@@ -7251,7 +11150,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 7.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      309,
+      71,
+      204
+    ],
+    "manualSection": "4.15.2. DALL’ATTIVITÀ LUDICA",
+    "manualExcerpt": "4.6.2. LE RESPONSABILITÀ Premesse e chiarite le ragi oni di come, nel caso di incidente, l’istruttore si trovi esposto ad una forma di responsabilità , occorre configurare il tipo di addebito, che viene distinto in genere con riferimento alla norma di legge eventualmente violata: si parla..."
   },
   {
     "id": 559,
@@ -7264,7 +11170,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Perché l’espirazione è forzata in quanto deve vincere la maggior pressione dell’acqua.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      183,
+      280,
+      163
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "all’innalzamento del battito cardiaco (e quindi della temperatura), p asserà da proposte differenti, più o meno impegnative da un punto di vista muscolare. 6...."
   },
   {
     "id": 560,
@@ -7277,7 +11190,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Le fasi della singola lezione per gruppi di scuola nuoto evoluti; e la loro applicazione costante nelle lezioni favorisce la concatenazione degli stimoli, lezione dopo lezione, unitamente all’applicazione dei principi di gradualità e progressività.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      293,
+      287,
+      155
+    ],
+    "manualSection": "4.13.6.1. CONSIDERAZIONI GENERALI",
+    "manualExcerpt": "cominciano ad avere anche una valenza metabolica : oltre alla tecnica si tengono presenti anche le int ensità di esecuzione...."
   },
   {
     "id": 561,
@@ -7290,7 +11210,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Fasi dell’apprendimento.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      20,
+      14,
+      375
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "La miglior qualità dell’insegnamento è basata sulla conoscenza globale della tecnica e sull’intenzione di renderla globale, cercando di svilupparla individualmente...."
   },
   {
     "id": 562,
@@ -7303,7 +11230,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. No, perché molto probabilmente l’azione delle gambe sarà eseguita scorrettamente.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      28,
+      278,
+      277
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "• Stendersi sul materassino : si può passare dai tappetini di materiale espanso, più spess i, a quelli sottili da palestra • Usare una ciamb ella o un tubo galleggiante come cuscino: rispetto al tubo la ciambella presenta il vantaggio di poter essere sgonfiata progressivamente...."
   },
   {
     "id": 563,
@@ -7316,7 +11250,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Nessuna.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      26,
+      305,
+      304
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 564,
@@ -7329,7 +11270,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. No perché altrimenti la battuta di gambe sarà tecnicamente errata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      246,
+      277,
+      278
+    ],
+    "manualSection": "4.8.2. INSEGNAMENTO/APPRENDIMENTO",
+    "manualExcerpt": "Ovviamente, i primi prerequisiti necessari per l’apprendimento della nuotata sul dorso sono: la capacità di saper galleggiare in posizione supina ( galleggiamento a stella ) e lo scivolamento con le braccia lungo i fianchi ( siluro , soldatino )...."
   },
   {
     "id": 565,
@@ -7342,7 +11290,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Soffiare con il naso, tenere il fiato per 10 secondi in immersione, prendere aria dalla bocca e soffiarla dal naso, eseguire 20 respirazioni in immersione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      252,
+      262
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Per poter passare all’insegnamento del crawl l’allievo deve, innanzitutto, non avere alcun problema di immersione del viso, apertura degli occhi sott’acqua e di coordinazione dell’espirazione con l’immersione del viso e dell’inspirazione c on l’emersione...."
   },
   {
     "id": 566,
@@ -7355,7 +11310,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Stare fermi in posizione verticale, stare fermi in posizione raggruppata, stare fermi in posizione rovesciata, passare da una posizione ad un’altra senza fare sforzi.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      28,
+      332
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell’acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
   },
   {
     "id": 567,
@@ -7368,7 +11330,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Immersione completa, immersioni con aiuti, immersioni in semicapovolta, raccolta di oggetti sul fondo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      269,
+      34,
+      32
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "o Gli allievi provano la gambata distesi proni sul bordo, le gambe in acqua. È importante inserire la pausa tra un colpo di gambe e il successivo. Con i bambini è importante f are in modo che contino almeno tre secondi...."
   },
   {
     "id": 568,
@@ -7380,7 +11349,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Arrivare ad un punto con la spinta dal bordo, arrivare alla corsia a sole gambe, scivolare sul dorso, usare braccia e gambe per raggiungere un punto, nuotare 25 m a gambe dorso.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      32,
+      280
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "4.14.7.3. NUOTATA A FARFALLA Dall’inizio della prima bracciata, dopo la partenza e dopo ogni virata, il corpo deve essere tenuto sul petto . In immersione è consentito effettuare colpi di gambe con il corpo posizionato sul fianco...."
   },
   {
     "id": 569,
@@ -7393,7 +11369,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Saltare in acqua, riprodurre una posizione in aria, tuffarsi da posizione in ginocchio, tuffarsi di testa.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      305,
+      274
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Esercizi in posizione di galleggiamento verticale o Gambe a bicicletta spostamento in avanti/all’indietro /laterale o Gambe a delfino braccia al petto o Kick-pull-kick o Gambe incrociate , un braccio effettua una rotazione sopra la testa in senso antiorario e l’altro braccio segue la..."
   },
   {
     "id": 570,
@@ -7406,7 +11389,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Gioco dei nomi, ricognizioni della vasca, esercizi di movimento in vasca piccoli, spostamenti lungo il bordo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      172,
+      238,
+      30
+    ],
+    "manualSection": "7.5.4. ESERCIZI",
+    "manualExcerpt": "persona al trattamento aumentando i rischi per la stessa persona, per l’operatore e per la struttura...."
   },
   {
     "id": 571,
@@ -7419,7 +11409,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Aprire gli occhi sott’acqua, sentire sott’acqua, toccare il compagno e copiare la posizione.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      252,
+      269
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Adulti: • Immergere il capo sott’acqua, aprire gli occhi, richiuderli ed emergere • Immergere il capo sott’acqua, trasmettere delle informazioni ad un altro allievo e riemergere • Recuperare degli oggetti dal fondo • Immergersi in posizione verticale con le braccia tese di fronte al petto,..."
   },
   {
     "id": 572,
@@ -7432,7 +11429,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Accoglienza, percepire in acqua, controllare la respirazione, controllare il galleggiamento, sapersi immergere,sapersi spostare, saltare in acqua e tuffarsi 57.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      280,
+      155,
+      278
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 573,
@@ -7445,7 +11449,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. 200, 400 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      304,
+      172,
+      246
+    ],
+    "manualSection": "4.14.6. PRIMATI NATATORI",
+    "manualExcerpt": "I primati nazionali, come le gare, si dividono in individuali e collettivi (a staffetta); per stile di gara; tra le sezioni maschile e femminile. Per i primati nazionali assoluti in vasca di m. 50, sono riconosciute le seguenti distanze e stili per entrambi i sessi:"
   },
   {
     "id": 574,
@@ -7458,7 +11469,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il controllo respiratorio.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      198,
+      375,
+      20
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Obiettivi formativi • Rafforzamento degli obiettivi del primo livello • Controllo respiratorio, coordinazione delle azioni degli arti superiori e inferiori • Sviluppo dell’immagine motoria • Sviluppo delle capacità di osservazione e di esplorazione del mondo circostante"
   },
   {
     "id": 575,
@@ -7471,7 +11489,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Consente di elevare il tono muscolare e di preparare le strutture periferiche all’attività natatoria.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      163,
+      185,
+      367
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Nello svolgimento delle attività è utile evitare alcune proposte : • Svolgimento delle nuotate a secco - Un tempo si riteneva che si potesse apprendere la tecnica del nuoto, solo mimando il gesto...."
   },
   {
     "id": 576,
@@ -7484,7 +11509,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Quando il fine dell’azione non è l’azione stessa ma la gratificazione ottenuta con la vittoria.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      281,
+      20,
+      212
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Battuta di gambe laterale con rotazione del capo : quest o esercizio può essere eseguito sia respirando da entrambi i lati sia simulando l’inizio del recupero del braccio dal lato della respirazione • Effettuare più bracciate possibile senza respirare, girarsi sul dorso e riprendere : questo..."
   },
   {
     "id": 577,
@@ -7497,7 +11529,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Quando il fine dell’azione non è l’azione stessa ma uno di contenuto ludico.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      281,
+      20,
+      366
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Un’altra alternativa è l’integrazione con gli allievi normodotati, argomento piuttosto delicato...."
   },
   {
     "id": 578,
@@ -7510,7 +11549,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Quando si propone un problema motorio e l’allievo deve trovare il modo di risolverlo.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      281,
+      20,
+      359
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "capacità, affermarsi come individuo originale, essere parte di un tessuto sociale fatto di relazioni interpersonali e di valori etici e morali di riferimento...."
   },
   {
     "id": 579,
@@ -7523,7 +11569,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. È riproducibile da tutti ogni volta che viene richiesto.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      34,
+      85,
+      30
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "Esercizi • Esercizi di perfezionamento: o Gambe delfino sul dorso : questo esercizio limita la flessione delle cosce nella gambata...."
   },
   {
     "id": 580,
@@ -7536,7 +11589,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. No.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      297,
+      76,
+      303
+    ],
+    "manualSection": "4.13.7.4. ALTRE ATTIVITÀ",
+    "manualExcerpt": "Le singole f ederazioni decidono se considerare l'età in base al criterio dell'anno solare, età anagrafica oppure stagione sportiva (che può avere inizio differente a seconda del tipo di sport); la FIN usa come criterio la stagio ne agonistica che ha inizio il giorno 1 ottobre e termina il 30..."
   },
   {
     "id": 581,
@@ -7549,7 +11609,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dopo la partenza a dorso non riemerge entro i 15 metri.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      305,
+      31,
+      306
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Prima del segnale di partenza i concorrenti devono allinearsi nell’acqua, rivolti verso la testata di partenza, con entrambe le mani agg rappate alle maniglie di partenza. È vietato posizionare i piedi dentro o sopra la canaletta di sfioro o piegare le dita sopra il bordo della stessa...."
   },
   {
     "id": 582,
@@ -7562,7 +11629,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Essere omologata.",
-    "category": "La cultura dell'acqua"
+    "category": "La cultura dell'acqua",
+    "manualPages": [
+      303,
+      163,
+      357
+    ],
+    "manualSection": "4.14.3. GIURIA",
+    "manualExcerpt": "Il GUG è un organo tecnic o della FIN che gode di autonomia funzionale per l’attuazione dei propri compiti istituzionali...."
   },
   {
     "id": 583,
@@ -7575,7 +11649,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dai 5 ai 12 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      182
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 584,
@@ -7588,7 +11669,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Ci rappresentiamo un movimento e lo riproduciamo individuando come punti di riferimento elementi percettivi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      262,
+      11,
+      281
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 585,
@@ -7601,7 +11689,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Ripetiamo soluzioni che precedentemente avevano recato un beneficio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      281,
+      262,
+      11
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Battuta di gambe laterale con rotazione del capo : quest o esercizio può essere eseguito sia respirando da entrambi i lati sia simulando l’inizio del recupero del braccio dal lato della respirazione • Effettuare più bracciate possibile senza respirare, girarsi sul dorso e riprendere : questo..."
   },
   {
     "id": 586,
@@ -7614,7 +11709,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Copiamo le soluzioni di un altro.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      262,
+      11,
+      281
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 587,
@@ -7627,7 +11729,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Intuiamo un movimento nuovo mentre siamo in azione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      262,
+      11,
+      281
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "Nei primi mesi di vita nel bambino predominano i riflessi di prensione e di abbrancamento (riflesso di Moro). Si presentano reazioni motorie ma ssive, che ricordano elementi legati all’arrampicarsi e alla prensione...."
   },
   {
     "id": 588,
@@ -7640,7 +11749,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Stabilità nella struttura e variabilità nei dettagli..",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      284,
+      83,
+      274
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "4.12.2.4. FARFALLA Gli stili rana e farfalla sono considerati , oramai, nuotate simultanee e non più simmetriche. In poche parole i movimenti devono essere effettuati contemporaneamente e non necessariamente sullo stesso piano ...."
   },
   {
     "id": 589,
@@ -7653,7 +11769,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La capacità di resistere alla fatica in esercitazioni di lunga durata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 590,
@@ -7666,7 +11789,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un principio dell’allenamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      14,
+      375
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Normalmente vengono descritti i metodi per il miglioramento del le capacità condizionali e tecniche. Assume grande importanza il processo di apprendimento ed insegnamento...."
   },
   {
     "id": 591,
@@ -7679,7 +11809,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esercizi volti a migliorare la sensibilità dell’allievo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      163,
+      362
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "La miglior qualità dell’insegnamento è basata sulla conoscenza globale della tecnica e sull’intenzione di renderla globale, cercando di svilupparla individualmente...."
   },
   {
     "id": 592,
@@ -7692,7 +11829,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Una struttura che ci informa sulle accelerazioni del corpo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      16,
+      71
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 593,
@@ -7705,7 +11849,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      292,
+      89,
+      358
+    ],
+    "manualSection": "4.13.5 STRUTTURA  DEL LAVORO",
+    "manualExcerpt": "o trisomia 21 , causata dalla presenza di una terza copia (o una sua parte) del cromosoma 21. Questa patologia provoca, oltre alle caratteristiche sembianze del viso, anche un ritardo nella crescita fisica e nelle capacità cognitive, con QI inferiore a 70...."
   },
   {
     "id": 594,
@@ -7718,7 +11869,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Per conduzione e per convezione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      70,
+      280
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Gli scambi di calore Il corpo umano è sottoposto continuamente a scambi di calore con l’ambiente che lo circonda. Il corpo acquista o perde calore per: • Convezione. La convezione è il passaggio di calore fra un corpo e un fluido in movimento intorno ad esso...."
   },
   {
     "id": 595,
@@ -7731,7 +11889,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il cervello.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      66,
+      60,
+      59
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": ""
   },
   {
     "id": 596,
@@ -7744,7 +11909,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Forza massimale, forza rapida, resistenza alla forza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      292
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 597,
@@ -7757,7 +11929,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Abilità motoria 60.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      78,
+      14
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 598,
@@ -7770,7 +11949,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Con il metodo delle ripetizioni in serie.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      305,
+      378,
+      18
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 599,
@@ -7783,7 +11969,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’insieme degli stimoli allenanti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      47,
+      46
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Dobbiamo tenere ben presente che gli adattamenti sono relativi al carico interno , ma l’allenatore non può che proporre un carico con certe caratteristiche oggettive, cioè un certo carico esterno, ritenendo che a questo corrisponda il carico interno prefissato...."
   },
   {
     "id": 600,
@@ -7796,7 +11989,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sport ciclico di resistenza alla forza ad elevata valenza coordinativa.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 601,
@@ -7809,7 +12009,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Con allenamenti mirati alla percezione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      147,
+      379,
+      47
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 602,
@@ -7822,7 +12029,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Forza massimale, forza rapida o veloce e resistenza alla forza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      67
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 603,
@@ -7835,7 +12049,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Multilaterale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 604,
@@ -7848,7 +12069,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Uno schema motorio di base.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      12,
+      377
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 605,
@@ -7861,7 +12089,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Uno schema motorio di base.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      12,
+      377
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 606,
@@ -7874,7 +12109,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Individuazione – destrutturazione del gesto – programma motorio e prima esecuzione – feedback e nuovo programma motorio – esecuzioni successive e nuovi feedback – output di migliore qualità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      38,
+      20,
+      163
+    ],
+    "manualSection": "5.2.2 3. FONDAMENTI TEORICI",
+    "manualExcerpt": "Gli atleti evoluti, che hanno fissato alcuni err ori, presentano alcune tipiche difficoltà, perché, come recita un proverbio, c hi lascia la strada vecchi a per la nuova sa ciò che perde ma non sa ciò che trova ...."
   },
   {
     "id": 607,
@@ -7887,7 +12129,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’insieme dei processi emotivi, cognitivi e motivazionali.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      377,
+      378
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "La prestazione è definita come l’esito misurabile di un’azione sportiva completa . L’azione è determinata dalla funzione e dalla struttura , e si costruisce attraverso l’interazione fra di esse. G...."
   },
   {
     "id": 608,
@@ -7900,7 +12149,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il grado di tensione a riposo di un muscolo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      66,
+      69,
+      67
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Lo scheletro, che con le sue varie parti può effettuare movimenti grazie all’apparato articolare, risente delle sollecitazioni di due forze: la contrazione muscolare e la gravità...."
   },
   {
     "id": 609,
@@ -7913,7 +12169,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La capacità condizionale che garantisce di effettuare sforzi di lunga durata nella massima economia delle funzioni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      278
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 610,
@@ -7926,7 +12189,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un processo di adattamento dell’organismo ad uno stimolo allenante.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      46,
+      20,
+      44
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Per esempio, se ne deve utilizzare una parte per impegni scolastici, o pe r coricarsi troppo tardi, oppure per svolgere una normale giornata lavorativa, ne rimarrà meno per adattarsi agli stimoli d’allenamento...."
   },
   {
     "id": 611,
@@ -7939,7 +12209,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un movimento accessorio inserito dopo l’insegnamento di un gesto delle gambe.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      269,
+      34,
+      260
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "o Gli allievi provano la gambata distesi proni sul bordo, le gambe in acqua. È importante inserire la pausa tra un colpo di gambe e il successivo. Con i bambini è importante f are in modo che contino almeno tre secondi...."
   },
   {
     "id": 612,
@@ -7952,7 +12229,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Un periodo particolarmente adatto per lo sviluppo di determinate capacità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      229,
+      18,
+      90
+    ],
+    "manualSection": "4.7.2.9. EPILESSIA",
+    "manualExcerpt": "Per i bambini piccoli la principale stimolazione ambientale è rappresentata inizialmente dalla madre (ossia quella persona che nei primi mesi si prende maggiore cura del neonato)...."
   },
   {
     "id": 613,
@@ -7965,7 +12249,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La capacità ad eseguire rapidamente azioni motorie adeguate in risposta ad un segnale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      12,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 614,
@@ -7978,7 +12269,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La quantità di materia presente in un volume.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      165,
+      70
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Il calore prodotto dall’organismo deve essere dissipato affinché la temperatura corporea si possa mantenere costante...."
   },
   {
     "id": 615,
@@ -7991,7 +12289,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La funzione che consente di stare in una posizione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      148,
+      11,
+      149
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Nelle lezioni di fitness in acqua con il corpo in verticale l’equilibrio viene stimolato in maniera differente a seconda dell’altezza dell’acqua: più l’acqua è bassa e meno la spinta di galleggiamento (spinta idrostatica) potrà variare la posizione verticale, ma lo spostamento del corpo nelle..."
   },
   {
     "id": 616,
@@ -8004,7 +12309,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’espressione dell’interazione tra età biologica e quella psicologica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      22,
+      20
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "Per età biologica o età fisiologica s’intende l'età che si può attribuire a un individuo sulla base delle sue condizioni morfologiche e funzionali (per esempio qualità dei tessuti, degli organi e degli apparati) valutate rispetto a valori standard di riferimento...."
   },
   {
     "id": 617,
@@ -8017,7 +12329,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Capacità di produrre una forza da elevata a massima nel più breve tempo possibile.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      68
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 618,
@@ -8030,7 +12349,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La capacità di percepire e controllare i segmenti corporei impegnati nel movimento in maniera indipendente.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      362,
+      163,
+      20
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 619,
@@ -8043,7 +12369,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La forza esercitata da un fluido in quiete su ogni superficie a contatto con esso.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      165,
+      70
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Gli scambi di calore Il corpo umano è sottoposto continuamente a scambi di calore con l’ambiente che lo circonda. Il corpo acquista o perde calore per: • Convezione. La convezione è il passaggio di calore fra un corpo e un fluido in movimento intorno ad esso...."
   },
   {
     "id": 620,
@@ -8056,7 +12389,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. È quella forza che si oppone al movimento di un corpo in un fluido.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      165,
+      168
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Fig.5: dimostrazione della tensione superficiale dell’acqua. L ’insetto si appoggia sull’acqua che riesce a sostenerlo. Questo è possibile grazie alla tensione superficiali dell’acqua e al peso esiguo dell’insetto...."
   },
   {
     "id": 621,
@@ -8069,7 +12409,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La capacità dell’organismo di opporsi alla fatica durante prestazioni di forza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      20
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 622,
@@ -8082,7 +12429,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Azioni motorie automatizzate mediante ripetizioni consapevoli.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      20,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 623,
@@ -8095,7 +12449,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Competenze relative a gesti motori specifici (azioni), si costruiscono sulle capacità coordinative e sono tante quante se ne possono apprendere.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      12,
+      377
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 624,
@@ -8108,7 +12469,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Presupposti motori fondamentali dell’essere umano.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      12,
+      14
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 625,
@@ -8121,7 +12489,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Da due o più recettori, vie di comunicazione del segnale, centri del sistema nervoso deputati alla decodificazione di segnali.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      54,
+      379,
+      56
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 626,
@@ -8134,7 +12509,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La capacità di protrarre nel tempo la prestazione sportiva.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 627,
@@ -8147,7 +12529,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Nessun adattamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      46,
+      41
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Dobbiamo tenere ben presente che gli adattamenti sono relativi al carico interno , ma l’allenatore non può che proporre un carico con certe caratteristiche oggettive, cioè un certo carico esterno, ritenendo che a questo corrisponda il carico interno prefissato...."
   },
   {
     "id": 628,
@@ -8160,7 +12549,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Su un fianco, effettuando la rotazione durante lo scivolamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      305,
+      279,
+      319
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Esercizi: 1. In piedi o in ginocchio in una zona della piscina dove l'acqua arriva circa alle spalle, oppure con l'ausilio di un galleggiante, praticare il movimento con le braccia avanti in superficie 2...."
   },
   {
     "id": 629,
@@ -8173,7 +12569,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Nella zona di sforzo fisico bassissimo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      30,
+      31,
+      146
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": ""
   },
   {
     "id": 630,
@@ -8186,7 +12589,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ampiezza e continuità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      377,
+      182,
+      378
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 631,
@@ -8199,7 +12609,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. No, perché non è ancora stata raggiunta la piena indipendenza segmentaria.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      68,
+      29,
+      293
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "sulla loro funzione ( ad esempio: nuotare a pugni chiusi) • Esercizi di combinazione : in cui si combinano elementi di due o più nuotate, per mettere in crisi la coordinazione o per esaltare alcuni a spetti particolari ( ad esempio: braccia crawl con gambe..."
   },
   {
     "id": 632,
@@ -8212,7 +12629,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Picco di lattato.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      292,
+      160,
+      46
+    ],
+    "manualSection": "4.13.5 STRUTTURA  DEL LAVORO",
+    "manualExcerpt": "o la tecnica in forma grezza e variabile • Fisiologico : aspetti fisiologici dell’età prepuberale: o allenamento coordinativo o allenamento condizionale o incremento della forza (attraverso proposte adatte all’ età biologica degli allievi) o..."
   },
   {
     "id": 633,
@@ -8225,7 +12649,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le precedenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      163,
+      47
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 634,
@@ -8238,7 +12669,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Ottico, acustico, tattile, cinestesico, labirintico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      15,
+      353
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 635,
@@ -8251,7 +12689,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Strutture deputate alla selezione di stimoli.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      12,
+      11
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 636,
@@ -8264,7 +12709,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Trasmettono informazioni al SNC.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      22,
+      182
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 637,
@@ -8277,7 +12729,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Immediati, permanenti, cumulativi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      47,
+      42
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico d’allenamento determina effetti successivi nel tempo che sono immediati, permanenti e cumulativi: • L’effetto immediato del carico riguarda aspetti biochimici e aspetti funzionali (capacità di reclutare una maggior quantità di fibre muscolari da coinvolgere nei ges ti e nell’azione..."
   },
   {
     "id": 638,
@@ -8290,7 +12749,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      38,
+      37,
+      35
+    ],
+    "manualSection": "5.2.2 3. FONDAMENTI TEORICI",
+    "manualExcerpt": "attivare la catena cinetica necessaria ad assicurare un gesto efficace, a causa di un feedback inadeguato Tutti questi errori sono causati da un percorso didattico inadeguato , nel quale gli strumenti forniti all’allievo sono insufficienti...."
   },
   {
     "id": 639,
@@ -8303,7 +12769,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Al grado di istruzione tecnica dell’allievo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      362,
+      20,
+      212
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 640,
@@ -8316,7 +12789,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Cura della continuità delle azioni, corretto ritmo ed ampiezza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      279,
+      281,
+      32
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 641,
@@ -8329,7 +12809,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Fondamentali ai fini dello star bene in acqua e tra questi ricordiamo la capacità di immergersi, rilassarsi, spostarsi, galleggiare ecc..",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      245,
+      183
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 642,
@@ -8342,7 +12829,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Coordinazione, Costituzione, Condizione, Controllo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      14
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 643,
@@ -8355,7 +12849,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tre.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      212,
+      210,
+      22
+    ],
+    "manualSection": "4.6.2.1.6. CONCLUSIONI",
+    "manualExcerpt": "La giurisprudenza tende ormai a sostenere la responsabilità del gestore non già nell’ambito della responsabilità extracontrattuale, ma in quello più garantista della responsabilità contrattuale ...."
   },
   {
     "id": 644,
@@ -8368,7 +12869,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Intensità, densità, durata, volume: con priorità uguali di importanza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      47,
+      46,
+      48
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Stimolo allenante Specificità • Tipo attivazione metabolica • Struttura del movimento Intensità • Livello soglia allenante (favorisce adattamenti a stimoli maggiori -> affaticamento non compensatorio) Densità • Tempo lavoro/tempo recupero Quantità/durata (volume) • Numero degli..."
   },
   {
     "id": 645,
@@ -8381,7 +12889,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Buone capacità di adattamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 646,
@@ -8394,7 +12909,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il movimento attorno all’asse trasversale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      165,
+      270,
+      277
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "7.5.2.2. CENTRO DI GALLEGGIAMENTO È il punto di riferimento sul quale agiscono le forze verticali della spinta di galleggiamento (spinta idrostatica). Per mantenere un corpo in equilibrio la forza di gravità e la spinta idrostatica oltre ad essere di pari entità devono essere collineari...."
   },
   {
     "id": 647,
@@ -8407,7 +12929,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Metri percorsi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      47,
+      48,
+      46
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico Esterno Interno Generale Speciale Oggettivamente valutabile e misurabile Riferito alle capacità massimali dell’atleta, non sempre valutabili ed in progressivo, costante adattamento valutabile mediante parametri: • diretti invasivi (lattacidemia) • indiretti non invasivi..."
   },
   {
     "id": 648,
@@ -8420,7 +12949,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’insieme degli stimoli di allenamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      47,
+      22
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "genericità. La specificità si attua in due direzioni, l’area metabolica di pertinenza e la struttura del movimento . Nell’ambito metabolico, la specificità dello stimolo dipende dalle sue altre caratteristiche e dalla loro interazione...."
   },
   {
     "id": 649,
@@ -8433,7 +12969,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il suo peso specifico è minore del peso specifico dell’acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      165,
+      163,
+      282
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "È diretta verso l’alto e in senso contrario alla forza di gravità. La spinta v erso l’alto ricevuta da un corpo immerso è pari al volume di liquido spostato...."
   },
   {
     "id": 650,
@@ -8446,7 +12989,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Quello che consente nuovi e più fini movimenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      158,
+      11,
+      33
+    ],
+    "manualSection": "7.4.4. STRUTTURA DELLA LEZIONE DI AQUAFITNESS",
+    "manualExcerpt": "Questo momento della lezione è molto importante sia dal punto di vista tecnico -didattico per l’istruttore sia dal punto di vista fisiologico per l’allievo...."
   },
   {
     "id": 651,
@@ -8459,7 +13009,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Interessa i substrati ATP+CP.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      158,
+      305
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Ciascuno di questi sistemi è identificato per la sua potenza e per la sua capacità: • Per potenza di un sistema metabolico atto a produrre energia s’intende la quantità di energia che il sistema è in grado di produrre nell’ unità di tempo, q uindi la velocità di..."
   },
   {
     "id": 652,
@@ -8472,7 +13029,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Nei lavori di lunga durata e intensità moderata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      378,
+      46
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Ciascuno di questi sistemi è identificato per la sua potenza e per la sua capacità: • Per potenza di un sistema metabolico atto a produrre energia s’intende la quantità di energia che il sistema è in grado di produrre nell’ unità di tempo, q uindi la velocità di..."
   },
   {
     "id": 653,
@@ -8485,7 +13049,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Necessita della presenza di ossigeno.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      49,
+      74,
+      73
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Le serie allenanti Noi abbiamo tre vie in grado di produrre energia per il movimento: • Sistema aerobico , che utilizz a ossigeno • Sistema anaerobico lattacido , che non utilizza ossigeno e produce acido lattico • Sistema anaerobico alattacido , che non utilizza ossigeno e non produce..."
   },
   {
     "id": 654,
@@ -8498,7 +13069,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Non è soggetto alla forza di gravità, è generato da agonisti e antagonisti, è frenato dalla resistenza in acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      67,
+      165,
+      132
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "Una delle proprietà specifiche delle attività motorie acquatiche è proprio quella di far lavorare in modo equilibrato i muscoli agonisti ed antagonisti, ma è possibile comunque individuare il gruppo muscolare che maggiormente agisce su un determinato movimento..."
   },
   {
     "id": 655,
@@ -8511,7 +13089,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Aumentare l’efficacia della propulsione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      26,
+      25,
+      269
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 656,
@@ -8524,7 +13109,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un corpo immerso in un fluido riceve una spinta verticale, dal basso verso l’alto, pari al peso del fluido da esso spostato.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      165,
+      70,
+      277
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "È diretta verso l’alto e in senso contrario alla forza di gravità. La spinta v erso l’alto ricevuta da un corpo immerso è pari al volume di liquido spostato...."
   },
   {
     "id": 657,
@@ -8537,7 +13129,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Prima aumenta il volume, poi l’intensità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      47,
+      48,
+      46
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico Esterno Interno Generale Speciale Oggettivamente valutabile e misurabile Riferito alle capacità massimali dell’atleta, non sempre valutabili ed in progressivo, costante adattamento valutabile mediante parametri: • diretti invasivi (lattacidemia) • indiretti non invasivi..."
   },
   {
     "id": 658,
@@ -8550,7 +13149,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 10,0-12,0%.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      113,
+      109,
+      20
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "L’allievo cerca di comprendere le molteplici prospettive tramite le sue interazioni con il mondo esterno. Su più punti la posizione dei costruttivisti è simile a quella dei cognitivisti p iù recenti (Reda, Guidano, Mahoney)...."
   },
   {
     "id": 659,
@@ -8563,7 +13169,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il movimento attorno all’asse longitudinale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      165,
+      27,
+      270
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "7.5.2.2. CENTRO DI GALLEGGIAMENTO È il punto di riferimento sul quale agiscono le forze verticali della spinta di galleggiamento (spinta idrostatica). Per mantenere un corpo in equilibrio la forza di gravità e la spinta idrostatica oltre ad essere di pari entità devono essere collineari...."
   },
   {
     "id": 660,
@@ -8576,7 +13189,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si effettua sempre.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      279,
+      32,
+      306
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 661,
@@ -8589,7 +13209,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sviluppo di senso percezione, coordinazione e tecnica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      377,
+      375
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 662,
@@ -8602,7 +13229,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Attraverso il calcolo della frequenza cardiaca.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      47,
+      146
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico Esterno Interno Generale Speciale Oggettivamente valutabile e misurabile Riferito alle capacità massimali dell’atleta, non sempre valutabili ed in progressivo, costante adattamento valutabile mediante parametri: • diretti invasivi (lattacidemia) • indiretti non invasivi..."
   },
   {
     "id": 663,
@@ -8615,7 +13249,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Ridotta Intensità ed elevata quantità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      46,
+      40,
+      146
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Gli effetti dell’immersione sono studiati da molto tempo per valutare le funzioni dell’organismo in assenza (o meglio in forte riduzione) della forza di gravità. I primi studi risalgono agli anni Cinquanta ed erano legati ai programmi aerospaziali che le grandi potenze stavano preparando...."
   },
   {
     "id": 664,
@@ -8628,7 +13269,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Una rappresentazione cognitiva della posizione e dell’estensione del corpo nello spazio, dell’organizzazione gerarchica dei singoli segmenti corporei, in relazione ai dati provenienti dal mondo interno ed esterno, finalizzata all’organizzazione dell’azione nello spazio 68.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      362,
+      278,
+      277
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 665,
@@ -8641,7 +13289,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. C3.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      49,
+      54
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Le serie allenanti Noi abbiamo tre vie in grado di produrre energia per il movimento: • Sistema aerobico , che utilizz a ossigeno • Sistema anaerobico lattacido , che non utilizza ossigeno e produce acido lattico • Sistema anaerobico alattacido , che non utilizza ossigeno e non produce..."
   },
   {
     "id": 666,
@@ -8654,7 +13309,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Tra gli 8 e i 12 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      22,
+      344
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 667,
@@ -8667,7 +13329,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dai 6 agli 11 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      182
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 668,
@@ -8680,7 +13349,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Tolleranza al lattato.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      292,
+      146,
+      46
+    ],
+    "manualSection": "4.13.5 STRUTTURA  DEL LAVORO",
+    "manualExcerpt": "o la tecnica in forma grezza e variabile • Fisiologico : aspetti fisiologici dell’età prepuberale: o allenamento coordinativo o allenamento condizionale o incremento della forza (attraverso proposte adatte all’ età biologica degli allievi) o..."
   },
   {
     "id": 669,
@@ -8693,7 +13369,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Solo nella fase subacquea.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      263,
+      201,
+      284
+    ],
+    "manualSection": "4.10.1.4. ERRORI COMUNI",
+    "manualExcerpt": "mantenendo sempre un atteggiamento proattivo (individuare e suggerire la correzione di eventuali criticità)...."
   },
   {
     "id": 670,
@@ -8706,7 +13389,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Le capacità coordinative.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      20,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 671,
@@ -8719,7 +13409,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. No, l’inspirazione ha un tempo minore.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      280,
+      163,
+      262
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 672,
@@ -8732,7 +13429,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. All’incremento delle capacità coordinative.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      278,
+      14,
+      292
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "o la tecnica in forma grezza e variabile • Fisiologico : aspetti fisiologici dell’età prepuberale: o allenamento coordinativo o allenamento condizionale o incremento della forza (attraverso proposte adatte all’ età biologica degli allievi) o..."
   },
   {
     "id": 673,
@@ -8745,7 +13449,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. A 13 – 15 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      67
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 674,
@@ -8758,7 +13469,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Coordinativi e condizionali.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      15,
+      109
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Normalmente vengono descritti i metodi per il miglioramento del le capacità condizionali e tecniche. Assume grande importanza il processo di apprendimento ed insegnamento...."
   },
   {
     "id": 675,
@@ -8771,7 +13489,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Fase della coordinazione grezza, coordinazione fine e disponibilità variabile.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      377,
+      182,
+      20
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1.3.2. CAPACITÀ MOTORIE: CAPACITÀ COORDINATIVE E CAPACITÀ CONDIZIONALI Le capacità motorie rappresentano il presupposto della prestazione sportiva e, secondo la classificazione più diffusa 2, si suddividono in: • Capacità coordinative: capacità di organizzare e regolare il movimento, a..."
   },
   {
     "id": 676,
@@ -8784,7 +13509,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dalle caratteristiche dell’esercizio fisico e dallo stato nutrizionale 69.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      20,
+      48
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 677,
@@ -8797,7 +13529,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Migliorare l’immagine corporea.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      74,
+      73,
+      75
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "L’obbligatorietà della certificazione medica spesso viene sottovalutata e torna drammaticamente in evidenza ogniqualvolta ci si trova di fronte a situazioni come decessi o invalidità permanenti verificatesi nel corso dello svolgimento di un’attività sportiva...."
   },
   {
     "id": 678,
@@ -8810,7 +13549,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. In posizione verticale in rilassamento generale in altre posizioni opportune mantenendo una posizione consona.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      149,
+      148,
+      163
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Nelle lezioni di fitness in acqua con il corpo in verticale l’equilibrio viene stimolato in maniera differente a seconda dell’altezza dell’acqua: più l’acqua è bassa e meno la spinta di galleggiamento (spinta idrostatica) potrà variare la posizione verticale, ma lo spostamento del corpo nelle..."
   },
   {
     "id": 679,
@@ -8823,7 +13569,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. È regolato prevalentemente dalle informazioni dell’analizzatore cinestesico e tattile.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      362,
+      20
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 680,
@@ -8836,7 +13589,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’allontanamento dal modello prestativo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      26,
+      35,
+      24
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Come possiamo allora individuare gli errori tecnici? Possiamo innanzitutto affermare che gli errori tecnici riducono l’efficienza di propulsione e fanno aumentare il costo energetico . Un’altra difficoltà è costituita dall’individuazione dell’errore principale."
   },
   {
     "id": 681,
@@ -8849,7 +13609,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La rapidità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      67
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 682,
@@ -8862,7 +13629,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sistema sensomotorio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      54,
+      13,
+      50
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Allargando le consideraz ioni in un ambito più generale, prendiamo in considerazione la tassonomia di Schnabel che definisce i fattori dell'area motoria come: • Costituzione : misura dei segmenti corporei e loro proporzione, massa corporea, mobilità articolare e processi di trasmissione..."
   },
   {
     "id": 683,
@@ -8875,7 +13649,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Mancanza di coordinazione braccia/gambe.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      262,
+      32,
+      31
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 684,
@@ -8888,7 +13669,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Maturazione anatomica – maturazione funzionale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      10,
+      11,
+      17
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "5.1.1. PREMESSA Con alcuni brevi cenni si vogliono richiamare brevemente alcune nozioni che serviranno a inquadrare meglio l'individuo umano, obiettivo della nostra attività didattica e formativa, in modo particolare dalla nascita alla pubertà...."
   },
   {
     "id": 685,
@@ -8901,7 +13689,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Lo schema corporeo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      181,
+      14
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA L’attività prenatatoria si rivolge, teoricamente, ad ogni tipologia di utente, tenendo in considerazione peculiarità e necessità. In generale è possibile individuare alcuni obiettivi primari: 1...."
   },
   {
     "id": 686,
@@ -8914,7 +13709,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Regolare e dosare il complesso degli impegni muscolari onde ottenere l’azione con rapidità, precisione e armonia.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      14,
+      28
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 687,
@@ -8927,7 +13729,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Una capacità coordinativa speciale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 688,
@@ -8940,7 +13749,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Una migliore efficienza funzionale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      146,
+      335,
+      60
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Gli effetti dell’immersione sono studiati da molto tempo per valutare le funzioni dell’organismo in assenza (o meglio in forte riduzione) della forza di gravità. I primi studi risalgono agli anni Cinquanta ed erano legati ai programmi aerospaziali che le grandi potenze stavano preparando...."
   },
   {
     "id": 689,
@@ -8953,7 +13769,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Consente un movimento più fluido, armonico e compiuto.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      377,
+      268
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "1.3.2. CAPACITÀ MOTORIE: CAPACITÀ COORDINATIVE E CAPACITÀ CONDIZIONALI Le capacità motorie rappresentano il presupposto della prestazione sportiva e, secondo la classificazione più diffusa 2, si suddividono in: • Capacità coordinative: capacità di organizzare e regolare il movimento, a..."
   },
   {
     "id": 690,
@@ -8966,7 +13789,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. È caratterizzata dall’attività di comprensione del compito motorio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      377,
+      182,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1.3.2. CAPACITÀ MOTORIE: CAPACITÀ COORDINATIVE E CAPACITÀ CONDIZIONALI Le capacità motorie rappresentano il presupposto della prestazione sportiva e, secondo la classificazione più diffusa 2, si suddividono in: • Capacità coordinative: capacità di organizzare e regolare il movimento, a..."
   },
   {
     "id": 691,
@@ -8979,7 +13809,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’ultimo stadio del processo di apprendimento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      377,
+      268
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "1.3.2. CAPACITÀ MOTORIE: CAPACITÀ COORDINATIVE E CAPACITÀ CONDIZIONALI Le capacità motorie rappresentano il presupposto della prestazione sportiva e, secondo la classificazione più diffusa 2, si suddividono in: • Capacità coordinative: capacità di organizzare e regolare il movimento, a..."
   },
   {
     "id": 692,
@@ -8992,7 +13829,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Sempre, in ogni caso.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      20,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 693,
@@ -9005,7 +13849,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Una capacità condizionale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      14
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 694,
@@ -9018,7 +13869,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Massimale, resistente, veloce.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      68
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 695,
@@ -9031,7 +13889,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Va controllata perché aiuta a valutare il diverso grado di affaticamento degli allievi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      146,
+      29,
+      30
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Gli effetti dell’immersione sono studiati da molto tempo per valutare le funzioni dell’organismo in assenza (o meglio in forte riduzione) della forza di gravità. I primi studi risalgono agli anni Cinquanta ed erano legati ai programmi aerospaziali che le grandi potenze stavano preparando...."
   },
   {
     "id": 696,
@@ -9044,7 +13909,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Alternanza delle azioni propulsive su un assetto di galleggiamento non ideale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      282,
+      32,
+      284
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 697,
@@ -9057,7 +13929,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La capacità di eseguire movimenti con la massima ampiezza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      19,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 698,
@@ -9070,7 +13949,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La capacità di compiere gesti con la massima escursione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      19,
+      378
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.3. MOBILITÀ ARTICOLARE Detta anche flessibilità, articolarità, articola bilità, estensibilità ecc, è la capacità di una o di un insieme di articolazioni, di muoversi liberamente per tutto il proprio range di mobilità ; la capacità di un soggetto di..."
   },
   {
     "id": 699,
@@ -9083,7 +13969,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. È alla base dell’apprendimento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      22,
+      20,
+      278
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "5.1.2.5. MOTIVAZIONI La motivazione allo sport, ultimo e più importante fattore della prestazione, appartiene all’area psico-pedagogica e psicologica. Se non viene sviluppata adeguatamente, crea i presupposti per l’ abbandono precoce dell’attività natatoria e sportiva in genere...."
   },
   {
     "id": 700,
@@ -9096,7 +13989,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sulle funzioni del SNC e degli organi di senso.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      10,
+      73,
+      349
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "5.1.1. PREMESSA Con alcuni brevi cenni si vogliono richiamare brevemente alcune nozioni che serviranno a inquadrare meglio l'individuo umano, obiettivo della nostra attività didattica e formativa, in modo particolare dalla nascita alla pubertà...."
   },
   {
     "id": 701,
@@ -9109,7 +14009,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Generale e mirato.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      11,
+      307
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "L’apprendimento e lo sviluppo intellettivo nel periodo che va dalla nascita alla preadolescenza evolvono prevalentemente grazie al movimento e al gioco...."
   },
   {
     "id": 702,
@@ -9122,7 +14029,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Attraverso la sintesi di due principi : ricchezza di mezzi e alternanza di esercizi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      279,
+      263,
+      297
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "Esercizi di sviluppo e consolidamento"
   },
   {
     "id": 703,
@@ -9135,7 +14049,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La funzione che ci permette di raccogliere informazioni relative a ciò che succede dentro il nostro corpo e a quello che succede all’esterno.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      278,
+      362,
+      378
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 704,
@@ -9148,7 +14069,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Costituzione, condizione, coordinazione e controllo 72.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      377,
+      13,
+      182
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "La prestazione è definita come l’esito misurabile di un’azione sportiva completa . L’azione è determinata dalla funzione e dalla struttura , e si costruisce attraverso l’interazione fra di esse. G...."
   },
   {
     "id": 705,
@@ -9161,7 +14089,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Definire procedure e mezzi per favorire l’apprendimento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      212,
+      362
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Normalmente vengono descritti i metodi per il miglioramento del le capacità condizionali e tecniche. Assume grande importanza il processo di apprendimento ed insegnamento...."
   },
   {
     "id": 706,
@@ -9174,7 +14109,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Ai movimenti superficiali dell’acqua che condizionano l’avanzata. del corpo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      33,
+      306
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 707,
@@ -9187,7 +14129,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Allo sfregamento del corpo con le molecole d’acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      33,
+      305,
+      306
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "Il sollevamento del capo per la respirazione deve iniziare dopo che le mani hanno raggiunto la massima profondità: tenere la tes ta in acqua durante la fase di presa/appoggio garantisce l’avanzamento del corpo anche durante la respirazione, in quanto questa viene effettuata per avanti -alto,..."
   },
   {
     "id": 708,
@@ -9200,7 +14149,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Alla particolare resistenza della superficie dell’acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      168,
+      163,
+      305
+    ],
+    "manualSection": "7.5.2.7. MECCANICA DEI FLUIDI",
+    "manualExcerpt": "Fig.5: dimostrazione della tensione superficiale dell’acqua. L ’insetto si appoggia sull’acqua che riesce a sostenerlo. Questo è possibile grazie alla tensione superficiali dell’acqua e al peso esiguo dell’insetto...."
   },
   {
     "id": 709,
@@ -9213,7 +14169,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Ai movimenti circolari dell’acqua che risucchiano il corpo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      33,
+      305,
+      306
+    ],
+    "manualSection": "5.2.1.3.4. FARFALLA",
+    "manualExcerpt": "5.2.1.3.4. FARFALLA Questi sono i punti più importanti del regolamento tecnico della farf alla: • Il corpo deve essere tenuto sul petto, dopo la partenza e dopo ogni virata • Si può nuotare per 15 metri in completa immersione (anche su di un fianco) dopo la partenza e dopo ogni virata • Le..."
   },
   {
     "id": 710,
@@ -9226,7 +14189,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Una capacità condizionale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 711,
@@ -9239,7 +14209,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Alla superficie del piano perpendicolare all’asse di avanzamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      305,
+      306,
+      33
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Il sollevamento del capo per la respirazione deve iniziare dopo che le mani hanno raggiunto la massima profondità: tenere la tes ta in acqua durante la fase di presa/appoggio garantisce l’avanzamento del corpo anche durante la respirazione, in quanto questa viene effettuata per avanti -alto,..."
   },
   {
     "id": 712,
@@ -9252,7 +14229,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 4 volte.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      167,
+      169,
+      378
+    ],
+    "manualSection": "7.5.2.5. DENSITÀ",
+    "manualExcerpt": "È l’attrito che si manifesta tra le molecole del liquido e provoca la resistenza al flusso. La resistenza è proporzionale alla velocità di movimento attraverso il liquido...."
   },
   {
     "id": 713,
@@ -9265,7 +14249,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La stimolazione sensoriale che non raggiunge i livelli della coscienza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      278,
+      27,
+      362
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "La prima parte della passata subacquea deve essere effettua ta a gomito alto ...."
   },
   {
     "id": 714,
@@ -9278,7 +14269,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un’attività conoscitiva che permette di percepire gli stimoli provenienti dagli analizzatori.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      14,
+      160
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 715,
@@ -9291,7 +14289,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La forza applicata al centro di galleggiamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      165,
+      67,
+      147
+    ],
+    "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
+    "manualExcerpt": "7.5.2.2. CENTRO DI GALLEGGIAMENTO È il punto di riferimento sul quale agiscono le forze verticali della spinta di galleggiamento (spinta idrostatica). Per mantenere un corpo in equilibrio la forza di gravità e la spinta idrostatica oltre ad essere di pari entità devono essere collineari...."
   },
   {
     "id": 716,
@@ -9304,7 +14309,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il processo mediante il quale lo stimolo provoca una condizione di disagio (la fatica), cui segue una reazione ricostruttiva che supera il livello precedente alla stimolazione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      46,
+      42,
+      159
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Stimolo allenante Specificità • Tipo attivazione metabolica • Struttura del movimento Intensità • Livello soglia allenante (favorisce adattamenti a stimoli maggiori -> affaticamento non compensatorio) Densità • Tempo lavoro/tempo recupero Quantità/durata (volume) • Numero degli..."
   },
   {
     "id": 717,
@@ -9317,7 +14329,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Un braccio entri in acqua prima dell’inizio della parte finale di spinta dell’altro.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      262,
+      31,
+      306
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "Dopo la partenza e dopo ogni virata, il concorrente può effettuare una sola bracciata completa all’indietro fino alle gambe, durante la quale può rimanere completamente immerso. Durante la prima bra cciata è consentito un singolo calcio a farfalla, seguito da un calcio a rana...."
   },
   {
     "id": 718,
@@ -9330,7 +14349,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Di avere più equilibrio sul blocco.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      305,
+      165,
+      319
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "In una gara così denominata il concorrente può nuotare con qualsiasi tecnica gli sia congeniale, tranne che nei misti individuali e nella staffetta mista, dove per “stile libero” si intende qualsiasi stile che non sia dorso rana o farfalla...."
   },
   {
     "id": 719,
@@ -9343,7 +14369,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Stabile nella struttura e variabile nei dettagli.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      26,
+      24,
+      185
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Nello svolgimento delle attività è utile evitare alcune proposte : • Svolgimento delle nuotate a secco - Un tempo si riteneva che si potesse apprendere la tecnica del nuoto, solo mimando il gesto...."
   },
   {
     "id": 720,
@@ -9356,7 +14389,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La partenza dal blocco dove i piedi non sono allineati.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      321,
+      319,
+      305
+    ],
+    "manualSection": "4.16.4. RANA",
+    "manualExcerpt": "Prima del segnale di partenza i concorrenti devono allinearsi nell’acqua, rivolti verso la testata di partenza, con entrambe le mani agg rappate alle maniglie di partenza. È vietato posizionare i piedi dentro o sopra la canaletta di sfioro o piegare le dita sopra il bordo della stessa...."
   },
   {
     "id": 721,
@@ -9369,7 +14409,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Coordinative.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      18,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Tale distinzione è prevalentemente organizzativa o didattica, poiché l’azione motoria è quanto di più unitario possa esser e espresso dall’uomo...."
   },
   {
     "id": 722,
@@ -9382,7 +14429,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Progressivamente accelerata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      279,
+      32,
+      262
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 723,
@@ -9395,7 +14449,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La capacità di eseguire un gesto nel minor tempo possibile.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      160
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 724,
@@ -9408,7 +14469,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Da aspetti energetici, biologici, fisiologici e coordinativi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      18,
+      54
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 725,
@@ -9421,7 +14489,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dai 10 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 726,
@@ -9434,7 +14509,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Fattori energetici.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      14,
+      378
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 727,
@@ -9447,7 +14529,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 5/6 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 728,
@@ -9460,7 +14549,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dalla funzionalità del sistema nervoso.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      17
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 729,
@@ -9473,7 +14569,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Apprendimento, controllo, trasformazione dei movimenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 730,
@@ -9486,7 +14589,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Controllano, regolano ed organizzano il movimento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 731,
@@ -9499,7 +14609,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Coordinative, condizionali ed intermedie.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      18,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 732,
@@ -9512,7 +14629,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Mobilità articolare, coordinazione, condizione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      182,
+      18
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 733,
@@ -9525,7 +14649,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’individuo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      376
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 734,
@@ -9538,7 +14669,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Tecnica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      20,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale 3...."
   },
   {
     "id": 735,
@@ -9551,7 +14689,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Lo sviluppo coordinativo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      13,
+      19
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "Questi cinque fattori ci forniscono lo stimolo ad approfondire le conoscenze negli ambiti che sottintendono...."
   },
   {
     "id": 736,
@@ -9564,7 +14709,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Coordinazione grezza, coordinazione fine e disponibilità variabile.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      46,
+      377,
+      182
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "1.3.2. CAPACITÀ MOTORIE: CAPACITÀ COORDINATIVE E CAPACITÀ CONDIZIONALI Le capacità motorie rappresentano il presupposto della prestazione sportiva e, secondo la classificazione più diffusa 2, si suddividono in: • Capacità coordinative: capacità di organizzare e regolare il movimento, a..."
   },
   {
     "id": 737,
@@ -9577,7 +14729,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Sono periodi dello sviluppo in cui alcuni stimoli provocano miglioramenti significativi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      155,
+      280,
+      379
+    ],
+    "manualSection": "7.4.3. ATTREZZI",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 738,
@@ -9590,7 +14749,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 3.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      278,
+      155,
+      195
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 739,
@@ -9603,7 +14769,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Analizzatori.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      53,
+      15
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 740,
@@ -9616,7 +14789,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’immagine che ognuno ha del proprio corpo in relazione con il mondo esterno.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      181,
+      149,
+      163
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA L’attività prenatatoria si rivolge, teoricamente, ad ogni tipologia di utente, tenendo in considerazione peculiarità e necessità. In generale è possibile individuare alcuni obiettivi primari: 1...."
   },
   {
     "id": 741,
@@ -9629,7 +14809,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Perché aiuta ad elaborare meglio la sensopercezione acquatica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      280,
+      378,
+      155
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "segmenti corporei in movimento. È indicata a un pubblico esperto, in quanto per riuscire a percepire al meglio le valenze del movimento controllato i n acqua è necessaria una sensibilità specifica che si può acquisire solo con il tempo...."
   },
   {
     "id": 742,
@@ -9642,7 +14829,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Inclinata con il palmo rivolto verso l’esterno.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      27,
+      264,
+      279
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 743,
@@ -9655,7 +14849,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. In accelerazione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      30,
+      27,
+      31
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 744,
@@ -9668,7 +14869,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Bracciata più potente in quanto i muscoli lavorano in condizioni biomeccaniche più vantaggiose.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      28,
+      305,
+      279
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "La sovrapposizione delle azioni degli arti superiori : permette di cavalcare maggiormente l’ond a in quanto l’appoggio viene spostato davanti alle spalle, sollevandole, ma la conseguente tendenza ad a ffondare con gli arti inferiori costringe l’atleta ad effettuare una battuta di gambe continua..."
   },
   {
     "id": 745,
@@ -9681,7 +14889,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Efficacia ed economicità del gesto.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      26,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 746,
@@ -9694,7 +14909,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Scapolo-omerale, colonna vertebrale, coxo-femorale e tibio-tarsica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      194,
+      195,
+      297
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "4.2 ASPETTI ORGANIZZATIVI"
   },
   {
     "id": 747,
@@ -9707,7 +14929,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Le abilità motorie si costruiscono sulle capacità motorie ma il loro esercizio aiuta lo sviluppo di queste ultime.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      12,
+      20
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 748,
@@ -9720,7 +14949,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Forza rapida e veloce.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      67
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 749,
@@ -9733,7 +14969,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’energia è fornita dal meccanismo aerobico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      147,
+      24
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Ciascuno di questi sistemi è identificato per la sua potenza e per la sua capacità: • Per potenza di un sistema metabolico atto a produrre energia s’intende la quantità di energia che il sistema è in grado di produrre nell’ unità di tempo, q uindi la velocità di..."
   },
   {
     "id": 750,
@@ -9746,7 +14989,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Fornita dal dorso del piede.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      280,
+      269,
+      264
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Il movimento delle gambe è alternato, come quello degli arti superiori, parte dall’anca con una frustata e si trasmette tramite il ginocchio alle caviglie e ai piedi...."
   },
   {
     "id": 751,
@@ -9759,7 +15009,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Continuità - ritmo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      279,
+      27,
+      31
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "4.12.2.2. CRAWL La distinzione tra crawl e stile libero è dovuta al regolamento tecnico...."
   },
   {
     "id": 752,
@@ -9772,7 +15029,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. All’entrata in acqua delle mani.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      284,
+      31,
+      268
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 753,
@@ -9785,7 +15049,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Tirano verso fuori (outsweep).",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      285,
+      31,
+      306
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "• Le gambe si muovono con un movimento continuo, simultaneo e ondulatorio simile alla coda di un delfino • L’inspirazione coincide con la distensione delle braccia dietro, la testa viene sollevata leggermente, ma non il corp o • La testa viene riportata in acqua quando le braccia nel recupero..."
   },
   {
     "id": 754,
@@ -9798,7 +15069,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Gli errori grossolani.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      38,
+      268,
+      281
+    ],
+    "manualSection": "5.2.2 3. FONDAMENTI TEORICI",
+    "manualExcerpt": "La più grande difficoltà per l’apprendimento del crawl è costituita dalla respirazione. L’inspirazione deve coincidere con il momento in cui si termina la spinta di un braccio, la testa è completamente ruotata sul suo asse e l’appoggio viene trasferito al braccio opposto...."
   },
   {
     "id": 755,
@@ -9811,7 +15089,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Verso i piedi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      30,
+      264,
+      31
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "• Esercizi di pe rfezionamento o Un solo braccio, l’altro in alto: in questo esercizio si pone l’accento sul rollio corrispondente con la fine della spinta e sull’appoggio della mano in alto...."
   },
   {
     "id": 756,
@@ -9824,7 +15109,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Spinta dal bordo, bracciata, colpo di gambe a delfino recupero delle braccia, gambata rana 77.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      31,
+      32,
+      269
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "5.2.1.3.3. RANA I dettami del regol amento tecnico di questo stile sono decisamente articolati : • Si deve nuotare sul petto, sia gli arti superiori che quelli inferiori devono muoversi simultaneamente e sullo stesso piano orizzon tale, senza movimenti alternati • Le mani non possono..."
   },
   {
     "id": 757,
@@ -9837,7 +15129,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Effettuare l’ultima parte della passata subacquea con un azione accelerata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      27,
+      281,
+      30
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 758,
@@ -9850,7 +15149,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dopo che l’arto opposto è entrato in acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      27,
+      281,
+      30
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "Per evitare che un ro llio eccessivo o mal coordinato comprometta il corretto assetto in acqua si deve iniziare la rotazione del capo per la respirazione solo dopo l’entrata in acqua dell’arto opposto...."
   },
   {
     "id": 759,
@@ -9863,7 +15169,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Esercizio di perfezionamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      30,
+      29,
+      34
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "Esercizi • Esercizi di perfezionamento: o Gambe delfino sul dorso : questo esercizio limita la flessione delle cosce nella gambata...."
   },
   {
     "id": 760,
@@ -9876,7 +15189,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Quando le braccia sono nella fase del recupero.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      31,
+      282,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 761,
@@ -9889,7 +15209,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Sovrapporre l’azione propulsiva delle braccia a quella delle gambe.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      32,
+      269,
+      284
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 762,
@@ -9902,7 +15229,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Alla partenza ed alle virate, per un massimo di 15 metri.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      305,
+      26,
+      306
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 763,
@@ -9915,7 +15249,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Forza rapida, resistenza aerobica e resistenza alla forza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      68
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 764,
@@ -9928,7 +15269,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il recupero degli avambracci fuori dall’acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      31,
+      32,
+      306
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 765,
@@ -9941,7 +15289,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. È possibile una riformulazione del progetto d’azione e quindi dello schema motorio attraverso un confronto tra risultato atteso e risultato reale dell’azione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      210,
+      212,
+      363
+    ],
+    "manualSection": "4.6.2.1.1. NORMA BASE",
+    "manualExcerpt": "impedire il fatto. Il fondamento della responsabilità previ sta dall’art.20 48 è costituito quindi dalla cosiddetta culpa in vigilando, presunta dal legislatore, con una cosiddetta prescriptio iuris tantum, al fine evidente di agevolare il danneggiato...."
   },
   {
     "id": 766,
@@ -9954,7 +15309,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Molto blanda.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      292,
+      160,
+      146
+    ],
+    "manualSection": "4.13.5 STRUTTURA  DEL LAVORO",
+    "manualExcerpt": "o la tecnica in forma grezza e variabile • Fisiologico : aspetti fisiologici dell’età prepuberale: o allenamento coordinativo o allenamento condizionale o incremento della forza (attraverso proposte adatte all’ età biologica degli allievi) o..."
   },
   {
     "id": 767,
@@ -9967,7 +15329,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Forza rapida.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      30,
+      160
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 768,
@@ -9980,7 +15349,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Verso il basso.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      282,
+      30,
+      31
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "4.12.2.3. RANA La nuotata rana, negli anni, è stato lo stile più influenzato dal l’evoluzione del regolamento...."
   },
   {
     "id": 769,
@@ -9993,7 +15369,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 170-190 Battiti per minuto.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      292,
+      50,
+      60
+    ],
+    "manualSection": "4.13.5 STRUTTURA  DEL LAVORO",
+    "manualExcerpt": "o la tecnica in forma grezza e variabile • Fisiologico : aspetti fisiologici dell’età prepuberale: o allenamento coordinativo o allenamento condizionale o incremento della forza (attraverso proposte adatte all’ età biologica degli allievi) o..."
   },
   {
     "id": 770,
@@ -10006,7 +15389,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dopo la trazione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      31,
+      30,
+      27
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "• Esercizi di pe rfezionamento o Un solo braccio, l’altro in alto: in questo esercizio si pone l’accento sul rollio corrispondente con la fine della spinta e sull’appoggio della mano in alto...."
   },
   {
     "id": 771,
@@ -10019,7 +15409,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Di esclusione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      263,
+      29,
+      30
+    ],
+    "manualSection": "4.10.1.4. ERRORI COMUNI",
+    "manualExcerpt": "Esercizi di esclusion e Si tratta di esercizi che prevedono l’esclusione o di un analizzatore corporeo o di una parte del corpo o di una parte del movimento : • Nuotare ad occhi chiusi • Nuotare con i pugni chiusi • Nuotare co n un braccio lungo il fianco, alternare la respirazione dal lato..."
   },
   {
     "id": 772,
@@ -10032,7 +15429,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Anaerobico alattacido.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      297,
+      160
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Ciascuno di questi sistemi è identificato per la sua potenza e per la sua capacità: • Per potenza di un sistema metabolico atto a produrre energia s’intende la quantità di energia che il sistema è in grado di produrre nell’ unità di tempo, q uindi la velocità di..."
   },
   {
     "id": 773,
@@ -10045,7 +15449,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Frequenza cardiaca 150-180 bpm – lattacidemia 2,5-3 mmol/l.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      146,
+      292,
+      47
+    ],
+    "manualSection": "7.3 ",
+    "manualExcerpt": "Il carico Esterno Interno Generale Speciale Oggettivamente valutabile e misurabile Riferito alle capacità massimali dell’atleta, non sempre valutabili ed in progressivo, costante adattamento valutabile mediante parametri: • diretti invasivi (lattacidemia) • indiretti non invasivi..."
   },
   {
     "id": 774,
@@ -10058,7 +15469,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Brevissimi (3-9 secondi).",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      18,
+      68
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 775,
@@ -10071,7 +15489,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nuotare lentamente per lunghi tratti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      272,
+      263,
+      266
+    ],
+    "manualSection": "4.10.4.4. ERRORI COMUNI",
+    "manualExcerpt": "o Gli allievi conoscono già il movimento circolatorio della bracciata perché lo possiedono, sebbene in forma alternata, dallo stile libero. Agli inizi deve essere proposta con le braccia distese o Far provare la bracciata in piedi in acqua...."
   },
   {
     "id": 776,
@@ -10084,7 +15509,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La quantità degli esercizi di allenamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      47,
+      146
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico d’allenamento determina effetti successivi nel tempo che sono immediati, permanenti e cumulativi: • L’effetto immediato del carico riguarda aspetti biochimici e aspetti funzionali (capacità di reclutare una maggior quantità di fibre muscolari da coinvolgere nei ges ti e nell’azione..."
   },
   {
     "id": 777,
@@ -10097,7 +15529,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’insieme delle capacità generali dell’individuo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      13,
+      377,
+      20
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "Questi cinque fattori ci forniscono lo stimolo ad approfondire le conoscenze negli ambiti che sottintendono...."
   },
   {
     "id": 778,
@@ -10110,7 +15549,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il ritmo e l’ampiezza del gesto.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      85,
+      366,
+      288
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "Un’altra alternativa è l’integrazione con gli allievi normodotati, argomento piuttosto delicato...."
   },
   {
     "id": 779,
@@ -10123,7 +15569,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La durata ed il volume.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      47,
+      46,
+      48
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Stimolo allenante Specificità • Tipo attivazione metabolica • Struttura del movimento Intensità • Livello soglia allenante (favorisce adattamenti a stimoli maggiori -> affaticamento non compensatorio) Densità • Tempo lavoro/tempo recupero Quantità/durata (volume) • Numero degli..."
   },
   {
     "id": 780,
@@ -10136,7 +15589,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Amplificare o inibire le informazioni provenienti dagli analizzatori.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      83,
+      89
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 781,
@@ -10149,7 +15609,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Amplificare o inibire le informazioni provenienti dagli analizzatori.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      375,
+      15
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 782,
@@ -10162,7 +15629,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Progressivamente crescere.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      47,
+      46
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Stimolo allenante Specificità • Tipo attivazione metabolica • Struttura del movimento Intensità • Livello soglia allenante (favorisce adattamenti a stimoli maggiori -> affaticamento non compensatorio) Densità • Tempo lavoro/tempo recupero Quantità/durata (volume) • Numero degli..."
   },
   {
     "id": 783,
@@ -10175,7 +15649,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Le capacità coordinative.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      182,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 784,
@@ -10188,7 +15669,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Perché è la nuotata in cui il nuotatore può applicare la massima potenza angolare con un azione propulsiva continua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      32,
+      305,
+      29
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "sulla loro funzione ( ad esempio: nuotare a pugni chiusi) • Esercizi di combinazione : in cui si combinano elementi di due o più nuotate, per mettere in crisi la coordinazione o per esaltare alcuni a spetti particolari ( ad esempio: braccia crawl con gambe..."
   },
   {
     "id": 785,
@@ -10201,7 +15689,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Avvicinamento al muro e calcolo della giusta distanza.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      305,
+      373,
+      29
+    ],
+    "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
+    "manualExcerpt": "Prima del segnale di partenza i concorrenti devono allinearsi nell’acqua, rivolti verso la testata di partenza, con entrambe le mani agg rappate alle maniglie di partenza. È vietato posizionare i piedi dentro o sopra la canaletta di sfioro o piegare le dita sopra il bordo della stessa...."
   },
   {
     "id": 786,
@@ -10214,7 +15709,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La funzionalità del sistema nervoso centrale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      54,
+      379,
+      375
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 787,
@@ -10227,7 +15729,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Di costruzione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      22,
+      278,
+      212
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "Per età biologica o età fisiologica s’intende l'età che si può attribuire a un individuo sulla base delle sue condizioni morfologiche e funzionali (per esempio qualità dei tessuti, degli organi e degli apparati) valutate rispetto a valori standard di riferimento...."
   },
   {
     "id": 788,
@@ -10240,7 +15749,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Cinestetico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      15,
+      16
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 789,
@@ -10253,7 +15769,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Spalla.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      195,
+      194,
+      289
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Tralasciando le questioni amministrative, oggetto della formazione specifica per le qualifiche superiori, l’organizzazione di una scuola nuoto deve essere strutturata riflettendo su: • Cosa si vuole fare: scelta delle attività, e del livello al quale praticarle...."
   },
   {
     "id": 790,
@@ -10266,7 +15789,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Tra i 6 ed i 13/14anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      26,
+      22,
+      181
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 791,
@@ -10279,7 +15809,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 6-12 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      22
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 792,
@@ -10292,7 +15829,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’azione calciata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      284,
+      32,
+      281
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 793,
@@ -10305,7 +15849,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. 70% - 90% della frequenza cardiaca massimale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      146,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "Gli effetti dell’immersione sono studiati da molto tempo per valutare le funzioni dell’organismo in assenza (o meglio in forte riduzione) della forza di gravità. I primi studi risalgono agli anni Cinquanta ed erano legati ai programmi aerospaziali che le grandi potenze stavano preparando...."
   },
   {
     "id": 794,
@@ -10318,7 +15869,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Un’azione motoria automatizzata tramite ripetizioni consapevoli, che può essere eseguita senza l’intervento cosciente dell’allievo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      359,
+      12
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "capacità, affermarsi come individuo originale, essere parte di un tessuto sociale fatto di relazioni interpersonali e di valori etici e morali di riferimento...."
   },
   {
     "id": 795,
@@ -10331,7 +15889,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. 27-28° C.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      375,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 796,
@@ -10344,7 +15909,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Zuccheri.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      68,
+      49
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Ciascuno di questi sistemi è identificato per la sua potenza e per la sua capacità: • Per potenza di un sistema metabolico atto a produrre energia s’intende la quantità di energia che il sistema è in grado di produrre nell’ unità di tempo, q uindi la velocità di..."
   },
   {
     "id": 797,
@@ -10357,7 +15929,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Primato personale sui 25 metri stile libero.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      22,
+      362,
+      13
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "5.1.2.4. SVILUPPO ANTROPOMETRICO Attraverso lo studio posturale del soggetto- allievo possiamo sviluppare nel praticante attività natatorie la capacita di assumere e controllare la propria postura sia nelle a zioni motorie quotidiane , attraverso la qualità ed il controllo consapevole del..."
   },
   {
     "id": 798,
@@ -10370,7 +15949,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Le capacità condizionali sono sempre sensibili all’allenamento, anche generale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 799,
@@ -10383,7 +15969,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Necessita di un tempo adeguato per potersi esprimere.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      46,
+      48,
+      41
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico d’allenamento determina effetti successivi nel tempo che sono immediati, permanenti e cumulativi: • L’effetto immediato del carico riguarda aspetti biochimici e aspetti funzionali (capacità di reclutare una maggior quantità di fibre muscolari da coinvolgere nei ges ti e nell’azione..."
   },
   {
     "id": 800,
@@ -10396,7 +15989,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si costruiscono su abilità motorie semplici che hanno le loro fondamenta nella fase di ambientamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      12,
+      275,
+      287
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 801,
@@ -10409,7 +16009,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Di controllo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 802,
@@ -10422,7 +16029,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutte le risposte precedenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      38,
+      207,
+      350
+    ],
+    "manualSection": "5.2.2 3. FONDAMENTI TEORICI",
+    "manualExcerpt": "attivare la catena cinetica necessaria ad assicurare un gesto efficace, a causa di un feedback inadeguato Tutti questi errori sono causati da un percorso didattico inadeguato , nel quale gli strumenti forniti all’allievo sono insufficienti...."
   },
   {
     "id": 803,
@@ -10435,7 +16049,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Discontinuità della bracciata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      269,
+      284,
+      32
+    ],
+    "manualSection": "4.10.3.3. DIDATTICA",
+    "manualExcerpt": "Differenze I differenti stili di rana sono tanti, quanti gli atleti che la nuotano. Ognuno sfrutta i propr i punti di forza ottimizzando lo stile secondo le proprie caratteristiche...."
   },
   {
     "id": 804,
@@ -10448,7 +16069,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Un errore di ritmo respiratorio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      280,
+      28,
+      284
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "interna del piede, devono solo contrastare la spinta. L’allievo deve avere un ruolo attivo, in nessun caso l’istruttore deve accompagnare il movimento della gamba...."
   },
   {
     "id": 805,
@@ -10461,7 +16089,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Piedi fuori dall’acqua.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      283,
+      269,
+      280
+    ],
+    "manualSection": "4.12.2.3. RANA",
+    "manualExcerpt": "Poiché nella rana la gambata riveste un’importanza fondamentale per l’avanzamento e soltanto la sua corretta esecuzione garantisce un apprendimento efficace della coordinazione tipica di questo stile, l’insegnante dovrà porre molta attenzione agli esercizi per il suo apprendimento...."
   },
   {
     "id": 806,
@@ -10474,7 +16109,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Comunicazione e comprensione del gesto da effettuare.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      83,
+      20,
+      182
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 807,
@@ -10487,7 +16129,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dai 5/6 ai 10/11 anni.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      182,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 808,
@@ -10500,7 +16149,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Galleggiare.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      258,
+      381
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 809,
@@ -10513,7 +16169,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Produce grosse quantità di acido lattico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      49,
+      375,
+      50
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Le serie allenanti Noi abbiamo tre vie in grado di produrre energia per il movimento: • Sistema aerobico , che utilizz a ossigeno • Sistema anaerobico lattacido , che non utilizza ossigeno e produce acido lattico • Sistema anaerobico alattacido , che non utilizza ossigeno e non produce..."
   },
   {
     "id": 810,
@@ -10526,7 +16189,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Grezzo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      278,
+      40,
+      268
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "Giova a questo punto ricordare che la costruzione di un atleta è il frutto di un preciso processo metodologico e didattico fatto di tappe consecutive legate tra loro in modo preciso senza possibilità di sopprimere o invertire...."
   },
   {
     "id": 811,
@@ -10539,7 +16209,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Le abilità motorie sono lo sviluppo delle capacità motorie.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      12,
+      377
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 812,
@@ -10552,7 +16229,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La velocità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 813,
@@ -10565,7 +16249,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La forza resistente.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      277
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 814,
@@ -10578,7 +16269,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capacità di adattamento e trasformazione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      378,
+      41
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 815,
@@ -10591,7 +16289,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capacità cinestesica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 816,
@@ -10604,7 +16309,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Cinestetico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      297,
+      194
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 817,
@@ -10617,7 +16329,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Le pause ed il ritmo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      280,
+      28,
+      31
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "offrono l’occasione di capire come gli adattamenti agli stimoli allenanti e alle caratteristiche particolari del tipo di gara possono portare a modificare la propria nuotata."
   },
   {
     "id": 818,
@@ -10630,7 +16349,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Aerobico glicolitico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      50,
+      20,
+      49
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Ciascuno di questi sistemi è identificato per la sua potenza e per la sua capacità: • Per potenza di un sistema metabolico atto a produrre energia s’intende la quantità di energia che il sistema è in grado di produrre nell’ unità di tempo, q uindi la velocità di..."
   },
   {
     "id": 819,
@@ -10643,7 +16369,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Capacità di direzione e controllo motorio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      182,
+      378
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 820,
@@ -10656,7 +16389,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Forza coordinata.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      68,
+      378
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 821,
@@ -10669,7 +16409,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Miofibrille.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      15,
+      60,
+      56
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Hanno uno sviluppo marcato nella fase prepuberale e in pa rticolare fra i 6 e i 12 anni...."
   },
   {
     "id": 822,
@@ -10682,7 +16429,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Ciclismo – Nuoto – Canottaggio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      194,
+      74,
+      75
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "Certificati per l'attività sportiva non agonistica di particolare ed elevato impegno cardiovascolare I soggetti non tesserati alle FSN, EPS, DSA partecipanti a manifestazioni non agonistiche o di tipo ludico motorio, caratterizzat e da particolare ed elevato impegno cardiovascolare quali..."
   },
   {
     "id": 823,
@@ -10695,7 +16449,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Sforzi coscienti ad elevata intensità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      50
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 824,
@@ -10708,7 +16469,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Biologica, vegetativa, coordinativa.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      45,
+      22,
+      46
+    ],
+    "manualSection": "5.3.3. LA DINAMICA CARICO -RECUPERO",
+    "manualExcerpt": "La figura 6 mostra come la supercompensazione investa sfere diverse: • La sfera biologica è quella alla quale si pensa immediatamente perché, di fatto, riguarda le capacità condizionali, forza, resistenza e velocità...."
   },
   {
     "id": 825,
@@ -10721,7 +16489,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Cinestesico, stato dinamico, tattile, visivo, uditivo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      10,
+      169
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "5.1.1. PREMESSA Con alcuni brevi cenni si vogliono richiamare brevemente alcune nozioni che serviranno a inquadrare meglio l'individuo umano, obiettivo della nostra attività didattica e formativa, in modo particolare dalla nascita alla pubertà...."
   },
   {
     "id": 826,
@@ -10734,7 +16509,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Acustico, ottico, tattile, vestibolare, cinestesico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      15,
+      16
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 827,
@@ -10747,7 +16529,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Continuità, ampiezza, ritmo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 828,
@@ -10760,7 +16549,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gare sociali, istruttori e allenatori.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      291,
+      300,
+      299
+    ],
+    "manualSection": "4.13.3. ORGANIZZAZIONE DI UNA STRUTTURA DIDATTICA",
+    "manualExcerpt": "Negli impianti natatori e nelle società sportive uno degli obiettivi è la creazione di gruppi agonistici delle varie discipline; si pone quindi il problema di come organizzare questa attività , che obiettivi avere, i criteri e gli strumenti da adottare...."
   },
   {
     "id": 829,
@@ -10773,7 +16569,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Costituzione - condizione - coordinazione – controllo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 830,
@@ -10786,7 +16589,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Volume, durata, densità e intensità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      47,
+      46,
+      48
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Stimolo allenante Specificità • Tipo attivazione metabolica • Struttura del movimento Intensità • Livello soglia allenante (favorisce adattamenti a stimoli maggiori -> affaticamento non compensatorio) Densità • Tempo lavoro/tempo recupero Quantità/durata (volume) • Numero degli..."
   },
   {
     "id": 831,
@@ -10799,7 +16609,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Continuità delle azioni ed ampiezza del gesto.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      26,
+      379,
+      378
+    ],
+    "manualSection": "5.2.1 3.1. CRAWL",
+    "manualExcerpt": "A conferma di questi risultati, la maggior parte dei nuotatori (specialmente i velocisti) ha sostituito, dalla metà degli anni Novanta , la bracciata curvilinea con quella rettilinea in profondità ...."
   },
   {
     "id": 832,
@@ -10812,7 +16629,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Forza, resistenza, velocità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      14
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 833,
@@ -10824,7 +16648,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Apprendimento motorio, controllo motorio, adattamento e trasformazione dei movimenti.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      377,
+      182
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "1.3.2. CAPACITÀ MOTORIE: CAPACITÀ COORDINATIVE E CAPACITÀ CONDIZIONALI Le capacità motorie rappresentano il presupposto della prestazione sportiva e, secondo la classificazione più diffusa 2, si suddividono in: • Capacità coordinative: capacità di organizzare e regolare il movimento, a..."
   },
   {
     "id": 834,
@@ -10837,7 +16668,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Riduzione delle capacità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      375,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 835,
@@ -10850,7 +16688,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Riduzione delle capacità, impossibilità di controllare lo spazio d’azione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      375,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 836,
@@ -10863,7 +16708,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Apprendimento di abilità motorie diverse.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      20,
+      14,
+      12
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 837,
@@ -10876,7 +16728,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Aumento della frequenza cardiaca e incremento dell’acido lattico.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      68,
+      20,
+      48
+    ],
+    "manualSection": "3.1.2.4. APPARATO OSTEOARTICOLARE",
+    "manualExcerpt": "È importante notare che l’ATP presente nelle cellule muscolari si esaurirebbe in pochi secondi se non venisse continuamente ricaricato, prima dalla fosfocreatina (CP), poi dalla scissione aerobica o anaerobica del glucosio, oppure dalla scissione aerobica degli acidi grassi o delle proteine...."
   },
   {
     "id": 838,
@@ -10889,7 +16748,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Posizione di una parte del corpo rispetto ad un’altra e stato di tensione di un muscolo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      70,
+      71,
+      379
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 839,
@@ -10902,7 +16768,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Posizione della testa rispetto al centro di gravità 84.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      379,
+      165,
+      149
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 840,
@@ -10915,7 +16788,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Pressione e calore.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      70,
+      71,
+      379
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 841,
@@ -10928,7 +16808,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Onde sonore.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      71,
+      70,
+      379
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 842,
@@ -10941,7 +16828,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Segnali luminosi.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      70,
+      71,
+      379
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": "Per sensopercezione si intende il processo di scoperta, analisi ed elaborazione di informazioni e sensazioni attraverso l’integrazione di afferenze provenienti dagli analizzatori; rappresenta il presupposto fondamentale per il progressivo affinamento del gesto ...."
   },
   {
     "id": 843,
@@ -10954,7 +16848,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Corpo subìto, corpo vissuto, corpo percepito, corpo rappresentato.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      344,
+      182,
+      22
+    ],
+    "manualSection": "6.3.2.2. 5 -6 ANNI",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 844,
@@ -10967,7 +16868,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Errori di respirazione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      35,
+      262,
+      263
+    ],
+    "manualSection": "5.2.2 1. INDIVIDUAZIONE DELL’ERRORE",
+    "manualExcerpt": "Sbagliare è una tappa utile e necessaria del processo di apprendimento: se non si commetto no errori, non si fa esperienza, ergo non si apprende. Allora cosa sono gli errori? E quali di essi vanno corretti?..."
   },
   {
     "id": 845,
@@ -10980,7 +16888,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Rotolare, arrampicarsi, correre.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      12,
+      14
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 846,
@@ -10993,7 +16908,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La forza resistente.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      18,
+      14
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 847,
@@ -11006,7 +16928,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La rapidità.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      18,
+      378,
+      14
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI Le capacità condizionali (legate ai grandi apparati muscolo- scheletrico e cardio -respiratorio) sono i presupposti determinati dai processi energetici sia metabolici che plastici...."
   },
   {
     "id": 848,
@@ -11019,7 +16948,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Fattori psicologici e motivazionali.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      291,
+      73,
+      307
+    ],
+    "manualSection": "4.13.3. ORGANIZZAZIONE DI UNA STRUTTURA DIDATTICA",
+    "manualExcerpt": "Negli impianti natatori e nelle società sportive uno degli obiettivi è la creazione di gruppi agonistici delle varie discipline; si pone quindi il problema di come organizzare questa attività , che obiettivi avere, i criteri e gli strumenti da adottare...."
   },
   {
     "id": 849,
@@ -11032,7 +16968,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Scivolamento supino.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      11,
+      182,
+      255
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "• Spingersi dalla parete (posizione prona e supina), fermarsi in posizione di scivolamento e allargare le braccia e/o le gambe Esercizi di base per lo scivolamento subacqueo Bambini: • Il sottomarino : immergersi, appoggiare i piedi alla parete,..."
   },
   {
     "id": 850,
@@ -11045,7 +16988,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Rotolare, arrampicarsi, correre.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      12,
+      14
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 851,
@@ -11058,7 +17008,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Quando il movimento corretto diventa un gesto volontario da parte dell’allievo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      362,
+      264
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "• Gambe a bicicle tta. Significa che non sono state rispettate le tappe di apprendimento dei propri allievi. Le gambe piegate aumentano considerevolmente la resistenza dell’acqua. • Piede a martello...."
   },
   {
     "id": 852,
@@ -11071,7 +17028,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Quando le forme globali delle nuotate sono state ben apprese ed automatizzate.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      29,
+      201,
+      172
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "sulla loro funzione ( ad esempio: nuotare a pugni chiusi) • Esercizi di combinazione : in cui si combinano elementi di due o più nuotate, per mettere in crisi la coordinazione o per esaltare alcuni a spetti particolari ( ad esempio: braccia crawl con gambe..."
   },
   {
     "id": 853,
@@ -11084,7 +17048,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Uno durante la fase di trazione e uno alla fine della fase di presa.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      284,
+      27,
+      31
+    ],
+    "manualSection": "4.12.2.4. FARFALLA",
+    "manualExcerpt": "Una battuta di gambe per ogni cambio di direzione degli arti superiori (con delle variazioni, in quanto la battuta di gambe e legata al tipo di tecnica utilizzata dall’atlet a)...."
   },
   {
     "id": 854,
@@ -11097,7 +17068,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Una capacità coordinativa speciale.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 855,
@@ -11110,7 +17088,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Testa - busto - braccia - gambe.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      31,
+      262,
+      269
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "Far intervenire i muscoli del tronco nella trazione di braccia : eseguire l’inizio della bracciata come nella farfalla , permette l’intervento del gran dorsale in presa (prestiramento) e del pettorale in trazione, con lo sfruttamento dell’energia elastica accumulata ...."
   },
   {
     "id": 856,
@@ -11123,7 +17108,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Uno schema motorio evoluto.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      384,
+      20
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 857,
@@ -11136,7 +17128,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Capacità di apprendimento rapido.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      18,
+      275
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "4.12.1 PREMESSA È proprio il significato del verbo nuotare il fulcro della questione: se per nuotare intendiamo spostarsi in acqua dal punto A al punto B, sicuramente un pesce nuota ...."
   },
   {
     "id": 858,
@@ -11149,7 +17148,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Insegna la posizione del gomito alto e a enfatizzare la presa.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      30,
+      29,
+      31
+    ],
+    "manualSection": "5.2.1.3.2. DORSO",
+    "manualExcerpt": "• Esercizi di pe rfezionamento o Un solo braccio, l’altro in alto: in questo esercizio si pone l’accento sul rollio corrispondente con la fine della spinta e sull’appoggio della mano in alto...."
   },
   {
     "id": 859,
@@ -11162,7 +17168,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. A ridurre le ondulazioni e a stimolare una bracciata senza pause.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      31,
+      32,
+      269
+    ],
+    "manualSection": "5.2.1.3.3. RANA",
+    "manualExcerpt": "• Esercizi di perfezionamento: o Gambe rana sul dorso : esercizio che può essere eseguito con le braccia lungo i fianchi o con le braccia in alto. Serve a l imitare la chiusura dell’angolo coscia - busto o Gambe rana sul petto braccia basse : è un esercizio per l’assetto del corpo in acqua...."
   },
   {
     "id": 860,
@@ -11175,7 +17188,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’insieme dei processi emotivi, cognitivi e motivazionali.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      377,
+      14,
+      12
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "La prestazione è definita come l’esito misurabile di un’azione sportiva completa . L’azione è determinata dalla funzione e dalla struttura , e si costruisce attraverso l’interazione fra di esse. G...."
   },
   {
     "id": 861,
@@ -11188,7 +17208,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il comportamento temporale del tempo di stimolo e di riposo in una unità di allenamento.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      48,
+      46,
+      47
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Stimolo allenante Specificità • Tipo attivazione metabolica • Struttura del movimento Intensità • Livello soglia allenante (favorisce adattamenti a stimoli maggiori -> affaticamento non compensatorio) Densità • Tempo lavoro/tempo recupero Quantità/durata (volume) • Numero degli..."
   },
   {
     "id": 862,
@@ -11201,7 +17228,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Che venga utilizzato un allenamento ricco di stimoli motori.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      14,
+      182,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Periodo ricco di movimenti, ma senza la gra zia infantile: si manifestano rigidità, angolosità, carenze coordinative, distur bi dell’inibizione, ecc (Gurevic , 1991)...."
   },
   {
     "id": 863,
@@ -11214,7 +17248,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Non si richiede nessuna esecuzione ma si agisce sul contesto per stimolare l’azione dell’allievo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      281,
+      20,
+      30
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Battuta di gambe laterale con rotazione del capo : quest o esercizio può essere eseguito sia respirando da entrambi i lati sia simulando l’inizio del recupero del braccio dal lato della respirazione • Effettuare più bracciate possibile senza respirare, girarsi sul dorso e riprendere : questo..."
   },
   {
     "id": 864,
@@ -11227,7 +17268,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Si definiscono alcuni aspetti dell’esecuzione e altri sono lasciati alla scelta dell’allievo.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      281,
+      20,
+      30
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Battuta di gambe laterale con rotazione del capo : quest o esercizio può essere eseguito sia respirando da entrambi i lati sia simulando l’inizio del recupero del braccio dal lato della respirazione • Effettuare più bracciate possibile senza respirare, girarsi sul dorso e riprendere : questo..."
   },
   {
     "id": 865,
@@ -11240,7 +17288,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Si definiscono tutti i dettagli dell’esecuzione.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      281,
+      20,
+      30
+    ],
+    "manualSection": "4.12.2.2. CRAWL",
+    "manualExcerpt": "• Battuta di gambe laterale con rotazione del capo : quest o esercizio può essere eseguito sia respirando da entrambi i lati sia simulando l’inizio del recupero del braccio dal lato della respirazione • Effettuare più bracciate possibile senza respirare, girarsi sul dorso e riprendere : questo..."
   },
   {
     "id": 866,
@@ -11253,7 +17308,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Schema motorio.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      182,
+      181,
+      12
+    ],
+    "manualSection": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA",
+    "manualExcerpt": "corporeo va creato attraverso proposte di controllo motorio e coinvolgerà primariamente il sistema nervoso. Nell’età prescolare l’obiettivo viene perseguito con primaria importanza, attraverso propos te specifiche, molto vicine alla psicomotricità...."
   },
   {
     "id": 867,
@@ -11266,7 +17328,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Una nuotata più fluida ed economica.",
-    "category": "Metodologia"
+    "category": "Metodologia",
+    "manualPages": [
+      163,
+      27,
+      28
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "Assetto in acqua: a causa delle elevate velocità, la posizione in acqua dei velocisti è più alta rispetto a quella dei fo ndisti. L e spalle e mergono maggiormente dall’acqua a causa della pressione dell’acqua stessa sul petto...."
   },
   {
     "id": 868,
@@ -11279,7 +17348,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Da 2 a 6 anni.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      383,
+      344,
+      182
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Nel programmare l’attività motoria per soggetti in età evolutiva è indispensabile tenere presenti le caratteristiche fisiologiche e psicologiche degli stessi...."
   },
   {
     "id": 869,
@@ -11292,7 +17368,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La prossemica.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      80,
+      83,
+      78
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Codice - Il messaggio è formato da parole, da immagini ed è codificato: il codice è un sistema di simboli regolati da rapporti di corrispondenza ai significati (parole/definizioni); il codice utilizzato è collegato a due canali - verbale e non verbale – ed è espresso attraverso il linguaggio..."
   },
   {
     "id": 870,
@@ -11305,7 +17388,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Strutturazione percettiva e coscienza del proprio corpo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      344,
+      92,
+      91
+    ],
+    "manualSection": "6.3.2.2. 5 -6 ANNI",
+    "manualExcerpt": "6.3.2.1. 3 -4 ANNI A quest’età il bambino è nel pieno dell’ egocentrismo. Questo significa che l’unica realtà che conosce è quella che sperimenta personalmente...."
   },
   {
     "id": 871,
@@ -11318,7 +17408,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Motricità volontaria.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      344,
+      92,
+      91
+    ],
+    "manualSection": "6.3.2.2. 5 -6 ANNI",
+    "manualExcerpt": "Il periodo evolutivo che va dai tre ai sei anni necessita a livello acquatico -natatorio di un progetto pensato ad hoc, questo per rispondere al meglio ai bisogni e alle caratteristiche di questa fascia d’età...."
   },
   {
     "id": 872,
@@ -11331,7 +17428,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Immagine sintetica del corpo, rappresentazione decentrata, rappresentazione mentale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      344,
+      92,
+      91
+    ],
+    "manualSection": "6.3.2.2. 5 -6 ANNI",
+    "manualExcerpt": "agire la sua espressione ed un mezzo fondamentale, che diventa utilissimo nella formazione in ambito acquatico, è l’ handling. Con questo termine s i definisce la manipolazione del bambino, che tende a favorire l’insediamento della psiche nel corpo...."
   },
   {
     "id": 873,
@@ -11344,7 +17448,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La percezione dell’impedimento a soddisfare bisogni e aspirazioni.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      163
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 874,
@@ -11357,7 +17468,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Valutare il risultato, non l’autore.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      362,
+      208,
+      365
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 875,
@@ -11370,7 +17488,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Mettere in comune.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      78,
+      104
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 876,
@@ -11383,7 +17508,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ciò che l’emittente intende trasmettere rappresentato dal significato del codice utilizzato.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      80,
+      83
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Il messaggio è il contenuto della comunicazione, è ciò che – più o meno consapevolmente – l’emittente trasmette al ricevente, ciò che viene scambiato, sotto forma di informazio ne, tra emittente e ricevente. Il messaggio è espresso attraverso un codice e inviato attraverso un canale...."
   },
   {
     "id": 877,
@@ -11396,7 +17528,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Tutte quelle informazioni che arrivano al destinatario circa l’andamento della relazione tra i due comunicandi, espressi dal linguaggio del corpo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      80,
+      83
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 878,
@@ -11409,7 +17548,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La considerazione che un individuo ha di sé stesso.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      214,
+      300,
+      203
+    ],
+    "manualSection": "4.6.3. CONCLUSIONI",
+    "manualExcerpt": "Vi sono dei casi in cui, pur producendosi un reato, intervengono alcune situazioni o circostanze particolari che limitano o, addirittura, escludono la responsabilità del sogge tto agente, sia essa di natura civile o penale...."
   },
   {
     "id": 879,
@@ -11422,7 +17568,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un’informazione di ritorno.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      40,
+      78
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 880,
@@ -11435,7 +17588,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Il processo soggettivo e duraturo che porta il soggetto a valutare e apprezzare se stesso tramite l’auto approvazione del proprio valore personale, fondato su quello che uno vede di sé.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      97,
+      96,
+      362
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 881,
@@ -11448,7 +17608,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Postura, gesti, movimenti, espressioni e mimica che accompagnano la parola e rendendo la comunicazione più comunicativa esprimendo il messaggio di relazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      14
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Codice - Il messaggio è formato da parole, da immagini ed è codificato: il codice è un sistema di simboli regolati da rapporti di corrispondenza ai significati (parole/definizioni); il codice utilizzato è collegato a due canali - verbale e non verbale – ed è espresso attraverso il linguaggio..."
   },
   {
     "id": 882,
@@ -11461,7 +17628,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il sistema di segni articolato da una grammatica e una sintassi che consente la comunicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      356
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Codice - Il messaggio è formato da parole, da immagini ed è codificato: il codice è un sistema di simboli regolati da rapporti di corrispondenza ai significati (parole/definizioni); il codice utilizzato è collegato a due canali - verbale e non verbale – ed è espresso attraverso il linguaggio..."
   },
   {
     "id": 883,
@@ -11474,7 +17648,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Comportarsi in base alle varie esigenze, considerando il ruolo di educatore.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      203,
+      20,
+      299
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 884,
@@ -11487,7 +17668,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Dall’alternanza di fasi di accelerazione/decelerazione e crisi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      93,
+      15,
+      89
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "differenziazione degli interventi muscolari, rivolta a mantenere la postura utile per la realizzazione dell’azione pre vista o Reazione : può essere suddivisa in due fasi: !..."
   },
   {
     "id": 885,
@@ -11500,7 +17688,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Emerge dalla constatazione che il corpo umano non è mai corpo in senso oggettivo e la psiche non ha alcun senso se non si fonda e si costituisce attraverso e insieme al corpo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      92,
+      70,
+      165
+    ],
+    "manualSection": "2.3.3. LE TEORIE DELLO SVILUPPO COGNITIVO",
+    "manualExcerpt": "Gli scambi di calore Il corpo umano è sottoposto continuamente a scambi di calore con l’ambiente che lo circonda. Il corpo acquista o perde calore per: • Convezione. La convezione è il passaggio di calore fra un corpo e un fluido in movimento intorno ad esso...."
   },
   {
     "id": 886,
@@ -11513,7 +17708,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Il mezzo fisico attraversato dalla comunicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      80,
+      83,
+      81
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Canale - Il messaggio codificato è trasmesso attraverso un canale, il mezzo fisico di propagazione (in vasca, principalmente onde sonore/canali visivi); per lo più si attiva un canale principale a cui si aggiungono canali accessori a rinforzo...."
   },
   {
     "id": 887,
@@ -11526,7 +17728,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Il sistema di segni usato per comunicare.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      80,
+      83,
+      79
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Codice - Il messaggio è formato da parole, da immagini ed è codificato: il codice è un sistema di simboli regolati da rapporti di corrispondenza ai significati (parole/definizioni); il codice utilizzato è collegato a due canali - verbale e non verbale – ed è espresso attraverso il linguaggio..."
   },
   {
     "id": 888,
@@ -11539,7 +17748,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La situazione che rende comprensibile una comunicazione 89.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      79,
+      80
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 889,
@@ -11552,7 +17768,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Colui al quale è indirizzato il messaggio.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      83,
+      78
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Quando l’istruttore – che in questo caso funge da emittente - vuol rendere partecipe l’allievo di un’informazione per richiedere di mettere in atto un’azione motoria, oppure di un’emozione o di un sentimento, traduce le immagini che sono nella sua mente in un messaggio – costituito da uno o più..."
   },
   {
     "id": 890,
@@ -11565,7 +17788,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La fonte del messaggio.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      83,
+      78
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "L’emittente è la persona che avvia la comunicazione attraverso un messaggio, il ricevente è l’altro elemento del rapporto interpersonale che decide di accogliere (o meno) il messaggio, lo decodifica, lo interpreta, lo comprende e, nel nostro caso, lo mette in atto...."
   },
   {
     "id": 891,
@@ -11578,7 +17808,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il contenuto della comunicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      79,
+      78
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Il messaggio è il contenuto della comunicazione, è ciò che – più o meno consapevolmente – l’emittente trasmette al ricevente, ciò che viene scambiato, sotto forma di informazio ne, tra emittente e ricevente. Il messaggio è espresso attraverso un codice e inviato attraverso un canale...."
   },
   {
     "id": 892,
@@ -11591,7 +17828,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Apprendimento per imitazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      112,
+      113,
+      275
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Spesso si sente affe rmare che gli allievi imparano malgrado l’istruttore, per sottolineare in maniera paradossale l’importanza che rivestono i processi legati all’apprendimento...."
   },
   {
     "id": 893,
@@ -11604,7 +17848,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Globalità dell’apprendimento, clima affettivo/ relazionale positivo, gestione del gruppo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      85,
+      20,
+      160
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "La persona che si iscrive a un corso in piscina è portatore del proprio interesse e della propria motivazione che deve trovare uno spazio di realizzazione all’interno di un gruppo alquanto particolare che si costituisce – nella normalità dei casi - un paio di volte a settim ana...."
   },
   {
     "id": 894,
@@ -11617,7 +17868,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Coscienza e conoscenza del proprio corpo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      361,
+      90,
+      365
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "Per i bambini piccoli la principale stimolazione ambientale è rappresentata inizialmente dalla madre (ossia quella persona che nei primi mesi si prende maggiore cura del neonato)...."
   },
   {
     "id": 895,
@@ -11630,7 +17888,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Motivazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      102,
+      113,
+      109
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Per comprendere gli aspetti legati all’intelligenza emotiva si deve partire dal concetto di emozioni che sono state sempre oggetto di dibattiti , sia a livello filosofico che psicologico. I primi scritti si trovano nelle opere di Aristotele, Cartesio e Spinoza...."
   },
   {
     "id": 896,
@@ -11643,7 +17908,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’insieme di tutti gli elementi a cui una persona fa riferimento per descrivere sé stessa.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      96,
+      14,
+      378
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Valutazione che si ha circa le svariate informazioni che derivano dal concetto di sé: da ciò scaturiscono i sentimenti del bambino nei confronti di sé stesso in senso globale. Insieme di tutti gli elementi a cui una persona fa riferimento per descrivere sé stessa...."
   },
   {
     "id": 897,
@@ -11656,7 +17928,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Comunicazione non verbale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      70
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Dunque, alla base del processo comunicativo in ambito didattico non c’è solo la capacità di trasmettere, ma anche quella di ascoltare, proprio perché il processo è bidirezionale e nella comunicazione didattica – per produrre un cambiamento – è più importante ciò che arriva non ciò che parte,..."
   },
   {
     "id": 898,
@@ -11669,7 +17948,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il contenuto della comunicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      83,
+      80
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Il messaggio è il contenuto della comunicazione, è ciò che – più o meno consapevolmente – l’emittente trasmette al ricevente, ciò che viene scambiato, sotto forma di informazio ne, tra emittente e ricevente. Il messaggio è espresso attraverso un codice e inviato attraverso un canale...."
   },
   {
     "id": 899,
@@ -11682,7 +17968,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gli stati emotivi o affettivi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      89,
+      375,
+      106
+    ],
+    "manualSection": "2.3.1. PREMESSA",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 900,
@@ -11695,7 +17988,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Accompagna l’espressione verbale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      80,
+      82,
+      354
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Questi diversi tipi di aure sintomatiche dipendono dall’area della corteccia cerebrale attivata e possono portare a uno stato confusionale, alla perdita delle forze e disturbi del linguaggio...."
   },
   {
     "id": 901,
@@ -11708,7 +18008,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Determinati e gestiti dall’istruttore.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      87,
+      83,
+      288
+    ],
+    "manualSection": "2.2.6. LE PAURE DELL’ISTRUTTORE",
+    "manualExcerpt": "Il percorso didattico e le modalità relazionali devono essere determinati e gestiti dall’istruttore, non subiti. La conduzione del gruppo -corsia deve essere quindi intenzionale sistematica e flessibile."
   },
   {
     "id": 902,
@@ -11721,7 +18028,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Tutti gli allievi possono imparare.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      20,
+      362,
+      363
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "6.4.3.3.2. SORDITÀ Il termine sordità identifica una perdita di funzionalità importante, che comporta problemi nello sviluppo sociale, cognitivo e del linguaggio...."
   },
   {
     "id": 903,
@@ -11734,7 +18048,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Motivazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      364,
+      85,
+      275
+    ],
+    "manualSection": "6.4.4. INTEGRAZIONE",
+    "manualExcerpt": "La persona che si iscrive a un corso in piscina è portatore del proprio interesse e della propria motivazione che deve trovare uno spazio di realizzazione all’interno di un gruppo alquanto particolare che si costituisce – nella normalità dei casi - un paio di volte a settim ana...."
   },
   {
     "id": 904,
@@ -11747,7 +18068,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’assunzione di responsabilità personale richiesta da una certa mansione e dai suoi obiettivi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      212,
+      362,
+      203
+    ],
+    "manualSection": "4.6.2.1.6. CONCLUSIONI",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 905,
@@ -11760,7 +18088,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Essere una figura di riferimento in vasca per i propri allievi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      203,
+      299,
+      300
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 906,
@@ -11773,7 +18108,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capacità personali, desiderio di imparare, tempo di applicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      378,
+      14,
+      18
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "Legate al sistema nervoso , sono i presupposti che determinano l'apprendimento, l’organizzazione, il controllo e la trasformazione del movimento ...."
   },
   {
     "id": 907,
@@ -11786,7 +18128,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Preadolescenza e adolescenza.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      383,
+      94
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 908,
@@ -11799,7 +18148,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Non esiste atto cognitivo che prescinda o che non sia preceduto da una componente emotiva.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      203,
+      20,
+      85
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "La miglior qualità dell’insegnamento è basata sulla conoscenza globale della tecnica e sull’intenzione di renderla globale, cercando di svilupparla individualmente...."
   },
   {
     "id": 909,
@@ -11812,7 +18168,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Circa il 90%.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      79,
+      80
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Il messaggio è il contenuto della comunicazione, è ciò che – più o meno consapevolmente – l’emittente trasmette al ricevente, ciò che viene scambiato, sotto forma di informazio ne, tra emittente e ricevente. Il messaggio è espresso attraverso un codice e inviato attraverso un canale...."
   },
   {
     "id": 910,
@@ -11825,7 +18188,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Miglioramento dell’autostima e maggiore autonomia.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      163,
+      375,
+      20
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 911,
@@ -11838,7 +18208,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dalla motivazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      362,
+      208,
+      363
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "Si è già evidenziato come l’allievo segue le direttive indicategli dal proprio istruttore in virtù del fatto che egli rappresenta, per lui, sicurezza ed esperienza...."
   },
   {
     "id": 912,
@@ -11851,7 +18228,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dalla motivazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      113,
+      183,
+      364
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "La teoria che sta alla base della pedagogia i nclusiva si basa su pochi e validi principi: • ognuno è speciale; • tutti possono imparare; • la diversità è un punto di forza; • l’apprendimento si intensifica con la cooperazione sinergica delle agenzie educative"
   },
   {
     "id": 913,
@@ -11864,7 +18248,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’attuazione consapevole di un principio didattico.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      203,
+      20,
+      375
+    ],
+    "manualSection": "4.6.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 914,
@@ -11877,7 +18268,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un cambiamento di comportamento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      109,
+      112,
+      113
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Nella psicologia comportamentale l’apprendimento è definito come un cambiamento di comportam ento. L’idea centrale è che non esista una realtà oggettiva esterna e che noi apprendiamo attraverso i nostri sensi...."
   },
   {
     "id": 915,
@@ -11890,7 +18288,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Scoperta – conoscenza – consolidamento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      78,
+      83,
+      20
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "La miglior qualità dell’insegnamento è basata sulla conoscenza globale della tecnica e sull’intenzione di renderla globale, cercando di svilupparla individualmente...."
   },
   {
     "id": 916,
@@ -11903,7 +18308,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Riguarda l’insieme dei rapporti che si creano tra l’individuo e le persone che vivono con lui.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      12,
+      377
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 917,
@@ -11916,7 +18328,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Motivazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      163,
+      249,
+      247
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 918,
@@ -11929,7 +18348,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. L’educazione al nuoto e l’educazione attraverso il nuoto.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      78
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 919,
@@ -11942,7 +18368,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Agevola la comunicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      18,
+      83,
+      14
+    ],
+    "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
+    "manualExcerpt": "Comunicazione efficace: Nella comunicazione è più importante ciò che arriva, non ciò che parte"
   },
   {
     "id": 920,
@@ -11955,7 +18388,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dai 18 mesi ai 7 anni.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      11,
+      91,
+      14
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "Nei primi mesi di vita nel bambino predominano i riflessi di prensione e di abbrancamento (riflesso di Moro). Si presentano reazioni motorie ma ssive, che ricordano elementi legati all’arrampicarsi e alla prensione...."
   },
   {
     "id": 921,
@@ -11968,7 +18408,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Durante i primi 18 mesi di vita.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      11,
+      91,
+      107
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "Nei primi mesi di vita nel bambino predominano i riflessi di prensione e di abbrancamento (riflesso di Moro). Si presentano reazioni motorie ma ssive, che ricordano elementi legati all’arrampicarsi e alla prensione...."
   },
   {
     "id": 922,
@@ -11981,7 +18428,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Quando si pone in posizione di diversità rispetto al gruppo e ne assume la conduzione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      85,
+      300,
+      86
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "L’istruttore, dunque, inteso come chi deve presiedere al conseguimento degli obiettivi, ha il compito di gestire sia il contenuto professionale sia le relazioni. È in queste ultime che si manifestano spesso i problemi più difficili cui far fronte...."
   },
   {
     "id": 923,
@@ -11994,7 +18448,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Quando si pone in condizione di parità e interagisce con il gruppo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      85,
+      300,
+      86
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "L’istruttore, dunque, inteso come chi deve presiedere al conseguimento degli obiettivi, ha il compito di gestire sia il contenuto professionale sia le relazioni. È in queste ultime che si manifestano spesso i problemi più difficili cui far fronte...."
   },
   {
     "id": 924,
@@ -12007,7 +18468,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Deve sapere, saper fare e saper far fare.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      362,
+      116,
+      208
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 925,
@@ -12020,7 +18488,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Utilizza la leadership per orientare il gruppo verso un obiettivo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      85,
+      116,
+      87
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "La persona che si iscrive a un corso in piscina è portatore del proprio interesse e della propria motivazione che deve trovare uno spazio di realizzazione all’interno di un gruppo alquanto particolare che si costituisce – nella normalità dei casi - un paio di volte a settim ana...."
   },
   {
     "id": 926,
@@ -12033,7 +18508,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Ecologico per l’allievo e formulato in termini sensorialmente basati.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      362,
+      163,
+      288
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 927,
@@ -12046,7 +18528,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Presenza di emittente, messaggio, ricevente e feed-back verbale o non verbale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      79,
+      82
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 928,
@@ -12059,7 +18548,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un processo attivo di elaborazione di informazioni, di codifiche e di decodifiche.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      103,
+      83,
+      78
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "2.1 IL PROCESSO DI COMUNICAZIONE"
   },
   {
     "id": 929,
@@ -12072,7 +18568,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Verbale e non verbale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      81
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Canale - Il messaggio codificato è trasmesso attraverso un canale, il mezzo fisico di propagazione (in vasca, principalmente onde sonore/canali visivi); per lo più si attiva un canale principale a cui si aggiungono canali accessori a rinforzo...."
   },
   {
     "id": 930,
@@ -12085,7 +18588,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Verbale e non verbale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      363
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Canale - Il messaggio codificato è trasmesso attraverso un canale, il mezzo fisico di propagazione (in vasca, principalmente onde sonore/canali visivi); per lo più si attiva un canale principale a cui si aggiungono canali accessori a rinforzo...."
   },
   {
     "id": 931,
@@ -12098,7 +18608,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. La capacità di esprimere correttamente e adeguatamente il proprio pensiero attraverso il linguaggio.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      362,
+      378
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Dunque, alla base del processo comunicativo in ambito didattico non c’è solo la capacità di trasmettere, ma anche quella di ascoltare, proprio perché il processo è bidirezionale e nella comunicazione didattica – per produrre un cambiamento – è più importante ciò che arriva non ciò che parte,..."
   },
   {
     "id": 932,
@@ -12111,7 +18628,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dai 6 agli 11 anni 93.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      123,
+      181,
+      348
+    ],
+    "manualSection": "2.9.1. CARATTERISTICHE E  SVILUPPO PSICOFISICO",
+    "manualExcerpt": "4.1.2. OBIETTIVI DELL’ATTIVITÀ PRENATATORIA L’attività prenatatoria si rivolge, teoricamente, ad ogni tipologia di utente, tenendo in considerazione peculiarità e necessità. In generale è possibile individuare alcuni obiettivi primari: 1...."
   },
   {
     "id": 933,
@@ -12124,7 +18648,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Colui che esprime una personalità carismatica in grado di soddisfare le esigenze di tutti i membri del gruppo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      85,
+      366,
+      278
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "Un’altra alternativa è l’integrazione con gli allievi normodotati, argomento piuttosto delicato...."
   },
   {
     "id": 934,
@@ -12137,7 +18668,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Stimolare l’allievo ad una riflessione cosciente e continua sul proprio movimento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      362,
+      284,
+      276
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "Il percorso didattico di apprendimento di ciascuna delle quattro nuotate agonistiche tradizionali comporta il superamento di alcune problematiche . Cercheremo di evidenziarle, offrendo delle soluzioni didattiche che agevolino l’apprendimento, rendendo l’ins egnamento più efficace...."
   },
   {
     "id": 935,
@@ -12150,7 +18688,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. L’insieme dei fattori che avviano e indirizzano le azioni di un soggetto.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      22,
+      74,
+      104
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "Per età biologica o età fisiologica s’intende l'età che si può attribuire a un individuo sulla base delle sue condizioni morfologiche e funzionali (per esempio qualità dei tessuti, degli organi e degli apparati) valutate rispetto a valori standard di riferimento...."
   },
   {
     "id": 936,
@@ -12163,7 +18708,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Lo stimolo a partecipare interno al soggetto e decade con difficoltà.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      47,
+      48,
+      46
+    ],
+    "manualSection": "5.3.4. IL PROCESSO D’ALLENAMENTO:",
+    "manualExcerpt": "Il carico d’allenamento determina effetti successivi nel tempo che sono immediati, permanenti e cumulativi: • L’effetto immediato del carico riguarda aspetti biochimici e aspetti funzionali (capacità di reclutare una maggior quantità di fibre muscolari da coinvolgere nei ges ti e nell’azione..."
   },
   {
     "id": 937,
@@ -12176,7 +18728,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. È alla base dell’apprendimento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      22,
+      20,
+      278
+    ],
+    "manualSection": "5.1.2.5. MOTIVAZIONI",
+    "manualExcerpt": "5.1.2.5. MOTIVAZIONI La motivazione allo sport, ultimo e più importante fattore della prestazione, appartiene all’area psico-pedagogica e psicologica. Se non viene sviluppata adeguatamente, crea i presupposti per l’ abbandono precoce dell’attività natatoria e sportiva in genere...."
   },
   {
     "id": 938,
@@ -12189,7 +18748,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Una sintesi originale, dinamica e relativamente stabile dei modi di essere e di agire dell’individuo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      356
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 939,
@@ -12202,7 +18768,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Da 0 a 3 anni.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      383,
+      344,
+      91
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Nel programmare l’attività motoria per soggetti in età evolutiva è indispensabile tenere presenti le caratteristiche fisiologiche e psicologiche degli stessi...."
   },
   {
     "id": 940,
@@ -12215,7 +18788,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. La gestione dello spazio tra sé e gli altri.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      70
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Codice - Il messaggio è formato da parole, da immagini ed è codificato: il codice è un sistema di simboli regolati da rapporti di corrispondenza ai significati (parole/definizioni); il codice utilizzato è collegato a due canali - verbale e non verbale – ed è espresso attraverso il linguaggio..."
   },
   {
     "id": 941,
@@ -12228,7 +18808,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Definisce il modo in cui una persona inconsapevolmente struttura lo spazio tra sé e gli altri nel corso delle interazioni sociali.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      378,
+      14,
+      47
+    ],
+    "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
+    "manualExcerpt": "Le capacità m otorie sono elementi generali del movimento, che nei primi anni di vita non si differenziano tra loro...."
   },
   {
     "id": 942,
@@ -12241,7 +18828,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. È inconsapevole.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      13,
+      113,
+      103
+    ],
+    "manualSection": "5.1.2. FATTORI DELLA PRESTAZIONE",
+    "manualExcerpt": "L’allievo cerca di comprendere le molteplici prospettive tramite le sue interazioni con il mondo esterno. Su più punti la posizione dei costruttivisti è simile a quella dei cognitivisti p iù recenti (Reda, Guidano, Mahoney)...."
   },
   {
     "id": 943,
@@ -12254,7 +18848,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Capacità di relazione e procedure che si adottano nello svolgere il lavoro.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      20,
+      300,
+      203
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "La miglior qualità dell’insegnamento è basata sulla conoscenza globale della tecnica e sull’intenzione di renderla globale, cercando di svilupparla individualmente...."
   },
   {
     "id": 944,
@@ -12267,7 +18868,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Dai 3 ai 6 anni.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      383,
+      91,
+      344
+    ],
+    "manualSection": "1.3.4. LE FASI SENSIBILI",
+    "manualExcerpt": "Nel programmare l’attività motoria per soggetti in età evolutiva è indispensabile tenere presenti le caratteristiche fisiologiche e psicologiche degli stessi...."
   },
   {
     "id": 945,
@@ -12280,7 +18888,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. L’autostima.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      96,
+      97,
+      102
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Valutazione che si ha circa le svariate informazioni che derivano dal concetto di sé: da ciò scaturiscono i sentimenti del bambino nei confronti di sé stesso in senso globale. Insieme di tutti gli elementi a cui una persona fa riferimento per descrivere sé stessa...."
   },
   {
     "id": 946,
@@ -12293,7 +18908,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Influenzano positivamente o negativamente l’ apprendimento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      275,
+      298,
+      112
+    ],
+    "manualSection": "4.12.1 PREMESSA",
+    "manualExcerpt": "Nell’immaginario collettivo, l’istruttore di nuoto è quello che, guadagnando, si diverte, fa una professione che lo rende attraente, invidiabile, sano… La realtà che conosciamo è ben altra...."
   },
   {
     "id": 947,
@@ -12306,7 +18928,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Comunicazione verbale, comunicazione non verbale, paralinguaggi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      80,
+      81
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Dunque, alla base del processo comunicativo in ambito didattico non c’è solo la capacità di trasmettere, ma anche quella di ascoltare, proprio perché il processo è bidirezionale e nella comunicazione didattica – per produrre un cambiamento – è più importante ciò che arriva non ciò che parte,..."
   },
   {
     "id": 948,
@@ -12319,7 +18948,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Apprendimento per imitazione, condizionamento, per prove ed errori, per intuizione, per comprensione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      112,
+      111,
+      109
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Spesso si sente affe rmare che gli allievi imparano malgrado l’istruttore, per sottolineare in maniera paradossale l’importanza che rivestono i processi legati all’apprendimento...."
   },
   {
     "id": 949,
@@ -12332,7 +18968,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. L’insieme organico dei compiti assegnati 95.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      212,
+      362,
+      203
+    ],
+    "manualSection": "4.6.2.1.6. CONCLUSIONI",
+    "manualExcerpt": ""
   },
   {
     "id": 950,
@@ -12345,7 +18988,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Motivazioni intrinseche.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      163
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 951,
@@ -12358,7 +19008,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Motivazioni sociali.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      10,
+      90,
+      12
+    ],
+    "manualSection": "5.1.1. PREMESSA",
+    "manualExcerpt": "Per i bambini piccoli la principale stimolazione ambientale è rappresentata inizialmente dalla madre (ossia quella persona che nei primi mesi si prende maggiore cura del neonato)...."
   },
   {
     "id": 952,
@@ -12371,7 +19028,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. 15-18 mesi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      91,
+      11,
+      20
+    ],
+    "manualSection": "2.3.3. LE TEORIE DELLO SVILUPPO COGNITIVO",
+    "manualExcerpt": "In seguito l’autore studio i primi anni di vita sui suoi tre figli e grazie alle osservazioni da lui effettuate delineò una teoria stadiale dello sviluppo cognitivo : • 15-18 mesi: stadio dell’ intelligenza senso -motoria , ossia la capacità di entrare in possesso di un oggetto non direttamente..."
   },
   {
     "id": 953,
@@ -12384,7 +19048,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dinamico.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      89,
+      93,
+      91
+    ],
+    "manualSection": "2.3.1. PREMESSA",
+    "manualExcerpt": "Lo sviluppo cognitivo, emotivo ed affettivo è un processo dinamico costituito da svariati cambiamenti in ognuna delle fasi della vita che avranno implicazioni fondamentali per il futuro adulto...."
   },
   {
     "id": 954,
@@ -12397,7 +19068,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Sono interpretati in funzione dell’immaginazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      346,
+      20,
+      375
+    ],
+    "manualSection": "6.3.3.3. GIOCO",
+    "manualExcerpt": "Il gioco simbolico, per la cui analisi il riferimento è lo psicologo J. Piaget, è una fase fondamentale della vita del bambino che, a partire dai 12/15 mesi d’età, costruisce attraverso il gioco il proprio sviluppo cognitivo, sociale, affettivo...."
   },
   {
     "id": 955,
@@ -12410,7 +19088,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Colui che avvia la comunicazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      83,
+      80
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "L’emittente è la persona che avvia la comunicazione attraverso un messaggio, il ricevente è l’altro elemento del rapporto interpersonale che decide di accogliere (o meno) il messaggio, lo decodifica, lo interpreta, lo comprende e, nel nostro caso, lo mette in atto...."
   },
   {
     "id": 956,
@@ -12423,7 +19108,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Elemento fondamentale per il corretto svolgimento del suddetto processo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      20,
+      109,
+      113
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "L’allievo cerca di comprendere le molteplici prospettive tramite le sue interazioni con il mondo esterno. Su più punti la posizione dei costruttivisti è simile a quella dei cognitivisti p iù recenti (Reda, Guidano, Mahoney)...."
   },
   {
     "id": 957,
@@ -12436,7 +19128,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Valutare, indirizzare e motivare gli allievi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      288,
+      87,
+      116
+    ],
+    "manualSection": "4.13.2. ORGANIZZAZIONE DEL CORSO DI NUOTO",
+    "manualExcerpt": "Mortificare gli allievi è utile solo a distruggerne l'autostima e a render e un istruttore non degno del propri o ruolo educativo. Un'altra strategia didattica è quella di programmare le attività , che non possono certo essere frutto d\u0001improvvisazione...."
   },
   {
     "id": 958,
@@ -12449,7 +19148,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. 90%.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      208,
+      80,
+      362
+    ],
+    "manualSection": "4.6.2.1. LA RESPONSABILITÀ CIVILE",
+    "manualExcerpt": "Codice - Il messaggio è formato da parole, da immagini ed è codificato: il codice è un sistema di simboli regolati da rapporti di corrispondenza ai significati (parole/definizioni); il codice utilizzato è collegato a due canali - verbale e non verbale – ed è espresso attraverso il linguaggio..."
   },
   {
     "id": 959,
@@ -12462,7 +19168,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Dimostrarlo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      272,
+      30,
+      191
+    ],
+    "manualSection": "4.10.4.4. ERRORI COMUNI",
+    "manualExcerpt": "o Gli allievi conoscono già il movimento circolatorio della bracciata perché lo possiedono, sebbene in forma alternata, dallo stile libero. Agli inizi deve essere proposta con le braccia distese o Far provare la bracciata in piedi in acqua...."
   },
   {
     "id": 960,
@@ -12475,7 +19188,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Deve dare molta importanza al proprio atteggiamento di ascolto, fase fondamentale per poi non compiere leggerezze nella risposta.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      362,
+      83,
+      208
+    ],
+    "manualSection": "6.4.3.3.1. CECITÀ",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 961,
@@ -12488,7 +19208,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Ridimensionare le aspettative.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      163
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "7.5.1. PREMESSA L’acqua per le sue caratteristiche fisiche e chimiche rappresenta non solo un ambiente nel quale si svolge un’attività sportiva ma anche un mezzo che il soggetto immerso utilizza al fine del movimento...."
   },
   {
     "id": 962,
@@ -12501,7 +19228,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Dimostrarlo correttamente.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      262,
+      287,
+      30
+    ],
+    "manualSection": "4.10.1.3. DIDATTICA",
+    "manualExcerpt": "• Insegnamento della bracciata : o La bracciata deve essere inserita quando la battuta di gambe è fluida e propulsiva. Durante l’insegnamento della bracciata è preferibile evitare di inserire la respirazione...."
   },
   {
     "id": 963,
@@ -12514,7 +19248,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Conoscere gli allievi e trattarli singolarmente secondo le loro caratteristiche personali.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      121,
+      87,
+      107
+    ],
+    "manualSection": "2.8.2. STRATEGIE  DIDATTICHE",
+    "manualExcerpt": "A tal proposito ultimamente sono stati sviluppati in ambito formativo programmi per insegnare nelle struttu re educative a riconoscere e gestire le emozioni...."
   },
   {
     "id": 964,
@@ -12526,7 +19267,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La percezione dell’impedimento a soddisfare le proprie aspirazioni.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      163
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 965,
@@ -12539,7 +19287,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Lavorare per una relazione interpersonale soddisfacente.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      201,
+      288,
+      116
+    ],
+    "manualSection": "4.1.6.3. ATTIVITÀ ALTERNATIVE",
+    "manualExcerpt": "mantenendo sempre un atteggiamento proattivo (individuare e suggerire la correzione di eventuali criticità)...."
   },
   {
     "id": 966,
@@ -12552,7 +19307,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Creare un legame affettivo, disporre un piano di apprendimento progressivo e realizzarlo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      113,
+      362,
+      283
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "L’allievo cerca di comprendere le molteplici prospettive tramite le sue interazioni con il mondo esterno. Su più punti la posizione dei costruttivisti è simile a quella dei cognitivisti p iù recenti (Reda, Guidano, Mahoney)...."
   },
   {
     "id": 967,
@@ -12565,7 +19327,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La causa di un comportamento, ciò che può determinare il manifestarsi, la forza, la direzione e la persistenza di un comportamento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      208,
+      362,
+      364
+    ],
+    "manualSection": "4.6.2.1. LA RESPONSABILITÀ CIVILE",
+    "manualExcerpt": "Si è già evidenziato come l’allievo segue le direttive indicategli dal proprio istruttore in virtù del fatto che egli rappresenta, per lui, sicurezza ed esperienza...."
   },
   {
     "id": 968,
@@ -12578,7 +19347,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Lo sviluppo delle attività intellettive.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      54,
+      375,
+      10
+    ],
+    "manualSection": "3.1.2.1. SISTEMA NERVOSO",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 969,
@@ -12591,7 +19367,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Caratterizzato dalle regole: capacità di cooperare, socializzare; aumentano i giochi di costruzione (realizzazione di capanne, oggetti).",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      14,
+      182,
+      12
+    ],
+    "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
+    "manualExcerpt": "Tale distinzione è prevalentemente organizzativa o didattica, poiché l’azione motoria è quanto di più unitario possa esser e espresso dall’uomo...."
   },
   {
     "id": 970,
@@ -12604,7 +19387,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Conoscenza tecnico didattica – Capacità comunicativa e relazionale.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      20,
+      368,
+      78
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "2.1.2. GLI ATTREZZI DEL MESTIERE DELL’ ISTRUTTORE In qualsiasi tipo di attività professionale si posson o distinguere l’aspetto tecnico, inerente i compiti specifici che l’attività comporta, e l’aspetto relazionale , relativo ai rapporti interpersonali che l’attività richiede o impone...."
   },
   {
     "id": 971,
@@ -12617,7 +19407,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. 120 centimetri.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      359,
+      300,
+      305
+    ],
+    "manualSection": "6.4.3.2.7. INSEGNAMENTO DEL NUOTO E DISABILITÀ PSICOFISICHE",
+    "manualExcerpt": "capacità, affermarsi come individuo originale, essere parte di un tessuto sociale fatto di relazioni interpersonali e di valori etici e morali di riferimento...."
   },
   {
     "id": 972,
@@ -12630,7 +19427,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Gioco.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      248,
+      73,
+      74
+    ],
+    "manualSection": "4.8.3.3. LA FABULAZIONE",
+    "manualExcerpt": "4.8.3.2. IL GIOCO I giochi dei bambini non sono dei giochi, bisogna in vece valutarl i come le loro azioni più serie (Michel de Montaigne )"
   },
   {
     "id": 973,
@@ -12643,7 +19447,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nel medesimo contesto, una corretta comunicazione verbale può essere invalidata da una comunicazione non verbale inefficiente.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      362,
+      363
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 974,
@@ -12656,7 +19467,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Intelligenza senso motoria.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      91,
+      107,
+      355
+    ],
+    "manualSection": "2.3.3. LE TEORIE DELLO SVILUPPO COGNITIVO",
+    "manualExcerpt": "In seguito l’autore studio i primi anni di vita sui suoi tre figli e grazie alle osservazioni da lui effettuate delineò una teoria stadiale dello sviluppo cognitivo : • 15-18 mesi: stadio dell’ intelligenza senso -motoria , ossia la capacità di entrare in possesso di un oggetto non direttamente..."
   },
   {
     "id": 975,
@@ -12669,7 +19487,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. La leadership è esercitata dall’ istruttore per condurre il gruppo verso un fine comune.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      366,
+      85,
+      212
+    ],
+    "manualSection": "6.4.4. INTEGRAZIONE",
+    "manualExcerpt": "Un’altra alternativa è l’integrazione con gli allievi normodotati, argomento piuttosto delicato...."
   },
   {
     "id": 976,
@@ -12682,7 +19507,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. La leadership è utilizzata dall’istruttore per condurre il gruppo verso un fine comune.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      366,
+      203,
+      362
+    ],
+    "manualSection": "6.4.4. INTEGRAZIONE",
+    "manualExcerpt": "Un’altra alternativa è l’integrazione con gli allievi normodotati, argomento piuttosto delicato...."
   },
   {
     "id": 977,
@@ -12695,7 +19527,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Area antropometrica.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      163
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 978,
@@ -12708,7 +19547,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Le caratteristiche della struttura e del funzionamento dell’organismo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      14,
+      13
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 979,
@@ -12721,7 +19567,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Rumore, perdita d’informazione, fraintendimento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      356,
+      182
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 980,
@@ -12734,7 +19587,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Conferma, negazione, disconferma, squalifica.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      82,
+      83,
+      27
+    ],
+    "manualSection": "2.1.5. DALLA PARTE DEL RICEVENTE",
+    "manualExcerpt": "Proprio perché la comunicazione didattica ha come fine un cambiamento nella persona del ricevente, è necessario che questi fornisca feedback a significare la risposta data alla comunicazione espressa dall’emittente (istruttore)...."
   },
   {
     "id": 981,
@@ -12747,7 +19607,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Biologici, psicologici, cognitivi, socio- affettivi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      89,
+      375,
+      338
+    ],
+    "manualSection": "2.3.1. PREMESSA",
+    "manualExcerpt": "Dopo il parto , il ritorno all’acqua per un neonato è senz’ altro una gradevole esperienza, durante la quale la presenza e il contatto con mamma e p apà, visti come punto di riferimento per l’esplorazione del mondo esterno (base sicura) sono fondamentali per un sereno apprendimento...."
   },
   {
     "id": 982,
@@ -12760,7 +19627,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Emittente, messaggio, destinatario, codice, canale, contesto.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      79,
+      83,
+      80
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 983,
@@ -12773,7 +19647,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Conferma, disconferma e negazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      27,
+      80
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 984,
@@ -12786,7 +19667,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Eccessiva distanza tra emittente e destinatario, rumore tra emittente e destinatario.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      80,
+      83,
+      78
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 985,
@@ -12799,7 +19687,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Il destinatario non conosce il codice o attribuisce al segno un significato diverso.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      80,
+      83,
+      78
+    ],
+    "manualSection": "2.1.3. PERCHÉ COMUNICARE",
+    "manualExcerpt": "Tanto l’istruttore quanto l’allievo devono utilizzare i propri sensi - vista e udito – per riconoscere il significato della comunicazione e utilizzare un codice comune : questo è un elemento f ondamentale soprattutto per ottenere una comunicazione che abbia efficacia ( figura 2)...."
   },
   {
     "id": 986,
@@ -12812,7 +19707,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gestualità.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      272,
+      70,
+      362
+    ],
+    "manualSection": "4.10.4.4. ERRORI COMUNI",
+    "manualExcerpt": "vasca sta per finire. Il loro utilizzo è utile per aumentare il grado di autonomia dell’allievo e per verificare il livello della fiducia nel suo istruttore, che non deve mai abbandonare di fornire una comunicazione diretta, quando e se serve...."
   },
   {
     "id": 987,
@@ -12825,7 +19727,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Gioco e agonismo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      70,
+      148,
+      149
+    ],
+    "manualSection": "4.2 J.",
+    "manualExcerpt": ""
   },
   {
     "id": 988,
@@ -12838,7 +19747,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Di tipo verbale, transferale e psicologico.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      79,
+      80
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "Canale - Il messaggio codificato è trasmesso attraverso un canale, il mezzo fisico di propagazione (in vasca, principalmente onde sonore/canali visivi); per lo più si attiva un canale principale a cui si aggiungono canali accessori a rinforzo...."
   },
   {
     "id": 989,
@@ -12851,7 +19767,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Educare all’acqua attraverso l’acqua, soddisfando i bisogni reali delle persone in considerazione delle motivazioni, del benessere e del divertimento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      163,
+      203,
+      212
+    ],
+    "manualSection": "7.5.1. PREMESSA",
+    "manualExcerpt": "4.6.1. PREMESSA In termini giuridici si può definire responsabile colui che assume su di sé l’onere del rischio e dell’eventuale danno/conseguenza procurato a seguito del proprio comportamento...."
   },
   {
     "id": 990,
@@ -12864,7 +19787,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Ascoltare 99.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      83,
+      376,
+      78
+    ],
+    "manualSection": "2.1.7. DISTURBI DELLA COMUNICAZIONE",
+    "manualExcerpt": "In piscina, talvolta, è difficile comunicare, non solo per problemi di acustica o di sovraffollamento, ma anche perché nella comunicazione s’innestano meccanismi di disturbo: rumore , dovuto a distorsioni e disturbi che possono verificarsi nel canale e che ren dono meno efficace la..."
   },
   {
     "id": 991,
@@ -12877,7 +19807,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un insieme dinamico di individui che si percepiscono vicendevolmente, più o meno indipendenti per qualche aspetto.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      85,
+      366,
+      192
+    ],
+    "manualSection": "2.2.2. DAL SINGOLO AL GRUPPO -CORSIA",
+    "manualExcerpt": "• Giochi di gruppo – in palestra (ma anche in acqua) sono l’unico strumento per creare il gruppo per ogni età. Permettono conoscenza, confronto, imitazione e divertono, così come i lavori a coppie...."
   },
   {
     "id": 992,
@@ -12890,7 +19827,14 @@ const quizData = [
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Sono motivazioni necessarie all’apprendimento.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      278,
+      362,
+      275
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "Propulsione e atteggiamenti dinamici Nell’otti ca di un apprendimento deduttivo basato sul feedback e sull’esperienza, non ha alcun senso la diatriba tra metodo globale e metodo analitico, in quanto tutte le esperienze motorie, appartenenti all’uno o all’altro metodo, concorrono alla formazione..."
   },
   {
     "id": 993,
@@ -12903,7 +19847,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Egocentrismo, realismo, animismo, finalismo.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      91,
+      92,
+      7
+    ],
+    "manualSection": "2.3.3. LE TEORIE DELLO SVILUPPO COGNITIVO",
+    "manualExcerpt": "agire la sua espressione ed un mezzo fondamentale, che diventa utilissimo nella formazione in ambito acquatico, è l’ handling. Con questo termine s i definisce la manipolazione del bambino, che tende a favorire l’insediamento della psiche nel corpo...."
   },
   {
     "id": 994,
@@ -12916,7 +19867,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Area affettivo/emotiva.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      102,
+      107
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "Il percorso formativo di un istruttore parte da una domanda fondamentale: perché si va in piscina? La risposta è semplice e complessa a un tempo: si va in piscina per stare bene...."
   },
   {
     "id": 995,
@@ -12929,7 +19887,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Per prove ed errori.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      113,
+      35,
+      345
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "è l’unica visione possibile. Il ruolo dell’adulto rimane fondamentale, ma l’interazione con i pari inizia ad assumere significato nello sviluppo del bambino grazie all’apprendimento per imitazione...."
   },
   {
     "id": 996,
@@ -12942,7 +19907,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Apprendimento per intuizione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      113,
+      112,
+      275
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "L’allievo cerca di comprendere le molteplici prospettive tramite le sue interazioni con il mondo esterno. Su più punti la posizione dei costruttivisti è simile a quella dei cognitivisti p iù recenti (Reda, Guidano, Mahoney)...."
   },
   {
     "id": 997,
@@ -12955,7 +19927,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Per imitazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      112,
+      113,
+      275
+    ],
+    "manualSection": "2.3.4. SVILUPPO EMOTIVO ED AFFETTIV O",
+    "manualExcerpt": "Spesso si sente affe rmare che gli allievi imparano malgrado l’istruttore, per sottolineare in maniera paradossale l’importanza che rivestono i processi legati all’apprendimento...."
   },
   {
     "id": 998,
@@ -12968,7 +19947,14 @@ const quizData = [
     },
     "answer": "C",
     "explanation": "La risposta corretta è C. Sulla possibilità di sperimentare esperienze di successo e sulla presenza di rinforzi positivi.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      278,
+      362,
+      365
+    ],
+    "manualSection": "4.12.2.1. DORSO",
+    "manualExcerpt": "Propulsione e atteggiamenti dinamici Nell’otti ca di un apprendimento deduttivo basato sul feedback e sull’esperienza, non ha alcun senso la diatriba tra metodo globale e metodo analitico, in quanto tutte le esperienze motorie, appartenenti all’uno o all’altro metodo, concorrono alla formazione..."
   },
   {
     "id": 999,
@@ -12981,7 +19967,14 @@ const quizData = [
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Un’atmosfera serena e ludica che sollecita la partecipazione.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      20,
+      116,
+      117
+    ],
+    "manualSection": "5.1.2.2. ABILITÀ MOTORIE",
+    "manualExcerpt": "soprattutto con gli anziani che sono a rischio di ritiro sociale, perché al di fuori ormai del mondo del lavoro e spesso privi del supporto sociale. È evidente quanto possa offrire il mondo dello sport al di la della pratica sportiva stessa...."
   },
   {
     "id": 1000,
@@ -12994,6 +19987,14 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Un ostacolo di qualsiasi genere che interrompe o riduce il flusso dell’informazione 100.",
-    "category": "Psicopedagogia"
+    "category": "Psicopedagogia",
+    "manualPages": [
+      375,
+      20,
+      78
+    ],
+    "manualSection": "6.5.4. CERTIFICAZIONE DEL NUOTATORE",
+    "manualExcerpt": "2.1.2. GLI ATTREZZI DEL MESTIERE DELL’ ISTRUTTORE In qualsiasi tipo di attività professionale si posson o distinguere l’aspetto tecnico, inerente i compiti specifici che l’attività comporta, e l’aspetto relazionale , relativo ai rapporti interpersonali che l’attività richiede o impone...."
   }
 ];
+const ALL_QUESTIONS = quizData;
