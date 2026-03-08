@@ -17046,8 +17046,8 @@ const quizData = [
       "C": "Uno durante la fase di trazione e uno alla fine della fase di presa",
       "D": "Uno dopo la fase di presa e uno dopo la fase di recupero quando le mani entrano in acqua"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. Uno durante la fase di trazione e uno alla fine della fase di presa.",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. Uno alla fine della fase di recupero quando le mani entrano in acqua e uno nella fase di spinta.",
     "category": "Metodologia",
     "manualPages": [
       284,
