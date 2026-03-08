@@ -4148,8 +4148,8 @@ const quizData = [
       "C": "Rinforzo lezione precedente – riscaldamento – rinforzo nucleo didattico – nucleo didattico",
       "D": "Presa – trazione – spinta - recupero"
     },
-    "answer": "B",
-    "explanation": "La risposta corretta è B. Riscaldamento – rinforzo lezione precedente – nucleo didattico – rinforzo nucleo didattico.",
+    "answer": "A",
+    "explanation": "La risposta corretta è A. Riscaldamento – nucleo didattico – rinforzo nucleo didattico – rinforzo lezione precedente.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       27,
