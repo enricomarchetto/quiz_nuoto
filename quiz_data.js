@@ -468,8 +468,8 @@ const quizData = [
       "C": "Non valuta il gesto sportivo",
       "D": "Permette handicap diversi nella stessa classe, ma con funzionalità simile"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. È composta da 12 classi.",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Permette handicap diversi nella stessa classe, ma con funzionalità simile.",
     "category": "Attività speciali",
     "manualPages": [
       350,
