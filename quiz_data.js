@@ -7768,8 +7768,8 @@ const quizData = [
       "C": "Si scelgono le strategie migliori per arrivare agli obiettivi",
       "D": "Si valutano i risultati ottenuti"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. Si valutano i risultati ottenuti.",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. Si scelgono le strategie migliori per arrivare agli obiettivi.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       275,
