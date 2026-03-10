@@ -189,7 +189,7 @@
     <button class="auth-btn" id="authBtn" onclick="handleAuth()">Accedi</button>
 
     <div class="auth-toggle" id="authToggle">
-      Non hai un account? <a onclick="toggleAuthMode()">Registrati</a>
+      Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>
     </div>
 
     <div class="auth-divider">oppure</div>
@@ -297,8 +297,8 @@ function toggleAuthMode() {
   isRegisterMode = !isRegisterMode;
   document.getElementById('authBtn').textContent = isRegisterMode ? 'Registrati' : 'Accedi';
   document.getElementById('authToggle').innerHTML = isRegisterMode
-    ? 'Hai già un account? <a onclick="toggleAuthMode()">Accedi</a>'
-    : 'Non hai un account? <a onclick="toggleAuthMode()">Registrati</a>';
+    ? 'Hai già un account? <a href="#" onclick="toggleAuthMode(); return false;">Accedi</a>'
+    : 'Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>';
   hideAuthMessages();
 }
 
