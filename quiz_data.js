@@ -13567,8 +13567,8 @@ const quizData = [
       "C": "È regolato prevalentemente dalle informazioni dell’analizzatore cinestesico e tattile",
       "D": "È regolato prevalentemente dalle informazioni dell’analizzatore ottico e vestibolare"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. È regolato prevalentemente dalle informazioni dell’analizzatore cinestesico e tattile.",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. L’equilibrio è regolato prevalentemente dalle informazioni dell’analizzatore ottico e vestibolare.",
     "category": "Metodologia",
     "manualPages": [
       379,
