@@ -144,6 +144,55 @@
   .results .red { color: #e53e3e; font-weight: 600; }
   .results .orange { color: #dd6b20; font-weight: 600; }
 
+  /* ===== STATS PAGE ===== */
+  .stats-page { display: none; min-height: 100vh; padding: 20px; padding-bottom: 40px; }
+  .stats-page.visible { display: block; }
+  .stats-header { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto 20px; }
+  .stats-title { font-size: 1.4em; font-weight: 700; color: #0077b6; }
+  .stats-back { background: none; border: 1px solid #e2e8f0; color: #0077b6; padding: 8px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; }
+  .stats-back:hover { background: #f7fafc; }
+
+  .stats-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+
+  .stat-card { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .stat-card h3 { font-size: 1em; font-weight: 700; color: #4a5568; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82em; }
+
+  .stat-big-number { font-size: 3em; font-weight: 700; color: #0077b6; line-height: 1; }
+  .stat-label { font-size: 0.85em; color: #718096; margin-top: 4px; }
+
+  .stat-row { display: flex; gap: 16px; }
+  .stat-box { flex: 1; text-align: center; padding: 16px 8px; background: #f7fafc; border-radius: 10px; }
+  .stat-box .stat-num { font-size: 1.8em; font-weight: 700; line-height: 1; }
+  .stat-box .stat-num.green { color: #38a169; }
+  .stat-box .stat-num.red { color: #e53e3e; }
+  .stat-box .stat-num.orange { color: #dd6b20; }
+  .stat-box .stat-num.blue { color: #0077b6; }
+  .stat-box .stat-lbl { font-size: 0.78em; color: #718096; margin-top: 4px; }
+
+  .progress-cat { margin-bottom: 14px; }
+  .progress-cat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .progress-cat-name { font-size: 0.88em; font-weight: 600; color: #4a5568; }
+  .progress-cat-pct { font-size: 0.82em; font-weight: 700; color: #0077b6; }
+  .progress-cat-bar { height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; }
+  .progress-cat-fill { height: 100%; border-radius: 5px; background: linear-gradient(135deg, #0077b6, #00b4d8); transition: width 0.5s; }
+
+  .session-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+  .session-item:last-child { border-bottom: none; }
+  .session-info { flex: 1; }
+  .session-cat { font-size: 0.88em; font-weight: 600; color: #4a5568; }
+  .session-date { font-size: 0.75em; color: #a0aec0; margin-top: 2px; }
+  .session-score { font-size: 1.2em; font-weight: 700; min-width: 50px; text-align: right; }
+  .session-detail { font-size: 0.75em; color: #a0aec0; text-align: right; }
+
+  .stats-empty { text-align: center; padding: 40px 20px; color: #a0aec0; font-size: 0.95em; }
+
+  @media (max-width: 600px) {
+    .stat-row { gap: 8px; }
+    .stat-box { padding: 12px 6px; }
+    .stat-box .stat-num { font-size: 1.4em; }
+    .stat-big-number { font-size: 2.4em; }
+  }
+
   /* Loading spinner */
   .loading { text-align: center; padding: 40px; color: #718096; }
   .spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #e2e8f0; border-top-color: #0077b6; border-radius: 50%; animation: spin 0.8s linear infinite; }
@@ -204,6 +253,7 @@
 <div class="user-bar" id="userBar">
   <span class="user-email" id="userEmail"></span>
   <span class="user-stats" id="userStats"></span>
+  <button class="logout-btn" id="statsBtn" onclick="showStats()" style="margin-right:4px; color:#0077b6; border-color:#0077b6;">Statistiche</button>
   <button class="logout-btn" id="logoutBtn" onclick="handleLogout()">Esci</button>
 </div>
 
@@ -255,6 +305,17 @@
     <button class="action-btn btn-correggi" id="btnCorreggi" onclick="correggi()">Correggi</button>
     <button class="action-btn btn-errori hidden" id="btnErrori" onclick="rivediErrori()">Rivedi gli errori</button>
     <button class="action-btn btn-home hidden" id="btnHome" onclick="goHome()">Nuovo quiz</button>
+  </div>
+</div>
+
+<!-- STATS PAGE -->
+<div class="stats-page" id="statsPage">
+  <div class="stats-header">
+    <span class="stats-title">Le tue Statistiche</span>
+    <button class="stats-back" onclick="hideStats()">← Torna al quiz</button>
+  </div>
+  <div class="stats-grid" id="statsContent">
+    <div class="stats-empty">Caricamento...</div>
   </div>
 </div>
 
@@ -826,6 +887,157 @@ document.getElementById('authPassword').addEventListener('keydown', (e) => {
 });
 
 // Avvia: controlla se c'è già una sessione
+// ============================================================
+// STATISTICHE
+// ============================================================
+
+async function showStats() {
+  if (isGuestMode || !currentUser) {
+    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Le statistiche sono disponibili solo con un account. Registrati per tracciare i tuoi progressi!</div>';
+    document.getElementById('homePage').classList.remove('visible');
+    document.getElementById('quizPage').style.display = 'none';
+    document.getElementById('statsPage').classList.add('visible');
+    return;
+  }
+
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('statsPage').classList.add('visible');
+  document.getElementById('statsContent').innerHTML = '<div class="stats-empty"><div class="spinner"></div><br>Caricamento statistiche...</div>';
+
+  try {
+    // Carica tutte le risposte
+    const { data: allAnswers, error: err1 } = await sb
+      .from('user_answers')
+      .select('question_id, category, is_correct, answered_at')
+      .eq('user_id', currentUser.id)
+      .order('answered_at', { ascending: false });
+
+    // Carica le sessioni
+    const { data: sessions, error: err2 } = await sb
+      .from('quiz_sessions')
+      .select('*')
+      .eq('user_id', currentUser.id)
+      .order('created_at', { ascending: false })
+      .limit(20);
+
+    if (err1) throw err1;
+    if (err2) throw err2;
+
+    renderStats(allAnswers || [], sessions || []);
+  } catch (err) {
+    console.error('Errore caricamento statistiche:', err);
+    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Errore nel caricamento delle statistiche. Riprova.</div>';
+  }
+}
+
+function renderStats(allAnswers, sessions) {
+  if (allAnswers.length === 0) {
+    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Non hai ancora completato nessun quiz. Inizia a studiare e le statistiche appariranno qui!</div>';
+    return;
+  }
+
+  // Calcoli generali
+  const totalAnswers = allAnswers.length;
+  const correctAnswers = allAnswers.filter(a => a.is_correct).length;
+  const wrongAnswers = totalAnswers - correctAnswers;
+  const globalPct = Math.round(correctAnswers / totalAnswers * 100);
+
+  // Domande uniche risposte correttamente (ultima risposta per ogni domanda)
+  const lastAnswerPerQuestion = {};
+  allAnswers.forEach(a => {
+    if (!lastAnswerPerQuestion[a.question_id]) {
+      lastAnswerPerQuestion[a.question_id] = a; // già ordinati per data desc
+    }
+  });
+  const uniqueMastered = Object.values(lastAnswerPerQuestion).filter(a => a.is_correct).length;
+  const totalQuestions = quizData.length;
+
+  // Progressione per categoria
+  const categories = [...new Set(quizData.map(q => q.category))].sort();
+  const catStats = {};
+  categories.forEach(cat => {
+    const catTotal = quizData.filter(q => q.category === cat).length;
+    const catAnswers = Object.values(lastAnswerPerQuestion).filter(a => a.category === cat);
+    const catMastered = catAnswers.filter(a => a.is_correct).length;
+    catStats[cat] = { total: catTotal, mastered: catMastered, pct: Math.round(catMastered / catTotal * 100) };
+  });
+
+  let html = '';
+
+  // Card 1: Panoramica generale
+  html += '<div class="stat-card">';
+  html += '<h3>Panoramica Generale</h3>';
+  html += '<div class="stat-row">';
+  html += '<div class="stat-box"><div class="stat-num blue">' + uniqueMastered + '/' + totalQuestions + '</div><div class="stat-lbl">Domande completate</div></div>';
+  html += '<div class="stat-box"><div class="stat-num green">' + globalPct + '%</div><div class="stat-lbl">Risposte corrette</div></div>';
+  html += '<div class="stat-box"><div class="stat-num blue">' + sessions.length + '</div><div class="stat-lbl">Quiz svolti</div></div>';
+  html += '</div>';
+  html += '</div>';
+
+  // Card 2: Corrette vs Sbagliate (totali)
+  html += '<div class="stat-card">';
+  html += '<h3>Risposte Totali</h3>';
+  html += '<div class="stat-row">';
+  html += '<div class="stat-box"><div class="stat-num blue">' + totalAnswers + '</div><div class="stat-lbl">Totali</div></div>';
+  html += '<div class="stat-box"><div class="stat-num green">' + correctAnswers + '</div><div class="stat-lbl">Corrette</div></div>';
+  html += '<div class="stat-box"><div class="stat-num red">' + wrongAnswers + '</div><div class="stat-lbl">Sbagliate</div></div>';
+  html += '</div>';
+  html += '</div>';
+
+  // Card 3: Progressione per categoria
+  html += '<div class="stat-card">';
+  html += '<h3>Progressione per Categoria</h3>';
+  categories.forEach(cat => {
+    const s = catStats[cat];
+    html += '<div class="progress-cat">';
+    html += '<div class="progress-cat-header">';
+    html += '<span class="progress-cat-name">' + esc(cat) + '</span>';
+    html += '<span class="progress-cat-pct">' + s.mastered + '/' + s.total + ' (' + s.pct + '%)</span>';
+    html += '</div>';
+    html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + s.pct + '%"></div></div>';
+    html += '</div>';
+  });
+  // Barra totale
+  const totalPct = Math.round(uniqueMastered / totalQuestions * 100);
+  html += '<div class="progress-cat" style="margin-top:8px; padding-top:12px; border-top:2px solid #e2e8f0;">';
+  html += '<div class="progress-cat-header">';
+  html += '<span class="progress-cat-name" style="font-weight:700;">TOTALE</span>';
+  html += '<span class="progress-cat-pct">' + uniqueMastered + '/' + totalQuestions + ' (' + totalPct + '%)</span>';
+  html += '</div>';
+  html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + totalPct + '%"></div></div>';
+  html += '</div>';
+  html += '</div>';
+
+  // Card 4: Ultimi quiz
+  if (sessions.length > 0) {
+    html += '<div class="stat-card">';
+    html += '<h3>Ultimi Quiz</h3>';
+    sessions.forEach(s => {
+      const date = new Date(s.created_at);
+      const dateStr = date.toLocaleDateString('it-IT', { day: '2-digit', month: 'short', year: 'numeric' });
+      const timeStr = date.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+      const catLabel = s.category === 'all' ? 'Tutte' : s.category;
+      const scoreCls = s.score_pct >= 80 ? 'green' : s.score_pct >= 60 ? 'orange' : 'red';
+      html += '<div class="session-item">';
+      html += '<div class="session-info"><div class="session-cat">' + esc(catLabel) + ' — ' + s.total_questions + ' domande</div>';
+      html += '<div class="session-date">' + dateStr + ' alle ' + timeStr + ' · ' + formatTime(s.elapsed_seconds) + '</div></div>';
+      html += '<div><div class="session-score ' + scoreCls + '">' + s.score_pct + '%</div>';
+      html += '<div class="session-detail">' + s.correct_count + '/' + s.total_questions + '</div></div>';
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+
+  document.getElementById('statsContent').innerHTML = html;
+}
+
+function hideStats() {
+  document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('homePage').classList.add('visible');
+  window.scrollTo({ top: 0 });
+}
+
 checkExistingSession();
 </script>
 </body>
