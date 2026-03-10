@@ -7748,9 +7748,9 @@ const quizData = [
       "C": "Tra il termine della trazione e l’inizio del recupero",
       "D": "Ogni due cicli di bracciata"
     },
-    "answer": "B",
-    "explanation": "La risposta corretta è B. All’inizio della trazione.",
-    "category": "La cultura dell'acqua",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. Tra il termine della trazione e l’inizio del recupero.",
+    "category": "La cultura dell’acqua",
     "manualPages": [
       284,
       31,
