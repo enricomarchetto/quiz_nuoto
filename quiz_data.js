@@ -9168,9 +9168,9 @@ const quizData = [
       "C": "Alla fine del recupero delle braccia",
       "D": "Quando il corpo è in completa estensione"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. Alla fine del recupero delle braccia.",
-    "category": "La cultura dell'acqua",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. Tra la trazione e il recupero delle braccia.",
+    "category": "La cultura dell’acqua",
     "manualPages": [
       32,
       31,

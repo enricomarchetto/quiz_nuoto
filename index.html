@@ -7,13 +7,42 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0077b6">
 <title>Istruttore di Nuoto - 1000 Domande</title>
+<!-- Supabase JS Client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; line-height: 1.5; }
 
+  /* ===== AUTH PAGE ===== */
+  .auth-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .auth-card { width: 100%; max-width: 400px; background: white; border-radius: 16px; padding: 36px 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .auth-logo { font-size: 3em; text-align: center; margin-bottom: 8px; }
+  .auth-title { font-size: 1.4em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
+  .auth-subtitle { font-size: 0.9em; color: #718096; text-align: center; margin-bottom: 28px; }
+  .auth-input { width: 100%; padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1em; margin-bottom: 12px; outline: none; transition: border-color 0.2s; }
+  .auth-input:focus { border-color: #0077b6; }
+  .auth-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; font-size: 1em; font-weight: 700; cursor: pointer; transition: all 0.15s; }
+  .auth-btn:active { transform: scale(0.97); }
+  .auth-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .auth-toggle { text-align: center; margin-top: 16px; font-size: 0.9em; color: #718096; }
+  .auth-toggle a { color: #0077b6; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .auth-error { background: #fff5f5; color: #e53e3e; padding: 10px 14px; border-radius: 8px; font-size: 0.88em; margin-bottom: 12px; display: none; }
+  .auth-success { background: #f0fff4; color: #38a169; padding: 10px 14px; border-radius: 8px; font-size: 0.88em; margin-bottom: 12px; display: none; }
+  .auth-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #a0aec0; font-size: 0.85em; }
+  .auth-divider::before, .auth-divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+
+  /* User bar */
+  .user-bar { background: white; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; display: none; }
+  .user-bar.visible { display: flex; }
+  .user-email { font-size: 0.82em; color: #718096; }
+  .user-stats { font-size: 0.82em; color: #0077b6; font-weight: 600; }
+  .logout-btn { background: none; border: 1px solid #e2e8f0; color: #718096; padding: 6px 12px; border-radius: 6px; font-size: 0.8em; cursor: pointer; }
+  .logout-btn:hover { background: #f7fafc; }
+
   /* ===== HOME ===== */
-  .home { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .home { min-height: 100vh; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .home.visible { display: flex; }
   .home-logo { font-size: 3em; margin-bottom: 12px; }
   .home-title { font-size: 1.6em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
   .home-subtitle { font-size: 0.95em; color: #718096; text-align: center; margin-bottom: 36px; }
@@ -115,6 +144,11 @@
   .results .red { color: #e53e3e; font-weight: 600; }
   .results .orange { color: #dd6b20; font-weight: 600; }
 
+  /* Loading spinner */
+  .loading { text-align: center; padding: 40px; color: #718096; }
+  .spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #e2e8f0; border-top-color: #0077b6; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
   /* Mobile */
   @media (max-width: 600px) {
     .home { padding: 20px 16px; }
@@ -129,6 +163,7 @@
     .question-card { padding: 14px; margin-bottom: 12px; }
     .option { padding: 12px 14px; }
     .actions { padding: 0 10px 30px; }
+    .auth-card { padding: 28px 20px; }
   }
   @media (max-width: 380px) {
     .amount-btn .num { font-size: 1.4em; }
@@ -137,6 +172,40 @@
 </style>
 </head>
 <body>
+
+<!-- AUTH PAGE -->
+<div class="auth-page" id="authPage">
+  <div class="auth-card">
+    <div class="auth-logo">🏊</div>
+    <div class="auth-title">Istruttore di Nuoto</div>
+    <div class="auth-subtitle">Accedi per sincronizzare i tuoi progressi</div>
+
+    <div class="auth-error" id="authError"></div>
+    <div class="auth-success" id="authSuccess"></div>
+
+    <input type="email" class="auth-input" id="authEmail" placeholder="Email" autocomplete="email">
+    <input type="password" class="auth-input" id="authPassword" placeholder="Password" autocomplete="current-password">
+
+    <button class="auth-btn" id="authBtn" onclick="handleAuth()">Accedi</button>
+
+    <div class="auth-toggle" id="authToggle">
+      Non hai un account? <a onclick="toggleAuthMode()">Registrati</a>
+    </div>
+
+    <div class="auth-divider">oppure</div>
+
+    <button class="auth-btn" style="background: white; color: #1a202c; border: 2px solid #e2e8f0;" onclick="handleGuestMode()">
+      Continua senza account
+    </button>
+  </div>
+</div>
+
+<!-- USER BAR -->
+<div class="user-bar" id="userBar">
+  <span class="user-email" id="userEmail"></span>
+  <span class="user-stats" id="userStats"></span>
+  <button class="logout-btn" id="logoutBtn" onclick="handleLogout()">Esci</button>
+</div>
 
 <!-- HOME -->
 <div class="home" id="homePage">
@@ -191,35 +260,298 @@
 
 <script src="quiz_data.js"></script>
 <script>
+// ============================================================
+// CONFIGURAZIONE SUPABASE
+// ⚠️ SOSTITUISCI QUESTI VALORI CON I TUOI!
+// ============================================================
+const SUPABASE_URL = 'https://ayuflpmsvphdeunbmdfk.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5dWZscG1zdnBoZGV1bmJtZGZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwODkyOTgsImV4cCI6MjA4ODY2NTI5OH0.7c0XENPhgEL7IogmKH2PWYN5a0pm_Y9x9D3nlw5wkHg';
+
+// Inizializza Supabase client
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// ============================================================
+// STATO APPLICAZIONE
+// ============================================================
+let currentUser = null;
+let isGuestMode = false;
 let amount = null, category = 'all', questions = [], answers = {}, corrected = false;
 let timerStart = null, timerInterval = null;
 
-// Sistema anti-ripetizione: tiene traccia delle domande già fatte per categoria
+// Cache locale delle domande "masterate" (caricate da Supabase al login)
+let masteredQuestions = {}; // { 'all': Set([1,2,3]), 'Biofisiologia': Set([5,6]) }
+
+// Fallback localStorage per modalità guest
 let seenQuestions = {};
 try {
   const saved = localStorage.getItem('quizSeenQuestions');
   if (saved) seenQuestions = JSON.parse(saved);
 } catch(e) {}
 
-function saveSeenQuestions() {
-  try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {}
+// ============================================================
+// AUTENTICAZIONE
+// ============================================================
+let isRegisterMode = false;
+
+function toggleAuthMode() {
+  isRegisterMode = !isRegisterMode;
+  document.getElementById('authBtn').textContent = isRegisterMode ? 'Registrati' : 'Accedi';
+  document.getElementById('authToggle').innerHTML = isRegisterMode
+    ? 'Hai già un account? <a onclick="toggleAuthMode()">Accedi</a>'
+    : 'Non hai un account? <a onclick="toggleAuthMode()">Registrati</a>';
+  hideAuthMessages();
 }
+
+function showAuthError(msg) {
+  const el = document.getElementById('authError');
+  el.textContent = msg;
+  el.style.display = 'block';
+  document.getElementById('authSuccess').style.display = 'none';
+}
+
+function showAuthSuccess(msg) {
+  const el = document.getElementById('authSuccess');
+  el.textContent = msg;
+  el.style.display = 'block';
+  document.getElementById('authError').style.display = 'none';
+}
+
+function hideAuthMessages() {
+  document.getElementById('authError').style.display = 'none';
+  document.getElementById('authSuccess').style.display = 'none';
+}
+
+async function handleAuth() {
+  const email = document.getElementById('authEmail').value.trim();
+  const password = document.getElementById('authPassword').value;
+  hideAuthMessages();
+
+  if (!email || !password) {
+    showAuthError('Inserisci email e password');
+    return;
+  }
+  if (password.length < 6) {
+    showAuthError('La password deve avere almeno 6 caratteri');
+    return;
+  }
+
+  const btn = document.getElementById('authBtn');
+  btn.disabled = true;
+  btn.textContent = 'Caricamento...';
+
+  try {
+    let result;
+    if (isRegisterMode) {
+      result = await supabase.auth.signUp({ email, password });
+      if (result.error) throw result.error;
+      // Controlla se serve conferma email
+      if (result.data.user && !result.data.session) {
+        showAuthSuccess('Registrazione completata! Controlla la tua email per confermare l\'account.');
+        btn.disabled = false;
+        btn.textContent = 'Registrati';
+        return;
+      }
+    } else {
+      result = await supabase.auth.signInWithPassword({ email, password });
+      if (result.error) throw result.error;
+    }
+
+    // Login riuscito - verrà gestito dall'onAuthStateChange
+  } catch (err) {
+    let msg = 'Errore durante l\'accesso';
+    if (err.message) {
+      if (err.message.includes('Invalid login')) msg = 'Email o password errati';
+      else if (err.message.includes('already registered')) msg = 'Email già registrata. Prova ad accedere.';
+      else if (err.message.includes('Email not confirmed')) msg = 'Conferma la tua email prima di accedere.';
+      else msg = err.message;
+    }
+    showAuthError(msg);
+    btn.disabled = false;
+    btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
+  }
+}
+
+function handleGuestMode() {
+  isGuestMode = true;
+  currentUser = null;
+  showApp();
+}
+
+async function handleLogout() {
+  if (!isGuestMode) {
+    await supabase.auth.signOut();
+  }
+  isGuestMode = false;
+  currentUser = null;
+  masteredQuestions = {};
+  document.getElementById('authPage').style.display = 'flex';
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('userBar').classList.remove('visible');
+}
+
+// Listener per cambi di stato auth
+supabase.auth.onAuthStateChange(async (event, session) => {
+  if (session && session.user) {
+    currentUser = session.user;
+    isGuestMode = false;
+    await loadMasteredQuestions();
+    showApp();
+  }
+});
+
+// Controlla sessione esistente all'avvio
+async function checkExistingSession() {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session && session.user) {
+    currentUser = session.user;
+    isGuestMode = false;
+    await loadMasteredQuestions();
+    showApp();
+  }
+}
+
+// ============================================================
+// SUPABASE DATA LAYER
+// ============================================================
+
+// Carica le domande che l'utente ha già risposto correttamente
+async function loadMasteredQuestions() {
+  if (!currentUser) return;
+
+  try {
+    // Prendi l'ultima risposta per ogni domanda
+    const { data, error } = await supabase
+      .from('user_answers')
+      .select('question_id, category, is_correct')
+      .eq('user_id', currentUser.id)
+      .eq('is_correct', true);
+
+    if (error) throw error;
+
+    masteredQuestions = {};
+    if (data) {
+      data.forEach(row => {
+        // Aggiungi sia alla categoria specifica che a 'all'
+        if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
+        masteredQuestions[row.category].add(row.question_id);
+        if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
+        masteredQuestions['all'].add(row.question_id);
+      });
+    }
+  } catch (err) {
+    console.error('Errore caricamento progressi:', err);
+  }
+}
+
+// Salva le risposte di un quiz su Supabase
+async function saveAnswersToSupabase(quizQuestions, userAnswers) {
+  if (!currentUser) return;
+
+  try {
+    const rows = quizQuestions.map(q => ({
+      user_id: currentUser.id,
+      question_id: q.id,
+      category: q.category,
+      selected_answer: userAnswers[q.id] || '',
+      correct_answer: q.answer,
+      is_correct: userAnswers[q.id] === q.answer
+    }));
+
+    const { error } = await supabase
+      .from('user_answers')
+      .insert(rows);
+
+    if (error) throw error;
+
+    // Aggiorna cache locale
+    rows.forEach(row => {
+      if (row.is_correct) {
+        if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
+        masteredQuestions[row.category].add(row.question_id);
+        if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
+        masteredQuestions['all'].add(row.question_id);
+      } else {
+        // Rimuovi dalla cache se ha sbagliato (torna in gioco)
+        if (masteredQuestions[row.category]) masteredQuestions[row.category].delete(row.question_id);
+        if (masteredQuestions['all']) masteredQuestions['all'].delete(row.question_id);
+      }
+    });
+  } catch (err) {
+    console.error('Errore salvataggio risposte:', err);
+  }
+}
+
+// Salva sessione quiz su Supabase
+async function saveSessionToSupabase(cat, total, correct, wrong, unanswered, elapsed, pct) {
+  if (!currentUser) return;
+
+  try {
+    const { error } = await supabase
+      .from('quiz_sessions')
+      .insert({
+        user_id: currentUser.id,
+        category: cat,
+        total_questions: total,
+        correct_count: correct,
+        wrong_count: wrong,
+        unanswered_count: unanswered,
+        elapsed_seconds: elapsed,
+        score_pct: pct
+      });
+    if (error) throw error;
+  } catch (err) {
+    console.error('Errore salvataggio sessione:', err);
+  }
+}
+
+// ============================================================
+// POOL DI DOMANDE (con supporto Supabase + fallback localStorage)
+// ============================================================
 
 function getUnseenPool(pool, cat) {
   const key = cat || 'all';
-  if (!seenQuestions[key]) seenQuestions[key] = [];
-  let seen = new Set(seenQuestions[key]);
-  let unseen = pool.filter(q => !seen.has(q.id));
-  // Se le domande non viste sono meno di quelle richieste, resetta
-  if (unseen.length < amount) {
-    seenQuestions[key] = [];
-    saveSeenQuestions();
-    unseen = pool;
+
+  if (!isGuestMode && currentUser) {
+    // MODALITÀ SUPABASE: usa masteredQuestions
+    const mastered = masteredQuestions[key] || new Set();
+    let unseen = pool.filter(q => !mastered.has(q.id));
+
+    // Se le domande non viste sono meno di quelle richieste, resetta
+    if (unseen.length < amount) {
+      // Reset: svuota la cache locale per questa categoria
+      if (key === 'all') {
+        masteredQuestions = {};
+      } else {
+        delete masteredQuestions[key];
+        // Ricostruisci 'all' senza questa categoria
+        if (masteredQuestions['all']) {
+          pool.forEach(q => masteredQuestions['all'].delete(q.id));
+        }
+      }
+      unseen = pool;
+    }
+    return unseen;
+  } else {
+    // MODALITÀ GUEST: usa localStorage (come prima)
+    if (!seenQuestions[key]) seenQuestions[key] = [];
+    let seen = new Set(seenQuestions[key]);
+    let unseen = pool.filter(q => !seen.has(q.id));
+    if (unseen.length < amount) {
+      seenQuestions[key] = [];
+      saveSeenQuestions();
+      unseen = pool;
+    }
+    return unseen;
   }
-  return unseen;
 }
 
 function markAsSeen(questionIds, cat) {
+  if (!isGuestMode && currentUser) {
+    // Per Supabase, il salvataggio avviene dopo la correzione
+    return;
+  }
+  // Guest mode
   const key = cat || 'all';
   if (!seenQuestions[key]) seenQuestions[key] = [];
   seenQuestions[key] = seenQuestions[key].concat(questionIds);
@@ -227,10 +559,49 @@ function markAsSeen(questionIds, cat) {
 }
 
 function unmarkWrongQuestions(wrongIds, cat) {
+  if (!isGuestMode && currentUser) {
+    // Per Supabase, il salvataggio gestisce già questo
+    return;
+  }
+  // Guest mode
   const key = cat || 'all';
   if (!seenQuestions[key]) return;
   seenQuestions[key] = seenQuestions[key].filter(id => !wrongIds.includes(id));
   saveSeenQuestions();
+}
+
+function saveSeenQuestions() {
+  try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {}
+}
+
+// ============================================================
+// INTERFACCIA UTENTE
+// ============================================================
+
+function showApp() {
+  document.getElementById('authPage').style.display = 'none';
+  document.getElementById('homePage').classList.add('visible');
+
+  // User bar
+  const bar = document.getElementById('userBar');
+  if (!isGuestMode && currentUser) {
+    document.getElementById('userEmail').textContent = currentUser.email;
+    document.getElementById('logoutBtn').textContent = 'Esci';
+    updateUserStats();
+    bar.classList.add('visible');
+  } else {
+    document.getElementById('userEmail').textContent = 'Modalità ospite';
+    document.getElementById('logoutBtn').textContent = 'Accedi';
+    document.getElementById('userStats').textContent = '';
+    bar.classList.add('visible');
+  }
+
+  initHome();
+}
+
+function updateUserStats() {
+  const mastered = masteredQuestions['all'] ? masteredQuestions['all'].size : 0;
+  document.getElementById('userStats').textContent = mastered + ' / ' + quizData.length + ' completate';
 }
 
 function formatTime(sec) {
@@ -254,7 +625,13 @@ function stopTimer() {
   return Math.floor((Date.now() - timerStart) / 1000);
 }
 
+let homeInitialized = false;
 function initHome() {
+  if (homeInitialized) {
+    updateStart();
+    return;
+  }
+  homeInitialized = true;
   const cats = [...new Set(quizData.map(q => q.category))].sort();
   const grid = document.getElementById('catGrid');
   const all = document.createElement('div');
@@ -272,6 +649,7 @@ function initHome() {
     btn.onclick = () => pickCat(c);
     grid.appendChild(btn);
   });
+  updateStart();
 }
 
 function pickAmount(n) {
@@ -303,10 +681,13 @@ function startQuiz() {
   const fullPool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
   const pool = getUnseenPool(fullPool, category);
   questions = shuffle(pool).slice(0, amount);
-  markAsSeen(questions.map(q => q.id), category);
+  // Per guest mode, segna come viste subito
+  if (isGuestMode || !currentUser) {
+    markAsSeen(questions.map(q => q.id), category);
+  }
   answers = {};
   corrected = false;
-  document.getElementById('homePage').style.display = 'none';
+  document.getElementById('homePage').classList.remove('visible');
   document.getElementById('quizPage').style.display = 'block';
   document.getElementById('quizTitle').textContent = category === 'all' ? 'Tutte le categorie' : category;
   document.getElementById('resultsCard').classList.remove('visible');
@@ -321,7 +702,9 @@ function startQuiz() {
 function goHome() {
   clearInterval(timerInterval);
   document.getElementById('quizPage').style.display = 'none';
-  document.getElementById('homePage').style.display = 'flex';
+  document.getElementById('homePage').classList.add('visible');
+  updateStart();
+  updateUserStats();
   window.scrollTo({ top: 0 });
 }
 
@@ -385,7 +768,7 @@ function render() {
   document.getElementById('quizInfo').textContent = done + ' / ' + questions.length + ' risposte';
 }
 
-function correggi() {
+async function correggi() {
   corrected = true;
   const elapsed = stopTimer();
   const tot = questions.length;
@@ -393,9 +776,21 @@ function correggi() {
   const ok = questions.filter(q => answers[q.id] === q.answer).length;
   const ko = done - ok;
   const empty = tot - done;
-  // Rimetti in gioco le domande sbagliate o non risposte
-  const wrongIds = questions.filter(q => answers[q.id] !== q.answer).map(q => q.id);
-  if (wrongIds.length > 0) unmarkWrongQuestions(wrongIds, category);
+
+  // Salva su Supabase (asincrono, non blocca l'UI)
+  if (!isGuestMode && currentUser) {
+    saveAnswersToSupabase(questions, answers);
+    saveSessionToSupabase(
+      category === 'all' ? 'all' : category,
+      tot, ok, ko, empty, elapsed,
+      Math.round(ok / tot * 100)
+    );
+  } else {
+    // Guest mode: rimetti in gioco le sbagliate
+    const wrongIds = questions.filter(q => answers[q.id] !== q.answer).map(q => q.id);
+    if (wrongIds.length > 0) unmarkWrongQuestions(wrongIds, category);
+  }
+
   const pct = Math.round(ok / tot * 100);
   const icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
   document.getElementById('rIcon').textContent = icon;
@@ -425,7 +820,13 @@ function rivediErrori() {
 
 function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
 
-initHome();
+// Enter key per login
+document.getElementById('authPassword').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') handleAuth();
+});
+
+// Avvia: controlla se c'è già una sessione
+checkExistingSession();
 </script>
 </body>
 </html>
