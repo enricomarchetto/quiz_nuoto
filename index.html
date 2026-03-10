@@ -424,55 +424,87 @@ async function loadMasteredQuestions() {
     var allData = [];
     var pageSize = 1000;
     var from = 0;
+    // Usa la view user_mastered_questions che prende solo l'ultima risposta per domanda
     while (true) {
-      var result = await sb.from('user_answers').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
-      if (result.error) throw result.error;
+      var result = await sb.from('user_mastered_questions').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
+      if (result.error) {
+        // Fallback alla tabella diretta se la view non esiste
+        console.warn('View not available, falling back to user_answers:', result.error.message);
+        allData = [];
+        from = 0;
+        while (true) {
+          var r2 = await sb.from('user_answers').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
+          if (r2.error) throw r2.error;
+          if (r2.data) allData = allData.concat(r2.data);
+          if (!r2.data || r2.data.length < pageSize) break;
+          from += pageSize;
+        }
+        break;
+      }
       if (result.data) allData = allData.concat(result.data);
       if (!result.data || result.data.length < pageSize) break;
       from += pageSize;
     }
-    var result = { data: allData, error: null };
-    if (result.error) throw result.error;
     masteredQuestions = {};
-    if (result.data) {
-      result.data.forEach(function(row) {
-        if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
-        masteredQuestions[row.category].add(row.question_id);
-        if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
-        masteredQuestions['all'].add(row.question_id);
-      });
-    }
+    allData.forEach(function(row) {
+      if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
+      masteredQuestions[row.category].add(row.question_id);
+      if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
+      masteredQuestions['all'].add(row.question_id);
+    });
     console.log('Loaded mastered questions:', masteredQuestions['all'] ? masteredQuestions['all'].size : 0);
-  } catch (err) { console.error('Error loading mastered:', err); }
+  } catch (err) {
+    console.error('Error loading mastered:', err);
+    showSaveError('Errore nel caricamento dei progressi. Ricarica la pagina.');
+  }
 }
 
 async function saveAnswersToSupabase(quizQuestions, userAnswers) {
   if (!currentUser) return;
+  var rows = quizQuestions.map(function(q) {
+    return {
+      user_id: currentUser.id,
+      question_id: q.id,
+      category: q.category,
+      selected_answer: userAnswers[q.id] || '',
+      correct_answer: q.answer,
+      is_correct: userAnswers[q.id] === q.answer
+    };
+  });
+  // Aggiorna SEMPRE lo stato locale, indipendentemente dal salvataggio DB
+  rows.forEach(function(row) {
+    if (row.is_correct) {
+      if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
+      masteredQuestions[row.category].add(row.question_id);
+      if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
+      masteredQuestions['all'].add(row.question_id);
+    } else {
+      if (masteredQuestions[row.category]) masteredQuestions[row.category].delete(row.question_id);
+      if (masteredQuestions['all']) masteredQuestions['all'].delete(row.question_id);
+    }
+  });
+  updateUserStats();
+  // Salva nel DB (con retry)
   try {
-    var rows = quizQuestions.map(function(q) {
-      return {
-        user_id: currentUser.id,
-        question_id: q.id,
-        category: q.category,
-        selected_answer: userAnswers[q.id] || '',
-        correct_answer: q.answer,
-        is_correct: userAnswers[q.id] === q.answer
-      };
-    });
     var result = await sb.from('user_answers').insert(rows);
     if (result.error) throw result.error;
-    rows.forEach(function(row) {
-      if (row.is_correct) {
-        if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
-        masteredQuestions[row.category].add(row.question_id);
-        if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
-        masteredQuestions['all'].add(row.question_id);
-      } else {
-        if (masteredQuestions[row.category]) masteredQuestions[row.category].delete(row.question_id);
-        if (masteredQuestions['all']) masteredQuestions['all'].delete(row.question_id);
-      }
-    });
-  } catch (err) { console.error('Error saving answers:', err); }
+    console.log('Answers saved to DB:', rows.length);
+  } catch (err) {
+    console.error('Error saving answers:', err);
+    showSaveError('Errore nel salvataggio delle risposte. Le risposte sono registrate localmente ma potrebbero non essere salvate nel database. Ricarica la pagina e riprova.');
+  }
+}
+
+function showSaveError(msg) {
+  var existing = document.getElementById('saveErrorBanner');
+  if (existing) existing.remove();
+  var banner = document.createElement('div');
+  banner.id = 'saveErrorBanner';
+  banner.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#e74c3c;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-size:14px;cursor:pointer;';
+  banner.textContent = msg;
+  banner.onclick = function() { banner.remove(); };
+  document.body.appendChild(banner);
+  setTimeout(function() { if (banner.parentNode) banner.remove(); }, 10000);
 }
 
 async function saveSessionToSupabase(cat, total, correct, wrong, unanswered, elapsed, pct) {
@@ -683,7 +715,7 @@ async function correggi() {
   var ok = questions.filter(function(q) { return answers[q.id] === q.answer; }).length;
   var ko = done - ok; var empty = tot - done;
   if (!isGuestMode && currentUser) {
-    saveAnswersToSupabase(questions, answers);
+    await saveAnswersToSupabase(questions, answers);
     saveSessionToSupabase(category === 'all' ? 'all' : category, tot, ok, ko, empty, elapsed, Math.round(ok / tot * 100));
   } else {
     var wrongIds = questions.filter(function(q) { return answers[q.id] !== q.answer; }).map(function(q) { return q.id; });

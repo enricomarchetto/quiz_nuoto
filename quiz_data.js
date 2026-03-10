@@ -17106,8 +17106,8 @@ const quizData = [
       "C": "Un’abilità motoria di secondo grado",
       "D": "Uno schema motorio evoluto"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. Uno schema motorio evoluto.",
+    "answer": "A",
+    "explanation": "La risposta corretta è A. Uno schema motorio di base.",
     "category": "Metodologia",
     "manualPages": [
       182,
