@@ -421,7 +421,17 @@ async function checkSession() {
 async function loadMasteredQuestions() {
   if (!currentUser) return;
   try {
-    var result = await sb.from('user_answers').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true);
+    var allData = [];
+    var pageSize = 1000;
+    var from = 0;
+    while (true) {
+      var result = await sb.from('user_answers').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
+      if (result.error) throw result.error;
+      if (result.data) allData = allData.concat(result.data);
+      if (!result.data || result.data.length < pageSize) break;
+      from += pageSize;
+    }
+    var result = { data: allData, error: null };
     if (result.error) throw result.error;
     masteredQuestions = {};
     if (result.data) {
@@ -717,7 +727,17 @@ async function showStats() {
   document.getElementById('statsPage').classList.add('visible');
   document.getElementById('statsContent').innerHTML = '<div class="stats-empty"><div class="spinner"></div><br>Caricamento...</div>';
   try {
-    var r1 = await sb.from('user_answers').select('question_id, category, is_correct, answered_at').eq('user_id', currentUser.id).order('answered_at', { ascending: false });
+    var allAnswers = [];
+    var pgSize = 1000;
+    var pgFrom = 0;
+    while (true) {
+      var page = await sb.from('user_answers').select('question_id, category, is_correct, answered_at').eq('user_id', currentUser.id).order('answered_at', { ascending: false }).range(pgFrom, pgFrom + pgSize - 1);
+      if (page.error) throw page.error;
+      if (page.data) allAnswers = allAnswers.concat(page.data);
+      if (!page.data || page.data.length < pgSize) break;
+      pgFrom += pgSize;
+    }
+    var r1 = { data: allAnswers, error: null };
     var r2 = await sb.from('quiz_sessions').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(20);
     if (r1.error) throw r1.error;
     if (r2.error) throw r2.error;
