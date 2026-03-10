@@ -268,7 +268,7 @@ const SUPABASE_URL = 'https://ayuflpmsvphdeunbmdfk.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5dWZscG1zdnBoZGV1bmJtZGZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwODkyOTgsImV4cCI6MjA4ODY2NTI5OH0.7c0XENPhgEL7IogmKH2PWYN5a0pm_Y9x9D3nlw5wkHg';
 
 // Inizializza Supabase client
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ============================================================
 // STATO APPLICAZIONE
@@ -342,7 +342,7 @@ async function handleAuth() {
   try {
     let result;
     if (isRegisterMode) {
-      result = await supabase.auth.signUp({ email, password });
+      result = await sb.auth.signUp({ email, password });
       if (result.error) throw result.error;
       // Controlla se serve conferma email
       if (result.data.user && !result.data.session) {
@@ -352,7 +352,7 @@ async function handleAuth() {
         return;
       }
     } else {
-      result = await supabase.auth.signInWithPassword({ email, password });
+      result = await sb.auth.signInWithPassword({ email, password });
       if (result.error) throw result.error;
     }
 
@@ -379,7 +379,7 @@ function handleGuestMode() {
 
 async function handleLogout() {
   if (!isGuestMode) {
-    await supabase.auth.signOut();
+    await sb.auth.signOut();
   }
   isGuestMode = false;
   currentUser = null;
@@ -391,7 +391,7 @@ async function handleLogout() {
 }
 
 // Listener per cambi di stato auth
-supabase.auth.onAuthStateChange(async (event, session) => {
+sb.auth.onAuthStateChange(async (event, session) => {
   if (session && session.user) {
     currentUser = session.user;
     isGuestMode = false;
@@ -402,7 +402,7 @@ supabase.auth.onAuthStateChange(async (event, session) => {
 
 // Controlla sessione esistente all'avvio
 async function checkExistingSession() {
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { session } } = await sb.auth.getSession();
   if (session && session.user) {
     currentUser = session.user;
     isGuestMode = false;
@@ -421,7 +421,7 @@ async function loadMasteredQuestions() {
 
   try {
     // Prendi l'ultima risposta per ogni domanda
-    const { data, error } = await supabase
+    const { data, error } = await sb
       .from('user_answers')
       .select('question_id, category, is_correct')
       .eq('user_id', currentUser.id)
@@ -458,7 +458,7 @@ async function saveAnswersToSupabase(quizQuestions, userAnswers) {
       is_correct: userAnswers[q.id] === q.answer
     }));
 
-    const { error } = await supabase
+    const { error } = await sb
       .from('user_answers')
       .insert(rows);
 
@@ -487,7 +487,7 @@ async function saveSessionToSupabase(cat, total, correct, wrong, unanswered, ela
   if (!currentUser) return;
 
   try {
-    const { error } = await supabase
+    const { error } = await sb
       .from('quiz_sessions')
       .insert({
         user_id: currentUser.id,
