@@ -801,7 +801,10 @@ function renderStats(allAnswers, sessions) {
     var catTotal = quizData.filter(function(q) { return q.category === cat; }).length;
     var catAnswers = Object.values(lastPerQ).filter(function(a) { return a.category === cat; });
     var catMastered = catAnswers.filter(function(a) { return a.is_correct; }).length;
-    catStats[cat] = { total: catTotal, mastered: catMastered, pct: Math.round(catMastered / catTotal * 100) };
+    var allCatAnswers = allAnswers.filter(function(a) { return a.category === cat; });
+    var allCatCorrect = allCatAnswers.filter(function(a) { return a.is_correct; }).length;
+    var correctPct = allCatAnswers.length > 0 ? Math.round(allCatCorrect / allCatAnswers.length * 100) : 0;
+    catStats[cat] = { total: catTotal, mastered: catMastered, pct: Math.round(catMastered / catTotal * 100), correctPct: correctPct, allCorrect: allCatCorrect, allTotal: allCatAnswers.length };
   });
   var html = '';
   html += '<div class="stat-card"><h3>Panoramica Generale</h3><div class="stat-row">';
@@ -817,14 +820,21 @@ function renderStats(allAnswers, sessions) {
   html += '<div class="stat-card"><h3>Progressione per Categoria</h3>';
   cats.forEach(function(cat) {
     var s = catStats[cat];
+    var correctColor = s.correctPct >= 80 ? '#16a34a' : s.correctPct >= 60 ? '#ea580c' : '#dc2626';
     html += '<div class="progress-cat"><div class="progress-cat-header"><span class="progress-cat-name">' + esc(cat) + '</span>';
-    html += '<span class="progress-cat-pct">' + s.mastered + '/' + s.total + ' (' + s.pct + '%)</span></div>';
+    html += '<span class="progress-cat-pct">' + s.mastered + '/' + s.total + ' (' + s.pct + '%)';
+    if (s.allTotal > 0) html += ' · <span style="color:' + correctColor + '">' + s.correctPct + '% corrette</span>';
+    html += '</span></div>';
     html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + s.pct + '%"></div></div></div>';
   });
   var totalPct = Math.round(uniqueMastered / totalQ * 100);
+  var totalCorrectPct = totalAnswers > 0 ? globalPct : 0;
+  var totalCorrectColor = totalCorrectPct >= 80 ? '#16a34a' : totalCorrectPct >= 60 ? '#ea580c' : '#dc2626';
   html += '<div class="progress-cat" style="margin-top:8px;padding-top:12px;border-top:2px solid #e2e8f0"><div class="progress-cat-header">';
   html += '<span class="progress-cat-name" style="font-weight:700">TOTALE</span>';
-  html += '<span class="progress-cat-pct">' + uniqueMastered + '/' + totalQ + ' (' + totalPct + '%)</span></div>';
+  html += '<span class="progress-cat-pct">' + uniqueMastered + '/' + totalQ + ' (' + totalPct + '%)';
+  if (totalAnswers > 0) html += ' · <span style="color:' + totalCorrectColor + '">' + totalCorrectPct + '% corrette</span>';
+  html += '</span></div>';
   html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + totalPct + '%"></div></div></div></div>';
   if (sessions.length > 0) {
     html += '<div class="stat-card"><h3>Ultimi Quiz</h3>';
