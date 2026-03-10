@@ -404,6 +404,7 @@ async function handleAuth() {
     let result;
     if (isRegisterMode) {
       result = await sb.auth.signUp({ email, password });
+      console.log('SignUp result:', JSON.stringify(result.error), JSON.stringify(result.data?.user?.id));
       if (result.error) throw result.error;
       // Controlla se serve conferma email
       if (result.data.user && !result.data.session) {
@@ -414,16 +415,28 @@ async function handleAuth() {
       }
     } else {
       result = await sb.auth.signInWithPassword({ email, password });
+      console.log('SignIn result:', JSON.stringify(result.error), JSON.stringify(result.data?.user?.id));
       if (result.error) throw result.error;
     }
 
     // Login riuscito - verrà gestito dall'onAuthStateChange
+    console.log('Auth OK, attendo onAuthStateChange...');
+    // Safety: se onAuthStateChange non scatta entro 5 secondi, sblocca
+    setTimeout(() => {
+      if (btn.disabled) {
+        console.warn('onAuthStateChange non ha risposto, sblocco manuale');
+        btn.disabled = false;
+        btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
+        showAuthError('Login riuscito ma il caricamento è lento. Ricarica la pagina.');
+      }
+    }, 5000);
   } catch (err) {
+    console.error('Auth error:', err);
     let msg = 'Errore durante l\'accesso';
     if (err.message) {
       if (err.message.includes('Invalid login')) msg = 'Email o password errati';
       else if (err.message.includes('already registered')) msg = 'Email già registrata. Prova ad accedere.';
-      else if (err.message.includes('Email not confirmed')) msg = 'Conferma la tua email prima di accedere.';
+      else if (err.message.includes('Email not confirmed')) msg = 'Conferma la tua email prima di accedere. Oppure disattiva "Confirm email" su Supabase.';
       else msg = err.message;
     }
     showAuthError(msg);
