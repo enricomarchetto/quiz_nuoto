@@ -2428,8 +2428,8 @@ const quizData = [
       "C": "Trasportare sostanze nutritive",
       "D": "Fluidificare la muscolatura"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. Trasportare l’ossigeno.",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. Trasportare sostanze nutritive.",
     "category": "Biofisiologia",
     "manualPages": [
       60,
@@ -5268,9 +5268,9 @@ const quizData = [
       "C": "Un’abilità appresa",
       "D": "Nessuna delle tre opzioni"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. Un’abilità appresa.",
-    "category": "La cultura dell'acqua",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Nessuna delle tre opzioni.",
+    "category": "La cultura dell’acqua",
     "manualPages": [
       350,
       12,
