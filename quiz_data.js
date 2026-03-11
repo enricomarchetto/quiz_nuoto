@@ -9108,8 +9108,8 @@ const quizData = [
       "C": "Equilibratrice",
       "D": "Conservatrice"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. Propulsiva.",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. Stabilizzatrice.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       284,
