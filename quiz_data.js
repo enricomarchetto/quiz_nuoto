@@ -288,8 +288,8 @@ const quizData = [
       "C": "Soprattutto nelle prime tre fasce d’eta (dai 4 ai 24 mesi)",
       "D": "Soprattutto nelle prime due fasce d’eta (dai 4 ai 18 mesi)"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. Soprattutto nelle prime due fasce d’eta (dai 4 ai 18 mesi).",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. Soprattutto nelle prime tre fasce d’età (dai 4 ai 24 mesi).",
     "category": "Attività speciali",
     "manualPages": [
       293,
@@ -3648,8 +3648,8 @@ const quizData = [
       "C": "La massa corporea non condiziona l’esecuzione di un esercizio a terra",
       "D": "Non vi è alcuna differenza"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. La massa corporea non condiziona l’esecuzione di un esercizio a terra.",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. La massa corporea non condiziona l’esecuzione di un esercizio in acqua.",
     "category": "Fitness in acqua",
     "manualPages": [
       163,
