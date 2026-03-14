@@ -230,6 +230,7 @@
       <div class="amount-btn" onclick="pickAmount(30)"><span class="num">30</span><span class="label">domande</span></div>
       <div class="amount-btn" onclick="pickAmount(50)"><span class="num">50</span><span class="label">domande</span></div>
       <div class="amount-btn" onclick="pickAmount(100)"><span class="num">100</span><span class="label">domande</span></div>
+      <div class="amount-btn" id="btnRestanti" onclick="pickRemaining()" style="display:none"><span class="num" id="restantiNum">0</span><span class="label">restanti</span></div>
     </div>
   </div>
   <div class="home-section">
@@ -548,11 +549,16 @@ function checkAllMastered() {
 
 function resetProgress() {
   masteredQuestions = {};
+  // Reset anche localStorage per guest mode
+  seenQuestions = {};
+  saveSeenQuestions();
   updateUserStats();
   updateStart();
 }
 
 function showCompletionModal() {
+  // Auto-reset dei progressi
+  resetProgress();
   var overlay = document.createElement('div');
   overlay.id = 'completionOverlay';
   overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:9999;display:flex;align-items:center;justify-content:center;';
@@ -560,10 +566,9 @@ function showCompletionModal() {
   modal.style.cssText = 'background:#fff;border-radius:20px;padding:40px 32px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);';
   modal.innerHTML = '<div style="font-size:64px;margin-bottom:16px">🏆</div>' +
     '<h2 style="color:#1e40af;margin:0 0 12px">Complimenti!</h2>' +
-    '<p style="color:#475569;font-size:16px;margin:0 0 24px">Hai completato tutte le <strong>' + quizData.length + '</strong> domande correttamente! Vuoi azzerare i progressi e ricominciare da capo?</p>' +
+    '<p style="color:#475569;font-size:16px;margin:0 0 24px">Hai completato tutte le <strong>' + quizData.length + '</strong> domande correttamente! I progressi sono stati azzerati: si ricomincia da capo!</p>' +
     '<div style="display:flex;gap:12px;justify-content:center">' +
-    '<button onclick="document.getElementById(\'completionOverlay\').remove()" style="padding:12px 24px;border-radius:12px;border:2px solid #cbd5e1;background:#fff;color:#475569;font-size:15px;font-weight:600;cursor:pointer">Continua così</button>' +
-    '<button onclick="resetProgress();document.getElementById(\'completionOverlay\').remove()" style="padding:12px 24px;border-radius:12px;border:none;background:#1e40af;color:#fff;font-size:15px;font-weight:600;cursor:pointer">Azzera e ricomincia</button>' +
+    '<button onclick="document.getElementById(\'completionOverlay\').remove()" style="padding:12px 24px;border-radius:12px;border:none;background:#1e40af;color:#fff;font-size:15px;font-weight:600;cursor:pointer">Ricomincia!</button>' +
     '</div>';
   overlay.appendChild(modal);
   overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
@@ -655,8 +660,21 @@ function initHome() {
 function pickAmount(n) {
   amount = n;
   document.querySelectorAll('.amount-btn').forEach(function(b) {
-    b.classList.toggle('selected', parseInt(b.querySelector('.num').textContent) === n);
+    var num = parseInt(b.querySelector('.num').textContent);
+    b.classList.toggle('selected', num === n);
   });
+  updateStart();
+}
+
+function pickRemaining() {
+  var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
+  var realUnseen = getRealUnseenCount(fullPool, category);
+  if (realUnseen <= 0) return;
+  amount = realUnseen;
+  document.querySelectorAll('.amount-btn').forEach(function(b) {
+    b.classList.remove('selected');
+  });
+  document.getElementById('btnRestanti').classList.add('selected');
   updateStart();
 }
 
@@ -668,14 +686,36 @@ function pickCat(c) {
   updateStart();
 }
 
+function getRealUnseenCount(pool, cat) {
+  var key = cat || 'all';
+  if (!isGuestMode && currentUser) {
+    var mastered = masteredQuestions[key] || new Set();
+    return pool.filter(function(q) { return !mastered.has(q.id); }).length;
+  } else {
+    if (!seenQuestions[key]) return pool.length;
+    var seen = new Set(seenQuestions[key]);
+    return pool.filter(function(q) { return !seen.has(q.id); }).length;
+  }
+}
+
 function updateStart() {
   var btn = document.getElementById('startBtn');
   if (!amount) { btn.disabled = true; btn.textContent = 'Scegli il numero di domande'; return; }
   var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
+  var realUnseen = getRealUnseenCount(fullPool, category);
   var unseen = getUnseenPool(fullPool, category);
   var n = Math.min(amount, unseen.length);
   btn.disabled = false;
-  btn.textContent = 'Inizia — ' + n + ' domande (' + unseen.length + ' ancora da fare su ' + fullPool.length + ')';
+  btn.textContent = 'Inizia — ' + n + ' domande (' + realUnseen + ' ancora da fare su ' + fullPool.length + ')';
+  // Mostra/nascondi bottone "restanti"
+  var btnRest = document.getElementById('btnRestanti');
+  if (realUnseen > 0 && realUnseen <= 200 && [10,20,30,50,100].indexOf(realUnseen) === -1) {
+    btnRest.style.display = '';
+    document.getElementById('restantiNum').textContent = realUnseen;
+  } else {
+    btnRest.style.display = 'none';
+    if (btnRest.classList.contains('selected')) btnRest.classList.remove('selected');
+  }
 }
 
 function shuffle(a) { var b = a.slice(); for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = b[i]; b[i] = b[j]; b[j] = t; } return b; }

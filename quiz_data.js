@@ -5270,7 +5270,7 @@ const quizData = [
     },
     "answer": "D",
     "explanation": "La risposta corretta è D. Nessuna delle tre opzioni.",
-    "category": "La cultura dell’acqua",
+    "category": "La cultura dell'acqua",
     "manualPages": [
       350,
       12,
