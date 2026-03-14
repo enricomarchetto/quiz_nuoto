@@ -5088,8 +5088,8 @@ const quizData = [
       "C": "Parlamento, senato, corte costituzionale",
       "D": "Il settore istruzione tecnica, il settore sanitario, il gruppo ufficiali gara, il settore squadre nazionali, il settore nuoto per tutti"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. L’assemblea nazionale, il presidente, il consiglio federale, il consiglio di presidenza, il collegio dei revisori dei conti.",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Gli organi tecnici della FIN sono: il settore istruzione tecnica, il settore sanitario, il gruppo ufficiali gara, il settore squadre nazionali, il settore nuoto per tutti.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       303,
