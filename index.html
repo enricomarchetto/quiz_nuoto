@@ -7,47 +7,20 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0077b6">
 <title>Istruttore di Nuoto - 1000 Domande</title>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; line-height: 1.5; }
 
-  /* AUTH */
-  .auth-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
-  .auth-card { width: 100%; max-width: 400px; background: white; border-radius: 16px; padding: 36px 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-  .auth-logo { font-size: 3em; text-align: center; margin-bottom: 8px; }
-  .auth-title { font-size: 1.4em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
-  .auth-subtitle { font-size: 0.9em; color: #718096; text-align: center; margin-bottom: 28px; }
-  .auth-input { width: 100%; padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1em; margin-bottom: 12px; outline: none; transition: border-color 0.2s; }
-  .auth-input:focus { border-color: #0077b6; }
-  .auth-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; font-size: 1em; font-weight: 700; cursor: pointer; transition: all 0.15s; }
-  .auth-btn:active { transform: scale(0.97); }
-  .auth-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-  .auth-toggle { text-align: center; margin-top: 16px; font-size: 0.9em; color: #718096; }
-  .auth-toggle a { color: #0077b6; font-weight: 600; cursor: pointer; text-decoration: none; }
-  .auth-error { background: #fff5f5; color: #e53e3e; padding: 10px 14px; border-radius: 8px; font-size: 0.88em; margin-bottom: 12px; display: none; }
-  .auth-success { background: #f0fff4; color: #38a169; padding: 10px 14px; border-radius: 8px; font-size: 0.88em; margin-bottom: 12px; display: none; }
-  .auth-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #a0aec0; font-size: 0.85em; }
-  .auth-divider::before, .auth-divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
-
-  /* User bar */
-  .user-bar { background: white; padding: 8px 16px; display: none; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; gap: 8px; flex-wrap: wrap; }
-  .user-bar.visible { display: flex; }
-  .user-email { font-size: 0.82em; color: #718096; }
-  .user-stats { font-size: 0.82em; color: #0077b6; font-weight: 600; }
-  .bar-btn { background: none; border: 1px solid #e2e8f0; color: #718096; padding: 6px 12px; border-radius: 6px; font-size: 0.8em; cursor: pointer; }
-  .bar-btn:hover { background: #f7fafc; }
-  .bar-btn-stats { color: #0077b6; border-color: #0077b6; }
-
-  /* HOME */
-  .home { min-height: 100vh; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
-  .home.visible { display: flex; }
+  /* ===== HOME ===== */
+  .home { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
   .home-logo { font-size: 3em; margin-bottom: 12px; }
   .home-title { font-size: 1.6em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
   .home-subtitle { font-size: 0.95em; color: #718096; text-align: center; margin-bottom: 36px; }
+
   .home-section { width: 100%; max-width: 500px; margin-bottom: 28px; }
   .section-label { font-size: 0.82em; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; text-align: center; }
+
   .amount-buttons { display: flex; gap: 12px; justify-content: center; }
   .amount-btn { flex: 1; max-width: 140px; padding: 22px 10px; border: 2px solid #e2e8f0; border-radius: 14px; background: white; cursor: pointer; text-align: center; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
   .amount-btn:active { transform: scale(0.96); }
@@ -55,19 +28,22 @@
   .amount-btn .num { font-size: 2em; font-weight: 700; color: #0077b6; display: block; line-height: 1; }
   .amount-btn .label { font-size: 0.8em; color: #718096; margin-top: 4px; display: block; }
   @media (hover: hover) { .amount-btn:hover:not(.selected) { border-color: #90cdf4; background: #f7fafc; } }
+
   .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .cat-btn { padding: 12px 10px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; cursor: pointer; text-align: center; font-size: 0.85em; font-weight: 500; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
   .cat-btn:active { transform: scale(0.96); }
   .cat-btn.selected { border-color: #0077b6; background: #ebf8ff; }
   .cat-btn .cat-count { font-size: 0.75em; color: #a0aec0; display: block; margin-top: 2px; }
   @media (hover: hover) { .cat-btn:hover:not(.selected) { border-color: #90cdf4; } }
+
   .start-btn { display: block; width: 100%; max-width: 500px; padding: 16px; border: none; border-radius: 12px; background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: all 0.15s; box-shadow: 0 4px 14px rgba(0,119,182,0.3); -webkit-user-select: none; user-select: none; }
   .start-btn:active { transform: scale(0.97); }
   .start-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
   @media (hover: hover) { .start-btn:hover:not(:disabled) { box-shadow: 0 6px 20px rgba(0,119,182,0.4); } }
 
-  /* QUIZ */
+  /* ===== QUIZ ===== */
   .quiz-page { display: none; }
+
   .quiz-header { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
   .quiz-header-left h2 { font-size: 1.05em; font-weight: 700; }
   .quiz-header-left .quiz-info { font-size: 0.78em; opacity: 0.9; margin-top: 2px; display: flex; gap: 12px; }
@@ -77,11 +53,15 @@
   .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 14px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; white-space: nowrap; }
   .back-btn:active { transform: scale(0.96); }
   @media (hover: hover) { .back-btn:hover { background: rgba(255,255,255,0.3); } }
+
   .quiz-container { max-width: 800px; margin: 0 auto; padding: 16px; padding-bottom: 20px; }
+
+  /* Question card */
   .question-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 2px solid transparent; transition: border-color 0.3s, box-shadow 0.3s; }
   .question-card.card-correct { border-color: #38a169; box-shadow: 0 0 0 3px rgba(56,161,105,0.15); }
   .question-card.card-wrong { border-color: #e53e3e; box-shadow: 0 0 0 3px rgba(229,62,62,0.15); }
   .question-card.card-empty { border-color: #dd6b20; box-shadow: 0 0 0 3px rgba(221,107,32,0.15); }
+
   .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; flex-wrap: wrap; }
   .question-number { font-weight: 700; color: #0077b6; font-size: 0.95em; white-space: nowrap; }
   .question-number .orig { font-weight: 600; color: #4a5568; font-size: 0.9em; }
@@ -92,7 +72,9 @@
   .category-badge[data-cat="La cultura dell'acqua"] { background: #ede9fe; color: #5b21b6; }
   .category-badge[data-cat="Metodologia"] { background: #ffedd5; color: #9a3412; }
   .category-badge[data-cat="Psicopedagogia"] { background: #f0fdf4; color: #166534; }
+
   .question-text { font-size: 1em; line-height: 1.6; margin-bottom: 14px; font-weight: 500; }
+
   .options { display: flex; flex-direction: column; gap: 8px; }
   .option { padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: all 0.15s; display: flex; align-items: flex-start; gap: 10px; min-height: 48px; -webkit-user-select: none; user-select: none; }
   .option:active:not(.locked) { transform: scale(0.98); }
@@ -105,10 +87,15 @@
   .option.opt-wrong { border-color: #e53e3e; background: #fff5f5; }
   .option.opt-wrong .letter { color: #e53e3e; }
   @media (hover: hover) { .option:hover:not(.locked):not(.picked) { border-color: #90cdf4; background: #f7fafc; } }
+
   .explanation-box { margin-top: 12px; padding: 16px 18px; border-radius: 10px; background: #fff7ed; border: 1px solid #fed7aa; color: #78350f; font-size: 0.88em; line-height: 1.7; }
   .explanation-box strong { color: #92400e; }
   .explanation-box .exp-wrong { color: #b91c1c; }
   .explanation-box .exp-correct { color: #166534; font-weight: 600; }
+  .explanation-box .exp-pages { display: inline-block; margin-top: 6px; padding: 4px 10px; background: #fef3c7; border-radius: 6px; font-size: 0.92em; color: #92400e; font-weight: 600; }
+  .explanation-box .exp-excerpt { display: block; margin-top: 10px; padding: 12px 14px; background: #fffbeb; border-left: 3px solid #f59e0b; border-radius: 0 6px 6px 0; font-style: italic; color: #78350f; font-size: 0.95em; }
+
+  /* Actions */
   .actions { max-width: 800px; margin: 0 auto; padding: 0 16px 30px; display: flex; flex-direction: column; gap: 10px; }
   .action-btn { width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 1.05em; font-weight: 700; cursor: pointer; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
   .action-btn:active { transform: scale(0.97); }
@@ -116,6 +103,8 @@
   .btn-errori { background: #e53e3e; color: white; box-shadow: 0 4px 14px rgba(229,62,62,0.25); }
   .btn-home { background: white; color: #0077b6; border: 2px solid #0077b6 !important; }
   .hidden { display: none !important; }
+
+  /* Results */
   .results { max-width: 800px; margin: 0 auto 16px; padding: 28px; background: white; border-radius: 14px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none; }
   .results.visible { display: block; }
   .results .r-icon { font-size: 2.5em; margin-bottom: 6px; }
@@ -125,41 +114,6 @@
   .results .green { color: #38a169; font-weight: 600; }
   .results .red { color: #e53e3e; font-weight: 600; }
   .results .orange { color: #dd6b20; font-weight: 600; }
-
-  /* STATS */
-  .stats-page { display: none; min-height: 100vh; padding: 20px; padding-bottom: 40px; }
-  .stats-page.visible { display: block; }
-  .stats-header { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto 20px; }
-  .stats-title { font-size: 1.4em; font-weight: 700; color: #0077b6; }
-  .stats-back { background: none; border: 1px solid #e2e8f0; color: #0077b6; padding: 8px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; }
-  .stats-back:hover { background: #f7fafc; }
-  .stats-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-  .stat-card { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-  .stat-card h3 { font-weight: 700; color: #4a5568; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82em; }
-  .stat-row { display: flex; gap: 16px; }
-  .stat-box { flex: 1; text-align: center; padding: 16px 8px; background: #f7fafc; border-radius: 10px; }
-  .stat-box .stat-num { font-size: 1.8em; font-weight: 700; line-height: 1; }
-  .stat-box .stat-num.green { color: #38a169; }
-  .stat-box .stat-num.red { color: #e53e3e; }
-  .stat-box .stat-num.orange { color: #dd6b20; }
-  .stat-box .stat-num.blue { color: #0077b6; }
-  .stat-box .stat-lbl { font-size: 0.78em; color: #718096; margin-top: 4px; }
-  .progress-cat { margin-bottom: 14px; }
-  .progress-cat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-  .progress-cat-name { font-size: 0.88em; font-weight: 600; color: #4a5568; }
-  .progress-cat-pct { font-size: 0.82em; font-weight: 700; color: #0077b6; }
-  .progress-cat-bar { height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; }
-  .progress-cat-fill { height: 100%; border-radius: 5px; background: linear-gradient(135deg, #0077b6, #00b4d8); transition: width 0.5s; }
-  .session-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
-  .session-item:last-child { border-bottom: none; }
-  .session-info { flex: 1; }
-  .session-cat { font-size: 0.88em; font-weight: 600; color: #4a5568; }
-  .session-date { font-size: 0.75em; color: #a0aec0; margin-top: 2px; }
-  .session-score { font-size: 1.2em; font-weight: 700; min-width: 50px; text-align: right; }
-  .session-detail { font-size: 0.75em; color: #a0aec0; text-align: right; }
-  .stats-empty { text-align: center; padding: 40px 20px; color: #a0aec0; font-size: 0.95em; }
-  .spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #e2e8f0; border-top-color: #0077b6; border-radius: 50%; animation: spin 0.8s linear infinite; }
-  @keyframes spin { to { transform: rotate(360deg); } }
 
   /* Mobile */
   @media (max-width: 600px) {
@@ -175,10 +129,6 @@
     .question-card { padding: 14px; margin-bottom: 12px; }
     .option { padding: 12px 14px; }
     .actions { padding: 0 10px 30px; }
-    .auth-card { padding: 28px 20px; }
-    .stat-row { gap: 8px; }
-    .stat-box { padding: 12px 6px; }
-    .stat-box .stat-num { font-size: 1.4em; }
   }
   @media (max-width: 380px) {
     .amount-btn .num { font-size: 1.4em; }
@@ -188,54 +138,26 @@
 </head>
 <body>
 
-<!-- AUTH -->
-<div class="auth-page" id="authPage">
-  <div class="auth-card">
-    <div class="auth-logo">🏊</div>
-    <div class="auth-title">Istruttore di Nuoto</div>
-    <div class="auth-subtitle">Accedi per sincronizzare i tuoi progressi</div>
-    <div class="auth-error" id="authError"></div>
-    <div class="auth-success" id="authSuccess"></div>
-    <input type="email" class="auth-input" id="authEmail" placeholder="Email" autocomplete="email">
-    <input type="password" class="auth-input" id="authPassword" placeholder="Password" autocomplete="current-password">
-    <button class="auth-btn" id="authBtn" onclick="handleAuth()">Accedi</button>
-    <div class="auth-toggle" id="authToggle">
-      Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>
-    </div>
-    <div class="auth-divider">oppure</div>
-    <button class="auth-btn" style="background: white; color: #1a202c; border: 2px solid #e2e8f0;" onclick="handleGuestMode()">
-      Continua senza account
-    </button>
-  </div>
-</div>
-
-<!-- USER BAR -->
-<div class="user-bar" id="userBar">
-  <span class="user-email" id="userEmail"></span>
-  <span class="user-stats" id="userStats"></span>
-  <button class="bar-btn bar-btn-stats" onclick="showStats()">Statistiche</button>
-  <button class="bar-btn" id="logoutBtn" onclick="handleLogout()">Esci</button>
-</div>
-
 <!-- HOME -->
 <div class="home" id="homePage">
   <div class="home-logo">🏊</div>
   <div class="home-title">Istruttore di Nuoto</div>
   <div class="home-subtitle">1000 Domande</div>
+
   <div class="home-section">
     <div class="section-label">Quante domande?</div>
     <div class="amount-buttons">
       <div class="amount-btn" onclick="pickAmount(10)"><span class="num">10</span><span class="label">domande</span></div>
       <div class="amount-btn" onclick="pickAmount(20)"><span class="num">20</span><span class="label">domande</span></div>
-      <div class="amount-btn" onclick="pickAmount(30)"><span class="num">30</span><span class="label">domande</span></div>
       <div class="amount-btn" onclick="pickAmount(50)"><span class="num">50</span><span class="label">domande</span></div>
-      <div class="amount-btn" onclick="pickAmount(100)"><span class="num">100</span><span class="label">domande</span></div>
     </div>
   </div>
+
   <div class="home-section">
     <div class="section-label">Categoria</div>
     <div class="cat-grid" id="catGrid"></div>
   </div>
+
   <button class="start-btn" id="startBtn" disabled onclick="startQuiz()">Scegli il numero di domande</button>
 </div>
 
@@ -249,7 +171,9 @@
     </div>
     <button class="back-btn" onclick="goHome()">← Home</button>
   </div>
+
   <div class="quiz-container" id="quizContainer"></div>
+
   <div class="results" id="resultsCard">
     <div class="r-icon" id="rIcon"></div>
     <h3>Risultato</h3>
@@ -257,6 +181,7 @@
     <div class="r-detail" id="rDetail"></div>
     <div class="r-time" id="rTime"></div>
   </div>
+
   <div class="actions" id="actionsBar">
     <button class="action-btn btn-correggi" id="btnCorreggi" onclick="correggi()">Correggi</button>
     <button class="action-btn btn-errori hidden" id="btnErrori" onclick="rivediErrori()">Rivedi gli errori</button>
@@ -264,324 +189,53 @@
   </div>
 </div>
 
-<!-- STATS -->
-<div class="stats-page" id="statsPage">
-  <div class="stats-header">
-    <span class="stats-title">Le tue Statistiche</span>
-    <button class="stats-back" onclick="hideStats()">← Torna al quiz</button>
-  </div>
-  <div class="stats-grid" id="statsContent"></div>
-</div>
-
 <script src="quiz_data.js"></script>
 <script>
-// === SUPABASE CONFIG ===
-var SUPABASE_URL = 'https://ayuflpmsvphdeunbmdfk.supabase.co';
-var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5dWZscG1zdnBoZGV1bmJtZGZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwODkyOTgsImV4cCI6MjA4ODY2NTI5OH0.7c0XENPhgEL7IogmKH2PWYN5a0pm_Y9x9D3nlw5wkHg';
-var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+let amount = null, category = 'all', questions = [], answers = {}, corrected = false;
+let timerStart = null, timerInterval = null;
 
-// === STATE ===
-var currentUser = null;
-var isGuestMode = false;
-var isRegisterMode = false;
-var amount = null;
-var category = 'all';
-var questions = [];
-var answers = {};
-var corrected = false;
-var timerStart = null;
-var timerInterval = null;
-var masteredQuestions = {};
-var seenQuestions = {};
-var homeInitialized = false;
+// Sistema anti-ripetizione: tiene traccia delle domande già fatte per categoria
+let seenQuestions = {};
+try {
+  const saved = localStorage.getItem('quizSeenQuestions');
+  if (saved) seenQuestions = JSON.parse(saved);
+} catch(e) {}
 
-try { var saved = localStorage.getItem('quizSeenQuestions'); if (saved) seenQuestions = JSON.parse(saved); } catch(e) {}
-function saveSeenQuestions() { try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {} }
-
-// === AUTH FUNCTIONS ===
-function toggleAuthMode() {
-  isRegisterMode = !isRegisterMode;
-  document.getElementById('authBtn').textContent = isRegisterMode ? 'Registrati' : 'Accedi';
-  document.getElementById('authToggle').innerHTML = isRegisterMode
-    ? 'Hai già un account? <a href="#" onclick="toggleAuthMode(); return false;">Accedi</a>'
-    : 'Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>';
-  document.getElementById('authError').style.display = 'none';
-  document.getElementById('authSuccess').style.display = 'none';
+function saveSeenQuestions() {
+  try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {}
 }
 
-function showAuthError(msg) {
-  var el = document.getElementById('authError');
-  el.textContent = msg; el.style.display = 'block';
-  document.getElementById('authSuccess').style.display = 'none';
-}
-
-function showAuthSuccess(msg) {
-  var el = document.getElementById('authSuccess');
-  el.textContent = msg; el.style.display = 'block';
-  document.getElementById('authError').style.display = 'none';
-}
-
-async function handleAuth() {
-  var email = document.getElementById('authEmail').value.trim();
-  var password = document.getElementById('authPassword').value;
-  document.getElementById('authError').style.display = 'none';
-  document.getElementById('authSuccess').style.display = 'none';
-
-  if (!email || !password) { showAuthError('Inserisci email e password'); return; }
-  if (password.length < 6) { showAuthError('La password deve avere almeno 6 caratteri'); return; }
-
-  var btn = document.getElementById('authBtn');
-  btn.disabled = true;
-  btn.textContent = 'Caricamento...';
-
-  try {
-    var result;
-    if (isRegisterMode) {
-      result = await sb.auth.signUp({ email: email, password: password });
-      console.log('SignUp result:', result.error, result.data);
-      if (result.error) throw result.error;
-      if (result.data.user && !result.data.session) {
-        showAuthSuccess('Registrazione completata! Controlla la tua email per confermare l\'account.');
-        btn.disabled = false;
-        btn.textContent = 'Registrati';
-        return;
-      }
-    } else {
-      result = await sb.auth.signInWithPassword({ email: email, password: password });
-      console.log('SignIn result:', result.error, result.data);
-      if (result.error) throw result.error;
-    }
-    // Login OK - onAuthStateChange gestirà il resto
-    console.log('Auth OK, user:', result.data.user.id);
-    // Fallback: se onAuthStateChange non scatta
-    setTimeout(function() {
-      if (btn.disabled) {
-        console.warn('Fallback: forzo showApp');
-        if (result.data.user) {
-          currentUser = result.data.user;
-          isGuestMode = false;
-          loadMasteredQuestions().then(function() { showApp(); });
-        }
-      }
-    }, 3000);
-  } catch (err) {
-    console.error('Auth error:', err);
-    var msg = err.message || 'Errore durante l\'accesso';
-    if (msg.includes('Invalid login')) msg = 'Email o password errati';
-    else if (msg.includes('Email not confirmed')) msg = 'Conferma la tua email prima di accedere. Oppure disattiva "Confirm email" nelle impostazioni di Supabase.';
-    showAuthError(msg);
-    btn.disabled = false;
-    btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
-  }
-}
-
-function handleGuestMode() {
-  isGuestMode = true;
-  currentUser = null;
-  showApp();
-}
-
-async function handleLogout() {
-  if (!isGuestMode) { await sb.auth.signOut(); }
-  isGuestMode = false;
-  currentUser = null;
-  masteredQuestions = {};
-  document.getElementById('authPage').style.display = 'flex';
-  document.getElementById('homePage').classList.remove('visible');
-  document.getElementById('quizPage').style.display = 'none';
-  document.getElementById('statsPage').classList.remove('visible');
-  document.getElementById('userBar').classList.remove('visible');
-}
-
-// Auth state listener
-sb.auth.onAuthStateChange(function(event, session) {
-  console.log('onAuthStateChange:', event);
-  if (session && session.user) {
-    currentUser = session.user;
-    isGuestMode = false;
-    loadMasteredQuestions().then(function() { showApp(); });
-  }
-});
-
-// Check existing session on load
-async function checkSession() {
-  try {
-    var result = await sb.auth.getSession();
-    console.log('Existing session:', result.data.session ? 'yes' : 'no');
-    if (result.data.session && result.data.session.user) {
-      currentUser = result.data.session.user;
-      isGuestMode = false;
-      await loadMasteredQuestions();
-      showApp();
-    }
-  } catch(e) { console.error('Session check error:', e); }
-}
-
-// === SUPABASE DATA ===
-async function loadMasteredQuestions() {
-  if (!currentUser) return;
-  try {
-    var allData = [];
-    var pageSize = 1000;
-    var from = 0;
-    // Usa la view user_mastered_questions che prende solo l'ultima risposta per domanda
-    while (true) {
-      var result = await sb.from('user_mastered_questions').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
-      if (result.error) {
-        // Fallback alla tabella diretta se la view non esiste
-        console.warn('View not available, falling back to user_answers:', result.error.message);
-        allData = [];
-        from = 0;
-        while (true) {
-          var r2 = await sb.from('user_answers').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
-          if (r2.error) throw r2.error;
-          if (r2.data) allData = allData.concat(r2.data);
-          if (!r2.data || r2.data.length < pageSize) break;
-          from += pageSize;
-        }
-        break;
-      }
-      if (result.data) allData = allData.concat(result.data);
-      if (!result.data || result.data.length < pageSize) break;
-      from += pageSize;
-    }
-    masteredQuestions = {};
-    allData.forEach(function(row) {
-      if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
-      masteredQuestions[row.category].add(row.question_id);
-      if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
-      masteredQuestions['all'].add(row.question_id);
-    });
-    console.log('Loaded mastered questions:', masteredQuestions['all'] ? masteredQuestions['all'].size : 0);
-  } catch (err) {
-    console.error('Error loading mastered:', err);
-    showSaveError('Errore nel caricamento dei progressi. Ricarica la pagina.');
-  }
-}
-
-async function saveAnswersToSupabase(quizQuestions, userAnswers) {
-  if (!currentUser) return;
-  var rows = quizQuestions.map(function(q) {
-    return {
-      user_id: currentUser.id,
-      question_id: q.id,
-      category: q.category,
-      selected_answer: userAnswers[q.id] || '',
-      correct_answer: q.answer,
-      is_correct: userAnswers[q.id] === q.answer
-    };
-  });
-  // Aggiorna SEMPRE lo stato locale, indipendentemente dal salvataggio DB
-  rows.forEach(function(row) {
-    if (row.is_correct) {
-      if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
-      masteredQuestions[row.category].add(row.question_id);
-      if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
-      masteredQuestions['all'].add(row.question_id);
-    } else {
-      if (masteredQuestions[row.category]) masteredQuestions[row.category].delete(row.question_id);
-      if (masteredQuestions['all']) masteredQuestions['all'].delete(row.question_id);
-    }
-  });
-  updateUserStats();
-  // Salva nel DB (con retry)
-  try {
-    var result = await sb.from('user_answers').insert(rows);
-    if (result.error) throw result.error;
-    console.log('Answers saved to DB:', rows.length);
-  } catch (err) {
-    console.error('Error saving answers:', err);
-    showSaveError('Errore nel salvataggio delle risposte. Le risposte sono registrate localmente ma potrebbero non essere salvate nel database. Ricarica la pagina e riprova.');
-  }
-}
-
-function showSaveError(msg) {
-  var existing = document.getElementById('saveErrorBanner');
-  if (existing) existing.remove();
-  var banner = document.createElement('div');
-  banner.id = 'saveErrorBanner';
-  banner.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#e74c3c;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-size:14px;cursor:pointer;';
-  banner.textContent = msg;
-  banner.onclick = function() { banner.remove(); };
-  document.body.appendChild(banner);
-  setTimeout(function() { if (banner.parentNode) banner.remove(); }, 10000);
-}
-
-async function saveSessionToSupabase(cat, total, correct, wrong, unanswered, elapsed, pct) {
-  if (!currentUser) return;
-  try {
-    var result = await sb.from('quiz_sessions').insert({
-      user_id: currentUser.id, category: cat, total_questions: total,
-      correct_count: correct, wrong_count: wrong, unanswered_count: unanswered,
-      elapsed_seconds: elapsed, score_pct: pct
-    });
-    if (result.error) throw result.error;
-  } catch (err) { console.error('Error saving session:', err); }
-}
-
-// === QUESTION POOL ===
 function getUnseenPool(pool, cat) {
-  var key = cat || 'all';
-  if (!isGuestMode && currentUser) {
-    var mastered = masteredQuestions[key] || new Set();
-    var unseen = pool.filter(function(q) { return !mastered.has(q.id); });
-    if (unseen.length < amount) {
-      if (key === 'all') { masteredQuestions = {}; } else { delete masteredQuestions[key]; }
-      unseen = pool;
-    }
-    return unseen;
-  } else {
-    if (!seenQuestions[key]) seenQuestions[key] = [];
-    var seen = new Set(seenQuestions[key]);
-    var unseen = pool.filter(function(q) { return !seen.has(q.id); });
-    if (unseen.length < amount) { seenQuestions[key] = []; saveSeenQuestions(); unseen = pool; }
-    return unseen;
+  const key = cat || 'all';
+  if (!seenQuestions[key]) seenQuestions[key] = [];
+  let seen = new Set(seenQuestions[key]);
+  let unseen = pool.filter(q => !seen.has(q.id));
+  // Se le domande non viste sono meno di quelle richieste, resetta
+  if (unseen.length < amount) {
+    seenQuestions[key] = [];
+    saveSeenQuestions();
+    unseen = pool;
   }
+  return unseen;
 }
 
-function markAsSeen(ids, cat) {
-  if (!isGuestMode && currentUser) return;
-  var key = cat || 'all';
+function markAsSeen(questionIds, cat) {
+  const key = cat || 'all';
   if (!seenQuestions[key]) seenQuestions[key] = [];
-  seenQuestions[key] = seenQuestions[key].concat(ids);
+  seenQuestions[key] = seenQuestions[key].concat(questionIds);
   saveSeenQuestions();
 }
 
 function unmarkWrongQuestions(wrongIds, cat) {
-  if (!isGuestMode && currentUser) return;
-  var key = cat || 'all';
+  const key = cat || 'all';
   if (!seenQuestions[key]) return;
-  seenQuestions[key] = seenQuestions[key].filter(function(id) { return wrongIds.indexOf(id) === -1; });
+  seenQuestions[key] = seenQuestions[key].filter(id => !wrongIds.includes(id));
   saveSeenQuestions();
 }
 
-// === UI ===
-function showApp() {
-  document.getElementById('authPage').style.display = 'none';
-  document.getElementById('homePage').classList.add('visible');
-  var bar = document.getElementById('userBar');
-  if (!isGuestMode && currentUser) {
-    document.getElementById('userEmail').textContent = currentUser.email;
-    updateUserStats();
-  } else {
-    document.getElementById('userEmail').textContent = 'Modalità ospite';
-    document.getElementById('userStats').textContent = '';
-  }
-  bar.classList.add('visible');
-  // Reset auth button
-  var btn = document.getElementById('authBtn');
-  btn.disabled = false;
-  btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
-  initHome();
-}
-
-function updateUserStats() {
-  var n = masteredQuestions['all'] ? masteredQuestions['all'].size : 0;
-  document.getElementById('userStats').textContent = n + ' / ' + quizData.length + ' completate';
-}
-
 function formatTime(sec) {
-  var m = Math.floor(sec / 60), s = sec % 60;
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
   return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
 }
 
@@ -589,143 +243,164 @@ function startTimer() {
   timerStart = Date.now();
   document.getElementById('quizTimer').textContent = '⏱ 00:00';
   clearInterval(timerInterval);
-  timerInterval = setInterval(function() {
-    var elapsed = Math.floor((Date.now() - timerStart) / 1000);
+  timerInterval = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - timerStart) / 1000);
     document.getElementById('quizTimer').textContent = '⏱ ' + formatTime(elapsed);
   }, 1000);
 }
 
-function stopTimer() { clearInterval(timerInterval); return Math.floor((Date.now() - timerStart) / 1000); }
+function stopTimer() {
+  clearInterval(timerInterval);
+  return Math.floor((Date.now() - timerStart) / 1000);
+}
 
 function initHome() {
-  if (homeInitialized) { updateStart(); return; }
-  homeInitialized = true;
-  var cats = []; var catSet = {};
-  quizData.forEach(function(q) { if (!catSet[q.category]) { catSet[q.category] = true; cats.push(q.category); } });
-  cats.sort();
-  var grid = document.getElementById('catGrid');
-  grid.innerHTML = '';
-  var all = document.createElement('div');
-  all.className = 'cat-btn selected'; all.dataset.cat = 'all';
+  const cats = [...new Set(quizData.map(q => q.category))].sort();
+  const grid = document.getElementById('catGrid');
+  const all = document.createElement('div');
+  all.className = 'cat-btn selected';
+  all.dataset.cat = 'all';
   all.innerHTML = '<span>Tutte</span><span class="cat-count">' + quizData.length + '</span>';
-  all.onclick = function() { pickCat('all'); };
+  all.onclick = () => pickCat('all');
   grid.appendChild(all);
-  cats.forEach(function(c) {
-    var n = quizData.filter(function(q) { return q.category === c; }).length;
-    var btn = document.createElement('div');
-    btn.className = 'cat-btn'; btn.dataset.cat = c;
+  cats.forEach(c => {
+    const n = quizData.filter(q => q.category === c).length;
+    const btn = document.createElement('div');
+    btn.className = 'cat-btn';
+    btn.dataset.cat = c;
     btn.innerHTML = '<span>' + c + '</span><span class="cat-count">' + n + '</span>';
-    btn.onclick = function() { pickCat(c); };
+    btn.onclick = () => pickCat(c);
     grid.appendChild(btn);
   });
-  updateStart();
 }
 
 function pickAmount(n) {
   amount = n;
-  document.querySelectorAll('.amount-btn').forEach(function(b) {
-    b.classList.toggle('selected', parseInt(b.querySelector('.num').textContent) === n);
-  });
+  document.querySelectorAll('.amount-btn').forEach(b => b.classList.toggle('selected', parseInt(b.querySelector('.num').textContent) === n));
   updateStart();
 }
 
 function pickCat(c) {
   category = c;
-  document.querySelectorAll('.cat-btn').forEach(function(b) {
-    b.classList.toggle('selected', b.dataset.cat === c);
-  });
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('selected', b.dataset.cat === c));
   updateStart();
 }
 
 function updateStart() {
-  var btn = document.getElementById('startBtn');
+  const btn = document.getElementById('startBtn');
   if (!amount) { btn.disabled = true; btn.textContent = 'Scegli il numero di domande'; return; }
-  var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
-  var unseen = getUnseenPool(fullPool, category);
-  var n = Math.min(amount, unseen.length);
+  const fullPool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
+  const unseen = getUnseenPool(fullPool, category);
+  const n = Math.min(amount, unseen.length);
   btn.disabled = false;
-  btn.textContent = 'Inizia — ' + n + ' domande (' + unseen.length + ' ancora da fare su ' + fullPool.length + ')';
+  const remaining = unseen.length;
+  btn.textContent = 'Inizia — ' + n + ' domande (' + remaining + ' ancora da fare su ' + fullPool.length + ')';
 }
 
-function shuffle(a) { var b = a.slice(); for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = b[i]; b[i] = b[j]; b[j] = t; } return b; }
+function shuffle(a) { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
 
 function startQuiz() {
-  var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
-  var pool = getUnseenPool(fullPool, category);
+  const fullPool = category === 'all' ? quizData : quizData.filter(q => q.category === category);
+  const pool = getUnseenPool(fullPool, category);
   questions = shuffle(pool).slice(0, amount);
-  if (isGuestMode || !currentUser) { markAsSeen(questions.map(function(q) { return q.id; }), category); }
-  answers = {}; corrected = false;
-  document.getElementById('homePage').classList.remove('visible');
+  markAsSeen(questions.map(q => q.id), category);
+  answers = {};
+  corrected = false;
+  document.getElementById('homePage').style.display = 'none';
   document.getElementById('quizPage').style.display = 'block';
   document.getElementById('quizTitle').textContent = category === 'all' ? 'Tutte le categorie' : category;
   document.getElementById('resultsCard').classList.remove('visible');
   document.getElementById('btnCorreggi').classList.remove('hidden');
   document.getElementById('btnErrori').classList.add('hidden');
   document.getElementById('btnHome').classList.add('hidden');
-  render(); window.scrollTo({ top: 0 }); startTimer();
+  render();
+  window.scrollTo({ top: 0 });
+  startTimer();
 }
 
 function goHome() {
   clearInterval(timerInterval);
   document.getElementById('quizPage').style.display = 'none';
-  document.getElementById('homePage').classList.add('visible');
-  updateStart(); updateUserStats(); window.scrollTo({ top: 0 });
+  document.getElementById('homePage').style.display = 'flex';
+  window.scrollTo({ top: 0 });
 }
 
-function pick(qid, letter) { if (corrected) return; answers[qid] = letter; render(); }
-
-function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+function pick(qid, letter) {
+  if (corrected) return;
+  answers[qid] = letter;
+  render();
+}
 
 function render() {
-  var c = document.getElementById('quizContainer'); var h = '';
-  questions.forEach(function(q, i) {
-    var a = answers[q.id]; var cardCls = 'question-card';
-    if (corrected) { if (!a) cardCls += ' card-empty'; else if (a === q.answer) cardCls += ' card-correct'; else cardCls += ' card-wrong'; }
+  const c = document.getElementById('quizContainer');
+  let h = '';
+  questions.forEach((q, i) => {
+    const a = answers[q.id];
+    let cardCls = 'question-card';
+    if (corrected) {
+      if (!a) cardCls += ' card-empty';
+      else if (a === q.answer) cardCls += ' card-correct';
+      else cardCls += ' card-wrong';
+    }
     h += '<div class="' + cardCls + '" id="q-' + q.id + '">';
-    h += '<div class="question-header"><span class="question-number">Domanda ' + (i+1) + ' <span class="orig">(n.' + q.id + ')</span></span>';
-    h += '<span class="category-badge" data-cat="' + esc(q.category) + '">' + esc(q.category) + '</span></div>';
-    h += '<div class="question-text">' + esc(q.question) + '</div><div class="options">';
-    ['A','B','C','D'].forEach(function(l) {
+    h += '<div class="question-header">';
+    h += '<span class="question-number">Domanda ' + (i + 1) + ' <span class="orig">(n.' + q.id + ')</span></span>';
+    h += '<span class="category-badge" data-cat="' + esc(q.category) + '">' + esc(q.category) + '</span>';
+    h += '</div>';
+    h += '<div class="question-text">' + esc(q.question) + '</div>';
+    h += '<div class="options">';
+    ['A','B','C','D'].forEach(l => {
       if (!q.options[l]) return;
-      var cls = 'option';
-      if (corrected) { cls += ' locked'; if (l === q.answer) cls += ' opt-correct'; if (a && l === a && a !== q.answer) cls += ' opt-wrong'; }
-      else { if (a === l) cls += ' picked'; }
-      h += '<div class="' + cls + '" onclick="pick(' + q.id + ',\'' + l + '\')"><span class="letter">' + l + '</span><span class="option-text">' + esc(q.options[l]) + '</span></div>';
+      let cls = 'option';
+      if (corrected) {
+        cls += ' locked';
+        if (l === q.answer) cls += ' opt-correct';
+        if (a && l === a && a !== q.answer) cls += ' opt-wrong';
+      } else {
+        if (a === l) cls += ' picked';
+      }
+      h += '<div class="' + cls + '" onclick="pick(' + q.id + ',\'' + l + '\')">';
+      h += '<span class="letter">' + l + '</span>';
+      h += '<span class="option-text">' + esc(q.options[l]) + '</span>';
+      h += '</div>';
     });
     h += '</div>';
     if (corrected && (!a || a !== q.answer)) {
+      var correctText = q.options[q.answer] || '';
       h += '<div class="explanation-box">';
-      if (a) { h += '<span class="exp-wrong">✗ Hai risposto <strong>' + a + '</strong>: ' + esc(q.options[a] || '') + '</span><br>'; }
-      else { h += '<span class="exp-wrong">✗ Non hai risposto</span><br>'; }
-      h += '<span class="exp-correct">✓ Risposta corretta: <strong>' + q.answer + '</strong> — ' + esc(q.options[q.answer] || '') + '</span></div>';
+      if (a) {
+        var wrongText = q.options[a] || '';
+        h += '<span class="exp-wrong">✗ Hai risposto <strong>' + a + '</strong>: ' + esc(wrongText) + '</span><br>';
+      } else {
+        h += '<span class="exp-wrong">✗ Non hai risposto</span><br>';
+      }
+      h += '<span class="exp-correct">✓ Risposta corretta: <strong>' + q.answer + '</strong> — ' + esc(correctText) + '</span>';
+      h += '</div>';
     }
     h += '</div>';
   });
   c.innerHTML = h;
-  var done = questions.filter(function(q) { return answers[q.id]; }).length;
+  const done = questions.filter(q => answers[q.id]).length;
   document.getElementById('progressFill').style.width = Math.round(done / questions.length * 100) + '%';
   document.getElementById('quizInfo').textContent = done + ' / ' + questions.length + ' risposte';
 }
 
-async function correggi() {
+function correggi() {
   corrected = true;
-  var elapsed = stopTimer();
-  var tot = questions.length;
-  var done = questions.filter(function(q) { return answers[q.id]; }).length;
-  var ok = questions.filter(function(q) { return answers[q.id] === q.answer; }).length;
-  var ko = done - ok; var empty = tot - done;
-  if (!isGuestMode && currentUser) {
-    await saveAnswersToSupabase(questions, answers);
-    saveSessionToSupabase(category === 'all' ? 'all' : category, tot, ok, ko, empty, elapsed, Math.round(ok / tot * 100));
-  } else {
-    var wrongIds = questions.filter(function(q) { return answers[q.id] !== q.answer; }).map(function(q) { return q.id; });
-    if (wrongIds.length > 0) unmarkWrongQuestions(wrongIds, category);
-  }
-  var pct = Math.round(ok / tot * 100);
-  var icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
+  const elapsed = stopTimer();
+  const tot = questions.length;
+  const done = questions.filter(q => answers[q.id]).length;
+  const ok = questions.filter(q => answers[q.id] === q.answer).length;
+  const ko = done - ok;
+  const empty = tot - done;
+  // Rimetti in gioco le domande sbagliate o non risposte
+  const wrongIds = questions.filter(q => answers[q.id] !== q.answer).map(q => q.id);
+  if (wrongIds.length > 0) unmarkWrongQuestions(wrongIds, category);
+  const pct = Math.round(ok / tot * 100);
+  const icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
   document.getElementById('rIcon').textContent = icon;
   document.getElementById('rScore').textContent = pct + '%';
-  var d = '<span class="green">✓ ' + ok + ' corrette</span>';
+  let d = '<span class="green">✓ ' + ok + ' corrette</span>';
   if (ko) d += ' · <span class="red">✗ ' + ko + ' errate</span>';
   if (empty) d += ' · <span class="orange">— ' + empty + ' senza risposta</span>';
   document.getElementById('rDetail').innerHTML = d;
@@ -739,132 +414,18 @@ async function correggi() {
 }
 
 function rivediErrori() {
-  for (var i = 0; i < questions.length; i++) {
-    var q = questions[i]; var a = answers[q.id];
-    if (!a || a !== q.answer) { document.getElementById('q-' + q.id).scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-  }
-}
-
-// === STATS ===
-async function showStats() {
-  if (isGuestMode || !currentUser) {
-    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Le statistiche sono disponibili solo con un account.</div>';
-    document.getElementById('homePage').classList.remove('visible');
-    document.getElementById('quizPage').style.display = 'none';
-    document.getElementById('statsPage').classList.add('visible');
-    return;
-  }
-  document.getElementById('homePage').classList.remove('visible');
-  document.getElementById('quizPage').style.display = 'none';
-  document.getElementById('statsPage').classList.add('visible');
-  document.getElementById('statsContent').innerHTML = '<div class="stats-empty"><div class="spinner"></div><br>Caricamento...</div>';
-  try {
-    var allAnswers = [];
-    var pgSize = 1000;
-    var pgFrom = 0;
-    while (true) {
-      var page = await sb.from('user_answers').select('question_id, category, is_correct, answered_at').eq('user_id', currentUser.id).order('answered_at', { ascending: false }).range(pgFrom, pgFrom + pgSize - 1);
-      if (page.error) throw page.error;
-      if (page.data) allAnswers = allAnswers.concat(page.data);
-      if (!page.data || page.data.length < pgSize) break;
-      pgFrom += pgSize;
+  for (const q of questions) {
+    const a = answers[q.id];
+    if (!a || a !== q.answer) {
+      document.getElementById('q-' + q.id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
     }
-    var r1 = { data: allAnswers, error: null };
-    var r2 = await sb.from('quiz_sessions').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(20);
-    if (r1.error) throw r1.error;
-    if (r2.error) throw r2.error;
-    renderStats(r1.data || [], r2.data || []);
-  } catch (err) {
-    console.error('Stats error:', err);
-    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Errore nel caricamento.</div>';
   }
 }
 
-function renderStats(allAnswers, sessions) {
-  if (allAnswers.length === 0) {
-    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Nessun quiz completato ancora. Inizia a studiare!</div>';
-    return;
-  }
-  var totalAnswers = allAnswers.length;
-  var correctAnswers = allAnswers.filter(function(a) { return a.is_correct; }).length;
-  var wrongAnswers = totalAnswers - correctAnswers;
-  var globalPct = Math.round(correctAnswers / totalAnswers * 100);
-  var lastPerQ = {};
-  allAnswers.forEach(function(a) { if (!lastPerQ[a.question_id]) lastPerQ[a.question_id] = a; });
-  var uniqueMastered = Object.values(lastPerQ).filter(function(a) { return a.is_correct; }).length;
-  var totalQ = quizData.length;
-  var cats = []; var catSet = {};
-  quizData.forEach(function(q) { if (!catSet[q.category]) { catSet[q.category] = true; cats.push(q.category); } });
-  cats.sort();
-  var catStats = {};
-  cats.forEach(function(cat) {
-    var catTotal = quizData.filter(function(q) { return q.category === cat; }).length;
-    var catAnswers = Object.values(lastPerQ).filter(function(a) { return a.category === cat; });
-    var catMastered = catAnswers.filter(function(a) { return a.is_correct; }).length;
-    var allCatAnswers = allAnswers.filter(function(a) { return a.category === cat; });
-    var allCatCorrect = allCatAnswers.filter(function(a) { return a.is_correct; }).length;
-    var correctPct = allCatAnswers.length > 0 ? Math.round(allCatCorrect / allCatAnswers.length * 100) : 0;
-    catStats[cat] = { total: catTotal, mastered: catMastered, pct: Math.round(catMastered / catTotal * 100), correctPct: correctPct, allCorrect: allCatCorrect, allTotal: allCatAnswers.length };
-  });
-  var html = '';
-  html += '<div class="stat-card"><h3>Panoramica Generale</h3><div class="stat-row">';
-  html += '<div class="stat-box"><div class="stat-num blue">' + uniqueMastered + '/' + totalQ + '</div><div class="stat-lbl">Completate</div></div>';
-  html += '<div class="stat-box"><div class="stat-num green">' + globalPct + '%</div><div class="stat-lbl">Corrette</div></div>';
-  html += '<div class="stat-box"><div class="stat-num blue">' + sessions.length + '</div><div class="stat-lbl">Quiz svolti</div></div>';
-  html += '</div></div>';
-  html += '<div class="stat-card"><h3>Risposte Totali</h3><div class="stat-row">';
-  html += '<div class="stat-box"><div class="stat-num blue">' + totalAnswers + '</div><div class="stat-lbl">Totali</div></div>';
-  html += '<div class="stat-box"><div class="stat-num green">' + correctAnswers + '</div><div class="stat-lbl">Corrette</div></div>';
-  html += '<div class="stat-box"><div class="stat-num red">' + wrongAnswers + '</div><div class="stat-lbl">Sbagliate</div></div>';
-  html += '</div></div>';
-  html += '<div class="stat-card"><h3>Progressione per Categoria</h3>';
-  cats.forEach(function(cat) {
-    var s = catStats[cat];
-    var correctColor = s.correctPct >= 80 ? '#16a34a' : s.correctPct >= 60 ? '#ea580c' : '#dc2626';
-    html += '<div class="progress-cat"><div class="progress-cat-header"><span class="progress-cat-name">' + esc(cat) + '</span>';
-    html += '<span class="progress-cat-pct">' + s.mastered + '/' + s.total + ' (' + s.pct + '%)';
-    if (s.allTotal > 0) html += ' · <span style="color:' + correctColor + '">' + s.correctPct + '% corrette</span>';
-    html += '</span></div>';
-    html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + s.pct + '%"></div></div></div>';
-  });
-  var totalPct = Math.round(uniqueMastered / totalQ * 100);
-  var totalCorrectPct = totalAnswers > 0 ? globalPct : 0;
-  var totalCorrectColor = totalCorrectPct >= 80 ? '#16a34a' : totalCorrectPct >= 60 ? '#ea580c' : '#dc2626';
-  html += '<div class="progress-cat" style="margin-top:8px;padding-top:12px;border-top:2px solid #e2e8f0"><div class="progress-cat-header">';
-  html += '<span class="progress-cat-name" style="font-weight:700">TOTALE</span>';
-  html += '<span class="progress-cat-pct">' + uniqueMastered + '/' + totalQ + ' (' + totalPct + '%)';
-  if (totalAnswers > 0) html += ' · <span style="color:' + totalCorrectColor + '">' + totalCorrectPct + '% corrette</span>';
-  html += '</span></div>';
-  html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + totalPct + '%"></div></div></div></div>';
-  if (sessions.length > 0) {
-    html += '<div class="stat-card"><h3>Ultimi Quiz</h3>';
-    sessions.forEach(function(s) {
-      var date = new Date(s.created_at);
-      var dateStr = date.toLocaleDateString('it-IT', { day: '2-digit', month: 'short', year: 'numeric' });
-      var timeStr = date.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
-      var catLabel = s.category === 'all' ? 'Tutte' : s.category;
-      var scoreCls = s.score_pct >= 80 ? 'green' : s.score_pct >= 60 ? 'orange' : 'red';
-      html += '<div class="session-item"><div class="session-info"><div class="session-cat">' + esc(catLabel) + ' — ' + s.total_questions + ' domande</div>';
-      html += '<div class="session-date">' + dateStr + ' alle ' + timeStr + ' · ' + formatTime(s.elapsed_seconds) + '</div></div>';
-      html += '<div><div class="session-score ' + scoreCls + '">' + s.score_pct + '%</div>';
-      html += '<div class="session-detail">' + s.correct_count + '/' + s.total_questions + '</div></div></div>';
-    });
-    html += '</div>';
-  }
-  document.getElementById('statsContent').innerHTML = html;
-}
+function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
 
-function hideStats() {
-  document.getElementById('statsPage').classList.remove('visible');
-  document.getElementById('homePage').classList.add('visible');
-  window.scrollTo({ top: 0 });
-}
-
-// Enter key per login
-document.getElementById('authPassword').addEventListener('keydown', function(e) { if (e.key === 'Enter') handleAuth(); });
-
-// Avvia
-checkSession();
+initHome();
 </script>
 </body>
 </html>

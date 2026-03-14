@@ -288,8 +288,8 @@ const quizData = [
       "C": "Soprattutto nelle prime tre fasce d’eta (dai 4 ai 24 mesi)",
       "D": "Soprattutto nelle prime due fasce d’eta (dai 4 ai 18 mesi)"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. Soprattutto nelle prime tre fasce d’età (dai 4 ai 24 mesi).",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Soprattutto nelle prime due fasce d’eta (dai 4 ai 18 mesi).",
     "category": "Attività speciali",
     "manualPages": [
       293,
@@ -541,7 +541,7 @@ const quizData = [
   },
   {
     "id": 28,
-    "question": "Nel nuoto in gravidanza la temperatura dell'acqua consigliata è:",
+    "question": "Nel nuoto in gravidanza la temperatura dell’acqua consigliata è:",
     "options": {
       "A": "Tra 23 e 25°C",
       "B": "Tra 27 e 30°C",
@@ -1003,13 +1003,13 @@ const quizData = [
     "id": 51,
     "question": "Uno dei cambiamenti più evidenti legati all’invecchiamento è:",
     "options": {
-      "A": "Perdita di massa magra e riduzione percentuale dell'acqua intracellulare",
-      "B": "Perdita di massa grassa e riduzione percentuale dell'acqua intracellulare",
-      "C": "Perdita di massa magra e scomparsa dell'acqua intracellulare",
-      "D": "Perdita di massa magra e aumento percentuale dell'acqua intracellulare"
+      "A": "Perdita di massa magra e riduzione percentuale dell’acqua intracellulare",
+      "B": "Perdita di massa grassa e riduzione percentuale dell’acqua intracellulare",
+      "C": "Perdita di massa magra e scomparsa dell’acqua intracellulare",
+      "D": "Perdita di massa magra e aumento percentuale dell’acqua intracellulare"
     },
     "answer": "A",
-    "explanation": "La risposta corretta è A. Perdita di massa magra e riduzione percentuale dell'acqua intracellulare.",
+    "explanation": "La risposta corretta è A. Perdita di massa magra e riduzione percentuale dell’acqua intracellulare.",
     "category": "Attività speciali",
     "manualPages": [
       163,
@@ -2428,8 +2428,8 @@ const quizData = [
       "C": "Trasportare sostanze nutritive",
       "D": "Fluidificare la muscolatura"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. Trasportare sostanze nutritive.",
+    "answer": "A",
+    "explanation": "La risposta corretta è A. Trasportare l’ossigeno.",
     "category": "Biofisiologia",
     "manualPages": [
       60,
@@ -2497,7 +2497,7 @@ const quizData = [
       67
     ],
     "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
-    "manualExcerpt": "In relazione all’altezza dell'acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 126,
@@ -2517,7 +2517,7 @@ const quizData = [
       67
     ],
     "manualSection": "7.5.2.2. CENTRO DI GALLEGGIAMENTO",
-    "manualExcerpt": "In relazione all’altezza dell'acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 127,
@@ -3077,7 +3077,7 @@ const quizData = [
       378
     ],
     "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 155,
@@ -3363,7 +3363,7 @@ const quizData = [
     "id": 169,
     "question": "Cosa deve conoscere un istruttore di aquagym?",
     "options": {
-      "A": "La profondità dell'acqua",
+      "A": "La profondità dell’acqua",
       "B": "I tempi minimi e massimi di esecuzione del gesto",
       "C": "I nomi degli allievi",
       "D": "I codici di comunicazione del nuoto agonistico"
@@ -3537,7 +3537,7 @@ const quizData = [
       132
     ],
     "manualSection": "7.5.1. PREMESSA",
-    "manualExcerpt": "In relazione all’altezza dell'acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 178,
@@ -3626,10 +3626,10 @@ const quizData = [
       "A": "L’istruttore, la musica, tipo di vasca",
       "B": "L’inquadramento professionale dell’istruttore",
       "C": "La musica, il bordo, la strumentazione",
-      "D": "La profondità, la tipologia di allievi, la temperatura dell'acqua"
+      "D": "La profondità, la tipologia di allievi, la temperatura dell’acqua"
     },
     "answer": "D",
-    "explanation": "La risposta corretta è D. La profondità, la tipologia di allievi, la temperatura dell'acqua.",
+    "explanation": "La risposta corretta è D. La profondità, la tipologia di allievi, la temperatura dell’acqua.",
     "category": "Fitness in acqua",
     "manualPages": [
       160,
@@ -3648,8 +3648,8 @@ const quizData = [
       "C": "La massa corporea non condiziona l’esecuzione di un esercizio a terra",
       "D": "Non vi è alcuna differenza"
     },
-    "answer": "B",
-    "explanation": "La risposta corretta è B. La massa corporea non condiziona l’esecuzione di un esercizio in acqua.",
+    "answer": "A",
+    "explanation": "La risposta corretta è A. La massa corporea non condiziona l’esecuzione di un esercizio a terra.",
     "category": "Fitness in acqua",
     "manualPages": [
       163,
@@ -3737,7 +3737,7 @@ const quizData = [
       149
     ],
     "manualSection": "7.5.1. PREMESSA",
-    "manualExcerpt": "In relazione all’altezza dell'acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 188,
@@ -4186,7 +4186,7 @@ const quizData = [
       "A": "Capacità di esercitare un controllo dinamico dell’azione motoria all’interno di una situazione, che può presentare continue variazioni",
       "B": "Capacità di esercitare un controllo emotivo durante una prestazione sportiva",
       "C": "Capacità di conformarsi alle aspettative dell’insegnante",
-      "D": "Capacità di adattarsi alle diverse temperature dell'acqua"
+      "D": "Capacità di adattarsi alle diverse temperature dell’acqua"
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Capacità di esercitare un controllo dinamico dell’azione motoria all’interno di una situazione, che può presentare continue variazioni.",
@@ -4357,7 +4357,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 219,
@@ -4717,7 +4717,7 @@ const quizData = [
       163
     ],
     "manualSection": "4.8.1. L’AMBIENTAMENTO",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 10 1.6 EVOLUZIONE DEL COMPORTAMENTO ACQUATICO. SVILUPPO DELLA SENSOPERCEZIONE. COSTRUZIONE DI ABILITÀ MOTORIE NEGLI SPORT ACQUATICI"
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 10 1.6 EVOLUZIONE DEL COMPORTAMENTO ACQUATICO. SVILUPPO DELLA SENSOPERCEZIONE. COSTRUZIONE DI ABILITÀ MOTORIE NEGLI SPORT ACQUATICI"
   },
   {
     "id": 237,
@@ -5268,9 +5268,9 @@ const quizData = [
       "C": "Un’abilità appresa",
       "D": "Nessuna delle tre opzioni"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. Nessuna delle tre opzioni.",
-    "category": "La cultura dell’acqua",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. Un’abilità appresa.",
+    "category": "La cultura dell'acqua",
     "manualPages": [
       350,
       12,
@@ -5357,7 +5357,7 @@ const quizData = [
       97
     ],
     "manualSection": "4.9.2. PERMANENZA IN ACQUA",
-    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell'acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
+    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell’acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
   },
   {
     "id": 269,
@@ -5397,7 +5397,7 @@ const quizData = [
       275
     ],
     "manualSection": "4.9.2. PERMANENZA IN ACQUA",
-    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell'acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
+    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell’acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
   },
   {
     "id": 271,
@@ -5877,7 +5877,7 @@ const quizData = [
       245
     ],
     "manualSection": "4.12.1 PREMESSA",
-    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell'acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
+    "manualExcerpt": "L’ambientamento acquatico trova la sua ragione di esistere all’interno della nuova c ultura dell’acqua , la quale pone come obiettivo primario della scuola nuoto l’imparare a stare bene in acqua e non più il solo apprendimento della tecnica dei quattro stili ...."
   },
   {
     "id": 295,
@@ -6617,7 +6617,7 @@ const quizData = [
       70
     ],
     "manualSection": "4.2 J.",
-    "manualExcerpt": "In relazione all’altezza dell'acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
+    "manualExcerpt": "In relazione all’altezza dell’acqua ed alla posizione del corpo bisogna ritrovare un nuovo equilibrio acquatico caratterizzato dalla totale assenza di appoggi fissi...."
   },
   {
     "id": 332,
@@ -7103,13 +7103,13 @@ const quizData = [
     "id": 356,
     "question": "Indica le principali cause di paura:",
     "options": {
-      "A": "Esperienza diretta negativa dell'acqua",
-      "B": "Esperienza diretta negativa dell'acqua, esperienze indirette, imitazione dei comportamenti di altri",
-      "C": "Esperienze raccontate circa la pericolosità dell'acqua",
+      "A": "Esperienza diretta negativa dell’acqua",
+      "B": "Esperienza diretta negativa dell’acqua, esperienze indirette, imitazione dei comportamenti di altri",
+      "C": "Esperienze raccontate circa la pericolosità dell’acqua",
       "D": "Tradizioni familiari"
     },
     "answer": "B",
-    "explanation": "La risposta corretta è B. Esperienza diretta negativa dell'acqua, esperienze indirette, imitazione dei comportamenti di altri.",
+    "explanation": "La risposta corretta è B. Esperienza diretta negativa dell’acqua, esperienze indirette, imitazione dei comportamenti di altri.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       163,
@@ -7397,7 +7397,7 @@ const quizData = [
       18
     ],
     "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 371,
@@ -7737,7 +7737,7 @@ const quizData = [
       252
     ],
     "manualSection": "7.5.1. PREMESSA",
-    "manualExcerpt": "Bambini: • Soffiare sopra l’acqua • Il motoscafo che affonda (soffiare a pelo dell'acqua e affondare) • Soffiare cercando di spostare delle palline galleggianti • Soffiare dentro l’acqua con il naso o con la bocca • Soffiare dentro l’acqua imitando una rana o un delfino • Gonfiare dei..."
+    "manualExcerpt": "Bambini: • Soffiare sopra l’acqua • Il motoscafo che affonda (soffiare a pelo dell’acqua e affondare) • Soffiare cercando di spostare delle palline galleggianti • Soffiare dentro l’acqua con il naso o con la bocca • Soffiare dentro l’acqua imitando una rana o un delfino • Gonfiare dei..."
   },
   {
     "id": 388,
@@ -7748,8 +7748,8 @@ const quizData = [
       "C": "Tra il termine della trazione e l’inizio del recupero",
       "D": "Ogni due cicli di bracciata"
     },
-    "answer": "C",
-    "explanation": "La risposta corretta è C. Tra il termine della trazione e l’inizio del recupero.",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. All’inizio della trazione.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       284,
@@ -8237,7 +8237,7 @@ const quizData = [
       283
     ],
     "manualSection": "4.12.2.2. CRAWL",
-    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell'acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
+    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell’acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
   },
   {
     "id": 413,
@@ -9108,8 +9108,8 @@ const quizData = [
       "C": "Equilibratrice",
       "D": "Conservatrice"
     },
-    "answer": "B",
-    "explanation": "La risposta corretta è B. Stabilizzatrice.",
+    "answer": "A",
+    "explanation": "La risposta corretta è A. Propulsiva.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       284,
@@ -9144,12 +9144,12 @@ const quizData = [
     "question": "Nella nuotata a rana l’inspirazione avviene quando:",
     "options": {
       "A": "Sia gli arti inferiori che quelli superiori sono completamente distesi",
-      "B": "Le spalle si trovano sopra la superficie dell'acqua",
+      "B": "Le spalle si trovano sopra la superficie dell’acqua",
       "C": "Le braccia sono distese e le gambe sono flesse",
       "D": "Le mani sono in fase di appoggio/presa"
     },
     "answer": "B",
-    "explanation": "La risposta corretta è B. Le spalle si trovano sopra la superficie dell'acqua.",
+    "explanation": "La risposta corretta è B. Le spalle si trovano sopra la superficie dell’acqua.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       31,
@@ -9168,8 +9168,8 @@ const quizData = [
       "C": "Alla fine del recupero delle braccia",
       "D": "Quando il corpo è in completa estensione"
     },
-    "answer": "B",
-    "explanation": "La risposta corretta è B. Tra la trazione e il recupero delle braccia.",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. Alla fine del recupero delle braccia.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       32,
@@ -9566,7 +9566,7 @@ const quizData = [
       "A": "Simultaneamente",
       "B": "È sufficiente solo il tocco di una mano",
       "C": "Basta toccare la parete con una qualsiasi parte del corpo",
-      "D": "Tassativamente sotto il pelo dell'acqua"
+      "D": "Tassativamente sotto il pelo dell’acqua"
     },
     "answer": "A",
     "explanation": "La risposta corretta è A. Simultaneamente.",
@@ -9697,7 +9697,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 486,
@@ -9817,7 +9817,7 @@ const quizData = [
       67
     ],
     "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 492,
@@ -9945,7 +9945,7 @@ const quizData = [
     "options": {
       "A": "Perché la posizione in acqua è più inclinata rispetto agli altri stili",
       "B": "Perché è uno stile discontinuo",
-      "C": "Perché la testa rompe la superficie dell'acqua ad ogni bracciata",
+      "C": "Perché la testa rompe la superficie dell’acqua ad ogni bracciata",
       "D": "Perché non c’è la fase di spinta nella bracciata"
     },
     "answer": "B",
@@ -10426,7 +10426,7 @@ const quizData = [
       "A": "Ruotare sul dorso",
       "B": "Superare la linea dei 15 metri durante la fase subacquea di nuotata",
       "C": "Effettuare movimenti alternati delle braccia o delle gambe",
-      "D": "Portare i gomiti oltre la superficie dell'acqua (ad eccezione dell’ultima bracciata di ogni vasca e durante la virata)"
+      "D": "Portare i gomiti oltre la superficie dell’acqua (ad eccezione dell’ultima bracciata di ogni vasca e durante la virata)"
     },
     "answer": "B",
     "explanation": "La risposta corretta è B. Superare la linea dei 15 metri durante la fase subacquea di nuotata.",
@@ -11083,7 +11083,7 @@ const quizData = [
     "id": 555,
     "question": "Quando si può ritenere che la fase dell’ambientamento sia superata?",
     "options": {
-      "A": "Appena l’allievo ha acquisito una buona padronanza dell'acqua.",
+      "A": "Appena l’allievo ha acquisito una buona padronanza dell’acqua.",
       "B": "Quando l’allievo si sa tuffare",
       "C": "Quando l’allievo galleggia sul petto e sul dorso, affonda e si sa spostare con il corpo rilassato",
       "D": "Quando l’allievo sa rimanere almeno 30 secondi in apnea"
@@ -11097,7 +11097,7 @@ const quizData = [
       249
     ],
     "manualSection": "4.12.2.2. CRAWL",
-    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell'acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
+    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell’acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
   },
   {
     "id": 556,
@@ -11166,10 +11166,10 @@ const quizData = [
       "A": "Per i tempi di inspirazione ed espirazione",
       "B": "Per il differente utilizzo di bocca/naso",
       "C": "Per le difficoltà nell’inspirazione, in quanto il viso deve uscire dall’acqua",
-      "D": "Perché l’espirazione è forzata in quanto deve vincere la maggior pressione dell'acqua"
+      "D": "Perché l’espirazione è forzata in quanto deve vincere la maggior pressione dell’acqua"
     },
     "answer": "D",
-    "explanation": "La risposta corretta è D. Perché l’espirazione è forzata in quanto deve vincere la maggior pressione dell'acqua.",
+    "explanation": "La risposta corretta è D. Perché l’espirazione è forzata in quanto deve vincere la maggior pressione dell’acqua.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       183,
@@ -11317,7 +11317,7 @@ const quizData = [
       332
     ],
     "manualSection": "4.12.2.2. CRAWL",
-    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell'acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
+    "manualExcerpt": "Ma l’allievo deve aver acquisito anche altre competenze nella fase di ambientamento, come la capacità di galleggiare e di scivolare sulla superficie dell’acqua in posizione prona, saper effettuare delle brevi apnee, galleggiare e scivolare sott’acqua e a mezz’acqua, controllando l’immersione o..."
   },
   {
     "id": 567,
@@ -11776,7 +11776,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 590,
@@ -11916,7 +11916,7 @@ const quizData = [
       292
     ],
     "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 597,
@@ -11956,7 +11956,7 @@ const quizData = [
       18
     ],
     "manualSection": "4.14.7.3. NUOTATA A FARFALLA",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 599,
@@ -11996,7 +11996,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 601,
@@ -12036,7 +12036,7 @@ const quizData = [
       67
     ],
     "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 603,
@@ -12176,7 +12176,7 @@ const quizData = [
       278
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 610,
@@ -12256,7 +12256,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 614,
@@ -12264,7 +12264,7 @@ const quizData = [
     "options": {
       "A": "La quantità di materia presente in un volume",
       "B": "la forza esercitata da un fluido in quiete su ogni superficie a contatto con esso",
-      "C": "La viscosità dell'acqua",
+      "C": "La viscosità dell’acqua",
       "D": "È quella forza che si oppone al movimento di un corpo in un fluido"
     },
     "answer": "A",
@@ -12296,7 +12296,7 @@ const quizData = [
       149
     ],
     "manualSection": "7.3 ",
-    "manualExcerpt": "Nelle lezioni di fitness in acqua con il corpo in verticale l’equilibrio viene stimolato in maniera differente a seconda dell’altezza dell'acqua: più l’acqua è bassa e meno la spinta di galleggiamento (spinta idrostatica) potrà variare la posizione verticale, ma lo spostamento del corpo nelle..."
+    "manualExcerpt": "Nelle lezioni di fitness in acqua con il corpo in verticale l’equilibrio viene stimolato in maniera differente a seconda dell’altezza dell’acqua: più l’acqua è bassa e meno la spinta di galleggiamento (spinta idrostatica) potrà variare la posizione verticale, ma lo spostamento del corpo nelle..."
   },
   {
     "id": 616,
@@ -12364,7 +12364,7 @@ const quizData = [
     "options": {
       "A": "La quantità di materia presente in un volume",
       "B": "La forza esercitata da un fluido in quiete su ogni superficie a contatto con esso",
-      "C": "La viscosità dell'acqua",
+      "C": "La viscosità dell’acqua",
       "D": "È quella forza che si oppone al movimento di un corpo in un fluido"
     },
     "answer": "B",
@@ -12384,7 +12384,7 @@ const quizData = [
     "options": {
       "A": "La quantità di materia presente in un volume",
       "B": "La forza esercitata da un fluido in quiete su ogni superficie a contatto con esso",
-      "C": "La viscosità dell'acqua",
+      "C": "La viscosità dell’acqua",
       "D": "È quella forza che si oppone al movimento di un corpo in un fluido"
     },
     "answer": "D",
@@ -12396,7 +12396,7 @@ const quizData = [
       168
     ],
     "manualSection": "7.5.1. PREMESSA",
-    "manualExcerpt": "Fig.5: dimostrazione della tensione superficiale dell'acqua. L ’insetto si appoggia sull’acqua che riesce a sostenerlo. Questo è possibile grazie alla tensione superficiali dell'acqua e al peso esiguo dell’insetto...."
+    "manualExcerpt": "Fig.5: dimostrazione della tensione superficiale dell’acqua. L ’insetto si appoggia sull’acqua che riesce a sostenerlo. Questo è possibile grazie alla tensione superficiali dell’acqua e al peso esiguo dell’insetto...."
   },
   {
     "id": 621,
@@ -12516,7 +12516,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 627,
@@ -12836,7 +12836,7 @@ const quizData = [
       14
     ],
     "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 643,
@@ -12896,7 +12896,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 646,
@@ -12962,13 +12962,13 @@ const quizData = [
     "id": 649,
     "question": "Il galleggiamento del corpo avviene quando:",
     "options": {
-      "A": "Il suo peso specifico è minore del peso specifico dell'acqua",
-      "B": "Il suo peso specifico è maggiore del peso specifico dell'acqua",
+      "A": "Il suo peso specifico è minore del peso specifico dell’acqua",
+      "B": "Il suo peso specifico è maggiore del peso specifico dell’acqua",
       "C": "Si esercita una pressione verso il basso utilizzando movimenti di remata",
       "D": "Vengono applicati sostegni al baricentro"
     },
     "answer": "A",
-    "explanation": "La risposta corretta è A. Il suo peso specifico è minore del peso specifico dell'acqua.",
+    "explanation": "La risposta corretta è A. Il suo peso specifico è minore del peso specifico dell’acqua.",
     "category": "Metodologia",
     "manualPages": [
       165,
@@ -13336,7 +13336,7 @@ const quizData = [
       182
     ],
     "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 668,
@@ -13556,7 +13556,7 @@ const quizData = [
       163
     ],
     "manualSection": "7.3 ",
-    "manualExcerpt": "Nelle lezioni di fitness in acqua con il corpo in verticale l’equilibrio viene stimolato in maniera differente a seconda dell’altezza dell'acqua: più l’acqua è bassa e meno la spinta di galleggiamento (spinta idrostatica) potrà variare la posizione verticale, ma lo spostamento del corpo nelle..."
+    "manualExcerpt": "Nelle lezioni di fitness in acqua con il corpo in verticale l’equilibrio viene stimolato in maniera differente a seconda dell’altezza dell’acqua: più l’acqua è bassa e meno la spinta di galleggiamento (spinta idrostatica) potrà variare la posizione verticale, ma lo spostamento del corpo nelle..."
   },
   {
     "id": 679,
@@ -13567,8 +13567,8 @@ const quizData = [
       "C": "È regolato prevalentemente dalle informazioni dell’analizzatore cinestesico e tattile",
       "D": "È regolato prevalentemente dalle informazioni dell’analizzatore ottico e vestibolare"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. L’equilibrio è regolato prevalentemente dalle informazioni dell’analizzatore ottico e vestibolare.",
+    "answer": "C",
+    "explanation": "La risposta corretta è C. È regolato prevalentemente dalle informazioni dell’analizzatore cinestesico e tattile.",
     "category": "Metodologia",
     "manualPages": [
       379,
@@ -13736,7 +13736,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 688,
@@ -13876,7 +13876,7 @@ const quizData = [
       68
     ],
     "manualSection": "5.1.2.1.2. CAPACI TÀ CONDIZIONALI",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 695,
@@ -13936,7 +13936,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 698,
@@ -14102,13 +14102,13 @@ const quizData = [
     "id": 706,
     "question": "La resistenza d’onda è dovuta:",
     "options": {
-      "A": "Alla particolare resistenza della superficie dell'acqua.",
-      "B": "Ai movimenti circolari dell'acqua che risucchiano il corpo.",
-      "C": "Ai movimenti superficiali dell'acqua che condizionano l’avanzata. del corpo",
+      "A": "Alla particolare resistenza della superficie dell’acqua.",
+      "B": "Ai movimenti circolari dell’acqua che risucchiano il corpo.",
+      "C": "Ai movimenti superficiali dell’acqua che condizionano l’avanzata. del corpo",
       "D": "Alla percentuale di massa grassa del nuotatore"
     },
     "answer": "C",
-    "explanation": "La risposta corretta è C. Ai movimenti superficiali dell'acqua che condizionano l’avanzata. del corpo.",
+    "explanation": "La risposta corretta è C. Ai movimenti superficiali dell’acqua che condizionano l’avanzata. del corpo.",
     "category": "Metodologia",
     "manualPages": [
       163,
@@ -14124,7 +14124,7 @@ const quizData = [
     "options": {
       "A": "Alla superficie del piano perpendicolare all’asse di avanzamento",
       "B": "Allo sfregamento del corpo con le molecole d’acqua",
-      "C": "Ai movimenti superficiali dell'acqua che condizionano l’avanzata. del corpo",
+      "C": "Ai movimenti superficiali dell’acqua che condizionano l’avanzata. del corpo",
       "D": "Alla percentuale di massa grassa del nuotatore"
     },
     "answer": "B",
@@ -14142,13 +14142,13 @@ const quizData = [
     "id": 708,
     "question": "La resistenza di superficie o tensione superficiale è dovuta:",
     "options": {
-      "A": "Alla particolare resistenza della superficie dell'acqua",
-      "B": "Ai movimenti circolari dell'acqua che risucchiano il corpo",
+      "A": "Alla particolare resistenza della superficie dell’acqua",
+      "B": "Ai movimenti circolari dell’acqua che risucchiano il corpo",
       "C": "Allo sfregamento del corpo con le molecole d’acqua",
       "D": "Alla percentuale di massa grassa del nuotatore"
     },
     "answer": "A",
-    "explanation": "La risposta corretta è A. Alla particolare resistenza della superficie dell'acqua.",
+    "explanation": "La risposta corretta è A. Alla particolare resistenza della superficie dell’acqua.",
     "category": "Metodologia",
     "manualPages": [
       168,
@@ -14156,19 +14156,19 @@ const quizData = [
       305
     ],
     "manualSection": "7.5.2.7. MECCANICA DEI FLUIDI",
-    "manualExcerpt": "Fig.5: dimostrazione della tensione superficiale dell'acqua. L ’insetto si appoggia sull’acqua che riesce a sostenerlo. Questo è possibile grazie alla tensione superficiali dell'acqua e al peso esiguo dell’insetto...."
+    "manualExcerpt": "Fig.5: dimostrazione della tensione superficiale dell’acqua. L ’insetto si appoggia sull’acqua che riesce a sostenerlo. Questo è possibile grazie alla tensione superficiali dell’acqua e al peso esiguo dell’insetto...."
   },
   {
     "id": 709,
     "question": "La resistenza di vortice, o turbolenza, è dovuta:",
     "options": {
       "A": "Alla superficie del piano perpendicolare all’asse di avanzamento",
-      "B": "Ai movimenti circolari dell'acqua che risucchiano il corpo",
-      "C": "Ai movimenti superficiali dell'acqua che condizionano l’avanzata del corpo",
+      "B": "Ai movimenti circolari dell’acqua che risucchiano il corpo",
+      "C": "Ai movimenti superficiali dell’acqua che condizionano l’avanzata del corpo",
       "D": "Alla percentuale di massa grassa del nuotatore"
     },
     "answer": "B",
-    "explanation": "La risposta corretta è B. Ai movimenti circolari dell'acqua che risucchiano il corpo.",
+    "explanation": "La risposta corretta è B. Ai movimenti circolari dell’acqua che risucchiano il corpo.",
     "category": "Metodologia",
     "manualPages": [
       33,
@@ -14196,15 +14196,15 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 711,
     "question": "La resistenza frontale all’avanzamento in acqua è dovuta",
     "options": {
       "A": "Alla superficie del piano perpendicolare all’asse di avanzamento",
-      "B": "Alla particolare resistenza della superficie dell'acqua",
-      "C": "Ai movimenti circolari dell'acqua che risucchiano il corpo",
+      "B": "Alla particolare resistenza della superficie dell’acqua",
+      "C": "Ai movimenti circolari dell’acqua che risucchiano il corpo",
       "D": "Alla tipologia di prodotti usati per la clorazione"
     },
     "answer": "A",
@@ -14456,7 +14456,7 @@ const quizData = [
       160
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 724,
@@ -14536,7 +14536,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 728,
@@ -14956,7 +14956,7 @@ const quizData = [
       67
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 749,
@@ -15880,7 +15880,7 @@ const quizData = [
   },
   {
     "id": 795,
-    "question": "Qual è la temperatura dell'acqua migliore per attività motorie intense e prolungate?",
+    "question": "Qual è la temperatura dell’acqua migliore per attività motorie intense e prolungate?",
     "options": {
       "A": "27-28° C",
       "B": "30-31° C",
@@ -15956,7 +15956,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 799,
@@ -16016,7 +16016,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 802,
@@ -16236,7 +16236,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 813,
@@ -16256,7 +16256,7 @@ const quizData = [
       277
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 814,
@@ -16276,7 +16276,7 @@ const quizData = [
       41
     ],
     "manualSection": "5.1.2.1.1. CA PACITÀ COORDINATIVE",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 815,
@@ -16296,7 +16296,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 816,
@@ -16536,7 +16536,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 828,
@@ -16576,7 +16576,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 830,
@@ -16915,7 +16915,7 @@ const quizData = [
       14
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 847,
@@ -17015,7 +17015,7 @@ const quizData = [
       264
     ],
     "manualSection": "7.5.1. PREMESSA",
-    "manualExcerpt": "• Gambe a bicicle tta. Significa che non sono state rispettate le tappe di apprendimento dei propri allievi. Le gambe piegate aumentano considerevolmente la resistenza dell'acqua. • Piede a martello...."
+    "manualExcerpt": "• Gambe a bicicle tta. Significa che non sono state rispettate le tappe di apprendimento dei propri allievi. Le gambe piegate aumentano considerevolmente la resistenza dell’acqua. • Piede a martello...."
   },
   {
     "id": 852,
@@ -17075,7 +17075,7 @@ const quizData = [
       18
     ],
     "manualSection": "1.3.2. CAPACITÀ MOTORIE:",
-    "manualExcerpt": "1. La cultura dell'acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
+    "manualExcerpt": "1. La cultura dell’acqua – versione 1.3 4 ! Capacità di adattamento e trasformazione: consente di adattare il movimento alle diverse situazioni, specifiche della gara o legate a variazioni morfologiche/funzionali dell’allievo o Capacità coordinative speciali: la classificazione di queste capacità..."
   },
   {
     "id": 855,
@@ -17106,8 +17106,8 @@ const quizData = [
       "C": "Un’abilità motoria di secondo grado",
       "D": "Uno schema motorio evoluto"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. Uno schema motorio di base.",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Uno schema motorio evoluto.",
     "category": "Metodologia",
     "manualPages": [
       182,
@@ -17335,7 +17335,7 @@ const quizData = [
       28
     ],
     "manualSection": "7.5.1. PREMESSA",
-    "manualExcerpt": "Assetto in acqua: a causa delle elevate velocità, la posizione in acqua dei velocisti è più alta rispetto a quella dei fo ndisti. L e spalle e mergono maggiormente dall’acqua a causa della pressione dell'acqua stessa sul petto...."
+    "manualExcerpt": "Assetto in acqua: a causa delle elevate velocità, la posizione in acqua dei velocisti è più alta rispetto a quella dei fo ndisti. L e spalle e mergono maggiormente dall’acqua a causa della pressione dell’acqua stessa sul petto...."
   },
   {
     "id": 868,
