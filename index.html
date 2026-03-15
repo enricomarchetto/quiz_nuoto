@@ -639,13 +639,21 @@ async function saveSessionToSupabase(cat, total, correct, wrong, unanswered, ela
 }
 
 // === QUESTION POOL ===
+// Track delle domande viste nella sessione corrente (tra quiz successivi)
+var sessionSeenIds = new Set();
+
 function getUnseenPool(pool, cat) {
   var key = cat || 'all';
   if (!isGuestMode && currentUser) {
     var mastered = masteredQuestions[key] || new Set();
-    var unseen = pool.filter(function(q) { return !mastered.has(q.id); });
-    // Se non ci sono abbastanza domande non viste, ricicla il pool
-    // MA senza azzerare masteredQuestions (il contatore resta intatto)
+    // Escludi sia le domande già completate correttamente, sia quelle viste in questa sessione
+    var unseen = pool.filter(function(q) { return !mastered.has(q.id) && !sessionSeenIds.has(q.id); });
+    // Se non ci sono abbastanza domande non viste nella sessione, resetta solo la sessione
+    if (unseen.length < amount) {
+      sessionSeenIds.clear();
+      unseen = pool.filter(function(q) { return !mastered.has(q.id); });
+    }
+    // Se ANCHE tutte mastered, ricicla tutto il pool
     if (unseen.length < amount) {
       unseen = pool;
     }
@@ -665,18 +673,23 @@ function checkAllMastered() {
   return mastered >= quizData.length;
 }
 
-function resetProgress() {
+async function resetProgress() {
   masteredQuestions = {};
-  // Reset anche localStorage per guest mode
+  sessionSeenIds.clear();
   seenQuestions = {};
   saveSeenQuestions();
+  // Cancella anche i dati su Supabase così il counter non si ripopola al reload
+  if (!isGuestMode && currentUser) {
+    try {
+      await sb.from('user_answers').delete().eq('user_id', currentUser.id);
+      console.log('Risposte cancellate dal DB');
+    } catch (err) { console.error('Errore reset DB:', err); }
+  }
   updateUserStats();
   updateStart();
 }
 
 function showCompletionModal() {
-  // Auto-reset dei progressi
-  resetProgress();
   var overlay = document.createElement('div');
   overlay.id = 'completionOverlay';
   overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:9999;display:flex;align-items:center;justify-content:center;';
@@ -684,13 +697,19 @@ function showCompletionModal() {
   modal.style.cssText = 'background:#fff;border-radius:20px;padding:40px 32px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);';
   modal.innerHTML = '<div style="font-size:64px;margin-bottom:16px">🏆</div>' +
     '<h2 style="color:#1e40af;margin:0 0 12px">Complimenti!</h2>' +
-    '<p style="color:#475569;font-size:16px;margin:0 0 24px">Hai completato tutte le <strong>' + quizData.length + '</strong> domande correttamente! I progressi sono stati azzerati: si ricomincia da capo!</p>' +
-    '<div style="display:flex;gap:12px;justify-content:center">' +
-    '<button onclick="document.getElementById(\'completionOverlay\').remove()" style="padding:12px 24px;border-radius:12px;border:none;background:#1e40af;color:#fff;font-size:15px;font-weight:600;cursor:pointer">Ricomincia!</button>' +
+    '<p style="color:#475569;font-size:16px;margin:0 0 24px">Hai completato tutte le <strong>' + quizData.length + '</strong> domande correttamente!</p>' +
+    '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">' +
+    '<button onclick="resetAndClose()" style="padding:12px 24px;border-radius:12px;border:none;background:#1e40af;color:#fff;font-size:15px;font-weight:600;cursor:pointer">Azzera e ricomincia</button>' +
+    '<button onclick="document.getElementById(\'completionOverlay\').remove()" style="padding:12px 24px;border-radius:12px;border:2px solid #e2e8f0;background:#fff;color:#475569;font-size:15px;font-weight:600;cursor:pointer">Chiudi</button>' +
     '</div>';
   overlay.appendChild(modal);
   overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
   document.body.appendChild(overlay);
+}
+
+async function resetAndClose() {
+  document.getElementById('completionOverlay').remove();
+  await resetProgress();
 }
 
 function markAsSeen(ids, cat) {
@@ -851,6 +870,8 @@ function startQuiz() {
   var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
   var pool = getUnseenPool(fullPool, category);
   questions = shuffle(pool).slice(0, amount);
+  // Segna le domande come viste in questa sessione per evitare ripetizioni
+  questions.forEach(function(q) { sessionSeenIds.add(q.id); });
   if (isGuestMode || !currentUser) { markAsSeen(questions.map(function(q) { return q.id; }), category); }
   answers = {}; corrected = false;
   document.getElementById('homePage').classList.remove('visible');
