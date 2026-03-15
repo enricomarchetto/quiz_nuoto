@@ -32,13 +32,20 @@
   .auth-divider::before, .auth-divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
 
   /* User bar */
-  .user-bar { background: white; padding: 8px 16px; display: none; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; gap: 8px; flex-wrap: wrap; }
+  .user-bar { background: white; padding: 10px 16px; display: none; align-items: center; border-bottom: 2px solid #e2e8f0; gap: 10px; flex-wrap: wrap; }
   .user-bar.visible { display: flex; }
-  .user-email { font-size: 0.82em; color: #718096; }
-  .user-stats { font-size: 0.82em; color: #0077b6; font-weight: 600; }
-  .bar-btn { background: none; border: 1px solid #e2e8f0; color: #718096; padding: 6px 12px; border-radius: 6px; font-size: 0.8em; cursor: pointer; }
-  .bar-btn:hover { background: #f7fafc; }
-  .bar-btn-stats { color: #0077b6; border-color: #0077b6; }
+  .user-bar-left { display: flex; align-items: center; gap: 6px; flex: 1; min-width: 0; }
+  .user-email { font-size: 0.8em; color: #718096; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .user-stats { font-size: 0.75em; color: #0077b6; font-weight: 600; background: #ebf8ff; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .user-bar-actions { display: flex; gap: 6px; align-items: center; }
+  .bar-btn { background: none; border: 1.5px solid #e2e8f0; color: #718096; padding: 7px 14px; border-radius: 8px; font-size: 0.82em; cursor: pointer; font-weight: 500; transition: all 0.15s; white-space: nowrap; }
+  .bar-btn:hover { background: #f7fafc; border-color: #cbd5e0; }
+  .bar-btn-primary { background: #0077b6; color: white; border-color: #0077b6; }
+  .bar-btn-primary:hover { background: #005f8a; }
+  .bar-btn-secondary { color: #0077b6; border-color: #90cdf4; }
+  .bar-btn-secondary:hover { background: #ebf8ff; }
+  .bar-btn-logout { color: #e53e3e; border-color: #fed7d7; }
+  .bar-btn-logout:hover { background: #fff5f5; border-color: #fc8181; }
 
   /* HOME */
   .home { min-height: 100vh; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
@@ -198,6 +205,10 @@
     .didattica-cat-btn { padding: 5px 10px; font-size: 11px; }
     .didattica-page { padding: 10px; }
     .didattica-nav { position: static; width: 100%; max-height: none; }
+    .user-bar { padding: 8px 12px; gap: 6px; }
+    .user-bar-left { gap: 4px; flex-direction: column; align-items: flex-start; }
+    .user-bar-actions { gap: 4px; }
+    .bar-btn { padding: 6px 10px; font-size: 0.75em; }
 
     .home { padding: 20px 16px; }
     .home-title { font-size: 1.3em; }
@@ -247,7 +258,13 @@
     <div class="auth-error" id="authError"></div>
     <div class="auth-success" id="authSuccess"></div>
     <input type="email" class="auth-input" id="authEmail" placeholder="Email" autocomplete="email">
-    <input type="password" class="auth-input" id="authPassword" placeholder="Password" autocomplete="current-password">
+    <div style="position:relative;">
+      <input type="password" class="auth-input" id="authPassword" placeholder="Password" autocomplete="current-password" style="padding-right:48px;">
+      <button type="button" id="togglePwd" onclick="togglePassword()" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; padding:4px; font-size:1.2em; color:#718096; line-height:1;" title="Mostra/nascondi password">
+        <svg id="eyeIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <svg id="eyeOffIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+      </button>
+    </div>
     <button class="auth-btn" id="authBtn" onclick="handleAuth()">Accedi</button>
     <div class="auth-toggle" id="authToggle">
       Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>
@@ -261,11 +278,15 @@
 
 <!-- USER BAR -->
 <div class="user-bar" id="userBar">
-  <span class="user-email" id="userEmail"></span>
-  <span class="user-stats" id="userStats"></span>
-  <button class="bar-btn bar-btn-stats" onclick="showDidattica()" style="background:#0077b6;color:white;">📖 Didattica</button>
-  <button class="bar-btn bar-btn-stats" onclick="showStats()">Statistiche</button>
-  <button class="bar-btn" id="logoutBtn" onclick="handleLogout()">Esci</button>
+  <div class="user-bar-left">
+    <span class="user-email" id="userEmail"></span>
+    <span class="user-stats" id="userStats"></span>
+  </div>
+  <div class="user-bar-actions">
+    <button class="bar-btn bar-btn-primary" onclick="showDidattica()">Didattica</button>
+    <button class="bar-btn bar-btn-secondary" onclick="showStats()">Statistiche</button>
+    <button class="bar-btn bar-btn-logout" id="logoutBtn" onclick="handleLogout()">Esci</button>
+  </div>
 </div>
 
 <!-- HOME -->
@@ -361,6 +382,21 @@ try { var saved = localStorage.getItem('quizSeenQuestions'); if (saved) seenQues
 function saveSeenQuestions() { try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {} }
 
 // === AUTH FUNCTIONS ===
+function togglePassword() {
+  var pwd = document.getElementById('authPassword');
+  var eyeOn = document.getElementById('eyeIcon');
+  var eyeOff = document.getElementById('eyeOffIcon');
+  if (pwd.type === 'password') {
+    pwd.type = 'text';
+    eyeOn.style.display = 'none';
+    eyeOff.style.display = 'block';
+  } else {
+    pwd.type = 'password';
+    eyeOn.style.display = 'block';
+    eyeOff.style.display = 'none';
+  }
+}
+
 function toggleAuthMode() {
   isRegisterMode = !isRegisterMode;
   document.getElementById('authBtn').textContent = isRegisterMode ? 'Registrati' : 'Accedi';
