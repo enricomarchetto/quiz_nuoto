@@ -161,6 +161,33 @@
   .spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #e2e8f0; border-top-color: #0077b6; border-radius: 50%; animation: spin 0.8s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
 
+  /* DIDATTICA */
+  .didattica-page { display: none; min-height: 100vh; padding: 20px; padding-bottom: 40px; }
+  .didattica-page.visible { display: block; }
+  .didattica-header { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto 20px; flex-wrap: wrap; gap: 10px; }
+  .didattica-title { font-size: 1.4em; font-weight: 700; color: #0077b6; }
+  .didattica-nav { max-width: 800px; margin: 0 auto 20px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+  .didattica-nav::-webkit-scrollbar { height: 4px; }
+  .didattica-nav::-webkit-scrollbar-thumb { background: #cbd5e0; border-radius: 2px; }
+  .didattica-nav-btn { flex-shrink: 0; padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 25px; background: white; cursor: pointer; font-size: 0.85em; font-weight: 500; color: #4a5568; transition: all 0.2s; white-space: nowrap; }
+  .didattica-nav-btn:hover { border-color: #90cdf4; background: #f7fafc; }
+  .didattica-nav-btn.active { border-color: #0077b6; background: #ebf8ff; color: #0077b6; font-weight: 600; }
+  .didattica-content { max-width: 800px; margin: 0 auto; }
+  .topic-card { background: white; border-radius: 14px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .topic-card h3 { font-size: 1.3em; font-weight: 700; color: #0077b6; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #ebf8ff; }
+  .topic-card h4 { font-size: 1.05em; font-weight: 700; color: #2d3748; margin: 20px 0 10px; }
+  .topic-card p { margin-bottom: 12px; line-height: 1.7; color: #2d3748; }
+  .topic-content { font-size: 0.95em; }
+  .key-concept { background: linear-gradient(135deg, #ebf8ff, #e0f2fe); border-radius: 12px; padding: 18px 20px; margin-bottom: 20px; line-height: 1.7; color: #1e40af; border: 1px solid #bfdbfe; }
+  .definition { border-left: 4px solid #0077b6; padding: 14px 18px; margin-bottom: 14px; background: #f8fafc; border-radius: 0 10px 10px 0; line-height: 1.7; color: #2d3748; }
+  .topic-card table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92em; }
+  .topic-card table th { background: #0077b6; color: white; padding: 10px 14px; text-align: left; font-weight: 600; }
+  .topic-card table th:first-child { border-radius: 8px 0 0 0; }
+  .topic-card table th:last-child { border-radius: 0 8px 0 0; }
+  .topic-card table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; color: #2d3748; }
+  .topic-card table tr:last-child td { border-bottom: none; }
+  .topic-card table tr:nth-child(even) td { background: #f7fafc; }
+
   /* Mobile */
   @media (max-width: 600px) {
     .home { padding: 20px 16px; }
@@ -179,6 +206,16 @@
     .stat-row { gap: 8px; }
     .stat-box { padding: 12px 6px; }
     .stat-box .stat-num { font-size: 1.4em; }
+    .didattica-header { padding: 0 4px; }
+    .didattica-title { font-size: 1.15em; }
+    .didattica-nav { gap: 6px; margin-bottom: 14px; }
+    .didattica-nav-btn { padding: 8px 12px; font-size: 0.8em; }
+    .topic-card { padding: 18px 14px; }
+    .topic-card h3 { font-size: 1.1em; }
+    .key-concept { padding: 14px 16px; }
+    .definition { padding: 12px 14px; }
+    .topic-card table { font-size: 0.85em; }
+    .topic-card table th, .topic-card table td { padding: 8px 10px; }
   }
   @media (max-width: 380px) {
     .amount-btn .num { font-size: 1.4em; }
@@ -213,6 +250,7 @@
 <div class="user-bar" id="userBar">
   <span class="user-email" id="userEmail"></span>
   <span class="user-stats" id="userStats"></span>
+  <button class="bar-btn bar-btn-stats" onclick="showDidattica()" style="background:#0077b6;color:white;">📖 Didattica</button>
   <button class="bar-btn bar-btn-stats" onclick="showStats()">Statistiche</button>
   <button class="bar-btn" id="logoutBtn" onclick="handleLogout()">Esci</button>
 </div>
@@ -272,6 +310,16 @@
     <button class="stats-back" onclick="hideStats()">← Torna al quiz</button>
   </div>
   <div class="stats-grid" id="statsContent"></div>
+</div>
+
+<!-- DIDATTICA -->
+<div class="didattica-page" id="didatticaPage">
+  <div class="didattica-header">
+    <span class="didattica-title">Didattica — Metodologia</span>
+    <button class="stats-back" onclick="hideDidattica()">← Torna al quiz</button>
+  </div>
+  <div class="didattica-nav" id="didatticaNav"></div>
+  <div class="didattica-content" id="didatticaContent"></div>
 </div>
 
 <script src="quiz_data.js"></script>
@@ -391,6 +439,7 @@ async function handleLogout() {
   document.getElementById('homePage').classList.remove('visible');
   document.getElementById('quizPage').style.display = 'none';
   document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('didatticaPage').classList.remove('visible');
   document.getElementById('userBar').classList.remove('visible');
 }
 
@@ -739,6 +788,8 @@ function startQuiz() {
 function goHome() {
   clearInterval(timerInterval);
   document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('didatticaPage').classList.remove('visible');
+  document.getElementById('statsPage').classList.remove('visible');
   document.getElementById('homePage').classList.add('visible');
   updateStart(); updateUserStats(); window.scrollTo({ top: 0 });
 }
@@ -822,6 +873,7 @@ function rivediErrori() {
 
 // === STATS ===
 async function showStats() {
+  document.getElementById('didatticaPage').classList.remove('visible');
   if (isGuestMode || !currentUser) {
     document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Le statistiche sono disponibili solo con un account.</div>';
     document.getElementById('homePage').classList.remove('visible');
@@ -933,6 +985,379 @@ function hideStats() {
   document.getElementById('statsPage').classList.remove('visible');
   document.getElementById('homePage').classList.add('visible');
   window.scrollTo({ top: 0 });
+}
+
+// === DIDATTICA ===
+var didatticaTopics = [
+  {
+    id: 'ontogenesi',
+    title: 'Sviluppo Motorio',
+    icon: '\U0001f476',
+    content: `
+      <div class="key-concept">L'organismo vive in equilibrio con l'ambiente circostante, mantenuto attraverso il modello <strong>stimolo-risposta</strong> (input-output). I movimenti sono l'espressione dell'attività vitale e attraverso essi l'organismo interagisce con l'ambiente. <em>(Dispense FIN, cap. 5.1.1)</em></div>
+
+      <h4>Ontogenesi della motricità</h4>
+      <p>L'ontogenesi naturale della motricità si compone di <strong>due fasi</strong>:</p>
+      <div class="definition">1. <strong>Maturazione anatomica</strong> dei substrati nervosi centrali (mielinizzazione, si conclude nel 2°-3° anno di vita)<br>
+      2. <strong>Maturazione funzionale</strong> e ordinamento delle attività dei livelli coordinativi</div>
+
+      <h4>Tappe dello sviluppo</h4>
+      <p>• <strong>Primo semestre</strong>: movimenti massivi, indifferenziati, automatici. Riflessi di prensione e abbrancamento (riflesso di Moro)<br>
+      • <strong>Secondo semestre</strong>: maturazione del livello dell'area spaziale. Periodo pre-locomotorio. Il bambino si siede, si solleva, sta in piedi. Passaggio dalle <strong>sincinesie</strong> (movimenti scoordinati) alle <strong>sinergie</strong> (movimenti coordinati per un compito motorio)<br>
+      • <strong>3-7 anni</strong>: grazia e agilità nei movimenti liberi, ma incapacità di eseguire movimenti precisi (sviluppo incompleto dei meccanismi corticali)<br>
+      • <strong>7-12 anni</strong>: graduale padronanza delle possibilità coordinative. Verso i 10 anni si accumulano movimenti piccoli e precisi<br>
+      • <strong>Pubertà</strong>: riorganizzazione dell'apparato motorio. Si manifestano rigidità, angolosità, carenze coordinative</p>
+
+      <h4>Schemi motori e abilità</h4>
+      <p>La struttura del movimento volontario consta di <strong>schemi motori di base</strong> e <strong>schemi posturali</strong> statico-dinamici. Le possibilità di movimento acquisite durante la vita sono le <strong>abilità motorie</strong>. È l'ambiente che, stimolando il soggetto, influisce sul loro maturarsi, svilupparsi e specializzarsi.</p>
+    `
+  },
+  {
+    id: 'fattori-prestazione',
+    title: 'Fattori della Prestazione',
+    icon: '\U0001f3af',
+    content: `
+      <div class="key-concept">I fattori della prestazione sono l'insieme di elementi che concorrono ad effettuare azioni finalizzate a un obiettivo motorio o a raggiungere un risultato sportivo. La tassonomia di Schnabel li sintetizza nelle <strong>"4 C"</strong>. <em>(Dispense FIN, cap. 5.1.2)</em></div>
+
+      <table>
+        <tr><th>Fattore</th><th>Descrizione</th><th>Tipo</th></tr>
+        <tr><td><strong>Costituzione</strong></td><td>Misura dei segmenti corporei, massa, mobilità articolare, processi di trasmissione dell'energia</td><td>Condizioni materiali</td></tr>
+        <tr><td><strong>Condizione</strong></td><td>Metabolismo muscolare, funzionalità dei grandi apparati</td><td>Condizioni materiali</td></tr>
+        <tr><td><strong>Coordinazione</strong></td><td>Controllo e regolazione dei movimenti, controllo dei gradi superflui di libertà</td><td>Condizioni relazionali</td></tr>
+        <tr><td><strong>Controllo</strong></td><td>Processi cognitivi, emotivi e motivazionali che sovraintendono all'esecuzione</td><td>Condizioni relazionali</td></tr>
+      </table>
+
+      <h4>I 5 fattori specifici</h4>
+      <p>Le dispense FIN individuano 5 fattori su cui intervenire:<br>
+      • <strong>Capacità motorie</strong> e <strong>abilità motorie</strong>: obiettivo più importante e delicato della metodologia<br>
+      • <strong>Età biologica</strong> e <strong>caratteristiche antropometriche</strong>: permettono di dosare il carico considerando le reali risposte attese<br>
+      • <strong>Motivazioni</strong>: sfera psichica gestibile attraverso una corretta educazione alla prestazione</p>
+
+      <h4>Differenziazione dell'allenamento per età</h4>
+      <div class="definition"><strong>Allenamento di formazione</strong> (dai 4/5 anni all'età prepuberale): base multilaterale con accento su capacità coordinative, rapidità e resistenza generale<br><br>
+      <strong>Allenamento di costruzione</strong> (dall'età prepuberale all'adolescenza): specializzazione in una disciplina, sviluppo condizionale e tecnico-tattico<br><br>
+      <strong>Allenamento di prestazione</strong> (dopo l'adolescenza): ottimizzazione per la massima forma sportiva</div>
+    `
+  },
+  {
+    id: 'capacita-coordinative',
+    title: 'Capacità Coordinative',
+    icon: '\U0001f9e0',
+    content: `
+      <div class="key-concept">Le capacità coordinative sono legate al <strong>sistema nervoso</strong> e determinano l'apprendimento, l'organizzazione, il controllo e la trasformazione del movimento. Hanno uno sviluppo marcato nella fase prepuberale, in particolare <strong>fra i 6 e i 12 anni</strong>. <em>(Dispense FIN, cap. 5.1.2.1.1)</em></div>
+
+      <h4>Capacità coordinative generali</h4>
+      <div class="definition">Strettamente interdipendenti tra loro:<br>
+      • <strong>Capacità di apprendimento</strong><br>
+      • <strong>Capacità di controllo</strong><br>
+      • <strong>Capacità di adattamento</strong></div>
+
+      <h4>Capacità coordinative speciali</h4>
+      <table>
+        <tr><th>Capacità</th><th>Descrizione dalle dispense</th></tr>
+        <tr><td><strong>Equilibrio</strong></td><td>Legata all'apparato vestibolare e alla differenziazione muscolare, per mantenere la postura utile all'azione</td></tr>
+        <tr><td><strong>Reazione</strong></td><td>Due fasi: elaborazione rapida delle informazioni in entrata + velocità di trasmissione agli organi effettori</td></tr>
+        <tr><td><strong>Combinazione motoria</strong></td><td>Sincronizza azioni secondo parametri di simultaneità, alternanza e successione</td></tr>
+        <tr><td><strong>Orientamento</strong></td><td>Mantiene il giusto rapporto con il campo d'azione e i riferimenti spaziali</td></tr>
+        <tr><td><strong>Differenziazione</strong></td><td>Dosare finemente l'entità della forza per la massima efficacia dell'azione</td></tr>
+        <tr><td><strong>Anticipazione motoria</strong></td><td>Previsione probabilistica di situazioni non ancora verificatesi, basata sulle esperienze</td></tr>
+        <tr><td><strong>Ritmo</strong></td><td>Scelta temporale degli impulsi idonei a realizzare l'azione in modo adeguato</td></tr>
+        <tr><td><strong>Fantasia motoria</strong></td><td>Utilizzare abilità dalla memoria motoria in maniera pratica ed efficace, anche combinandole</td></tr>
+      </table>
+
+      <h4>La coordinazione neuromuscolare</h4>
+      <p>Dal punto di vista neuromuscolare, le capacità coordinative sono l'attivazione combinata di nervi e muscoli. La coordinazione si distingue in: <strong>intramuscolare</strong> (regolazione degli stimoli in un singolo muscolo) e <strong>intermuscolare</strong> (attività sinergica in più muscoli).</p>
+    `
+  },
+  {
+    id: 'analizzatori',
+    title: 'Analizzatori e Sensopercezione',
+    icon: '\U0001f441\uFE0F',
+    content: `
+      <div class="key-concept">I fattori limitanti delle capacità coordinative sono le capacità del soggetto di acquisire ed elaborare le <strong>afferenze</strong> (informazioni) provenienti al SNC. Queste informazioni vengono raccolte dagli <strong>analizzatori</strong>, composti da: recettori specifici, vie nervose afferenti, centri sensoriali, campo primario di proiezione della corteccia. <em>(Dispense FIN, cap. 5.1.2.1.1)</em></div>
+
+      <h4>Classificazione degli analizzatori</h4>
+      <p>Si suddividono in <strong>esterni</strong> (visivo, acustico, tattile) e <strong>interni</strong> (cinestetico, statico-dinamico/vestibolare):</p>
+      <table>
+        <tr><th>Analizzatore</th><th>Funzione (dalle dispense)</th></tr>
+        <tr><td><strong>Visivo</strong> (telerecettore)</td><td>Ricevere un modello di apprendimento, controllare il movimento, visione periferica, raccogliere esperienze motorie</td></tr>
+        <tr><td><strong>Acustico</strong></td><td>Percepisce segnali del processo motorio. Importante nella ricezione di impulsi dinamici e informazioni verbali</td></tr>
+        <tr><td><strong>Tattile</strong></td><td>Informazioni tramite pressocettori, termocettori, nocicettori. Sulla cute. Es: vincere la resistenza e andare in presa nell'acqua</td></tr>
+        <tr><td><strong>Cinestetico</strong></td><td>Propriocettori in muscoli, tendini, articolazioni. Vie di conduzione più veloci. Percepisce variazioni di tensione sin dall'inizio</td></tr>
+        <tr><td><strong>Vestibolare</strong></td><td>Posizione della testa nel campo gravitazionale, accelerazioni e decelerazioni. Regola equilibrio statico e dinamico</td></tr>
+      </table>
+
+      <h4>Sensopercezione</h4>
+      <div class="definition"><strong>Sensazione</strong>: afferenza giunta come stimolo alle aree corticali primarie.<br>
+      <strong>Percezione</strong>: attraverso le aree associative (momento intellettivo) fornisce significato alla sensazione.<br><br>
+      Le capacità senso-percettive sono i presupposti di base per qualsiasi attività consapevole. Dipendono dalla sollecitazione sensoriale, quindi dal <strong>continuo allenamento</strong>: più ci si allena e più si diventa abili.</div>
+
+      <h4>Fasi sensibili</h4>
+      <p>Una fase sensibile è il periodo in cui allenando una capacità si assiste a un <strong>miglioramento più fruttuoso</strong> che se la stessa venisse allenata in un'altra età. Le capacità coordinative presentano la loro fase sensibile tra i <strong>6 e i 12 anni</strong> (Martin, 1982), le condizionali dai <strong>12 ai 18 anni</strong>.</p>
+    `
+  },
+  {
+    id: 'capacita-condizionali',
+    title: 'Capacità Condizionali e Mobilità',
+    icon: '\U0001f4aa',
+    content: `
+      <div class="key-concept">Le capacità condizionali sono legate ai grandi apparati <strong>muscolo-scheletrico e cardio-respiratorio</strong>, determinate dai processi energetici metabolici e plastici. Hanno uno sviluppo accentuato all'inizio della pubertà, <strong>fra i 12 e i 18 anni</strong>. <em>(Dispense FIN, cap. 5.1.2.1.2)</em></div>
+
+      <h4>Capacità di rapidità</h4>
+      <div class="definition">Capacità di compiere azioni nel più breve tempo possibile. Comprende:<br>
+      • <strong>Rapidità di azione</strong>: compiere un movimento volontario nel minor tempo<br>
+      • <strong>Rapidità di reazione</strong>: rispondere a uno stimolo nel minor tempo<br>
+      • <strong>Frequenza dei movimenti</strong>: unione di movimenti rapidi e semplici in azioni complesse</div>
+
+      <h4>Capacità di forza</h4>
+      <div class="definition">Capacità di opporsi a o vincere una resistenza con contrazione muscolare:<br>
+      • <strong>Forza massima</strong>: forza di intensità massima<br>
+      • <strong>Forza rapida</strong>: forza da elevata a massima nel più breve tempo possibile<br>
+      • <strong>Forza resistente</strong>: forza mantenuta nel tempo</div>
+      <p>Tipi di contrazione: <strong>concentrica/isotonica</strong> (capi si avvicinano), <strong>eccentrica</strong> (capi si distanziano), <strong>isometrica</strong> (distanza costante), <strong>isocinetica</strong> (velocità costante, attuabile con macchine).</p>
+
+      <h4>Capacità di resistenza</h4>
+      <p>Capacità di tollerare l'affaticamento. Indispensabile per sopportare impegni più elevati e influisce positivamente sul recupero. Lo sviluppo di forza rapida, coordinazione e rapidità è possibile <strong>solo sulla base di un adeguato sviluppo della resistenza</strong>.</p>
+
+      <h4>Mobilità articolare</h4>
+      <div class="definition">Capacità di muovere articolazioni con la massima escursione, senza limiti e senza dolore. Nel nuoto è unita a coordinative e condizionali come <strong>terzo vertice di un triangolo</strong>. Consente di aumentare l'economia energetica e favorire la precisione. Nell'ambito natatorio l'articolazione <strong>scapolo-omerale</strong> è particolarmente sollecitata. <em>(Cap. 5.1.2.1.3)</em><br><br>
+      Si distingue in: <strong>attiva</strong> (agonisti distendono antagonisti), <strong>passiva</strong> (forza esterna), <strong>mista</strong>.</div>
+    `
+  },
+  {
+    id: 'abilita-motorie',
+    title: 'Abilità Motorie e Apprendimento',
+    icon: '\U0001f3cb\uFE0F',
+    content: `
+      <div class="key-concept">Le abilità motorie sono azioni motorie che, attraverso il <strong>ripetersi sistematico</strong> quanto più vicino al modello proposto, raggiungono la completa <strong>automatizzazione</strong>. Sono potenzialmente infinite: tante quante se ne apprendono. <em>(Dispense FIN, cap. 5.1.2.2)</em></div>
+
+      <h4>Differenza capacità vs abilità (Fleischman, 1964)</h4>
+      <p>L'<strong>abilità</strong> (skill) definisce il livello di perizia in un compito specifico. La <strong>capacità</strong> (ability) si riferisce a un tratto più generale. Sulle capacità motorie si strutturano e affinano le abilità, che rappresentano un grado più complesso di strutturazione del movimento.</p>
+
+      <h4>Le 4 fasi della coordinazione motoria</h4>
+      <div class="definition">1. <strong>Comprensione del compito</strong>: coinvolgimento affettivo, scoperta delle azioni possibili, primi tentativi, modello approssimativo<br><br>
+      2. <strong>Coordinazione grezza</strong>: coinvolgimento cognitivo, prime esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale<br><br>
+      3. <strong>Coordinazione fine</strong>: esecuzioni perfezionate, capacità di regolare e controllare l'azione, padronanza dell'azione<br><br>
+      4. <strong>Disponibilità variabile</strong>: automatizzazione resa possibile dall'incremento delle capacità motorie</div>
+
+      <h4>Insegnamento delle abilità</h4>
+      <p>Aspetti rilevanti secondo le dispense:<br>
+      • Verifica delle condizioni dell'apprendimento e della prestazione<br>
+      • Interazione tra tecnico e allievo/atleta<br>
+      • Utilizzo di sussidi cognitivi<br>
+      • Varietà di metodi con <strong>feedback, elogi e rinforzi</strong> e aumento dell'attività autonoma</p>
+      <p>I <strong>fondamentali</strong> (o tecniche sportive) sono azioni motorie automatizzabili che rappresentano le soluzioni ottimali dei compiti motori di quello sport specifico (Rieder, 1983). Il processo di formazione deve essere svolto con il <strong>controllo cosciente e consapevole</strong> dell'allievo.</p>
+    `
+  },
+  {
+    id: 'propulsione',
+    title: 'Propulsione nel Nuoto',
+    icon: '\U0001f30a',
+    content: `
+      <div class="key-concept">Nel nuoto il rendimento meccanico si riduce al <strong>10-12%</strong> circa, perché l'acqua non offre un punto d'appoggio fisso: circa il 50% dell'energia meccanica viene sprecata per spostare l'acqua stessa. I nuotatori più efficienti hanno uno slittamento minore della mano e percorrono distanze maggiori per ciclo. <em>(Dispense FIN, cap. 5.2.1)</em></div>
+
+      <h4>Teorie sulla propulsione</h4>
+      <p>Le dispense descrivono l'evoluzione delle teorie:</p>
+      <div class="definition">• <strong>Azione-reazione</strong>: poco probabile, l'acqua è incomprimibile e si apre in vortici<br>
+      • <strong>Principio di Bernoulli (lift)</strong>: utile per spostamenti lenti e appoggi stabili, ma improbabile a causa delle grandi accelerazioni<br>
+      • <strong>Teoria dei vortici</strong> (Colwin, 1986): le grandi accelerazioni generano vortici (depressioni) sul dorso della mano che si oppongono allo slittamento<br>
+      • <strong>Bracciata rettilinea</strong>: evidenze sperimentali confermano che la miglior risposta si ha spostando la mano <strong>in linea retta</strong> (massima velocità), con palmo ad angolo retto (massimo Reynolds), alla massima profondità</div>
+
+      <h4>Efficacia vs Efficienza</h4>
+      <p><strong>Efficacia</strong>: capacità di nuotare a velocità elevate, anche a discapito del costo energetico (dote del velocista).<br>
+      <strong>Efficienza</strong>: capacità di sostenere buone velocità per tempi prolungati (requisito del mezzofondista).<br>
+      L'<strong>ampiezza di bracciata</strong> è una buona misura dell'efficienza propulsiva.</p>
+
+      <h4>Tecnica vs Stile</h4>
+      <p><strong>Tecnica</strong>: i fondamentali, l'insieme delle strategie motorie per la massima efficacia ed efficienza.<br>
+      <strong>Stile</strong>: gli adattamenti individuali filtrati attraverso caratteristiche morfologiche, psicologiche e fisiologiche.<br>
+      Non esiste un modello stilistico universale, ma tante <strong>soluzioni individuali</strong> basate su principi fondamentali.</p>
+    `
+  },
+  {
+    id: 'tecnica-nuotate',
+    title: 'Tecnica delle 4 Nuotate',
+    icon: '\U0001f3ca',
+    content: `
+      <div class="key-concept">Ogni nuotata ha dei <strong>fondamentali</strong> comuni: il rollio, la presa a gomito alto, la continuità di applicazione della forza, e una corretta coordinazione braccia-gambe-respirazione. La biodiversità degli stili permette prestazioni simili con soluzioni molto diverse. <em>(Dispense FIN, cap. 5.2.1.3)</em></div>
+
+      <h4>Crawl</h4>
+      <p>Il <strong>rollio</strong> è il fondamentale più importante (dimostrato dalla tecnica di Mark Spitz, 7 ori a Monaco 1972). Vantaggi: dimezza la resistenza, permette intervento dei grandi muscoli del tronco, respirazione più naturale, bracciate più ampie. La prima parte della passata subacquea va a <strong>gomito alto</strong>. Coordinazioni: 6-2, 4-2, 3-2, 2-2. Differenze velocisti/fondisti: i velocisti si sollevano sull'acqua, i fondisti usano il rollio accentuato.</p>
+
+      <h4>Dorso</h4>
+      <p>La <strong>continuità</strong> di applicazione di forza è il tratto dei dorsisti di successo. Si entra con un arto prima che l'altro termini la spinta. Il rollio è ancora più efficace che nel crawl: senza di esso la bracciata sarebbe laterale e inefficace. Coordinazione praticamente sempre 6-2.</p>
+
+      <h4>Rana</h4>
+      <p>Far intervenire i muscoli del <strong>tronco</strong> (gran dorsale e pettorale). Trazione a gomito alto. Respirazione dopo che le mani raggiungono la massima profondità. Recupero gambe durante recupero braccia. La gambata quando le braccia sono distese in avanti. Fase di <strong>scivolamento</strong> dopo la gambata.</p>
+
+      <h4>Farfalla</h4>
+      <p>Prima parte a gomito alto. Il capo si solleva per respirare solo <strong>dopo la massima profondità delle mani</strong>. La seconda battuta (di sostegno) coincide con l'uscita delle mani. La prima battuta coincide con l'entrata: mantiene il corpo in movimento, evitando di ripartire da fermo. Tutto il corpo si muove con moto ondulatorio, ma il <strong>baricentro si muove in linea retta</strong>.</p>
+
+      <h4>Tipi di esercizi coordinativi</h4>
+      <div class="definition">• <strong>Variazione</strong>: si variano situazioni della nuotata completa (es: crawl successivo)<br>
+      • <strong>Esclusione</strong>: si escludono parti del corpo per evidenziarne la funzione (es: pugni chiusi)<br>
+      • <strong>Combinazione</strong>: si combinano elementi di più nuotate (es: braccia crawl + gambe delfino). Non adatte alla fase iniziale</div>
+    `
+  },
+  {
+    id: 'teoria-errore',
+    title: 'Teoria dell\'Errore',
+    icon: '\U0001f50d',
+    content: `
+      <div class="key-concept">"Sbagliare è una tappa utile e necessaria del processo di apprendimento: se non si commettono errori, non si fa esperienza, ergo non si apprende." Gli errori tecnici riducono l'<strong>efficienza di propulsione</strong> e fanno aumentare il <strong>costo energetico</strong>. <em>(Dispense FIN, cap. 5.2.2)</em></div>
+
+      <h4>Tipologie e cause di errore</h4>
+      <div class="definition">• <strong>Errori cinematici</strong> (ideomotricità): inadeguata rappresentazione mentale del gesto, esperienza motoria insufficiente<br>
+      • <strong>Errori dinamici</strong> (azione-reazione): si pensa alla geometria del movimento più che all'effetto dell'azione. Applicazione di forza insufficiente<br>
+      • <strong>Errori di coordinazione</strong> (propriocezione): l'allievo non riesce ad attivare la catena cinetica necessaria, feedback inadeguato</div>
+
+      <h4>Cause generali</h4>
+      <p>Gli errori possono essere generati da: scarso livello di attenzione, scarso livello di capacità coordinative/condizionali, inadeguata rappresentazione mentale del gesto, scarsa propriocezione, adattamento per economizzare il gesto. <strong>Quando la causa è un allenamento eccessivo</strong>, gli errori sono conservativi e di difesa, quindi difficilmente correggibili.</p>
+
+      <h4>Procedura di correzione (feedback immediato)</h4>
+      <div class="definition">1. Individuazione dell'errore<br>
+      2. <strong>Destrutturazione del gesto</strong> con variazioni e accentuazione degli effetti dell'errore<br>
+      3. Programma motorio e prima esecuzione<br>
+      4. Feedback e nuovo programma motorio<br>
+      5. Esecuzioni successive e nuovi feedback<br>
+      6. Output di miglior qualità</div>
+
+      <h4>Atleti giovani vs evoluti</h4>
+      <table>
+        <tr><th>Atleti giovani</th><th>Atleti evoluti</th></tr>
+        <tr><td>Multilateralità</td><td>Smontare e rimontare la tecnica</td></tr>
+        <tr><td>Consapevolezza</td><td>Sfruttare l'esperienza come risorsa</td></tr>
+        <tr><td>Motivazione e attenzione</td><td>Amplificare gli effetti degli errori</td></tr>
+        <tr><td>Freschezza fisica e mentale</td><td>Sfruttare la maggiore percezione</td></tr>
+      </table>
+      <p>Con i giovani: <strong>prevenire</strong> gli errori attraverso una solida immagine motoria. Con gli evoluti: <strong>resettare</strong> la tecnica e amplificarne gli effetti.</p>
+    `
+  },
+  {
+    id: 'supercompensazione',
+    title: 'Supercompensazione',
+    icon: '\U0001f4c8',
+    content: `
+      <div class="key-concept">Quando l'equilibrio omeostatico si infrange (le richieste superano le possibilità), l'organismo tende ad aumentare le sue potenzialità <strong>un po' oltre l'attuale bisogno</strong>, per essere attrezzato per future richieste. Questo plus è la <strong>supercompensazione</strong>, possibile solo se esiste una <strong>riserva attuale di adattamento (RAA)</strong>. <em>(Dispense FIN, cap. 5.3.2)</em></div>
+
+      <h4>Dinamica carico-recupero (Jakowlew, 1972)</h4>
+      <p>Quando si somministra un carico, le capacità prestative si abbassano. Terminato il carico, se la RAA lo consente, le capacità vengono prima <strong>recuperate</strong> (compensazione) e poi <strong>superate</strong> (supercompensazione). La curva parte solo se esiste un carico, ma si esaurisce solo in assenza di carico: <strong>pari importanza del carico e del recupero</strong>.</p>
+
+      <h4>Sfere della supercompensazione</h4>
+      <div class="definition">• <strong>Sfera biologica</strong>: efficienza enzimatica e substrati energetici (forza, resistenza, velocità) — supercompensazione certa<br>
+      • <strong>Sfera vegetativa</strong>: adattamenti cardiorespiratori e ormonali — regrediscono in assenza dell'attività<br>
+      • <strong>Sfera coordinativa</strong>: sistema nervoso e trasmissione neuromuscolare — importanza primaria, ancora poco conosciuta</div>
+
+      <h4>Differenze per età</h4>
+      <p>• <strong>Esordienti</strong>: supercompensazione più rapida e abbondante, ma vanno perseguiti gli obiettivi tipici dell'età<br>
+      • <strong>Anziani (master)</strong>: adattamento pigro ma sempre presente e perseguibile<br>
+      • In entrambi il ventre della depressione è meno marcato per l'assenza del meccanismo lattacido</p>
+
+      <h4>Eterocronismo</h4>
+      <p>La supercompensazione avviene in tempi diversi nelle diverse sfere. Il tempo necessario è <strong>inversamente proporzionale all'intensità</strong> dello stimolo: tanto più rapida si instaura, tanto più rapidamente si perde senza ulteriori stimoli.</p>
+    `
+  },
+  {
+    id: 'carico-allenamento',
+    title: 'Carico e Parametri',
+    icon: '\U0001f4ca',
+    content: `
+      <div class="key-concept">L'insieme degli stimoli dell'allenamento rappresenta il <strong>carico</strong>. Uno stimolo allenante va gestito tenendo sotto controllo 4 parametri: <strong>intensità, densità, volume, specificità</strong>. La distinzione tra insegnamento e allenamento è solo didattica: le due situazioni coesistono sempre. <em>(Dispense FIN, cap. 5.3.4)</em></div>
+
+      <h4>Carico esterno vs interno</h4>
+      <table>
+        <tr><th>Carico esterno</th><th>Carico interno</th></tr>
+        <tr><td>Caratteristiche oggettive decise dall'allenatore</td><td>Effetto reale sull'atleta</td></tr>
+        <tr><td>Misurabile: metri, velocità, tempo</td><td>Dipende dalle capacità massimali dell'atleta</td></tr>
+        <tr><td>Determina il <strong>potenziale allenante</strong></td><td>Determina il <strong>vero effetto allenante</strong></td></tr>
+        <tr><td></td><td>Valutabile con: FC, modalità respiratorie, lattato</td></tr>
+      </table>
+
+      <h4>Effetti cronologici del carico</h4>
+      <div class="definition">• <strong>Effetto immediato</strong>: aspetti biochimici e funzionali (reclutamento fibre muscolari)<br>
+      • <strong>Effetto permanente</strong>: persistenza degli adattamenti immediati per stimoli successivi<br>
+      • <strong>Effetto cumulativo</strong>: susseguirsi di effetti immediati che diventano permanenti = risultato finale del programma</div>
+
+      <h4>Principi fondamentali dell'allenamento</h4>
+      <p>• <strong>Continuità</strong>: gli adattamenti regrediscono in assenza degli stimoli<br>
+      • <strong>Progressività</strong>: stimolo costante perde effetto; aumento graduale "a gradini"<br>
+      • <strong>Multilateralità</strong>: condizionamento rivolto a tutti gli ambiti (fisico, tecnico, psicologico)<br>
+      • <strong>Alternanza ciclica</strong>: distribuzione nel tempo, periodizzazione dell'allenamento<br>
+      • <strong>Individualizzazione</strong>: programmazione precisa con attenzione alle reazioni individuali</p>
+
+      <p><strong>Soglia allenante</strong>: l'intensità che è necessario superare perché lo stimolo rompa l'equilibrio omeostatico e avvii la supercompensazione.</p>
+    `
+  },
+  {
+    id: 'sistemi-energetici',
+    title: 'Sistemi Energetici',
+    icon: '\u26a1',
+    content: `
+      <div class="key-concept">Esistono <strong>tre vie</strong> per produrre energia per il movimento. I tre sistemi lavorano <strong>sempre contemporaneamente</strong>, ma in proporzione diversa secondo la tipologia dell'esercizio. Ciascuno è identificato per la sua <strong>potenza</strong> (velocità di produzione) e <strong>capacità</strong> (quantità totale prima dell'esaurimento). <em>(Dispense FIN, cap. 5.3.4)</em></div>
+
+      <table>
+        <tr><th>Sistema</th><th>Potenza</th><th>Capacità</th><th>Caratteristiche</th></tr>
+        <tr><td><strong>Anaerobico alattacido</strong></td><td>Altissima</td><td>Limitatissima</td><td>Substrato: ATP+CP. Interviene per i primi 10-15 sec. Esaurimento in ~1 min. Ricarica: 50% in 15-30 sec, totale in 2-3 min</td></tr>
+        <tr><td><strong>Anaerobico lattacido</strong></td><td>Media</td><td>Media</td><td>Combustibile: zuccheri. Produce acido lattico. Potenza max in 30-60 sec. Esaurimento in ~10 min. Recupero: 30 sec - 2 min</td></tr>
+        <tr><td><strong>Aerobico</strong></td><td>Modesta</td><td>Grandissima</td><td>Utilizza ossigeno. Energia lenta ma a lungo. Non raggiunge mai esaurimento completo (assicura i processi vitali)</td></tr>
+      </table>
+
+      <h4>Applicazione pratica</h4>
+      <div class="definition"><strong>Lavoro alattacido</strong>: sforzi brevissimi (5-10 sec), recupero ampio (>3 min)<br><br>
+      <strong>Lavoro lattacido</strong>: intensità elevata, durata max 10 min, frazioni da 30-60 sec, recupero 30 sec - 2 min. <strong>Non indicato per atleti prepuberi e puberi</strong> (immaturità metabolica e tecnica)<br><br>
+      <strong>Lavoro aerobico</strong>: lunga durata, frazioni >60 sec, intervalli brevi (5-30 sec), intensità bassa. È <strong>sempre il più presente</strong> nell'allenamento del nuotatore, si sposa con recupero e lavoro tecnico. Fondamentale nella preparazione giovanile.</div>
+
+      <h4>Nota importante</h4>
+      <p>Le dispense sottolineano che il carico fisico è un <strong>reale limite alla possibilità di apprendere</strong>: "tanto più una cosa è faticosa, tanto meno è possibile monetizzarne l'aspetto cognitivo in termini di movimento." Per questo le correzioni tecniche e i nuovi apprendimenti si inseriscono in condizioni di <strong>freschezza fisica e mentale</strong>.</p>
+    `
+  }
+];
+
+function showDidattica() {
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('didatticaPage').classList.add('visible');
+  renderDidatticaNav();
+  renderDidatticaTopic(didatticaTopics[0].id);
+  window.scrollTo({ top: 0 });
+}
+
+function hideDidattica() {
+  document.getElementById('didatticaPage').classList.remove('visible');
+  document.getElementById('homePage').classList.add('visible');
+  window.scrollTo({ top: 0 });
+}
+
+function renderDidatticaNav() {
+  var nav = document.getElementById('didatticaNav');
+  nav.innerHTML = '';
+  didatticaTopics.forEach(function(t) {
+    var btn = document.createElement('button');
+    btn.className = 'didattica-nav-btn';
+    btn.dataset.topic = t.id;
+    btn.innerHTML = t.icon + ' ' + t.title;
+    btn.onclick = function() { renderDidatticaTopic(t.id); };
+    nav.appendChild(btn);
+  });
+}
+
+function renderDidatticaTopic(topicId) {
+  var topic = didatticaTopics.find(function(t) { return t.id === topicId; });
+  if (!topic) return;
+
+  // Update nav active state
+  document.querySelectorAll('.didattica-nav-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.topic === topicId);
+  });
+
+  var content = document.getElementById('didatticaContent');
+  content.innerHTML = '<div class="topic-card"><h3>' + topic.icon + ' ' + topic.title + '</h3><div class="topic-content">' + topic.content + '</div></div>';
+
+  // Smooth scroll to top of content on mobile
+  if (window.innerWidth <= 600) {
+    content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 // Enter key per login
