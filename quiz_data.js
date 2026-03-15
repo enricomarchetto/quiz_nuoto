@@ -5208,8 +5208,8 @@ const quizData = [
       "C": "Tra 20 e 50",
       "D": "Infinite"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. Più di 50.",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Le abilità motorie sono potenzialmente infinite: tante quante se ne apprendono (Dispense FIN, cap. 5.1.2.2).",
     "category": "La cultura dell'acqua",
     "manualPages": [
       20,
