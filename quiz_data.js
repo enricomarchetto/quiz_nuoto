@@ -8629,7 +8629,7 @@ const quizData = [
       "D": "È indifferente perché è uno stile facile da imparare"
     },
     "answer": "A",
-    "explanation": "La risposta corretta è C. La bracciata, che è il principale fattore di avanzamento.",
+    "explanation": "La risposta corretta è A. Il colpo di gambe per ricercare il movimento del bacino.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       269,
@@ -9068,8 +9068,8 @@ const quizData = [
       "C": "Ogni quattro colpi di gambe",
       "D": "Nessuna delle risposte precedenti"
     },
-    "answer": "D",
-    "explanation": "La risposta corretta è D. Nessuna delle risposte precedenti.",
+    "answer": "B",
+    "explanation": "La risposta corretta è B. Nella farfalla la respirazione avviene in fase di spinta.",
     "category": "La cultura dell'acqua",
     "manualPages": [
       284,
