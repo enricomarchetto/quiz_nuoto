@@ -37,6 +37,8 @@
   .user-bar-left { display: flex; align-items: center; gap: 6px; flex: 1; min-width: 0; }
   .user-email { font-size: 0.8em; color: #718096; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .user-stats { font-size: 0.75em; color: #0077b6; font-weight: 600; background: #ebf8ff; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .bar-btn-reset { background: none; border: 1px solid #e2e8f0; color: #e53e3e; font-size: 1.1em; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0; transition: all 0.2s; }
+  .bar-btn-reset:hover { background: #fee2e2; border-color: #e53e3e; }
   .user-bar-actions { display: flex; gap: 6px; align-items: center; }
   .bar-btn { background: none; border: 1.5px solid #e2e8f0; color: #718096; padding: 7px 14px; border-radius: 8px; font-size: 0.82em; cursor: pointer; font-weight: 500; transition: all 0.15s; white-space: nowrap; }
   .bar-btn:hover { background: #f7fafc; border-color: #cbd5e0; }
@@ -298,6 +300,7 @@
   <div class="user-bar-left">
     <span class="user-email" id="userEmail"></span>
     <span class="user-stats" id="userStats"></span>
+    <button class="bar-btn-reset" id="btnReset" onclick="confirmReset()" title="Azzera progressi">↺</button>
   </div>
   <div class="user-bar-actions">
     <button class="bar-btn bar-btn-primary" onclick="showDidattica()">Didattica</button>
@@ -707,6 +710,16 @@ function checkAllMastered() {
   return mastered >= quizData.length;
 }
 
+async function confirmReset() {
+  if (confirm('Sei sicuro di voler azzerare tutti i progressi e ricominciare da zero?')) {
+    var btn = document.getElementById('btnReset');
+    btn.disabled = true; btn.textContent = '...';
+    await resetProgress();
+    btn.disabled = false; btn.textContent = '↺';
+    alert('Progressi azzerati! 0/' + quizData.length);
+  }
+}
+
 async function resetProgress() {
   masteredQuestions = {};
   sessionSeenIds.clear();
@@ -717,9 +730,15 @@ async function resetProgress() {
   // Cancella anche i dati su Supabase così il counter non si ripopola al reload
   if (!isGuestMode && currentUser) {
     try {
-      await sb.from('user_answers').delete().eq('user_id', currentUser.id);
-      console.log('Risposte cancellate dal DB');
-    } catch (err) { console.error('Errore reset DB:', err); }
+      var delAns = await sb.from('user_answers').delete().eq('user_id', currentUser.id);
+      if (delAns.error) console.error('Errore cancellazione risposte:', delAns.error);
+      else console.log('Risposte cancellate dal DB');
+    } catch (err) { console.error('Errore reset risposte:', err); }
+    try {
+      var delSess = await sb.from('quiz_sessions').delete().eq('user_id', currentUser.id);
+      if (delSess.error) console.error('Errore cancellazione sessioni:', delSess.error);
+      else console.log('Sessioni cancellate dal DB');
+    } catch (err) { console.error('Errore reset sessioni:', err); }
   }
   updateUserStats();
   updateStart();
