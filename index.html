@@ -727,6 +727,15 @@ function showApp() {
   btn.disabled = false;
   btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
   initHome();
+  // Auto-open didattica if ?page=didattica
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('page') === 'didattica') {
+    showDidattica();
+    // Clean up URL without reload
+    if (window.history.replaceState) {
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }
 }
 
 function updateUserStats() {
