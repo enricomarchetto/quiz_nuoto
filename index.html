@@ -327,6 +327,9 @@
     <div class="cat-grid" id="catGrid"></div>
   </div>
   <button class="start-btn" id="startBtn" disabled onclick="startQuiz()">Scegli il numero di domande</button>
+  <button class="start-btn" id="btnWrong" style="display:none; background:linear-gradient(135deg,#e53e3e,#c53030); margin-top:10px;" onclick="startWrongQuiz()">
+    Ripassa le domande errate (<span id="wrongCount">0</span>)
+  </button>
 </div>
 
 <!-- QUIZ -->
@@ -395,11 +398,14 @@ var corrected = false;
 var timerStart = null;
 var timerInterval = null;
 var masteredQuestions = {};
+var wrongQuestions = new Set();
 var seenQuestions = {};
 var homeInitialized = false;
 
 try { var saved = localStorage.getItem('quizSeenQuestions'); if (saved) seenQuestions = JSON.parse(saved); } catch(e) {}
+try { var savedW = localStorage.getItem('quizWrongQuestions'); if (savedW) wrongQuestions = new Set(JSON.parse(savedW)); } catch(e) {}
 function saveSeenQuestions() { try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {} }
+function saveWrongQuestions() { try { localStorage.setItem('quizWrongQuestions', JSON.stringify(Array.from(wrongQuestions))); } catch(e) {} }
 
 // === AUTH FUNCTIONS ===
 function togglePassword() {
@@ -572,6 +578,29 @@ async function loadMasteredQuestions() {
       masteredQuestions['all'].add(row.question_id);
     });
     console.log('Loaded mastered questions:', masteredQuestions['all'] ? masteredQuestions['all'].size : 0);
+    // Carica domande sbagliate dall'ultima risposta per ogni domanda
+    try {
+      var wrongData = [];
+      var wFrom = 0;
+      while (true) {
+        var wr = await sb.from('user_answers').select('question_id, is_correct, answered_at').eq('user_id', currentUser.id).order('answered_at', { ascending: false }).range(wFrom, wFrom + pageSize - 1);
+        if (wr.error) throw wr.error;
+        if (wr.data) wrongData = wrongData.concat(wr.data);
+        if (!wr.data || wr.data.length < pageSize) break;
+        wFrom += pageSize;
+      }
+      // Prendi solo l'ultima risposta per ogni domanda
+      var lastAnswer = {};
+      wrongData.forEach(function(r) {
+        if (!lastAnswer[r.question_id]) lastAnswer[r.question_id] = r;
+      });
+      wrongQuestions = new Set();
+      Object.values(lastAnswer).forEach(function(r) {
+        if (!r.is_correct) wrongQuestions.add(r.question_id);
+      });
+      saveWrongQuestions();
+      console.log('Loaded wrong questions:', wrongQuestions.size);
+    } catch (wErr) { console.error('Error loading wrong questions:', wErr); }
   } catch (err) {
     console.error('Error loading mastered:', err);
     showSaveError('Errore nel caricamento dei progressi. Ricarica la pagina.');
@@ -678,6 +707,8 @@ async function resetProgress() {
   sessionSeenIds.clear();
   seenQuestions = {};
   saveSeenQuestions();
+  wrongQuestions = new Set();
+  saveWrongQuestions();
   // Cancella anche i dati su Supabase così il counter non si ripopola al reload
   if (!isGuestMode && currentUser) {
     try {
@@ -862,6 +893,7 @@ function updateStart() {
     btnRest.style.display = 'none';
     if (btnRest.classList.contains('selected')) btnRest.classList.remove('selected');
   }
+  updateWrongButton();
 }
 
 function shuffle(a) { var b = a.slice(); for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = b[i]; b[i] = b[j]; b[j] = t; } return b; }
@@ -882,6 +914,33 @@ function startQuiz() {
   document.getElementById('btnErrori').classList.add('hidden');
   document.getElementById('btnHome').classList.add('hidden');
   render(); window.scrollTo({ top: 0 }); startTimer();
+}
+
+function startWrongQuiz() {
+  var wrongPool = quizData.filter(function(q) { return wrongQuestions.has(q.id); });
+  if (wrongPool.length === 0) return;
+  questions = shuffle(wrongPool);
+  questions.forEach(function(q) { sessionSeenIds.add(q.id); });
+  answers = {}; corrected = false;
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'block';
+  document.getElementById('quizTitle').textContent = 'Ripasso domande errate (' + questions.length + ')';
+  document.getElementById('resultsCard').classList.remove('visible');
+  document.getElementById('btnCorreggi').classList.remove('hidden');
+  document.getElementById('btnErrori').classList.add('hidden');
+  document.getElementById('btnHome').classList.add('hidden');
+  render(); window.scrollTo({ top: 0 }); startTimer();
+}
+
+function updateWrongButton() {
+  var btn = document.getElementById('btnWrong');
+  var cnt = document.getElementById('wrongCount');
+  if (wrongQuestions.size > 0) {
+    btn.style.display = '';
+    cnt.textContent = wrongQuestions.size;
+  } else {
+    btn.style.display = 'none';
+  }
 }
 
 function goHome() {
@@ -935,6 +994,15 @@ async function correggi() {
   var done = questions.filter(function(q) { return answers[q.id]; }).length;
   var ok = questions.filter(function(q) { return answers[q.id] === q.answer; }).length;
   var ko = done - ok; var empty = tot - done;
+  // Aggiorna le domande sbagliate
+  questions.forEach(function(q) {
+    if (!answers[q.id] || answers[q.id] !== q.answer) {
+      wrongQuestions.add(q.id);
+    } else {
+      wrongQuestions.delete(q.id);
+    }
+  });
+  saveWrongQuestions();
   if (!isGuestMode && currentUser) {
     await saveAnswersToSupabase(questions, answers);
     saveSessionToSupabase(category === 'all' ? 'all' : category, tot, ok, ko, empty, elapsed, Math.round(ok / tot * 100));
