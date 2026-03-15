@@ -14,7 +14,7 @@
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; line-height: 1.5; }
 
   /* AUTH */
-  .auth-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .auth-page { min-height: 100vh; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
   .auth-card { width: 100%; max-width: 400px; background: white; border-radius: 16px; padding: 36px 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
   .auth-logo { font-size: 3em; text-align: center; margin-bottom: 8px; }
   .auth-title { font-size: 1.4em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
@@ -538,8 +538,13 @@ async function checkSession() {
       isGuestMode = false;
       await loadMasteredQuestions();
       showApp();
+    } else {
+      document.getElementById('authPage').style.display = 'flex';
     }
-  } catch(e) { console.error('Session check error:', e); }
+  } catch(e) {
+    console.error('Session check error:', e);
+    document.getElementById('authPage').style.display = 'flex';
+  }
 }
 
 // === SUPABASE DATA ===
