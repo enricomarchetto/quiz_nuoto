@@ -1,14 +1,2983 @@
 <!DOCTYPE html>
-<html><head>
+<html lang="it">
+<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Didattica — Istruttore di Nuoto</title>
-<script>window.__startPage = 'didattica';</script>
-</head><body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0077b6">
+<title>Istruttore di Nuoto - 1000 Domande</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; line-height: 1.5; }
+
+  /* AUTH */
+  .auth-page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .auth-card { width: 100%; max-width: 400px; background: white; border-radius: 16px; padding: 36px 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .auth-logo { font-size: 3em; text-align: center; margin-bottom: 8px; }
+  .auth-title { font-size: 1.4em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
+  .auth-subtitle { font-size: 0.9em; color: #718096; text-align: center; margin-bottom: 28px; }
+  .auth-input { width: 100%; padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1em; margin-bottom: 12px; outline: none; transition: border-color 0.2s; }
+  .auth-input:focus { border-color: #0077b6; }
+  .auth-btn { width: 100%; padding: 14px; border: none; border-radius: 10px; background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; font-size: 1em; font-weight: 700; cursor: pointer; transition: all 0.15s; }
+  .auth-btn:active { transform: scale(0.97); }
+  .auth-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .auth-toggle { text-align: center; margin-top: 16px; font-size: 0.9em; color: #718096; }
+  .auth-toggle a { color: #0077b6; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .auth-error { background: #fff5f5; color: #e53e3e; padding: 10px 14px; border-radius: 8px; font-size: 0.88em; margin-bottom: 12px; display: none; }
+  .auth-success { background: #f0fff4; color: #38a169; padding: 10px 14px; border-radius: 8px; font-size: 0.88em; margin-bottom: 12px; display: none; }
+  .auth-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #a0aec0; font-size: 0.85em; }
+  .auth-divider::before, .auth-divider::after { content: ''; flex: 1; height: 1px; background: #e2e8f0; }
+
+  /* User bar */
+  .user-bar { background: white; padding: 10px 16px; display: none; align-items: center; border-bottom: 2px solid #e2e8f0; gap: 10px; flex-wrap: wrap; }
+  .user-bar.visible { display: flex; }
+  .user-bar-left { display: flex; align-items: center; gap: 6px; flex: 1; min-width: 0; }
+  .user-email { font-size: 0.8em; color: #718096; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .user-stats { font-size: 0.75em; color: #0077b6; font-weight: 600; background: #ebf8ff; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .user-bar-actions { display: flex; gap: 6px; align-items: center; }
+  .bar-btn { background: none; border: 1.5px solid #e2e8f0; color: #718096; padding: 7px 14px; border-radius: 8px; font-size: 0.82em; cursor: pointer; font-weight: 500; transition: all 0.15s; white-space: nowrap; }
+  .bar-btn:hover { background: #f7fafc; border-color: #cbd5e0; }
+  .bar-btn-primary { background: #0077b6; color: white; border-color: #0077b6; }
+  .bar-btn-primary:hover { background: #005f8a; }
+  .bar-btn-secondary { color: #0077b6; border-color: #90cdf4; }
+  .bar-btn-secondary:hover { background: #ebf8ff; }
+  .bar-btn-logout { color: #e53e3e; border-color: #fed7d7; }
+  .bar-btn-logout:hover { background: #fff5f5; border-color: #fc8181; }
+
+  /* HOME */
+  .home { min-height: 100vh; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+  .home.visible { display: flex; }
+  .home-logo { font-size: 3em; margin-bottom: 12px; }
+  .home-title { font-size: 1.6em; font-weight: 700; color: #0077b6; text-align: center; margin-bottom: 4px; }
+  .home-subtitle { font-size: 0.95em; color: #718096; text-align: center; margin-bottom: 36px; }
+  .home-section { width: 100%; max-width: 500px; margin-bottom: 28px; }
+  .section-label { font-size: 0.82em; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; text-align: center; }
+  .amount-buttons { display: flex; gap: 12px; justify-content: center; }
+  .amount-btn { flex: 1; max-width: 140px; padding: 22px 10px; border: 2px solid #e2e8f0; border-radius: 14px; background: white; cursor: pointer; text-align: center; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
+  .amount-btn:active { transform: scale(0.96); }
+  .amount-btn.selected { border-color: #0077b6; background: #ebf8ff; box-shadow: 0 0 0 3px rgba(0,119,182,0.15); }
+  .amount-btn .num { font-size: 2em; font-weight: 700; color: #0077b6; display: block; line-height: 1; }
+  .amount-btn .label { font-size: 0.8em; color: #718096; margin-top: 4px; display: block; }
+  @media (hover: hover) { .amount-btn:hover:not(.selected) { border-color: #90cdf4; background: #f7fafc; } }
+  .cat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .cat-btn { padding: 12px 10px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; cursor: pointer; text-align: center; font-size: 0.85em; font-weight: 500; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
+  .cat-btn:active { transform: scale(0.96); }
+  .cat-btn.selected { border-color: #0077b6; background: #ebf8ff; }
+  .cat-btn .cat-count { font-size: 0.75em; color: #a0aec0; display: block; margin-top: 2px; }
+  @media (hover: hover) { .cat-btn:hover:not(.selected) { border-color: #90cdf4; } }
+  .start-btn { display: block; width: 100%; max-width: 500px; padding: 16px; border: none; border-radius: 12px; background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: all 0.15s; box-shadow: 0 4px 14px rgba(0,119,182,0.3); -webkit-user-select: none; user-select: none; }
+  .start-btn:active { transform: scale(0.97); }
+  .start-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  @media (hover: hover) { .start-btn:hover:not(:disabled) { box-shadow: 0 6px 20px rgba(0,119,182,0.4); } }
+
+  /* QUIZ */
+  .quiz-page { display: none; }
+  .quiz-header { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; padding: 14px 20px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.15); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .quiz-header-left h2 { font-size: 1.05em; font-weight: 700; }
+  .quiz-header-left .quiz-info { font-size: 0.78em; opacity: 0.9; margin-top: 2px; display: flex; gap: 12px; }
+  .quiz-timer { font-variant-numeric: tabular-nums; }
+  .progress-bar { width: 100%; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+  .progress-fill { height: 100%; background: white; border-radius: 2px; transition: width 0.3s; }
+  .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 14px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .back-btn:active { transform: scale(0.96); }
+  @media (hover: hover) { .back-btn:hover { background: rgba(255,255,255,0.3); } }
+  .quiz-container { max-width: 800px; margin: 0 auto; padding: 16px; padding-bottom: 20px; }
+  .question-card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 2px solid transparent; transition: border-color 0.3s, box-shadow 0.3s; }
+  .question-card.card-correct { border-color: #38a169; box-shadow: 0 0 0 3px rgba(56,161,105,0.15); }
+  .question-card.card-wrong { border-color: #e53e3e; box-shadow: 0 0 0 3px rgba(229,62,62,0.15); }
+  .question-card.card-empty { border-color: #dd6b20; box-shadow: 0 0 0 3px rgba(221,107,32,0.15); }
+  .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; flex-wrap: wrap; }
+  .question-number { font-weight: 700; color: #0077b6; font-size: 0.95em; white-space: nowrap; }
+  .question-number .orig { font-weight: 600; color: #4a5568; font-size: 0.9em; }
+  .category-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.72em; font-weight: 600; white-space: nowrap; }
+  .category-badge[data-cat="Attività speciali"] { background: #fef3c7; color: #92400e; }
+  .category-badge[data-cat="Biofisiologia"] { background: #fce7f3; color: #9d174d; }
+  .category-badge[data-cat="Fitness in acqua"] { background: #d1fae5; color: #065f46; }
+  .category-badge[data-cat="La cultura dell'acqua"] { background: #ede9fe; color: #5b21b6; }
+  .category-badge[data-cat="Metodologia"] { background: #ffedd5; color: #9a3412; }
+  .category-badge[data-cat="Psicopedagogia"] { background: #f0fdf4; color: #166534; }
+  .question-text { font-size: 1em; line-height: 1.6; margin-bottom: 14px; font-weight: 500; }
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option { padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 10px; cursor: pointer; transition: all 0.15s; display: flex; align-items: flex-start; gap: 10px; min-height: 48px; -webkit-user-select: none; user-select: none; }
+  .option:active:not(.locked) { transform: scale(0.98); }
+  .option .letter { font-weight: 700; color: #4a5568; min-width: 22px; flex-shrink: 0; }
+  .option .option-text { flex: 1; }
+  .option.picked { border-color: #0077b6; background: #ebf8ff; }
+  .option.locked { pointer-events: none; }
+  .option.opt-correct { border-color: #38a169; background: #f0fff4; }
+  .option.opt-correct .letter { color: #38a169; font-weight: 800; }
+  .option.opt-wrong { border-color: #e53e3e; background: #fff5f5; }
+  .option.opt-wrong .letter { color: #e53e3e; }
+  @media (hover: hover) { .option:hover:not(.locked):not(.picked) { border-color: #90cdf4; background: #f7fafc; } }
+  .explanation-box { margin-top: 12px; padding: 16px 18px; border-radius: 10px; background: #fff7ed; border: 1px solid #fed7aa; color: #78350f; font-size: 0.88em; line-height: 1.7; }
+  .explanation-box strong { color: #92400e; }
+  .explanation-box .exp-wrong { color: #b91c1c; }
+  .explanation-box .exp-correct { color: #166534; font-weight: 600; }
+  .actions { max-width: 800px; margin: 0 auto; padding: 0 16px 30px; display: flex; flex-direction: column; gap: 10px; }
+  .action-btn { width: 100%; padding: 16px; border: none; border-radius: 12px; font-size: 1.05em; font-weight: 700; cursor: pointer; transition: all 0.15s; -webkit-user-select: none; user-select: none; }
+  .action-btn:active { transform: scale(0.97); }
+  .btn-correggi { background: linear-gradient(135deg, #0077b6, #00b4d8); color: white; box-shadow: 0 4px 14px rgba(0,119,182,0.3); }
+  .btn-errori { background: #e53e3e; color: white; box-shadow: 0 4px 14px rgba(229,62,62,0.25); }
+  .btn-home { background: white; color: #0077b6; border: 2px solid #0077b6 !important; }
+  .hidden { display: none !important; }
+  .results { max-width: 800px; margin: 0 auto 16px; padding: 28px; background: white; border-radius: 14px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none; }
+  .results.visible { display: block; }
+  .results .r-icon { font-size: 2.5em; margin-bottom: 6px; }
+  .results .r-score { font-size: 2.2em; font-weight: 700; color: #0077b6; margin: 8px 0; }
+  .results .r-detail { font-size: 0.9em; color: #718096; line-height: 1.7; }
+  .results .r-time { font-size: 1em; color: #4a5568; margin-top: 10px; font-weight: 600; }
+  .results .green { color: #38a169; font-weight: 600; }
+  .results .red { color: #e53e3e; font-weight: 600; }
+  .results .orange { color: #dd6b20; font-weight: 600; }
+
+  /* STATS */
+  .stats-page { display: none; min-height: 100vh; padding: 20px; padding-bottom: 40px; }
+  .stats-page.visible { display: block; }
+  .stats-header { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto 20px; }
+  .stats-title { font-size: 1.4em; font-weight: 700; color: #0077b6; }
+  .stats-back { background: none; border: 1px solid #e2e8f0; color: #0077b6; padding: 8px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 600; cursor: pointer; }
+  .stats-back:hover { background: #f7fafc; }
+  .stats-grid { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+  .stat-card { background: white; border-radius: 14px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .stat-card h3 { font-weight: 700; color: #4a5568; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.82em; }
+  .stat-row { display: flex; gap: 16px; }
+  .stat-box { flex: 1; text-align: center; padding: 16px 8px; background: #f7fafc; border-radius: 10px; }
+  .stat-box .stat-num { font-size: 1.8em; font-weight: 700; line-height: 1; }
+  .stat-box .stat-num.green { color: #38a169; }
+  .stat-box .stat-num.red { color: #e53e3e; }
+  .stat-box .stat-num.orange { color: #dd6b20; }
+  .stat-box .stat-num.blue { color: #0077b6; }
+  .stat-box .stat-lbl { font-size: 0.78em; color: #718096; margin-top: 4px; }
+  .progress-cat { margin-bottom: 14px; }
+  .progress-cat-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .progress-cat-name { font-size: 0.88em; font-weight: 600; color: #4a5568; }
+  .progress-cat-pct { font-size: 0.82em; font-weight: 700; color: #0077b6; }
+  .progress-cat-bar { height: 10px; background: #e2e8f0; border-radius: 5px; overflow: hidden; }
+  .progress-cat-fill { height: 100%; border-radius: 5px; background: linear-gradient(135deg, #0077b6, #00b4d8); transition: width 0.5s; }
+  .session-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f4f8; }
+  .session-item:last-child { border-bottom: none; }
+  .session-info { flex: 1; }
+  .session-cat { font-size: 0.88em; font-weight: 600; color: #4a5568; }
+  .session-date { font-size: 0.75em; color: #a0aec0; margin-top: 2px; }
+  .session-score { font-size: 1.2em; font-weight: 700; min-width: 50px; text-align: right; }
+  .session-detail { font-size: 0.75em; color: #a0aec0; text-align: right; }
+  .stats-empty { text-align: center; padding: 40px 20px; color: #a0aec0; font-size: 0.95em; }
+  .spinner { display: inline-block; width: 30px; height: 30px; border: 3px solid #e2e8f0; border-top-color: #0077b6; border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* DIDATTICA */
+  .didattica-page { display: none; min-height: 100vh; padding: 0; flex-direction: column; }
+  .didattica-page.visible { display: flex; }
+  .didattica-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: white; border-bottom: 2px solid #e2e8f0; z-index: 10; flex-shrink: 0; }
+  .didattica-title { font-size: 1.2em; font-weight: 700; color: #0077b6; }
+
+  /* Sidebar */
+  .didattica-sidebar { width: 280px; min-width: 280px; background: white; border-right: 2px solid #e2e8f0; overflow-y: auto; }
+  .didattica-sidebar-section { border-bottom: 1px solid #f0f0f0; }
+  .didattica-sidebar-title { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; font-size: 0.85em; font-weight: 700; color: #0077b6; cursor: pointer; background: #f8fafc; transition: background 0.15s; user-select: none; }
+  .didattica-sidebar-title:hover { background: #ebf8ff; }
+  .didattica-sidebar-title.active { background: #ebf8ff; }
+  .didattica-sidebar-title .arrow { font-size: 0.7em; transition: transform 0.2s; color: #a0aec0; }
+  .didattica-sidebar-title.open .arrow { transform: rotate(90deg); }
+  .didattica-sidebar-items { display: none; padding: 4px 0; }
+  .didattica-sidebar-items.open { display: block; }
+  .didattica-sidebar-item { display: block; width: 100%; padding: 9px 16px 9px 28px; border: none; background: none; text-align: left; font-size: 0.82em; color: #4a5568; cursor: pointer; transition: all 0.15s; line-height: 1.4; }
+  .didattica-sidebar-item:hover { background: #f7fafc; color: #0077b6; }
+  .didattica-sidebar-item.active { background: #ebf8ff; color: #0077b6; font-weight: 600; border-left: 3px solid #0077b6; padding-left: 25px; }
+  .didattica-sidebar-num { color: #a0aec0; font-size: 0.9em; margin-right: 6px; }
+
+  /* Main content area */
+  .didattica-body { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+  .didattica-content { flex: 1; overflow-y: auto; padding: 24px; background: #f0f4f8; }
+  .topic-card { background: white; border-radius: 14px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto; }
+  .topic-card h3 { font-size: 1.3em; font-weight: 700; color: #0077b6; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #ebf8ff; }
+  .topic-card h4 { font-size: 1.05em; font-weight: 700; color: #2d3748; margin: 20px 0 10px; }
+  .topic-card p { margin-bottom: 12px; line-height: 1.7; color: #2d3748; }
+  .topic-content { font-size: 0.95em; }
+  .key-concept { background: linear-gradient(135deg, #ebf8ff, #e0f2fe); border-radius: 12px; padding: 18px 20px; margin-bottom: 20px; line-height: 1.7; color: #1e40af; border: 1px solid #bfdbfe; }
+  .definition { border-left: 4px solid #0077b6; padding: 14px 18px; margin-bottom: 14px; background: #f8fafc; border-radius: 0 10px 10px 0; line-height: 1.7; color: #2d3748; }
+  .topic-card table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 0.92em; }
+  .topic-card table th { background: #0077b6; color: white; padding: 10px 14px; text-align: left; font-weight: 600; }
+  .topic-card table th:first-child { border-radius: 8px 0 0 0; }
+  .topic-card table th:last-child { border-radius: 0 8px 0 0; }
+  .topic-card table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; color: #2d3748; }
+  .topic-card table tr:last-child td { border-bottom: none; }
+  .topic-card table tr:nth-child(even) td { background: #f7fafc; }
+
+  /* Mobile sidebar becomes a dropdown select */
+  .didattica-mobile-nav { display: none; padding: 12px 16px; background: white; border-bottom: 1px solid #e2e8f0; }
+  .didattica-mobile-select { width: 100%; padding: 10px 14px; border: 2px solid #0077b6; border-radius: 10px; font-size: 0.9em; font-weight: 600; color: #0077b6; background: white; cursor: pointer; appearance: auto; }
+  .didattica-mobile-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .didattica-mobile-topic-btn { padding: 7px 12px; border: 1.5px solid #e2e8f0; border-radius: 8px; background: white; font-size: 0.78em; color: #4a5568; cursor: pointer; text-align: left; line-height: 1.3; }
+  .didattica-mobile-topic-btn.active { border-color: #0077b6; background: #ebf8ff; color: #0077b6; font-weight: 600; }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    .didattica-page.visible { flex-direction: column; }
+    .didattica-sidebar { display: none; }
+    .didattica-mobile-nav { display: block; }
+    .didattica-content { height: auto; min-height: 0; padding: 12px; }
+    .didattica-body { flex-direction: column; }
+    .topic-card { padding: 18px; }
+    .user-bar { padding: 8px 12px; gap: 6px; }
+    .user-bar-left { gap: 4px; flex-direction: column; align-items: flex-start; }
+    .user-bar-actions { gap: 4px; }
+    .bar-btn { padding: 6px 10px; font-size: 0.75em; }
+
+    .home { padding: 20px 16px; }
+    .home-title { font-size: 1.3em; }
+    .amount-btn { padding: 18px 8px; }
+    .amount-btn .num { font-size: 1.6em; }
+    .cat-grid { gap: 6px; }
+    .cat-btn { padding: 10px 8px; font-size: 0.8em; }
+    .quiz-header { padding: 10px 14px; }
+    .quiz-header-left h2 { font-size: 0.95em; }
+    .quiz-container { padding: 10px; }
+    .question-card { padding: 14px; margin-bottom: 12px; }
+    .option { padding: 12px 14px; }
+    .actions { padding: 0 10px 30px; }
+    .auth-card { padding: 28px 20px; }
+    .stat-row { gap: 8px; }
+    .stat-box { padding: 12px 6px; }
+    .stat-box .stat-num { font-size: 1.4em; }
+    .didattica-header { padding: 0 4px; }
+    .didattica-title { font-size: 1.15em; }
+    .didattica-nav { gap: 6px; margin-bottom: 14px; }
+    .didattica-cats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; }
+  .didattica-cat-btn { padding: 6px 14px; border: 2px solid #0077b6; border-radius: 20px; background: white; color: #0077b6; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+  .didattica-cat-btn.active, .didattica-cat-btn:hover { background: #0077b6; color: white; }
+  .didattica-topics-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .didattica-nav-btn { padding: 8px 12px; font-size: 0.8em; }
+    .topic-card { padding: 18px 14px; }
+    .topic-card h3 { font-size: 1.1em; }
+    .key-concept { padding: 14px 16px; }
+    .definition { padding: 12px 14px; }
+    .topic-card table { font-size: 0.85em; }
+    .topic-card table th, .topic-card table td { padding: 8px 10px; }
+  }
+  @media (max-width: 380px) {
+    .amount-btn .num { font-size: 1.4em; }
+    .cat-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- AUTH -->
+<div class="auth-page" id="authPage">
+  <div class="auth-card">
+    <div class="auth-logo">🏊</div>
+    <div class="auth-title">Istruttore di Nuoto</div>
+    <div class="auth-subtitle">Accedi per sincronizzare i tuoi progressi</div>
+    <div class="auth-error" id="authError"></div>
+    <div class="auth-success" id="authSuccess"></div>
+    <input type="email" class="auth-input" id="authEmail" placeholder="Email" autocomplete="email">
+    <div style="position:relative;">
+      <input type="password" class="auth-input" id="authPassword" placeholder="Password" autocomplete="current-password" style="padding-right:48px;">
+      <button type="button" id="togglePwd" onclick="togglePassword()" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:none; border:none; cursor:pointer; padding:4px; font-size:1.2em; color:#718096; line-height:1;" title="Mostra/nascondi password">
+        <svg id="eyeIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <svg id="eyeOffIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+      </button>
+    </div>
+    <button class="auth-btn" id="authBtn" onclick="handleAuth()">Accedi</button>
+    <div class="auth-toggle" id="authToggle">
+      Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>
+    </div>
+    <div class="auth-divider">oppure</div>
+    <button class="auth-btn" style="background: white; color: #1a202c; border: 2px solid #e2e8f0;" onclick="handleGuestMode()">
+      Continua senza account
+    </button>
+  </div>
+</div>
+
+<!-- USER BAR -->
+<div class="user-bar" id="userBar">
+  <div class="user-bar-left">
+    <span class="user-email" id="userEmail"></span>
+    <span class="user-stats" id="userStats"></span>
+  </div>
+  <div class="user-bar-actions">
+    <button class="bar-btn bar-btn-primary" onclick="showDidattica()">Didattica</button>
+    <button class="bar-btn bar-btn-secondary" onclick="showStats()">Statistiche</button>
+    <button class="bar-btn bar-btn-logout" id="logoutBtn" onclick="handleLogout()">Esci</button>
+  </div>
+</div>
+
+<!-- HOME -->
+<div class="home" id="homePage">
+  <div class="home-logo">🏊</div>
+  <div class="home-title">Istruttore di Nuoto</div>
+  <div class="home-subtitle">1000 Domande</div>
+  <div class="home-section">
+    <div class="section-label">Quante domande?</div>
+    <div class="amount-buttons">
+      <div class="amount-btn" onclick="pickAmount(10)"><span class="num">10</span><span class="label">domande</span></div>
+      <div class="amount-btn" onclick="pickAmount(20)"><span class="num">20</span><span class="label">domande</span></div>
+      <div class="amount-btn" onclick="pickAmount(30)"><span class="num">30</span><span class="label">domande</span></div>
+      <div class="amount-btn" onclick="pickAmount(50)"><span class="num">50</span><span class="label">domande</span></div>
+      <div class="amount-btn" onclick="pickAmount(100)"><span class="num">100</span><span class="label">domande</span></div>
+      <div class="amount-btn" id="btnRestanti" onclick="pickRemaining()" style="display:none"><span class="num" id="restantiNum">0</span><span class="label">restanti</span></div>
+    </div>
+  </div>
+  <div class="home-section">
+    <div class="section-label">Categoria</div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+  <button class="start-btn" id="startBtn" disabled onclick="startQuiz()">Scegli il numero di domande</button>
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-page" id="quizPage">
+  <div class="quiz-header">
+    <div class="quiz-header-left">
+      <h2 id="quizTitle"></h2>
+      <div class="quiz-info"><span id="quizInfo"></span><span class="quiz-timer" id="quizTimer">⏱ 00:00</span></div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <button class="back-btn" onclick="goHome()">← Home</button>
+  </div>
+  <div class="quiz-container" id="quizContainer"></div>
+  <div class="results" id="resultsCard">
+    <div class="r-icon" id="rIcon"></div>
+    <h3>Risultato</h3>
+    <div class="r-score" id="rScore"></div>
+    <div class="r-detail" id="rDetail"></div>
+    <div class="r-time" id="rTime"></div>
+  </div>
+  <div class="actions" id="actionsBar">
+    <button class="action-btn btn-correggi" id="btnCorreggi" onclick="correggi()">Correggi</button>
+    <button class="action-btn btn-errori hidden" id="btnErrori" onclick="rivediErrori()">Rivedi gli errori</button>
+    <button class="action-btn btn-home hidden" id="btnHome" onclick="goHome()">Nuovo quiz</button>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-page" id="statsPage">
+  <div class="stats-header">
+    <span class="stats-title">Le tue Statistiche</span>
+    <button class="stats-back" onclick="hideStats()">← Torna al quiz</button>
+  </div>
+  <div class="stats-grid" id="statsContent"></div>
+</div>
+
+<!-- DIDATTICA -->
+<div class="didattica-page" id="didatticaPage">
+  <div class="didattica-header">
+    <span class="didattica-title">Didattica</span>
+    <button class="stats-back" onclick="hideDidattica()">← Torna al quiz</button>
+  </div>
+  <div class="didattica-body">
+    <nav class="didattica-sidebar" id="didatticaSidebar"></nav>
+    <div class="didattica-mobile-nav" id="didatticaMobileNav"></div>
+    <div class="didattica-content" id="didatticaContent"></div>
+  </div>
+</div>
+
+<script src="quiz_data.js"></script>
 <script>
-// Redirect to main app with didattica flag
-window.location.replace('/?page=didattica');
+// === SUPABASE CONFIG ===
+var SUPABASE_URL = 'https://ayuflpmsvphdeunbmdfk.supabase.co';
+var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF5dWZscG1zdnBoZGV1bmJtZGZrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwODkyOTgsImV4cCI6MjA4ODY2NTI5OH0.7c0XENPhgEL7IogmKH2PWYN5a0pm_Y9x9D3nlw5wkHg';
+var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// === STATE ===
+var currentUser = null;
+var isGuestMode = false;
+var isRegisterMode = false;
+var amount = null;
+var category = 'all';
+var questions = [];
+var answers = {};
+var corrected = false;
+var timerStart = null;
+var timerInterval = null;
+var masteredQuestions = {};
+var seenQuestions = {};
+var homeInitialized = false;
+
+try { var saved = localStorage.getItem('quizSeenQuestions'); if (saved) seenQuestions = JSON.parse(saved); } catch(e) {}
+function saveSeenQuestions() { try { localStorage.setItem('quizSeenQuestions', JSON.stringify(seenQuestions)); } catch(e) {} }
+
+// === AUTH FUNCTIONS ===
+function togglePassword() {
+  var pwd = document.getElementById('authPassword');
+  var eyeOn = document.getElementById('eyeIcon');
+  var eyeOff = document.getElementById('eyeOffIcon');
+  if (pwd.type === 'password') {
+    pwd.type = 'text';
+    eyeOn.style.display = 'none';
+    eyeOff.style.display = 'block';
+  } else {
+    pwd.type = 'password';
+    eyeOn.style.display = 'block';
+    eyeOff.style.display = 'none';
+  }
+}
+
+function toggleAuthMode() {
+  isRegisterMode = !isRegisterMode;
+  document.getElementById('authBtn').textContent = isRegisterMode ? 'Registrati' : 'Accedi';
+  document.getElementById('authToggle').innerHTML = isRegisterMode
+    ? 'Hai già un account? <a href="#" onclick="toggleAuthMode(); return false;">Accedi</a>'
+    : 'Non hai un account? <a href="#" onclick="toggleAuthMode(); return false;">Registrati</a>';
+  document.getElementById('authError').style.display = 'none';
+  document.getElementById('authSuccess').style.display = 'none';
+}
+
+function showAuthError(msg) {
+  var el = document.getElementById('authError');
+  el.textContent = msg; el.style.display = 'block';
+  document.getElementById('authSuccess').style.display = 'none';
+}
+
+function showAuthSuccess(msg) {
+  var el = document.getElementById('authSuccess');
+  el.textContent = msg; el.style.display = 'block';
+  document.getElementById('authError').style.display = 'none';
+}
+
+async function handleAuth() {
+  var email = document.getElementById('authEmail').value.trim();
+  var password = document.getElementById('authPassword').value;
+  document.getElementById('authError').style.display = 'none';
+  document.getElementById('authSuccess').style.display = 'none';
+
+  if (!email || !password) { showAuthError('Inserisci email e password'); return; }
+  if (password.length < 6) { showAuthError('La password deve avere almeno 6 caratteri'); return; }
+
+  var btn = document.getElementById('authBtn');
+  btn.disabled = true;
+  btn.textContent = 'Caricamento...';
+
+  try {
+    var result;
+    if (isRegisterMode) {
+      result = await sb.auth.signUp({ email: email, password: password });
+      console.log('SignUp result:', result.error, result.data);
+      if (result.error) throw result.error;
+      if (result.data.user && !result.data.session) {
+        showAuthSuccess('Registrazione completata! Controlla la tua email per confermare l\'account.');
+        btn.disabled = false;
+        btn.textContent = 'Registrati';
+        return;
+      }
+    } else {
+      result = await sb.auth.signInWithPassword({ email: email, password: password });
+      console.log('SignIn result:', result.error, result.data);
+      if (result.error) throw result.error;
+    }
+    // Login OK - onAuthStateChange gestirà il resto
+    console.log('Auth OK, user:', result.data.user.id);
+    // Fallback: se onAuthStateChange non scatta
+    setTimeout(function() {
+      if (btn.disabled) {
+        console.warn('Fallback: forzo showApp');
+        if (result.data.user) {
+          currentUser = result.data.user;
+          isGuestMode = false;
+          loadMasteredQuestions().then(function() { showApp(); });
+        }
+      }
+    }, 3000);
+  } catch (err) {
+    console.error('Auth error:', err);
+    var msg = err.message || 'Errore durante l\'accesso';
+    if (msg.includes('Invalid login')) msg = 'Email o password errati';
+    else if (msg.includes('Email not confirmed')) msg = 'Conferma la tua email prima di accedere. Oppure disattiva "Confirm email" nelle impostazioni di Supabase.';
+    showAuthError(msg);
+    btn.disabled = false;
+    btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
+  }
+}
+
+function handleGuestMode() {
+  isGuestMode = true;
+  currentUser = null;
+  showApp();
+}
+
+async function handleLogout() {
+  if (!isGuestMode) { await sb.auth.signOut(); }
+  isGuestMode = false;
+  currentUser = null;
+  masteredQuestions = {};
+  document.getElementById('authPage').style.display = 'flex';
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('didatticaPage').classList.remove('visible');
+  document.getElementById('userBar').classList.remove('visible');
+}
+
+// Auth state listener
+sb.auth.onAuthStateChange(function(event, session) {
+  console.log('onAuthStateChange:', event);
+  if (session && session.user) {
+    currentUser = session.user;
+    isGuestMode = false;
+    loadMasteredQuestions().then(function() { showApp(); });
+  }
+});
+
+// Check existing session on load
+async function checkSession() {
+  try {
+    var result = await sb.auth.getSession();
+    console.log('Existing session:', result.data.session ? 'yes' : 'no');
+    if (result.data.session && result.data.session.user) {
+      currentUser = result.data.session.user;
+      isGuestMode = false;
+      await loadMasteredQuestions();
+      showApp();
+    }
+  } catch(e) { console.error('Session check error:', e); }
+}
+
+// === SUPABASE DATA ===
+async function loadMasteredQuestions() {
+  if (!currentUser) return;
+  try {
+    var allData = [];
+    var pageSize = 1000;
+    var from = 0;
+    // Usa la view user_mastered_questions che prende solo l'ultima risposta per domanda
+    while (true) {
+      var result = await sb.from('user_mastered_questions').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
+      if (result.error) {
+        // Fallback alla tabella diretta se la view non esiste
+        console.warn('View not available, falling back to user_answers:', result.error.message);
+        allData = [];
+        from = 0;
+        while (true) {
+          var r2 = await sb.from('user_answers').select('question_id, category, is_correct').eq('user_id', currentUser.id).eq('is_correct', true).range(from, from + pageSize - 1);
+          if (r2.error) throw r2.error;
+          if (r2.data) allData = allData.concat(r2.data);
+          if (!r2.data || r2.data.length < pageSize) break;
+          from += pageSize;
+        }
+        break;
+      }
+      if (result.data) allData = allData.concat(result.data);
+      if (!result.data || result.data.length < pageSize) break;
+      from += pageSize;
+    }
+    masteredQuestions = {};
+    allData.forEach(function(row) {
+      if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
+      masteredQuestions[row.category].add(row.question_id);
+      if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
+      masteredQuestions['all'].add(row.question_id);
+    });
+    console.log('Loaded mastered questions:', masteredQuestions['all'] ? masteredQuestions['all'].size : 0);
+  } catch (err) {
+    console.error('Error loading mastered:', err);
+    showSaveError('Errore nel caricamento dei progressi. Ricarica la pagina.');
+  }
+}
+
+async function saveAnswersToSupabase(quizQuestions, userAnswers) {
+  if (!currentUser) return;
+  var rows = quizQuestions.map(function(q) {
+    return {
+      user_id: currentUser.id,
+      question_id: q.id,
+      category: q.category,
+      selected_answer: userAnswers[q.id] || '',
+      correct_answer: q.answer,
+      is_correct: userAnswers[q.id] === q.answer
+    };
+  });
+  // Aggiorna SEMPRE lo stato locale, indipendentemente dal salvataggio DB
+  rows.forEach(function(row) {
+    if (row.is_correct) {
+      if (!masteredQuestions[row.category]) masteredQuestions[row.category] = new Set();
+      masteredQuestions[row.category].add(row.question_id);
+      if (!masteredQuestions['all']) masteredQuestions['all'] = new Set();
+      masteredQuestions['all'].add(row.question_id);
+    } else {
+      if (masteredQuestions[row.category]) masteredQuestions[row.category].delete(row.question_id);
+      if (masteredQuestions['all']) masteredQuestions['all'].delete(row.question_id);
+    }
+  });
+  updateUserStats();
+  // Salva nel DB (con retry)
+  try {
+    var result = await sb.from('user_answers').insert(rows);
+    if (result.error) throw result.error;
+    console.log('Answers saved to DB:', rows.length);
+  } catch (err) {
+    console.error('Error saving answers:', err);
+    showSaveError('Errore nel salvataggio delle risposte. Le risposte sono registrate localmente ma potrebbero non essere salvate nel database. Ricarica la pagina e riprova.');
+  }
+}
+
+function showSaveError(msg) {
+  var existing = document.getElementById('saveErrorBanner');
+  if (existing) existing.remove();
+  var banner = document.createElement('div');
+  banner.id = 'saveErrorBanner';
+  banner.style.cssText = 'position:fixed;top:0;left:0;right:0;background:#e74c3c;color:#fff;padding:12px 16px;text-align:center;z-index:9999;font-size:14px;cursor:pointer;';
+  banner.textContent = msg;
+  banner.onclick = function() { banner.remove(); };
+  document.body.appendChild(banner);
+  setTimeout(function() { if (banner.parentNode) banner.remove(); }, 10000);
+}
+
+async function saveSessionToSupabase(cat, total, correct, wrong, unanswered, elapsed, pct) {
+  if (!currentUser) return;
+  try {
+    var result = await sb.from('quiz_sessions').insert({
+      user_id: currentUser.id, category: cat, total_questions: total,
+      correct_count: correct, wrong_count: wrong, unanswered_count: unanswered,
+      elapsed_seconds: elapsed, score_pct: pct
+    });
+    if (result.error) throw result.error;
+  } catch (err) { console.error('Error saving session:', err); }
+}
+
+// === QUESTION POOL ===
+function getUnseenPool(pool, cat) {
+  var key = cat || 'all';
+  if (!isGuestMode && currentUser) {
+    var mastered = masteredQuestions[key] || new Set();
+    var unseen = pool.filter(function(q) { return !mastered.has(q.id); });
+    // Se non ci sono abbastanza domande non viste, ricicla il pool
+    // MA senza azzerare masteredQuestions (il contatore resta intatto)
+    if (unseen.length < amount) {
+      unseen = pool;
+    }
+    return unseen;
+  } else {
+    if (!seenQuestions[key]) seenQuestions[key] = [];
+    var seen = new Set(seenQuestions[key]);
+    var unseen = pool.filter(function(q) { return !seen.has(q.id); });
+    if (unseen.length < amount) { seenQuestions[key] = []; saveSeenQuestions(); unseen = pool; }
+    return unseen;
+  }
+}
+
+function checkAllMastered() {
+  if (isGuestMode || !currentUser) return false;
+  var mastered = masteredQuestions['all'] ? masteredQuestions['all'].size : 0;
+  return mastered >= quizData.length;
+}
+
+function resetProgress() {
+  masteredQuestions = {};
+  // Reset anche localStorage per guest mode
+  seenQuestions = {};
+  saveSeenQuestions();
+  updateUserStats();
+  updateStart();
+}
+
+function showCompletionModal() {
+  // Auto-reset dei progressi
+  resetProgress();
+  var overlay = document.createElement('div');
+  overlay.id = 'completionOverlay';
+  overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:9999;display:flex;align-items:center;justify-content:center;';
+  var modal = document.createElement('div');
+  modal.style.cssText = 'background:#fff;border-radius:20px;padding:40px 32px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);';
+  modal.innerHTML = '<div style="font-size:64px;margin-bottom:16px">🏆</div>' +
+    '<h2 style="color:#1e40af;margin:0 0 12px">Complimenti!</h2>' +
+    '<p style="color:#475569;font-size:16px;margin:0 0 24px">Hai completato tutte le <strong>' + quizData.length + '</strong> domande correttamente! I progressi sono stati azzerati: si ricomincia da capo!</p>' +
+    '<div style="display:flex;gap:12px;justify-content:center">' +
+    '<button onclick="document.getElementById(\'completionOverlay\').remove()" style="padding:12px 24px;border-radius:12px;border:none;background:#1e40af;color:#fff;font-size:15px;font-weight:600;cursor:pointer">Ricomincia!</button>' +
+    '</div>';
+  overlay.appendChild(modal);
+  overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
+  document.body.appendChild(overlay);
+}
+
+function markAsSeen(ids, cat) {
+  if (!isGuestMode && currentUser) return;
+  var key = cat || 'all';
+  if (!seenQuestions[key]) seenQuestions[key] = [];
+  seenQuestions[key] = seenQuestions[key].concat(ids);
+  saveSeenQuestions();
+}
+
+function unmarkWrongQuestions(wrongIds, cat) {
+  if (!isGuestMode && currentUser) return;
+  var key = cat || 'all';
+  if (!seenQuestions[key]) return;
+  seenQuestions[key] = seenQuestions[key].filter(function(id) { return wrongIds.indexOf(id) === -1; });
+  saveSeenQuestions();
+}
+
+// === UI ===
+function showApp() {
+  document.getElementById('authPage').style.display = 'none';
+  document.getElementById('homePage').classList.add('visible');
+  var bar = document.getElementById('userBar');
+  if (!isGuestMode && currentUser) {
+    document.getElementById('userEmail').textContent = currentUser.email;
+    updateUserStats();
+  } else {
+    document.getElementById('userEmail').textContent = 'Modalità ospite';
+    document.getElementById('userStats').textContent = '';
+  }
+  bar.classList.add('visible');
+  // Reset auth button
+  var btn = document.getElementById('authBtn');
+  btn.disabled = false;
+  btn.textContent = isRegisterMode ? 'Registrati' : 'Accedi';
+  initHome();
+  // Auto-open didattica if ?page=didattica
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('page') === 'didattica') {
+    showDidattica();
+    // Clean up URL without reload
+    if (window.history.replaceState) {
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }
+}
+
+function updateUserStats() {
+  var n = masteredQuestions['all'] ? masteredQuestions['all'].size : 0;
+  document.getElementById('userStats').textContent = n + ' / ' + quizData.length + ' completate';
+}
+
+function formatTime(sec) {
+  var m = Math.floor(sec / 60), s = sec % 60;
+  return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+}
+
+function startTimer() {
+  timerStart = Date.now();
+  document.getElementById('quizTimer').textContent = '⏱ 00:00';
+  clearInterval(timerInterval);
+  timerInterval = setInterval(function() {
+    var elapsed = Math.floor((Date.now() - timerStart) / 1000);
+    document.getElementById('quizTimer').textContent = '⏱ ' + formatTime(elapsed);
+  }, 1000);
+}
+
+function stopTimer() { clearInterval(timerInterval); return Math.floor((Date.now() - timerStart) / 1000); }
+
+function initHome() {
+  if (homeInitialized) { updateStart(); return; }
+  homeInitialized = true;
+  var cats = []; var catSet = {};
+  quizData.forEach(function(q) { if (!catSet[q.category]) { catSet[q.category] = true; cats.push(q.category); } });
+  cats.sort();
+  var grid = document.getElementById('catGrid');
+  grid.innerHTML = '';
+  var all = document.createElement('div');
+  all.className = 'cat-btn selected'; all.dataset.cat = 'all';
+  all.innerHTML = '<span>Tutte</span><span class="cat-count">' + quizData.length + '</span>';
+  all.onclick = function() { pickCat('all'); };
+  grid.appendChild(all);
+  cats.forEach(function(c) {
+    var n = quizData.filter(function(q) { return q.category === c; }).length;
+    var btn = document.createElement('div');
+    btn.className = 'cat-btn'; btn.dataset.cat = c;
+    btn.innerHTML = '<span>' + c + '</span><span class="cat-count">' + n + '</span>';
+    btn.onclick = function() { pickCat(c); };
+    grid.appendChild(btn);
+  });
+  updateStart();
+}
+
+function pickAmount(n) {
+  amount = n;
+  document.querySelectorAll('.amount-btn').forEach(function(b) {
+    var num = parseInt(b.querySelector('.num').textContent);
+    b.classList.toggle('selected', num === n);
+  });
+  updateStart();
+}
+
+function pickRemaining() {
+  var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
+  var realUnseen = getRealUnseenCount(fullPool, category);
+  if (realUnseen <= 0) return;
+  amount = realUnseen;
+  document.querySelectorAll('.amount-btn').forEach(function(b) {
+    b.classList.remove('selected');
+  });
+  document.getElementById('btnRestanti').classList.add('selected');
+  updateStart();
+}
+
+function pickCat(c) {
+  category = c;
+  document.querySelectorAll('.cat-btn').forEach(function(b) {
+    b.classList.toggle('selected', b.dataset.cat === c);
+  });
+  updateStart();
+}
+
+function getRealUnseenCount(pool, cat) {
+  var key = cat || 'all';
+  if (!isGuestMode && currentUser) {
+    var mastered = masteredQuestions[key] || new Set();
+    return pool.filter(function(q) { return !mastered.has(q.id); }).length;
+  } else {
+    if (!seenQuestions[key]) return pool.length;
+    var seen = new Set(seenQuestions[key]);
+    return pool.filter(function(q) { return !seen.has(q.id); }).length;
+  }
+}
+
+function updateStart() {
+  var btn = document.getElementById('startBtn');
+  if (!amount) { btn.disabled = true; btn.textContent = 'Scegli il numero di domande'; return; }
+  var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
+  var realUnseen = getRealUnseenCount(fullPool, category);
+  var unseen = getUnseenPool(fullPool, category);
+  var n = Math.min(amount, unseen.length);
+  btn.disabled = false;
+  btn.textContent = 'Inizia — ' + n + ' domande (' + realUnseen + ' ancora da fare su ' + fullPool.length + ')';
+  // Mostra/nascondi bottone "restanti"
+  var btnRest = document.getElementById('btnRestanti');
+  if (realUnseen > 0 && realUnseen <= 200 && [10,20,30,50,100].indexOf(realUnseen) === -1) {
+    btnRest.style.display = '';
+    document.getElementById('restantiNum').textContent = realUnseen;
+  } else {
+    btnRest.style.display = 'none';
+    if (btnRest.classList.contains('selected')) btnRest.classList.remove('selected');
+  }
+}
+
+function shuffle(a) { var b = a.slice(); for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = b[i]; b[i] = b[j]; b[j] = t; } return b; }
+
+function startQuiz() {
+  var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
+  var pool = getUnseenPool(fullPool, category);
+  questions = shuffle(pool).slice(0, amount);
+  if (isGuestMode || !currentUser) { markAsSeen(questions.map(function(q) { return q.id; }), category); }
+  answers = {}; corrected = false;
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'block';
+  document.getElementById('quizTitle').textContent = category === 'all' ? 'Tutte le categorie' : category;
+  document.getElementById('resultsCard').classList.remove('visible');
+  document.getElementById('btnCorreggi').classList.remove('hidden');
+  document.getElementById('btnErrori').classList.add('hidden');
+  document.getElementById('btnHome').classList.add('hidden');
+  render(); window.scrollTo({ top: 0 }); startTimer();
+}
+
+function goHome() {
+  clearInterval(timerInterval);
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('didatticaPage').classList.remove('visible');
+  document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('homePage').classList.add('visible');
+  updateStart(); updateUserStats(); window.scrollTo({ top: 0 });
+}
+
+function pick(qid, letter) { if (corrected) return; answers[qid] = letter; render(); }
+
+function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+function render() {
+  var c = document.getElementById('quizContainer'); var h = '';
+  questions.forEach(function(q, i) {
+    var a = answers[q.id]; var cardCls = 'question-card';
+    if (corrected) { if (!a) cardCls += ' card-empty'; else if (a === q.answer) cardCls += ' card-correct'; else cardCls += ' card-wrong'; }
+    h += '<div class="' + cardCls + '" id="q-' + q.id + '">';
+    h += '<div class="question-header"><span class="question-number">Domanda ' + (i+1) + ' <span class="orig">(n.' + q.id + ')</span></span>';
+    h += '<span class="category-badge" data-cat="' + esc(q.category) + '">' + esc(q.category) + '</span></div>';
+    h += '<div class="question-text">' + esc(q.question) + '</div><div class="options">';
+    ['A','B','C','D'].forEach(function(l) {
+      if (!q.options[l]) return;
+      var cls = 'option';
+      if (corrected) { cls += ' locked'; if (l === q.answer) cls += ' opt-correct'; if (a && l === a && a !== q.answer) cls += ' opt-wrong'; }
+      else { if (a === l) cls += ' picked'; }
+      h += '<div class="' + cls + '" onclick="pick(' + q.id + ',\'' + l + '\')"><span class="letter">' + l + '</span><span class="option-text">' + esc(q.options[l]) + '</span></div>';
+    });
+    h += '</div>';
+    if (corrected && (!a || a !== q.answer)) {
+      h += '<div class="explanation-box">';
+      if (a) { h += '<span class="exp-wrong">✗ Hai risposto <strong>' + a + '</strong>: ' + esc(q.options[a] || '') + '</span><br>'; }
+      else { h += '<span class="exp-wrong">✗ Non hai risposto</span><br>'; }
+      h += '<span class="exp-correct">✓ Risposta corretta: <strong>' + q.answer + '</strong> — ' + esc(q.options[q.answer] || '') + '</span></div>';
+    }
+    h += '</div>';
+  });
+  c.innerHTML = h;
+  var done = questions.filter(function(q) { return answers[q.id]; }).length;
+  document.getElementById('progressFill').style.width = Math.round(done / questions.length * 100) + '%';
+  document.getElementById('quizInfo').textContent = done + ' / ' + questions.length + ' risposte';
+}
+
+async function correggi() {
+  corrected = true;
+  var elapsed = stopTimer();
+  var tot = questions.length;
+  var done = questions.filter(function(q) { return answers[q.id]; }).length;
+  var ok = questions.filter(function(q) { return answers[q.id] === q.answer; }).length;
+  var ko = done - ok; var empty = tot - done;
+  if (!isGuestMode && currentUser) {
+    await saveAnswersToSupabase(questions, answers);
+    saveSessionToSupabase(category === 'all' ? 'all' : category, tot, ok, ko, empty, elapsed, Math.round(ok / tot * 100));
+  } else {
+    var wrongIds = questions.filter(function(q) { return answers[q.id] !== q.answer; }).map(function(q) { return q.id; });
+    if (wrongIds.length > 0) unmarkWrongQuestions(wrongIds, category);
+  }
+  var pct = Math.round(ok / tot * 100);
+  var icon = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
+  document.getElementById('rIcon').textContent = icon;
+  document.getElementById('rScore').textContent = pct + '%';
+  var d = '<span class="green">✓ ' + ok + ' corrette</span>';
+  if (ko) d += ' · <span class="red">✗ ' + ko + ' errate</span>';
+  if (empty) d += ' · <span class="orange">— ' + empty + ' senza risposta</span>';
+  document.getElementById('rDetail').innerHTML = d;
+  document.getElementById('rTime').textContent = '⏱ Tempo: ' + formatTime(elapsed);
+  document.getElementById('resultsCard').classList.add('visible');
+  document.getElementById('btnCorreggi').classList.add('hidden');
+  if (ko || empty) document.getElementById('btnErrori').classList.remove('hidden');
+  document.getElementById('btnHome').classList.remove('hidden');
+  render();
+  document.getElementById('resultsCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Controlla se tutte le domande sono state completate
+  if (checkAllMastered()) {
+    setTimeout(function() { showCompletionModal(); }, 1500);
+  }
+}
+
+function rivediErrori() {
+  for (var i = 0; i < questions.length; i++) {
+    var q = questions[i]; var a = answers[q.id];
+    if (!a || a !== q.answer) { document.getElementById('q-' + q.id).scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+  }
+}
+
+// === STATS ===
+async function showStats() {
+  document.getElementById('didatticaPage').classList.remove('visible');
+  if (isGuestMode || !currentUser) {
+    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Le statistiche sono disponibili solo con un account.</div>';
+    document.getElementById('homePage').classList.remove('visible');
+    document.getElementById('quizPage').style.display = 'none';
+    document.getElementById('statsPage').classList.add('visible');
+    return;
+  }
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('statsPage').classList.add('visible');
+  document.getElementById('statsContent').innerHTML = '<div class="stats-empty"><div class="spinner"></div><br>Caricamento...</div>';
+  try {
+    var allAnswers = [];
+    var pgSize = 1000;
+    var pgFrom = 0;
+    while (true) {
+      var page = await sb.from('user_answers').select('question_id, category, is_correct, answered_at').eq('user_id', currentUser.id).order('answered_at', { ascending: false }).range(pgFrom, pgFrom + pgSize - 1);
+      if (page.error) throw page.error;
+      if (page.data) allAnswers = allAnswers.concat(page.data);
+      if (!page.data || page.data.length < pgSize) break;
+      pgFrom += pgSize;
+    }
+    var r1 = { data: allAnswers, error: null };
+    var r2 = await sb.from('quiz_sessions').select('*').eq('user_id', currentUser.id).order('created_at', { ascending: false }).limit(20);
+    if (r1.error) throw r1.error;
+    if (r2.error) throw r2.error;
+    renderStats(r1.data || [], r2.data || []);
+  } catch (err) {
+    console.error('Stats error:', err);
+    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Errore nel caricamento.</div>';
+  }
+}
+
+function renderStats(allAnswers, sessions) {
+  if (allAnswers.length === 0) {
+    document.getElementById('statsContent').innerHTML = '<div class="stats-empty">Nessun quiz completato ancora. Inizia a studiare!</div>';
+    return;
+  }
+  var totalAnswers = allAnswers.length;
+  var correctAnswers = allAnswers.filter(function(a) { return a.is_correct; }).length;
+  var wrongAnswers = totalAnswers - correctAnswers;
+  var globalPct = Math.round(correctAnswers / totalAnswers * 100);
+  var lastPerQ = {};
+  allAnswers.forEach(function(a) { if (!lastPerQ[a.question_id]) lastPerQ[a.question_id] = a; });
+  var uniqueMastered = Object.values(lastPerQ).filter(function(a) { return a.is_correct; }).length;
+  var totalQ = quizData.length;
+  var cats = []; var catSet = {};
+  quizData.forEach(function(q) { if (!catSet[q.category]) { catSet[q.category] = true; cats.push(q.category); } });
+  cats.sort();
+  var catStats = {};
+  cats.forEach(function(cat) {
+    var catTotal = quizData.filter(function(q) { return q.category === cat; }).length;
+    var catAnswers = Object.values(lastPerQ).filter(function(a) { return a.category === cat; });
+    var catMastered = catAnswers.filter(function(a) { return a.is_correct; }).length;
+    var allCatAnswers = allAnswers.filter(function(a) { return a.category === cat; });
+    var allCatCorrect = allCatAnswers.filter(function(a) { return a.is_correct; }).length;
+    var correctPct = allCatAnswers.length > 0 ? Math.round(allCatCorrect / allCatAnswers.length * 100) : 0;
+    catStats[cat] = { total: catTotal, mastered: catMastered, pct: Math.round(catMastered / catTotal * 100), correctPct: correctPct, allCorrect: allCatCorrect, allTotal: allCatAnswers.length };
+  });
+  var html = '';
+  html += '<div class="stat-card"><h3>Panoramica Generale</h3><div class="stat-row">';
+  html += '<div class="stat-box"><div class="stat-num blue">' + uniqueMastered + '/' + totalQ + '</div><div class="stat-lbl">Completate</div></div>';
+  html += '<div class="stat-box"><div class="stat-num green">' + globalPct + '%</div><div class="stat-lbl">Corrette</div></div>';
+  html += '<div class="stat-box"><div class="stat-num blue">' + sessions.length + '</div><div class="stat-lbl">Quiz svolti</div></div>';
+  html += '</div></div>';
+  html += '<div class="stat-card"><h3>Risposte Totali</h3><div class="stat-row">';
+  html += '<div class="stat-box"><div class="stat-num blue">' + totalAnswers + '</div><div class="stat-lbl">Totali</div></div>';
+  html += '<div class="stat-box"><div class="stat-num green">' + correctAnswers + '</div><div class="stat-lbl">Corrette</div></div>';
+  html += '<div class="stat-box"><div class="stat-num red">' + wrongAnswers + '</div><div class="stat-lbl">Sbagliate</div></div>';
+  html += '</div></div>';
+  html += '<div class="stat-card"><h3>Progressione per Categoria</h3>';
+  cats.forEach(function(cat) {
+    var s = catStats[cat];
+    var correctColor = s.correctPct >= 80 ? '#16a34a' : s.correctPct >= 60 ? '#ea580c' : '#dc2626';
+    html += '<div class="progress-cat"><div class="progress-cat-header"><span class="progress-cat-name">' + esc(cat) + '</span>';
+    html += '<span class="progress-cat-pct">' + s.mastered + '/' + s.total + ' (' + s.pct + '%)';
+    if (s.allTotal > 0) html += ' · <span style="color:' + correctColor + '">' + s.correctPct + '% corrette</span>';
+    html += '</span></div>';
+    html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + s.pct + '%"></div></div></div>';
+  });
+  var totalPct = Math.round(uniqueMastered / totalQ * 100);
+  var totalCorrectPct = totalAnswers > 0 ? globalPct : 0;
+  var totalCorrectColor = totalCorrectPct >= 80 ? '#16a34a' : totalCorrectPct >= 60 ? '#ea580c' : '#dc2626';
+  html += '<div class="progress-cat" style="margin-top:8px;padding-top:12px;border-top:2px solid #e2e8f0"><div class="progress-cat-header">';
+  html += '<span class="progress-cat-name" style="font-weight:700">TOTALE</span>';
+  html += '<span class="progress-cat-pct">' + uniqueMastered + '/' + totalQ + ' (' + totalPct + '%)';
+  if (totalAnswers > 0) html += ' · <span style="color:' + totalCorrectColor + '">' + totalCorrectPct + '% corrette</span>';
+  html += '</span></div>';
+  html += '<div class="progress-cat-bar"><div class="progress-cat-fill" style="width:' + totalPct + '%"></div></div></div></div>';
+  if (sessions.length > 0) {
+    html += '<div class="stat-card"><h3>Ultimi Quiz</h3>';
+    sessions.forEach(function(s) {
+      var date = new Date(s.created_at);
+      var dateStr = date.toLocaleDateString('it-IT', { day: '2-digit', month: 'short', year: 'numeric' });
+      var timeStr = date.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+      var catLabel = s.category === 'all' ? 'Tutte' : s.category;
+      var scoreCls = s.score_pct >= 80 ? 'green' : s.score_pct >= 60 ? 'orange' : 'red';
+      html += '<div class="session-item"><div class="session-info"><div class="session-cat">' + esc(catLabel) + ' — ' + s.total_questions + ' domande</div>';
+      html += '<div class="session-date">' + dateStr + ' alle ' + timeStr + ' · ' + formatTime(s.elapsed_seconds) + '</div></div>';
+      html += '<div><div class="session-score ' + scoreCls + '">' + s.score_pct + '%</div>';
+      html += '<div class="session-detail">' + s.correct_count + '/' + s.total_questions + '</div></div></div>';
+    });
+    html += '</div>';
+  }
+  document.getElementById('statsContent').innerHTML = html;
+}
+
+function hideStats() {
+  document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('homePage').classList.add('visible');
+  window.scrollTo({ top: 0 });
+}
+
+// === DIDATTICA ===
+var didatticaTopics = [
+{
+        id: 'cap-1-1',
+        title: 'L\'uomo e l\'acqua',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">Non si va in piscina per imparare i quattro stili canonici, ma per acquisire piena consapevolezza di come l'acqua agisce sul corpo e modificarne la percezione.</div>
+<h4>L'obiettivo della Scuola di abilità acquatiche</h4>
+<p>Il percorso formativo deve mirare a <strong>stare in acqua in sicurezza</strong>, sviluppando consapevolezza del mezzo. Questo contribuisce a uno sviluppo equilibrato della personalità in tre aree:</p>
+<ul>
+<li><strong>Area morfologico-funzionale:</strong> sviluppo anatomico, prevenzione difetti, acquisizione sensopercezione</li>
+<li><strong>Area intellettivo-cognitiva:</strong> potenziamento attività sensoriale e processi cognitivi</li>
+<li><strong>Area affettivo-relazionale:</strong> autostima, autonomia, gestione emozioni</li>
+</ul>
+<p class="source">Dispense FIN, cap. 1.1</p>`
+    },
+    {
+        id: 'cap-1-2',
+        title: 'Figura e comportamento dell\'istruttore',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">L'istruttore non può contare su alcuna capacità acquisita autonomamente dai propri allievi in acqua e deve essere sempre presente, motivante e sicuro.</div>
+<h4>Le quattro competenze fondamentali</h4>
+<table style="width:100%; border-collapse: collapse;">
+<tr><th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Competenza</th><th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Descrizione</th></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Sapere</strong></td><td style="border: 1px solid #ccc; padding: 8px;">Conoscenze tecniche, didattiche, psicopedagogiche, biofisiologiche</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Saper fare</strong></td><td style="border: 1px solid #ccc; padding: 8px;">Capacità pratiche di riprodurre tecniche e intervento in emergenza</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Saper far fare</strong></td><td style="border: 1px solid #ccc; padding: 8px;">Capacità comunicative e relazionali</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Saper essere</strong></td><td style="border: 1px solid #ccc; padding: 8px;">Osservazione, ascolto, personalizzazione per singoli e gruppi</td></tr>
+</table>
+<h4>Concetti chiave: Multilateralità e Specializzazione</h4>
+<p><strong>Multilateralità:</strong> Ampliamento massimo del bagaglio motorio durante le fasi sensibili (periodi critici dello sviluppo).</p>
+<p><strong>Specializzazione:</strong> Successiva focalizzazione verso discipline specifiche, costruita su fondamenta motorie solide.</p>
+<p class="source">Dispense FIN, cap. 1.2</p>`
+    },
+    {
+        id: 'cap-1-3',
+        title: 'Teoria del movimento',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">La prestazione sportiva dipende dall'interazione tra funzione e struttura, determinata da quattro fattori fondamentali.</div>
+<h4>I quattro fattori della prestazione (Schnabel)</h4>
+<ul>
+<li><strong>Costituzione:</strong> misure, proporzioni, massa corporea, mobilità articolare</li>
+<li><strong>Condizione:</strong> capacità condizionali (forza, velocità, resistenza)</li>
+<li><strong>Coordinazione:</strong> capacità di controllare e regolare il movimento</li>
+<li><strong>Controllo:</strong> processi emotivi, cognitivi e motivazionali</li>
+</ul>
+<h4>Capacità motorie: Coordinative e Condizionali</h4>
+<p><strong>Capacità coordinative generali:</strong> apprendimento, adattamento, orientamento spaziale</p>
+<p><strong>Fasi dell'apprendimento motorio:</strong></p>
+<ol>
+<li><strong>Coordinazione grezza:</strong> comprensione del compito, esecuzione imperfetta</li>
+<li><strong>Coordinazione fine:</strong> movimento fluido, armonico, preciso</li>
+<li><strong>Disponibilità variabile:</strong> esecuzione in qualsiasi condizione</li>
+</ol>
+<p><strong>Capacità condizionali:</strong> forza, velocità, resistenza, mobilità articolare</p>
+<p class="source">Dispense FIN, cap. 1.3</p>`
+    },
+    {
+        id: 'cap-1-4',
+        title: 'Le attività motorie: schemi terrestri e acquatici',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">L'acqua è un mezzo radicalmente diverso dalla terra: gli schemi motori naturali terrestri non hanno utilità in acqua e le abilità acquatiche devono essere apprese, non acquisite per maturazione autonoma.</div>
+<h4>Peculiarità del mezzo acquatico</h4>
+<p>L'acqua ha densità 800 volte superiore all'aria, oppone resistenza, riduce gravità e altera equilibrio. <strong>L'uomo non è un animale acquatico:</strong> nessuno schema motorio di base (camminare, correre, saltare, arrampicare) è utile per la locomozione acquatica.</p>
+<h4>Apprendimento vs Maturazione in acqua</h4>
+<p>In terra: <strong>Maturazione → Apprendimento → Sviluppo</strong></p>
+<p>In acqua: <strong>Apprendimento (insegnamento) → Sviluppo</strong></p>
+<p class="definition">Non esiste stimolo naturale che induca autonomamente galleggiamento, scivolamento o propulsione. Le abilità motorie acquatiche <strong>devono essere insegnate</strong>, e se ne possiede tante quante se ne apprendono.</p>
+<h4>Principi dell'apprendimento acquatico</h4>
+<p>Elasticità e trasferibilità: ogni abilità deve essere modificabile in base a obiettivi contingenti e adattabile allo sviluppo psicofisico.</p>
+<p class="source">Dispense FIN, cap. 1.4</p>`
+    },
+    {
+        id: 'cap-1-5',
+        title: 'Età cronologica ed età biologica',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">Non sempre l'età biologica corrisponde all'età cronologica. L'istruttore deve riconoscere il grado di sviluppo reale di ogni allievo e proporre stimoli appropriati.</div>
+<h4>Periodo evolutivo e suddivisioni</h4>
+<table style="width:100%; border-collapse: collapse;">
+<tr><th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Periodo</th><th style="border: 1px solid #ccc; padding: 8px; text-align: left;">Età</th></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Prima infanzia</strong></td><td style="border: 1px solid #ccc; padding: 8px;">0-4 anni</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Seconda infanzia</strong></td><td style="border: 1px solid #ccc; padding: 8px;">4-10 anni</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Fase prepuberale</strong></td><td style="border: 1px solid #ccc; padding: 8px;">10-13 anni</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Fase puberale</strong></td><td style="border: 1px solid #ccc; padding: 8px;">14-15 anni</td></tr>
+<tr><td style="border: 1px solid #ccc; padding: 8px;"><strong>Fase post-puberale</strong></td><td style="border: 1px solid #ccc; padding: 8px;">16-19 anni</td></tr>
+</table>
+<h4>Concetto di sviluppo auxologico</h4>
+<p>Fenomeni naturali di crescita e maturazione che possono manifestarsi in anticipo o ritardo rispetto alla cronologia.</p>
+<p class="definition"><strong>Timing biologico:</strong> capacità e abilità vanno sollecitate al momento opportuno—non prima (impossibile) e non dopo (inutile). Stimoli sufficienti a innescare evoluzione tecnica, non eccessivi da creare frustrazione.</p>
+<p class="source">Dispense FIN, cap. 1.5</p>`
+    },
+    {
+        id: 'cap-1-6',
+        title: 'Evoluzione del comportamento acquatico',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">La "Scuola d'acqua" segue un percorso progressivo di familiarizzazione, adattamento sensoperceettivo e costruzione di abilità motorie elastiche e trasferibili.</div>
+<h4>Percorso della Scuola d'acqua</h4>
+<p><strong>Fase esplorativa:</strong> Esplorare il nuovo ambiente, prendere confidenza, stare in acqua volentieri</p>
+<p><strong>Fase di controllo corporeo:</strong> Padroneggiare il corpo in acqua, immersione, respirazione, orientamento</p>
+<p><strong>Fase di galleggiamento:</strong> Galleggiamento naturale → galleggiamento dinamico con percezione dell'acqua</p>
+<p><strong>Fase propulsiva:</strong> Propulsione grezza → sviluppo di modelli propulsivi → acquisizione di molteplici abilità</p>
+<h4>Approccio euristico vs meccanicistico</h4>
+<p><strong>Approccio euristico (corretto):</strong> sviluppo di mappa motoria ricca, elastica, trasferibile; costruzione competenza motoria ampia; flessibilità adattativa.</p>
+<p><strong>Approccio meccanicistico (obsoleto):</strong> percorso obbligato rigido, stereotipizzazione del gesto, ridotta trasferibilità.</p>
+<p class="definition">Il fulcro è la parola <strong>"abilità"</strong>: capacità motorie educate, orientate, dinamiche su cui costruire competenza motoria elevata.</p>
+<p class="source">Dispense FIN, cap. 1.6</p>`
+    },
+    {
+        id: 'cap-1-7',
+        title: 'Dalla competenza motoria al talento sportivo',
+        category: "La cultura dell'acqua",
+        content: `<div class="key-concept">Lo sviluppo della competenza motoria precede e favorisce il talento sportivo. Una specializzazione precoce garantisce risultati immediate ma compromette il potenziale massimo.</div>
+<h4>Competenza motoria vs Specializzazione precoce</h4>
+<p><strong>Approccio tradizionale (specializzazione precoce):</strong></p>
+<ul>
+<li>Risultati migliori nel breve periodo</li>
+<li>Non consente sviluppo pieno potenziale</li>
+<li>Manca della finestra temporale ottimale per capacità coordinative</li>
+<li>Conduce a stagnazione nei momenti critici di sviluppo</li>
+</ul>
+<p><strong>Approccio euristico (competenza motoria ampia):</strong></p>
+<ul>
+<li>Risultati apparentemente meno soddisfacenti nell'immediato</li>
+<li>Crea presupposti per "esplosione di efficienza" al momento biologico ottimale</li>
+<li>Sfrutta pienamente le fasi sensibili</li>
+<li>Costruisce pieno potenziale</li>
+</ul>
+<h4>Fattori chiave del successo</h4>
+<p><strong>Fasi sensibili:</strong> periodi temporali definiti durante i quali le capacità coordinative sono massimamente stimolabili e non indefinitamente migliorabili.</p>
+<p><strong>Benessere psicologico:</strong> appropriate condizioni psicologiche e psicodinamiche favoriscono processo e risultato.</p>
+<p class="source">Dispense FIN, cap. 1.7</p>`
+    },
+{
+    id: 'psicopedagogia-2-1',
+    title: 'Il processo di comunicazione',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">La comunicazione è un processo bidirezionale che coinvolge mittente, messaggio e destinatario, con feedback continuo.</div>
+<h4>Elementi fondamentali</h4>
+<p><strong>Emettente e ricevente:</strong> Ogni comunicazione richiede una fonte attiva e un destinatario. La qualità dipende dalla chiarezza del mittente e dall'attenzione del ricevente.</p>
+<p><strong>Messaggio e canale:</strong> Il contenuto deve essere appropriato al mezzo utilizzato (verbale, non-verbale, paraverbale). La scelta del canale influenza l'efficacia.</p>
+<p><strong>Feedback:</strong> Essenziale per verificare la ricezione corretta del messaggio e per adattare la comunicazione in tempo reale.</p>
+<h4>Barriere comunicative</h4>
+<p>Le principali difficoltà sono: distrazioni ambientali, differenze culturali, pregiudizi, mancanza di ascolto attivo, e uso di linguaggio inadatto.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.1</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-2',
+    title: 'Gestione del singolo e gestione del gruppo',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">La gestione dell'individuo e del gruppo richiede competenze diverse: empatia per il singolo, capacità di conduzione per il gruppo.</div>
+<h4>Gestione del singolo</h4>
+<p>Richiede <strong>ascolto attivo</strong>, riconoscimento delle specificità individuali, e personalizzazione dell'insegnamento. Essenziale stabilire rapporti di fiducia.</p>
+<h4>Gestione del gruppo</h4>
+<p>Implica <strong>coesione</strong>, definizione di norme comuni, gestione dei conflitti, e creazione di un clima positivo. Il leader deve bilanciare autorità e inclusione.</p>
+<h4>Dinamiche di gruppo</h4>
+<p>I gruppi attraversano fasi: formazione, conflitto, sviluppo di norme, prestazione e chiusura. Comprendere queste fasi facilita la gestione efficace.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.2</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-3',
+    title: 'Sviluppo cognitivo emotivo ed affettivo',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">Lo sviluppo cognitivo, emotivo e affettivo è un processo integrato che determina la capacità di apprendimento e relazione.</div>
+<h4>Sviluppo cognitivo</h4>
+<p>Secondo Piaget, evolve attraverso stadi: sensomotorio, preoperatorio, concreto-operatorio, formale. Ogni stadio ha caratteristiche e limiti specifici.</p>
+<h4>Sviluppo emotivo</h4>
+<p>Riguarda la capacità di <strong>riconoscere e regolare le emozioni</strong>. È fondamentale per l'adattamento sociale e il benessere psicologico.</p>
+<h4>Sviluppo affettivo</h4>
+<p>Include la formazione di <strong>legami significativi</strong> e l'acquisizione di sicurezza relazionale. Influenza la fiducia negli altri e in se stessi.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.3</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-4',
+    title: 'Costruzione dell\'autostima',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">L'autostima è la valutazione che una persona fa di se stessa ed è fondamentale per il benessere e la prestazione.</div>
+<h4>Componenti dell'autostima</h4>
+<p><strong>Autoefficacia:</strong> Convinzione nella propria capacità di affrontare compiti. <strong>Autovalore:</strong> Senso di meritevolezza e dignità personale.</p>
+<h4>Fattori di costruzione</h4>
+<p>Esperienza di successo, feedback positivo credibile, modelli di ruolo, accettazione incondizionata, e sfide gestibili sono elementi chiave.</p>
+<h4>Ruolo dell'istruttore</h4>
+<p>Creare <strong>ambienti supportivi</strong>, riconoscere progressi, evitare critiche distruttive, e promuovere attribuzioni interne di successo.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.4</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-5',
+    title: 'Intelligenza emotiva',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">L'intelligenza emotiva è la capacità di riconoscere, comprendere e gestire le proprie emozioni e quelle altrui.</div>
+<h4>Quattro dimensioni</h4>
+<p><strong>Consapevolezza emotiva:</strong> Riconoscimento accurato delle proprie emozioni. <strong>Gestione emotiva:</strong> Controllo e regolazione delle risposte emotive.</p>
+<p><strong>Empatia:</strong> Comprensione delle emozioni altrui. <strong>Gestione relazionale:</strong> Utilizzo delle emozioni per migliorare le relazioni.</p>
+<h4>Sviluppo e applicazione</h4>
+<p>L'intelligenza emotiva può essere sviluppata attraverso pratica consapevole. Negli sport acquatici, migliora comunicazione, motivazione e climate emotivo.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.5</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-6',
+    title: 'Insegnamento ed apprendimento',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">Insegnamento e apprendimento sono processi interconnessi. L'apprendimento efficace richiede coinvolgimento attivo dello studente.</div>
+<h4>Teorie dell'apprendimento</h4>
+<p><strong>Comportamentismo:</strong> Focus su stimolo-risposta e rinforzo. <strong>Cognitivismo:</strong> Enfasi su processi mentali e costruzione di significato.</p>
+<p><strong>Costruttivismo:</strong> L'apprendente costruisce attivamente la conoscenza. <strong>Socioculturale:</strong> L'apprendimento è mediato da contesto e interazioni.</p>
+<h4>Ruolo dell'istruttore</h4>
+<p>Da trasmettitore passivo a <strong>facilitatore</strong>. Crea scaffolding, pone domande, permette scoperta guidata, e adatta il ritmo alle capacità.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.6</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-7',
+    title: 'Strategie didattiche e clima psicologico',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">Le strategie didattiche efficaci creano un clima psicologico positivo che favorisce apprendimento, sicurezza e motivazione.</div>
+<h4>Strategie didattiche principali</h4>
+<p><strong>Lezione interattiva:</strong> Alternanza tra spiegazione e coinvolgimento. <strong>Scoperta guidata:</strong> L'apprendente trova soluzioni con supporto.</p>
+<p><strong>Cooperative learning:</strong> Lavoro di gruppo per obiettivi comuni. <strong>Problem-solving:</strong> Affronta sfide concrete e significative.</p>
+<h4>Clima psicologico</h4>
+<p>Richiede <strong>fiducia</strong>, <strong>rispetto</strong>, <strong>inclusione</strong>, e <strong>sicurezza emotiva</strong>. Un clima positivo riduce ansia e aumenta motivazione intrinseca.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.7</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-8',
+    title: 'L\'allievo adolescente',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">L'adolescente attraversa cambiamenti fisici, cognitivi e sociali significativi che influenzano l'apprendimento e le relazioni.</div>
+<h4>Caratteristiche dello sviluppo</h4>
+<p><strong>Cognitivo:</strong> Pensiero astratto e critico si sviluppano; idealismo e sperimentazione aumentano. <strong>Fisico:</strong> Cambiamenti rapidi e pubertà con effetti su autoimmagine.</p>
+<h4>Aspetti psicosociali</h4>
+<p><strong>Ricerca di identità</strong> e <strong>autonomia</strong> sono prioritarie. Pari sono influenti; aumenta il bisogno di appartenenza e accettazione.</p>
+<h4>Implicazioni pedagogiche</h4>
+<p>Favorire <strong>autonomia</strong> con supervisione; proporre <strong>sfide cognitively complex</strong>; normalizzare incertezze; costruire relazioni autentiche.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.8</em></p>`
+  },
+  {
+    id: 'psicopedagogia-2-9',
+    title: 'L\'allievo adulto',
+    category: 'Psicopedagogia',
+    content: `<div class="key-concept">L'adulto apporta esperienze, motivazioni diverse e preferenze di apprendimento mature che richiedono approcci differenti.</div>
+<h4>Caratteristiche dell'apprendimento adulto</h4>
+<p><strong>Autodiretto:</strong> Assume responsabilità del proprio apprendimento. <strong>Esperienza-basato:</strong> Connette nuovo apprendimento all'esperienza pregressa.</p>
+<p><strong>Problem-centrico:</strong> Apprende per risolvere problemi reali. <strong>Motivazione intrinseca:</strong> Guidato da obiettivi personali e significato.</p>
+<h4>Ruolo dell'istruttore</h4>
+<p><strong>Facilitatore</strong> piuttosto che autoritario. Riconosce competenze precedenti, permette scelta, integra feedback pratico, e crea ambienti collaborativi.</p>
+<p><em>Fonte: Dispense FIN, cap. 2.9</em></p>`
+  },
+{
+    id: '3.1.1-cellula',
+    title: 'La Cellula: Struttura e Organuli',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">La cellula è l'unità fondamentale degli organismi viventi. In organismi complessi come l'uomo, le cellule si specializzano e si organizzano in tessuti e organi.</div>
+    <h4>Organuli Cellulari</h4>
+    <p><strong>Nucleo:</strong> Contiene il materiale genetico (DNA) ed è il centro di controllo della cellula.</p>
+    <p><strong>Mitocondrio:</strong> Responsabile della produzione di energia (ATP). Interviene anche nella regolazione dello stato redox, sintesi dell'eme e del colesterolo, produzione di calore e regolazione del ciclo cellulare.</p>
+    <p><strong>Reticolo Endoplasmatico:</strong> Sistema di canalicoli e cisterne. Il reticolo rugoso sintetizza proteine con ribosomi, il liscio è coinvolto nel metabolismo dei lipidi. Mantiene la forma della cellula.</p>
+    <p><strong>Complesso del Golgi:</strong> Completa la sintesi di materiali glicoproteici e glicolipidici, processa e immagazzina le proteine.</p>
+    <p><strong>Ribosomi:</strong> Siti di sintesi delle proteine cellulari, costituiti da RNA ribosomiale.</p>
+    <p><strong>Lisosoma:</strong> Contiene enzimi idrolitici responsabili della digestione cellulare. La sua integrità è essenziale per la sopravvivenza cellulare.</p>
+    <p><strong>Centriolo:</strong> Organulo coinvolto nella divisione cellulare, non presente in tutti i tipi cellulari.</p>
+    <h4>Organizzazione Biologica</h4>
+    <p>Le cellule si specializzano in popolazioni diverse, unendosi per formare <strong>tessuti</strong> (gruppi di cellule specializzate). I tessuti formano <strong>organi</strong>, che sono organizzati in <strong>sistemi</strong> per svolgere funzioni coordinate.</p>
+    <p>Fonte: Cap. 3.1.1 (pp. 53-54)</p>`
+  },
+  {
+    id: '3.1.2.1-sistema-nervoso',
+    title: 'Sistema Nervoso: Struttura e Funzioni',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">Il sistema nervoso è responsabile della ricezione, elaborazione e trasmissione degli stimoli, permettendo il controllo e il coordinamento delle funzioni corporee.</div>
+    <h4>Divisione del Sistema Nervoso</h4>
+    <p><strong>Sistema Nervoso Centrale (SNC):</strong> Composto da encefalo e midollo spinale. Centro di controllo e coordinamento.</p>
+    <p><strong>Sistema Nervoso Periferico (SNP):</strong> Comprende i nervi e i gangli. Collega il SNC al resto del corpo.</p>
+    <h4>Unità Funzionale: Il Neurone</h4>
+    <p>Il neurone è la cellula specializzata del sistema nervoso, composto da:</p>
+    <ul>
+    <li><strong>Soma:</strong> Corpo cellulare contenente il nucleo</li>
+    <li><strong>Dendriti:</strong> Prolungamenti che ricevono i segnali</li>
+    <li><strong>Assone:</strong> Prolungamento lungo che trasmette i segnali</li>
+    </ul>
+    <h4>Trasmissione dell'Impulso Nervoso</h4>
+    <p>L'impulso nervoso si propaga attraverso i neuroni mediante sinapsi (giunzioni tra neuroni). La trasmissione avviene attraverso neurotrasmettitori, molecole chimiche che permettono la comunicazione tra cellule nervose.</p>
+    <p>Fonte: Cap. 3.1.2.1 (pp. 55-56)</p>`
+  },
+  {
+    id: '3.1.2.2-sistema-respiratorio',
+    title: 'Sistema Respiratorio: Scambi Gassosi',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">Il sistema respiratorio è responsabile dello scambio di ossigeno e anidride carbonica tra il corpo e l'ambiente esterno.</div>
+    <h4>Vie Respiratorie</h4>
+    <p><strong>Vie Aeree Superiori:</strong> Naso, cavità nasale, faringe e laringe. Filtrano, riscaldano e umidificano l'aria.</p>
+    <p><strong>Vie Aeree Inferiori:</strong> Trachea, bronchi e bronchioli. Conducono l'aria fino ai polmoni.</p>
+    <h4>Polmoni e Scambio Gassoso</h4>
+    <p>I polmoni contengono <strong>alveoli</strong>, piccole sacche dove avviene lo scambio gassoso:</p>
+    <ul>
+    <li>L'<strong>ossigeno</strong> dall'aria inspirata passa nel sangue</li>
+    <li>L'<strong>anidride carbonica</strong> dal sangue passa nell'aria da espirare</li>
+    </ul>
+    <h4>Meccanica Respiratoria</h4>
+    <p>La respirazione è controllata dal <strong>diaframma</strong> e dai muscoli intercostali:</p>
+    <ul>
+    <li><strong>Inspirazione:</strong> Il diaframma si contrae, il torace si espande, l'aria entra nei polmoni</li>
+    <li><strong>Espirazione:</strong> Il diaframma si rilassa, il torace si contrae, l'aria esce dai polmoni</li>
+    </ul>
+    <p>Fonte: Cap. 3.1.2.2 (pp. 57-58)</p>`
+  },
+  {
+    id: '3.1.2.3-sistema-circolatorio',
+    title: 'Sistema Circolatorio: Trasporto e Nutrizione',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">Il sistema circolatorio trasporta ossigeno, nutrienti e sostanze di scarto attraverso il corpo. È composto dal cuore, dai vasi sanguigni e dal sangue.</div>
+    <h4>Il Cuore</h4>
+    <p>Organo muscolare principale della circolazione. Strutturato in quattro camere:</p>
+    <ul>
+    <li><strong>Atri (2):</strong> Ricevono il sangue</li>
+    <li><strong>Ventricoli (2):</strong> Spingono il sangue verso i vasi</li>
+    </ul>
+    <p><strong>Funzionamento:</strong> Il cuore batte ritmicamente, creando una sequenza di sistole (contrazione) e diastole (rilassamento). La frequenza cardiaca media è di 60-100 battiti al minuto.</p>
+    <h4>Vasi Sanguigni</h4>
+    <p><strong>Arterie:</strong> Portano il sangue ricco di ossigeno dal cuore ai tessuti. Hanno pareti spesse ed elastiche.</p>
+    <p><strong>Vene:</strong> Riportano il sangue deossigenato ai polmoni e al cuore. Hanno pareti più sottili.</p>
+    <p><strong>Capillari:</strong> Piccoli vasi dove avvengono gli scambi di ossigeno, nutrienti e scarti tra sangue e tessuti.</p>
+    <h4>Circolazione Polmonare e Sistemica</h4>
+    <p><strong>Circolazione Polmonare:</strong> Il cuore destro pompa sangue deossigenato ai polmoni per ossigenarlo.</p>
+    <p><strong>Circolazione Sistemica:</strong> Il cuore sinistro pompa sangue ossigenato a tutti i tessuti del corpo.</p>
+    <h4>Sangue</h4>
+    <p>Composto da:</p>
+    <ul>
+    <li><strong>Plasma:</strong> Fluido trasportatore</li>
+    <li><strong>Globuli Rossi (Eritrociti):</strong> Trasportano ossigeno grazie all'emoglobina</li>
+    <li><strong>Globuli Bianchi (Leucociti):</strong> Difendono da infezioni</li>
+    <li><strong>Piastrine (Trombociti):</strong> Coagulazione del sangue</li>
+    </ul>
+    <h4>Pressione Arteriosa</h4>
+    <p>La pressione sanguigna è la forza esercitata dal sangue sulle pareti dei vasi. Si misura in mmHg (millimetri di mercurio). Valori normali: sistolica 120 mmHg, diastolica 80 mmHg.</p>
+    <p>Fonte: Cap. 3.1.2.3 (pp. 59-63)</p>`
+  },
+  {
+    id: '3.1.2.4-apparato-scheletrico',
+    title: 'Apparato Scheletrico: Sostegno e Movimento',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">L'apparato scheletrico fornisce struttura, sostegno, protezione e permette il movimento in combinazione con i muscoli.</div>
+    <h4>Funzioni dello Scheletro</h4>
+    <ul>
+    <li><strong>Sostegno:</strong> Forma la struttura del corpo</li>
+    <li><strong>Protezione:</strong> Protegge organi vitali (cranio, gabbia toracica, colonna vertebrale)</li>
+    <li><strong>Movimento:</strong> Fornisce leve per i muscoli</li>
+    <li><strong>Emopoiesi:</strong> Midollo osseo produce cellule del sangue</li>
+    <li><strong>Deposito:</strong> Immagazzina minerali (calcio, fosforo)</li>
+    </ul>
+    <h4>Composizione Ossea</h4>
+    <p><strong>Matrice Extracellulare:</strong> Contenente minerali (calcio, fosforo) che conferiscono durezza.</p>
+    <p><strong>Collagene:</strong> Proteina che conferisce flessibilità all'osso.</p>
+    <p><strong>Cellule Ossee:</strong> Osteociti mantengono la struttura, osteoblasti costruiscono, osteoclasti degradano.</p>
+    <h4>Tipi di Articolazioni</h4>
+    <p><strong>Sinartrosi:</strong> Articolazioni immobili (es. cranio)</p>
+    <p><strong>Anfiartrosi:</strong> Articolazioni leggermente mobili (es. vertebre)</p>
+    <p><strong>Diartrosi:</strong> Articolazioni mobili (spalla, ginocchio). Caratterizzate da superfici articolari lisce ricoperte di cartilagine e liquido sinoviale lubrificante.</p>
+    <h4>Divisioni dello Scheletro</h4>
+    <p><strong>Scheletro Assiale:</strong> Cranio, colonna vertebrale, gabbia toracica.</p>
+    <p><strong>Scheletro Appendicolare:</strong> Arti superiori, arti inferiori, cingoli (spalla e bacino).</p>
+    <p>Fonte: Cap. 3.1.2.4 (pp. 64-65)</p>`
+  },
+  {
+    id: '3.1.2.5-apparato-muscolare',
+    title: 'Apparato Muscolare: Contrazione e Movimento',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">I muscoli consentono il movimento volontario e involontario attraverso contrazioni coordinate. Sono responsabili di tutto il movimento corporeo.</div>
+    <h4>Tipi di Muscoli</h4>
+    <p><strong>Muscoli Scheletrici:</strong> Volontari, striati. Consentono il movimento conscio. Attaccati alle ossa tramite tendini.</p>
+    <p><strong>Muscoli Lisci:</strong> Involontari, non striati. Controllano funzioni automatiche (peristalsi, vasocostrizione).</p>
+    <p><strong>Muscolo Cardiaco:</strong> Involontario, striato. Costituisce il cuore e pompa il sangue.</p>
+    <h4>Struttura del Muscolo Scheletrico</h4>
+    <p>Organizzazione gerarchica:</p>
+    <ul>
+    <li><strong>Fibra Muscolare (Miocita):</strong> Cellula muscolare contenente filamenti proteici</li>
+    <li><strong>Miofilamenti:</strong> Filamenti di actina (sottili) e miosina (spessi)</li>
+    <li><strong>Sarcomero:</strong> Unità contrattile del muscolo tra due dischi Z</li>
+    </ul>
+    <h4>Meccanismo di Contrazione (Teoria del Filamento Scorrevole)</h4>
+    <p>1. L'impulso nervoso provoca il rilascio di Ca2+ dalle cisterne del reticolo sarcoplasmatico.</p>
+    <p>2. Il calcio si lega alla <strong>troponina</strong> sulla molecola di actina.</p>
+    <p>3. Questo scopre i siti di legame per la <strong>miosina</strong>.</p>
+    <p>4. Le teste di miosina si legano all'actina formando ponti trasversali.</p>
+    <p>5. La miosina tira l'actina verso il centro del sarcomero (potenza).</p>
+    <p>6. L'ATP fornisce energia per il distacco e il ricominciamento del ciclo.</p>
+    <p>7. Quando cessa lo stimolo, il Ca2+ viene riassorbito e il muscolo si rilassa.</p>
+    <h4>Energia per la Contrazione</h4>
+    <p>L'ATP (adenosina trifosfato) è la fonte energetica. Viene rigenerato tramite:</p>
+    <ul>
+    <li><strong>Creatina Fosfato:</strong> Riserva rapida (secondi)</li>
+    <li><strong>Glicolisi Anaerobica:</strong> Produce lattato (minuti)</li>
+    <li><strong>Fosforilazione Ossidativa:</strong> Metabolismo aerobico (sforzi prolungati)</li>
+    </ul>
+    <h4>Caratteristiche della Contrazione</h4>
+    <p><strong>Forza:</strong> Dipende dal numero di fibre attivate.</p>
+    <p><strong>Velocità:</strong> Varia con il tipo di fibra (lente o veloci).</p>
+    <p><strong>Resistenza:</strong> Fibre lente ricche di mioglobina e mitocondri hanno maggiore resistenza.</p>
+    <p>Fonte: Cap. 3.1.2.5 (pp. 66-69)</p>`
+  },
+  {
+    id: '3.1.2.6-termoregolazione',
+    title: 'Termoregolazione: Mantenimento della Temperatura Corporea',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">La termoregolazione è il processo attraverso il quale il corpo mantiene una temperatura interna stabile attorno a 37°C, essenziale per le funzioni metaboliche.</div>
+    <h4>Fonti di Calore</h4>
+    <p><strong>Termogenesi Metabolica:</strong> Il metabolismo cellulare produce calore come sottoprodotto. Maggiore è l'attività metabolica, maggiore è il calore generato (soprattutto nei muscoli e nel fegato).</p>
+    <p><strong>Brividi Termogenici:</strong> Contrazioni muscolari involontarie che aumentano la produzione di calore in risposta al freddo.</p>
+    <h4>Perdita di Calore</h4>
+    <p><strong>Radiazione:</strong> Emissione di radiazione infrarossa dalla superficie corporea.</p>
+    <p><strong>Conduzione:</strong> Trasferimento diretto di calore verso oggetti più freddi in contatto.</p>
+    <p><strong>Convezione:</strong> Trasferimento di calore tramite aria o liquidi in movimento.</p>
+    <p><strong>Evaporazione:</strong> Evaporazione del sudore dalla pelle (meccanismo più efficiente in ambienti caldi).</p>
+    <h4>Centro di Controllo: L'Ipotalamo</h4>
+    <p>L'<strong>ipotalamo</strong> nel cervello è il termostato corporeo. Contiene neuroni che:</p>
+    <ul>
+    <li>Rilevano la temperatura corporea centrale e periferica</li>
+    <li>Confrontano con il set point (circa 37°C)</li>
+    <li>Attivano meccanismi di compensazione</li>
+    </ul>
+    <h4>Meccanismi di Regolazione</h4>
+    <p><strong>Quando la Temperatura è Bassa:</strong></p>
+    <ul>
+    <li>Vasocostrizione: Riduce il flusso sanguigno verso la pelle</li>
+    <li>Brividi: Aumentano la produzione di calore muscolare</li>
+    <li>Aumento del metabolismo: Termogenesi chimica</li>
+    </ul>
+    <p><strong>Quando la Temperatura è Alta:</strong></p>
+    <ul>
+    <li>Vasodilatazione: Aumenta il flusso sanguigno verso la pelle</li>
+    <li>Sudorazione: Evaporazione raffredda la pelle</li>
+    <li>Riduzione del metabolismo: Diminuisce la produzione di calore</li>
+    </ul>
+    <h4>Importanza della Termoregolazione</h4>
+    <p>Una temperatura corporea stabile è essenziale per:</p>
+    <ul>
+    <li>Funzionamento ottimale degli enzimi</li>
+    <li>Velocità delle reazioni metaboliche</li>
+    <li>Prestazioni muscolari</li>
+    <li>Sopravvivenza (ipotermia e febbre sono pericolose)</li>
+    </ul>
+    <p>Fonte: Cap. 3.1.2.6 (pp. 70-71)</p>`
+  },
+  {
+    id: '3.1.2.7-sistema-endocrino',
+    title: 'Sistema Endocrino: Controllo Ormonale',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">Il sistema endocrino regola le funzioni corporee attraverso ormoni, molecole messaggere che controllano crescita, metabolismo, riproduzione e stress.</div>
+    <h4>Ghiandole Endocrine Principali</h4>
+    <p><strong>Ipofisi (Ghiandola Pituitaria):</strong> La "ghiandola maestra". Produce ormoni che controllano altre ghiandole e regolano crescita, riproduzione e metabolismo.</p>
+    <p><strong>Ipotalamo:</strong> Regione cerebrale che controlla l'ipofisi e integra le risposte neuroendocrine.</p>
+    <p><strong>Tiroide:</strong> Produce ormoni tiroidei (T3, T4) che regolano il metabolismo basale.</p>
+    <p><strong>Paratiroidi:</strong> Controllano i livelli di calcio nel sangue.</p>
+    <p><strong>Pancreas:</strong> Produce insulina e glucagone per il controllo glicemico.</p>
+    <p><strong>Ghiandole Surrenali:</strong> Producono adrenalina e cortisolo in risposta allo stress.</p>
+    <p><strong>Gonadi (Testicoli e Ovaie):</strong> Producono ormoni sessuali per riproduzione e caratteristiche sessuali secondarie.</p>
+    <h4>Meccanismo di Azione degli Ormoni</h4>
+    <p>Gli ormoni vengono secreti nel sangue e viaggiano fino alle cellule bersaglio. Si legano a recettori specifici sulle cellule provocando una risposta biologica.</p>
+    <p><strong>Feedback Negativo:</strong> Meccanismo di autoregolazione che mantiene l'omeostasi. Quando i livelli ormonali salgono, si riduce la secrezione; quando scendono, aumenta.</p>
+    <h4>Ormoni Chiave</h4>
+    <p><strong>Insulina:</strong> Abbassa la glicemia aumentando l'assorbimento di glucosio.</p>
+    <p><strong>Glucagone:</strong> Aumenta la glicemia promuovendo la liberazione di glucosio.</p>
+    <p><strong>Adrenalina:</strong> Risposta "combatti o fuggi", aumenta frequenza cardiaca e glucosio.</p>
+    <p><strong>Cortisolo:</strong> Ormone dello stress, mobilita l'energia.</p>
+    <p><strong>Ormoni Sessuali:</strong> Testosterone ed estrogeni controllano lo sviluppo sessuale e riproduttivo.</p>
+    <p>Fonte: Cap. 3.1.2.7 (p. 72)</p>`
+  },
+  {
+    id: '3.2-tutela-sanitaria',
+    title: 'Tutela Sanitaria: Sicurezza e Prevenzione',
+    category: 'Biofisiologia',
+    content: `<div class="key-concept">La tutela sanitaria comprende le misure preventive e di sicurezza per proteggere la salute degli istruttori e degli allievi durante l'attività in piscina e palestra.</div>
+    <h4>Principi di Prevenzione</h4>
+    <p><strong>Valutazione del Rischio:</strong> Identificare i potenziali pericoli nell'ambiente acquatico e nelle strutture di allenamento.</p>
+    <p><strong>Misure Preventive:</strong> Implementare controlli per eliminare o ridurre i rischi:</p>
+    <ul>
+    <li>Manutenzione regolare delle strutture</li>
+    <li>Controllo della qualità dell'acqua (cloro, pH, temperatura)</li>
+    <li>Percorsi di evacuazione chiari</li>
+    <li>Supervisione costante</li>
+    </ul>
+    <h4>Sicurezza in Acqua</h4>
+    <p><strong>Prevenzione dell'Annegamento:</strong></p>
+    <ul>
+    <li>Supervisione continua durante tutte le attività</li>
+    <li>Rapporto appropriato istruttore-allievi</li>
+    <li>Identificazione dei nuotatori deboli</li>
+    <li>Fornire materiali di galleggiamento quando necessario</li>
+    </ul>
+    <p><strong>Temperatura dell'Acqua:</strong> La temperatura corretta (26-28°C per lezioni ricreative) previene ipotermia e shock termico.</p>
+    <p><strong>Igiene:</strong> Prevenire infezioni attraverso:</p>
+    <ul>
+    <li>Doccia prima di entrare in acqua</li>
+    <li>Controllo regolare della qualità dell'acqua</li>
+    <li>Protocolli di pulizia</li>
+    </ul>
+    <h4>Sicurezza Generale nella Struttura</h4>
+    <p><strong>Pavimentazione:</strong> Superfici antiscivolo per prevenire cadute.</p>
+    <p><strong>Illuminazione:</strong> Adeguata illuminazione in tutte le aree.</p>
+    <p><strong>Attrezzature:</strong> Ispezionate e manutenute regolarmente.</p>
+    <p><strong>Primo Soccorso:</strong> Disponibilità di kit di primo soccorso e personale addestrato.</p>
+    <h4>Responsabilità dell'Istruttore</h4>
+    <p><strong>Formazione Continua:</strong> Aggiornamento regolare su protocolli di sicurezza e RCP (Rianimazione Cardio-Polmonare).</p>
+    <p><strong>Comunicazione:</strong> Informare gli allievi sui rischi e sulle corrette tecniche.</p>
+    <p><strong>Documentazione:</strong> Mantenere registri degli incidenti e dei controlli di manutenzione.</p>
+    <p><strong>Consapevolezza Medica:</strong> Conoscere le controindicazioni e limitazioni fisiche degli allievi.</p>
+    <h4>Patologie e Attività Acquatica</h4>
+    <p>Gli istruttori devono essere consapevoli di:</p>
+    <ul>
+    <li>Asma e attività fisiche</li>
+    <li>Problemi cardiaci e limitazioni di intensità</li>
+    <li>Pressione alta e controllo dell'attività</li>
+    <li>Diabete e gestione durante esercizio prolungato</li>
+    <li>Lesioni vertebrali e protezioni necessarie</li>
+    </ul>
+    <p>Fonte: Cap. 3.2 (pp. 73-76)</p>`
+  },
+{
+    id: '4.1-premessa',
+    title: '4.1 Ginnastica Educativa e Prenatatoria - Premessa',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">La ginnastica educativa e prenatatoria è un progetto educativo-motorio complementare al nuoto in acqua</div>
+<h4>Contesto Storico</h4>
+<p>Negli ultimi 20 anni le piscine si sono trasformate da pubblici servizi tecnici a poli sociali di benessere. La cultura sportiva commerciale ha portato alla quasi estinzione dei corsi bisettimanali a favore di quelli monosettimanali, con minore valore educativo-motorio-tecnico.</p>
+<h4>Importanza della Frequenza</h4>
+<p>Una maggiore frequenza (bi/tri-settimanale) consente apprendimenti più stabili e rapidi. Nel corso di una settimana gli adattamenti sensopercettivi, coordinativi e condizionali vanno quasi completamente persi.</p>
+<h4>Ruolo della Ginnastica Prenatatoria</h4>
+<p>Non è indispensabile per nuotare, ma è un valore aggiunto importante. Aiuta a colmare la crescente sedentarietà dei giovani. Deve offrire qualcosa efficace a secco che sia difficile proporre in acqua.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.1</p>`
+  },
+  {
+    id: '4.1-obiettivi',
+    title: '4.1 Obiettivi dell\'Attività Prenatatoria',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">L'attività prenatatoria sviluppa schemi motori, consapevolezza corporea e disposizioni psicologiche essenziali</div>
+<h4>Obiettivi Primari</h4>
+<ul>
+<li><strong>Sviluppo schema corporeo:</strong> consapevolezza del proprio corpo e dei suoi segmenti</li>
+<li><strong>Educazione respiratoria:</strong> respirazione diaframmatica controllata</li>
+<li><strong>Coordinazione motoria:</strong> movimenti coordinati, equilibrio, controllo</li>
+<li><strong>Disposizioni psicologiche:</strong> fiducia, autostima, superamento delle paure</li>
+<li><strong>Tonificazione muscolare:</strong> preparazione muscolare per i movimenti acquatici</li>
+</ul>
+<h4>Target</h4>
+<p>L'attività prenatatoria si rivolge a ogni tipologia di utente, considerando peculiarità e necessità specifiche. È particolarmente indicata per bambini con scarsa motricità di base.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.1</p>`
+  },
+  {
+    id: '4.2-organizzazione',
+    title: '4.2 Aspetti Organizzativi di una Scuola Nuoto',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">L'organizzazione efficace di una scuola nuoto richiede chiarezza negli obiettivi e prioritaria attenzione alla sicurezza</div>
+<h4>Elementi Fondamentali</h4>
+<p>Un'organizzazione è un'associazione di persone collegate in una struttura organica per cooperare verso un fine comune. Gli obiettivi possono essere: sportiva agonistica, didattica, educativa, ricreativa, socio-culturale, commerciale.</p>
+<h4>Priorità Assoluta: Sicurezza</h4>
+<p>In una piscina, rispetto a qualsiasi altra struttura sportiva, un'impercettibile disattenzione può portare a incidenti letali. La sicurezza dei frequentatori deve essere la prima preoccupazione.</p>
+<h4>Natura della Struttura</h4>
+<ul>
+<li><strong>Privata:</strong> gestione libera di definire priorità senza limitazioni</li>
+<li><strong>Pubblica:</strong> sottoposta a limitazioni (tariffe, orari, spazi per nuoto libero)</li>
+</ul>
+<h4>Equilibrio di Bilancio</h4>
+<p>Imprescindibile il perseguimento dell'equilibrio economico che consente il rispetto degli impegni verso personale, collaboratori, fornitori e utenza.</p>
+<h4>Obiettivi FIN</h4>
+<p>Promuovere, organizzare, disciplinare e diffondere discipline sportive acquatiche (nuoto, tuffi, pallanuoto, nuoto sincronizzato, nuoto di fondo, nuoto per salvamento) a livelli amatoriale, didattico, preagonistico e agonistico.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.2</p>`
+  },
+  {
+    id: '4.3-organizzazione-didattica',
+    title: '4.3 Organizzazione Didattica e Piani di Lavoro',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">L'organizzazione didattica si struttura su 4 domande fondamentali: COSA, COME, CON CHI, DOVE E QUANDO</div>
+<h4>Cosa Vuoi Fare: Scelta Attività e Livelli</h4>
+<p>Discipline FIN: nuoto (piscina/acque aperte), pallanuoto, nuoto sincronizzato, tuffi, nuoto per salvamento, fitness in acqua. Ogni disciplina può essere promossa a livelli amatoriale, didattico, preagonistico, agonistico con differenti fasce d'età e competitività.</p>
+<h4>Come Lo Vuoi Fare: Programmi e Qualifiche</h4>
+<p>Definizione dei programmi di ciascuna attività e delle qualifiche professionali richieste al personale tecnico per i vari settori.</p>
+<h4>Con Chi Lo Vuoi Fare: Selezione Personale</h4>
+<p>La scelta delle persone è cruciale. Questionari in scuole nuoto federali mostrano che la percezione di qualità dell'utenza dipende quasi esclusivamente dalla competenza e attenzione del personale tecnico (coordinatore, istruttori).</p>
+<h4>Qualità Essenziali dell\'Istruttore</h4>
+<ul>
+<li><strong>Osservazione e ascolto:</strong> ogni allievo è diverso con esigenze specifiche</li>
+<li><strong>Entusiasmo:</strong> partecipazione emotiva indispensabile per motivare</li>
+<li><strong>Disponibilità:</strong> flessibilità nei flussi variabili di utenza</li>
+<li><strong>Aggiornamento continuo:</strong> conoscenza di novità tecniche, sportive, di costume</li>
+</ul>
+<h4>Dove e Quando: Programmazione Spazi e Tempi</h4>
+<p>Allocazione razionale delle vasche, degli spazi e dei tempi di utilizzo del centro natatorio secondo le attività programmate.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.3</p>`
+  },
+  {
+    id: '4.4-scuola-nuoto-federale',
+    title: '4.4 Scuola Nuoto Federale (SNF) - Standard e Organizzazione',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">La Scuola Nuoto Federale è un progetto di total quality della FIN per uniformare standard organizzativi e didattici</div>
+<h4>Obiettivo SNF</h4>
+<p>Uniformare verso l'alto gli standard organizzativi e didattici per garantire all'utenza un servizio eccellente e omogeneo sull'intero territorio nazionale.</p>
+<h4>Impegni di una SNF</h4>
+<ul>
+<li>Garantire elevati standard igienico-sanitari</li>
+<li>Verificare idoneità alla pratica sportiva non agonistica (certificato medico)</li>
+<li>Utilizzare personale tecnico con qualifiche FIN adeguate</li>
+<li>Mettere a disposizione materiale informativo chiaro e completo</li>
+</ul>
+<h4>Cadenza Lezioni</h4>
+<p>Durata 30-60 minuti. Preferibilmente <strong>bi/tri-settimanale</strong>. Monosettimanale è possibile ma con impegno della SNF a sensibilizzare verso maggiore frequenza (adattamenti sensopercettivi, coordinativi, condizionali vanno quasi completamente persi in una settimana).</p>
+<h4>Composizione Gruppi</h4>
+<p>Costituiti secondo criteri di <strong>omogeneità tecnica</strong> primaria. Se non totalmente possibile, numero allievi deve essere ragionevolmente contenuto.</p>
+<h4>Certificazione e Brevetti</h4>
+<p>SNF deve certificare almeno 1 volta (preferibilmente 2) l'anno il livello tecnico con brevetto. Seguire successione di livelli tecnici federali.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.4</p>`
+  },
+  {
+    id: '4.4-livelli-tecnici',
+    title: '4.4 Livelli Tecnici nella Scuola Nuoto Federale',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">La SNF prevede una progressione di livelli tecnici certificati con obiettivi specifici motori e formativi</div>
+<h4>Livello 1: Ambientamento</h4>
+<div class="definition">
+<strong>Obiettivi Tecnici:</strong> approccio acqua, immersione viso, galleggiamento prono/supino, scivolamenti, prime propulsive
+<br><strong>Obiettivi Formativi:</strong> socializzazione, autostima, superamento difficoltà, rilassamento, educazione respiratoria, autonomia
+</div>
+<h4>Livello 2: Forme di Propulsione Elementari</h4>
+<div class="definition">
+<strong>Obiettivi Tecnici:</strong> battuta gambe dorso/crawl, coordinazione braccia-gambe, tuffo da blocco, apnea, galleggiamento verticale
+<br><strong>Obiettivi Formativi:</strong> rafforzamento autostima, consapevolezza dei progressi
+</div>
+<h4>Livelli Successivi (3-5+)</h4>
+<p>Proseguono con raffinamento tecniche, distanze, coordinazione complessa, elementi di stile libero, dorso, rana, farfalla e specializzazioni tecniche.</p>
+<p>Ogni livello prevede obiettivi formativi di: sicurezza, autonomia, responsabilità, conoscenza limiti personali, capacità di superare difficoltà.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.4</p>`
+  },
+  {
+    id: '4.5-sicurezza-rischi',
+    title: '4.5 Sicurezza in Piscina - Rischi e Cause di Incidente',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Sebbene rari, gli incidenti in piscina sono spesso gravi. Un comportamento corretto può eliminarli completamente</div>
+<h4>Caratteristica del Nuoto</h4>
+<p>Il nuoto è probabilmente lo sport più sicuro con limitata traumatologia. Tuttavia, gli incidenti in acqua hanno conseguenze potenzialmente letali e richiedono soccorso immediato.</p>
+<h4>Cause Frequenti di Incidente</h4>
+<ul>
+<li><strong>Cadute sul bordo vasca:</strong> spesso dovute a eccessiva velocità</li>
+<li><strong>Urti tra bagnanti:</strong> durante il nuoto o nell'esecuzione di tuffi</li>
+<li><strong>Affondamenti:</strong> dovuti a imperizia, malore o soccorso non immediato</li>
+</ul>
+<h4>Responsabilità dell\'Istruttore</h4>
+<p>Un istruttore di nuoto <strong>non può accettare il rischio del decesso</strong> di un corsista. Deve eliminare completamente i rischi di incidente.</p>
+<h4>Fattori di Rischio</h4>
+<ul>
+<li><strong>Strutturali:</strong> spigoli vivi, pavimentazioni scivolose, gradini poco visibili (responsabilità gestione, segnalazione istruttore)</li>
+<li><strong>Organizzativi:</strong> percorsi di entrata/uscita, disposizione gruppi in vasca, velocità di spostamento</li>
+<li><strong>Comportamentali:</strong> attenzione, rispetto delle regole, comportamento responsabile</li>
+</ul>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.5</p>`
+  },
+  {
+    id: '4.5-misure-sicurezza',
+    title: '4.5 Misure Organizzative di Sicurezza in Piscina',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Accorgimenti organizzativi specifici eliminano i rischi di incidente in piscina</div>
+<h4>Percorsi</h4>
+<p>Organizzare in modo che gruppi che accedono al piano vasca non incrocino gruppi che lo stanno abbandonando. Percorsi separati o tempi diversi.</p>
+<h4>Disposizione in Vasca</h4>
+<ul>
+<li>Gruppi meno evoluti nelle corsie esterne (più vicini al bordo vasca)</li>
+<li>Ogni gruppo entra/esce nel punto più vicino possibile al proprio settore</li>
+<li>Mantenere distanze fra corsie</li>
+<li>Evitare affollamento</li>
+</ul>
+<h4>Velocità di Movimento</h4>
+<p>Vietare movimento precipitoso sul bordo vasca. Insegnare a camminare, non correre, sul pavimento bagnato. Speciale attenzione nei passaggi tra spogliatoi e piano vasca.</p>
+<h4>Comportamento Acquatico</h4>
+<ul>
+<li>Nuoto solo nelle corsie assegnate</li>
+<li>Tuffi solo dove autorizzato e con adeguata preparazione</li>
+<li>Vieto di spinte, giochi pericolosi, immersioni forzate</li>
+<li>Sorveglianza costante dell\'istruttore</li>
+</ul>
+<h4>Ruolo dell\'Istruttore</h4>
+<p>Deve verificare costantemente che le regole siano rispettate, educare al comportamento sicuro, osservare tutti gli allievi, intervenire prontamente su comportamenti a rischio.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.5</p>`
+  },
+  {
+    id: '4.6-responsabilita-definizione',
+    title: '4.6 Responsabilità dell\'Istruttore - Definizione Giuridica',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">La responsabilità giuridica implica l'assunzione del rischio e delle conseguenze dannose del proprio comportamento</div>
+<h4>Definizione Giuridica</h4>
+<p>Responsabile è chi assume su di sé l'onere del rischio e dell'eventuale danno/conseguenza procurato a seguito del proprio comportamento. Gli atti compiuti sono imputabili e regolati dal diritto oggettivo.</p>
+<h4>Obbligazione Giuridica</h4>
+<p>Rapporto tra due parti in cui una (il debitore) ha il dovere giuridico di tenere un certo comportamento e eseguire una prestazione a favore dell'altra parte (creditore), adempiendo l'obbligo.</p>
+<h4>Centro dell\'Attività</h4>
+<p>L'allievo o il soggetto affidato rimane sempre il centro dell'attività. L'istruttore è il soggetto che garantisce <strong>sia l'apprendimento della tecnica che la sicurezza</strong>.</p>
+<h4>Contesto Particolare del Nuoto</h4>
+<p>L'insegnamento avviene in un elemento (acqua) non predefinito per l'essere umano (elemento terra). La particolarità di questo contesto naturale amplifica la sfera di rischio e rende l'istruttore responsabile di eventuali incidenti.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.6</p>`
+  },
+  {
+    id: '4.6-responsabilita-tipologie',
+    title: '4.6 Tipologie di Responsabilità dell\'Istruttore',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Esistono multiple forme di responsabilità: civile, penale, amministrativa, contrattuale e sportiva</div>
+<h4>Responsabilità Civile</h4>
+<p>Obbligo di risarcire il danno causato a terzi tramite la propria azione. Nasce dal violamento di un diritto altrui. Elemento chiave: il danno (patrimoniale o non patrimoniale).</p>
+<div class="definition">
+<strong>Colpa:</strong> violamento di norme di legge o di prudenza, imperilzia, negligenza, imprudenza
+<br><strong>Danno:</strong> lesione di un interesse tutelato (personale, patrimoniale, morale)
+</div>
+<h4>Responsabilità Penale</h4>
+<p>Violamento di norma penale. Può derivare da negligenza, imprudenza, imperizia (reati colposi come lesioni, omicidio colposo). Comporta sanzioni penali e pene detentive.</p>
+<h4>Responsabilità Amministrativa</h4>
+<p>Violamento di norme di legge amministrativa o regolamenti. Comporta sanzioni amministrative.</p>
+<h4>Responsabilità Contrattuale</h4>
+<p>Violamento degli obblighi derivanti dal contratto con l'utente (corso di nuoto). Obbligo di insegnare la tecnica e garantire la sicurezza.</p>
+<h4>Responsabilità Sportiva</h4>
+<p>Violamento delle norme tecniche e regolamentari federali. Comporta sanzioni sportive e disciplinari.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.6</p>`
+  },
+  {
+    id: '4.6-doveri-istruttore',
+    title: '4.6 Doveri Principali dell\'Istruttore',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">L'istruttore ha doveri specifici verso allievi, struttura e comunità sportiva per minimizzare responsabilità</div>
+<h4>Dovere di Insegnamento</h4>
+<ul>
+<li>Insegnare tecniche corrette secondo standard FIN</li>
+<li>Adattare insegnamento a capacità individuali dell'allievo</li>
+<li>Fornire progressione logica e graduata</li>
+<li>Verificare apprendimento</li>
+<li>Documentare progressi</li>
+</ul>
+<h4>Dovere di Vigilanza e Sorveglianza</h4>
+<ul>
+<li>Osservare costantemente tutti gli allievi durante la lezione</li>
+<li>Posizionarsi strategicamente per visibilità totale</li>
+<li>Intervenire prontamente su comportamenti a rischio</li>
+<li>Applicare e far rispettare regole di sicurezza</li>
+</ul>
+<h4>Dovere di Verifica Medica</h4>
+<ul>
+<li>Richiedere certificato di idoneità alla pratica sportiva</li>
+<li>Osservare segni di malessere o problemi di salute</li>
+<li>Astenersi da insegnamento in caso di dubbi sulla salute dell'allievo</li>
+</ul>
+<h4>Dovere di Preparazione e Aggiornamento</h4>
+<ul>
+<li>Possedere qualifiche FIN adeguate al ruolo</li>
+<li>Mantenersi aggiornato su tecniche e norme</li>
+<li>Seguire formazione continua</li>
+<li>Conoscere norme di primo soccorso</li>
+</ul>
+<h4>Dovere di Segnalazione</h4>
+<ul>
+<li>Segnalare criticità strutturali alla gestione</li>
+<li>Comunicare situazioni di rischio</li>
+<li>Documentare incidenti e infortuni</li>
+</ul>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.6</p>`
+  },
+  {
+    id: '4.6-cause-responsabilita',
+    title: '4.6 Cause di Responsabilità dell\'Istruttore - Negligenza e Imprudenza',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">La responsabilità sorge da comportamenti negligenti, imprudenti o imperitzia che causano danno</div>
+<h4>Negligenza</h4>
+<p>Mancanza di attenzione, omissione di cautele, dimenticanza. Esempi:</p>
+<ul>
+<li>Non sorvegliare gli allievi durante la lezione</li>
+<li>Permettere comportamenti pericolosi (spinte, tuffi non autorizzati)</li>
+<li>Non verificare idoneità medica dell'allievo</li>
+<li>Non applicare regole di sicurezza</li>
+<li>Non segnalare criticità strutturali</li>
+</ul>
+<h4>Imprudenza</h4>
+<p>Azione consapevole ma avventata, violamento di regole note. Esempi:</p>
+<ul>
+<li>Insegnare tuffi a allievi non preparati</li>
+<li>Consentire comportamenti vietati</li>
+<li>Non intervenire su comportamenti rischiosi</li>
+<li>Disattenzione volontaria durante lezione</li>
+</ul>
+<h4>Imprudenza</h4>
+<p>Mancanza di capacità tecnica per svolgere l'incarico. Esempi:</p>
+<ul>
+<li>Non conoscere tecniche corrette</li>
+<li>Insegnare metodi scorretti</li>
+<li>Mancanza di qualifiche appropriate</li>
+<li>Incapacità di gestire situazioni di emergenza</li>
+</ul>
+<h4>Conseguenze</h4>
+<p>Comportamenti negligenti, imprudenti o imperti possono configurare responsabilità civile (risarcimento danni), penale (sanzioni penali) o amministrativa (multe). Nel contesto sportivo anche sanzioni disciplinari.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.6</p>`
+  },
+  {
+    id: '4.7-primo-soccorso-comportamenti',
+    title: '4.7 Primo Soccorso - Norme Comportamentali in Emergenza',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Conoscere il comportamento corretto in emergenza modifica in modo importante il decorso clinico</div>
+<h4>NON Bisogna Mai Fare</h4>
+<ul>
+<li>Mettere a repentaglio la propria sicurezza</li>
+<li>Spostare il paziente (rischio lesioni spinali)</li>
+<li>Somministrare alcolici o comunque da bere</li>
+<li>Caricare il paziente su una macchina di passaggio per trasporto improvvisato in ospedale</li>
+</ul>
+<h4>Bisogna Fare SEMPRE</h4>
+<ul>
+<li><strong>Allertare il 118</strong> (art. 593 CP - obbligo legale)</li>
+<li>Mantenere la calma ed allontanare la folla</li>
+<li>Cercare di capire la dinamica dell'evento</li>
+<li>Praticare primo soccorso se si è capaci</li>
+<li>Esaminare l'infortunato: stato di coscienza, respirazione, emorragie, fratture, ferite</li>
+<li>Fornire soccorso psicologico (tranquillizzare, rassicurare)</li>
+<li>Assistere i soccorsi qualificati quando arrivano</li>
+</ul>
+<h4>Obbligatorietà del 118</h4>
+<p>Contattare il 118 è obbligatorio per legge (art. 593 CP). Non farlo configura responsabilità penale anche se l'esito non sarebbe cambiato.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.7</p>`
+  },
+  {
+    id: '4.7-sistema-118',
+    title: '4.7 Sistema di Emergenza Territoriale 118 - Funzionamento',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Il 118 è un sistema organizzato e coordinato di persone e strutture per rispondere adeguatamente all'emergenza sanitaria</div>
+<h4>Istituzione e Normativa</h4>
+<p>Istituito con DPR 27/03/1992 per rispondere alle esigenze di emergenza sanitaria. Prima del 1992 il soccorso era solo trasporto verso pronto soccorso con ritardi e confusione.</p>
+<h4>Limiti del Sistema Precedente</h4>
+<ul>
+<li>Confusione: difficile trovare numero telefonico del servizio</li>
+<li>Ritardo nei soccorsi: prestazioni non omogenee</li>
+<li>Assenza di coordinamento negli interventi</li>
+</ul>
+<h4>Vantaggi del Sistema 118</h4>
+<ul>
+<li>Numero unico nazionale per l'emergenza</li>
+<li>Coordinamento centralizzato dei soccorsi</li>
+<li>Qualità e tempistica omogenee su territorio</li>
+<li>Personale addestrato e strutturato</li>
+<li>Possibilità di interventi pre-ospedalieri immediati</li>
+</ul>
+<h4>Composizione del Sistema</h4>
+<p>Insieme organizzato e coordinato di persone (operatori, medici, infermieri) e strutture (centrali, ambulanze, ospedali) che interagiscono a livelli e competenze diverse.</p>
+<h4>Istruzioni Corrette per l'Attivazione</h4>
+<p>Fornire: ubicazione esatta, numero persone coinvolte, tipo di problema, condizioni cliniche, numero telefonico del soccorritore. Seguire istruzioni dell'operatore 118.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.7</p>`
+  },
+  {
+    id: '4.7-principali-emergenze',
+    title: '4.7 Emergenze Comuni in Piscina - Riconoscimento e Interventi',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Riconoscere emergenze comuni e interventi di base di primo soccorso è essenziale per gli istruttori</div>
+<h4>Annegamento e Situazioni di Rischio Acquatico</h4>
+<ul>
+<li><strong>Arresto cardiaco:</strong> incoscienza, assenza respirazione, mancanza polso. Massaggio cardiaco con RCP</li>
+<li><strong>Affogamento:</strong> respiro assente o insufficiente. Drenaggio delle vie aeree, RCP se necessario</li>
+<li><strong>Panico in acqua:</strong> disoriamento, movimenti disordinati. Estrazione dal'acqua, calma, rassicurazione</li>
+<li><strong>Ipotermia:</strong> prolungata esposizione al freddo. Riscaldamento graduale, non brusco</li>
+</ul>
+<h4>Traumi e Lesioni</h4>
+<ul>
+<li><strong>Trauma spinale:</strong> caduta, tuffo errato. NON spostare, mobilizzazione spinale, 118</li>
+<li><strong>Fratture:</strong> dolore, deformità. Immobilizzazione, ghiaccio, elevazione</li>
+<li><strong>Emorragie:</strong> pressione diretta con garza, elevazione, laccio emostatico se necessario</li>
+<li><strong>Ferite:</strong> pulizia, disinfezione, bende sterili</li>
+</ul>
+<h4>Crisi Mediche</h4>
+<ul>
+<li><strong>Perdita di coscienza:</strong> posizionamento laterale, 118, monitoraggio respirazione</li>
+<li><strong>Crisi convulsive:</strong> proteggere dalla caduta, lato corpo, 118, NON forzare mascella</li>
+<li><strong>Allergie gravi/Anafilassi:</strong> 118, posizionamento, autoiniettore adrenalina se disponibile</li>
+<li><strong>Sincope:</strong> posizionamento supino, gambe elevate, 118 se prolungato</li>
+</ul>
+<p><strong>Nota:</strong> Tutti i casi richiedono 118 e non tentare manovre se non addestrati. La RCP (rianimazione cardio-polmonare) è tecnica salvavita fondamentale.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.7</p>`
+  },
+  {
+    id: '4.7-manovre-salvavita',
+    title: '4.7 Manovre di Salvavita - RCP e Disostruzione',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">La Rianimazione Cardio-Polmonare (RCP) è la manovra salvavita più importante in arresto cardiaco</div>
+<h4>RCP - Rianimazione Cardio-Polmonare</h4>
+<p>Sequenza di compressioni toraciche e insufflazioni di aria per mantenere la circolazione e ossigenazione in caso di arresto cardiaco.</p>
+<h4>Indicazioni</h4>
+<ul>
+<li>Incoscienza totale</li>
+<li>Assenza di respirazione</li>
+<li>Assenza di polso carotideo</li>
+</ul>
+<h4>Sequenza Base (BLS - Basic Life Support)</h4>
+<ol>
+<li><strong>Valutazione:</strong> Verifica coscienza, respirazione, polso</li>
+<li><strong>Posizionamento:</strong> Paziente supino su superficie dura</li>
+<li><strong>Compressioni toraciche:</strong> Tallone della mano al centro torace, altre mani sovrapposte, pressione verticale 5-6 cm a frequenza 100-120/min</li>
+<li><strong>Insufflazioni:</strong> 2 insufflazioni ogni 30 compressioni (dopo ogni 100-120 compressioni)</li>
+<li><strong>Continuare:</strong> fino all'arrivo dei soccorsi o segni di vita</li>
+</ol>
+<h4>Disostruzione</h4>
+<p>Se oggetto ostruisce le vie aeree: posizionamento laterale, drenaggio passivo della bocca, estrazione se visibile (NON alla cieca). In acqua, estrarre il paziente prima di manovre.</p>
+<h4>Defibrillatore (DAE)</h4>
+<p>Se disponibile in struttura, applicare DAE secondo istruzioni. Fondamentale per fibrillazione ventricolare.</p>
+<p><strong>Importante:</strong> Una corretta RCP eseguita immediatamente aumenta significativamente le probabilità di sopravvivenza. La formazione continua è essenziale.</p>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.7</p>`
+  },
+  {
+    id: '4.7-shock-posizione',
+    title: '4.7 Stato di Shock e Posizionamento del Paziente',
+    category: 'La scuola nuoto',
+    content: `<div class="key-concept">Lo shock è una condizione di insufficiente circolazione e ossigenazione; il posizionamento è critico nel primo soccorso</div>
+<h4>Definizione di Shock</h4>
+<p>Stato di alterazione acuta della funzione circolatoria con insufficiente ossigenazione dei tessuti. Può derivare da emorragia, trauma, ustione, allergia, sepsi.</p>
+<h4>Segni e Sintomi</h4>
+<ul>
+<li>Pallore</li>
+<li>Sudorazione fredda</li>
+<li>Polso rapido e debole</li>
+<li>Respirazione rapida e superficiale</li>
+<li>Confusione o perdita coscienza progressiva</li>
+<li>Pressione arteriosa bassa</li>
+</ul>
+<h4>Posizionamento nei Diversi Scenari</h4>
+<ul>
+<li><strong>Shock non traumatico:</strong> Supino, gambe elevate a 30-45 gradi per favorire ritorno venoso</li>
+<li><strong>Trauma spinale sospetto:</strong> Immobilizzazione, NON elevare gambe</li>
+<li><strong>Vomito/Perdita coscienza:</strong> Posizionamento laterale di sicurezza (PLS) per drenaggio e pervietà vie aeree</li>
+<li><strong>Difficoltà respiratoria:</strong> Posizionamento semi-seduto</li>
+</ul>
+<h4>Posizionamento Laterale di Sicurezza (PLS)</h4>
+<ol>
+<li>Paziente supino</li>
+<li>Girare verso un lato</li>
+<li>Testa estesa all'indietro per permeabilità vie aeree</li>
+<li>Braccio superiore supporta la testa</li>
+<li>Gamba superiore flessa a 90 gradi per stabilità</li>
+</ol>
+<h4>Interventi Generali nello Shock</h4>
+<ul>
+<li>Mantieni calma e tranquillità</li>
+<li>Togli indumenti bagnati, copri con coperte (perdita calore)</li>
+<li>NON somministrare cibo o bevande</li>
+<li>Monitora continuamente respiro e polso</li>
+<li>118 immediatamente</li>
+</ul>
+<p><strong>Riferimento:</strong> Dispense FIN, cap. 4.7</p>`
+  },
+{
+    id: '4-8-ambientamento',
+    title: '4.8 - Ambientamento e acquaticità',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">L'ambientamento è la fase preliminare all'acquisizione di qualsiasi competenza motoria acquatica: raggiungimento di uno stato di benessere psicofisico e conoscenza della reazione del corpo all'immersione.</div>
+      
+      <h4>Obiettivi fondamentali</h4>
+      <ul>
+        <li>Superamento della paura dell'acqua</li>
+        <li>Comprensione delle resistenze e del galleggiamento</li>
+        <li>Sviluppo della plasticità motoria e capacità di adattamento</li>
+      </ul>
+      
+      <h4>Competenze acquisite tramite gioco</h4>
+      <p>
+        <strong>Entrata in acqua dal basso e dall'alto</strong> • <strong>Rilassamento muscolare</strong> • 
+        <strong>Immersione della testa</strong> • <strong>Apertura occhi sott'acqua</strong> • 
+        <strong>Controllo della respirazione</strong> • <strong>Galleggiamento statico (prono/supino)</strong> • 
+        <strong>Galleggiamento dinamico (scivolamento)</strong>
+      </p>
+      
+      <h4>Acqua bassa vs. acqua alta</h4>
+      <p>In acqua bassa (vasca piccola): raggiungere autonomia partendo dall'acquaticità. In acqua alta: acquisire minimo di autonomia (galleggiamento verticale) partendo da essa.</p>
+      <p><strong>Sequenza di sicurezza in acqua alta:</strong> staccarsi dal bordo → spostarsi prono 4-5m → verticale → mantenere verticale → tornare al bordo supino → ripetere invertito.</p>
+      
+      <h4>Ruolo dell'istruttore</h4>
+      <p>Figura di riferimento adulta che deve: stare in acqua, prevenire incidenti, adattarsi al mondo infantile, utilizzare linguaggio figurato, eseguire esercizi insieme ai bambini (3-6 anni imparano per imitazione).</p>
+      
+      <div class="definition">
+        <strong>Acquaticità:</strong> possesso delle competenze di ambientamento, percezione dell'acqua come ambiente naturale e piacevole.
+      </div>
+      
+      <p><em>Dispense FIN, cap. 4.8</em></p>
+    `
+  },
+
+  {
+    id: '4-9-galleggiamenti',
+    title: '4.9 - Galleggiamenti e spostamenti',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Il percorso progressivo di ambientamento acquatico si sviluppa attraverso 7 fasi: permanenza in acqua → sott'acqua → galleggiamento → scivolamento → propulsione → cadute → rotolamenti/capovolte.</div>
+      
+      <h4>Fase 1: Permanenza in acqua</h4>
+      <p><strong>Obiettivo:</strong> accettazione degli spruzzi, movimento autonomo in vasca, comprensione della reazione del corpo al movimento dell'acqua.</p>
+      
+      <h4>Fase 2: Permanenza sott'acqua</h4>
+      <p><strong>Controllo respiratorio:</strong> espirazione consapevole sott'acqua (soffiare con naso/bocca). <strong>Orientamento:</strong> apertura occhi sott'acqua (superare riflesso di chiusura palpebrale).</p>
+      
+      <h4>Fase 3: Galleggiamento</h4>
+      <p>Sperimentazione della spinta idrostatica. <strong>Posizione testa:</strong> sempre in linea con colonna vertebrale. <strong>No ausili:</strong> evitare materiali galleggianti (forniscono falsa sicurezza).</p>
+      
+      <h4>Fase 4: Scivolamento</h4>
+      <p>Galleggiamento dinamico in superficie e subacqueo. Comprensione che posizione orizzontale prona riduce resistenza. <strong>Posizione ottimale:</strong> prona con braccia in avanti.</p>
+      
+      <h4>Fase 5: Propulsione</h4>
+      <p>Sfruttamento della resistenza dell'acqua per il movimento. <strong>Importante:</strong> propulsione da movimento di tutto il corpo, non solo gambe. No ausili per non distorcere postura.</p>
+      
+      <h4>Fase 6: Cadute in acqua</h4>
+      <p>Proposte altamente formative: creare vissuto positivo, sviluppare coraggio e autostima. <strong>Tuffi:</strong> da seduti, in ginocchio, da piedi con progressione da semplice a complesso.</p>
+      
+      <h4>Fase 7: Rotolamenti e capovolte</h4>
+      <p>Rotazione attorno assi trasversali/longitudinali. Sviluppa equilibrio, percezione spaziale, mobilità colonna vertebrale. Prerequisito: saper rotolare e capovoltare a terra.</p>
+      
+      <div class="definition">
+        <strong>Ambientamento acquatico:</strong> capacità di stare in acqua con naturalezza e tranquillità, processo fondamentale per buon rapporto con l'acqua.
+      </div>
+      
+      <p><em>Dispense FIN, cap. 4.9</em></p>
+    `
+  },
+
+  {
+    id: '4-10-locomozione',
+    title: '4.10 - La locomozione in acqua e i quattro stili canonici',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Quattro stili regolamentari: crawl, dorso, rana, farfalla. Insegnamento: crawl (scivolamento) → dorso (nuotata completa) → rana → farfalla.</div>
+      
+      <h4>Stile Libero (Crawl)</h4>
+      <p><strong>Caratteristica:</strong> massima velocità, continuità d'azione. <strong>Posizione:</strong> orizzontale prona, minima resistenza.</p>
+      <p><strong>Bracciata (4 fasi):</strong> Presa (entrata spalla, rollio) → Trazione (gomito alto, mano sotto tronco) → Spinta (lato coscia, prolungamento aereo) → Recupero (sciolto, avanti).</p>
+      <p><strong>Gambata:</strong> Alternata, partenza anche, frequenza elevata, ampiezza limitata (6 battute/bracciata). Piedi in estensione, intra-ruotati, rilassati.</p>
+      <p><strong>Respirazione:</strong> Fine fase spinta, rotazione laterale capo (non sollevamento), inspirazione laterale, espirazione bocca/naso.</p>
+      
+      <h4>Stile Dorso</h4>
+      <p><strong>Caratteristica:</strong> Facile base (viso fuori), affinamento più complesso (no riferimenti visivi). <strong>Posizione:</strong> Orizzontale supina, bacino sollevato.</p>
+      <p><strong>Bracciata (4 fasi):</strong> Presa (mignolo entra/spalla) → Trazione (gomito avanti, dorso mano verso interno) → Spinta (accelerazione avambraccio/coscia) → Recupero (dorso mano/pollice, rotazione busto).</p>
+      <p><strong>Gambata:</strong> Da anche, frequenza elevata, ampiezza scarsa (6 colpi). <strong>Importante:</strong> ginocchia non oltrepassare superficie.</p>
+      <p><strong>Ordinamento didattico:</strong> Dorso insegnato prima di crawl per semplicità e continuità con ambientamento.</p>
+      
+      <h4>Rana e Farfalla</h4>
+      <p><strong>Rana:</strong> Posizione orizz. prona, bracciata simmetrica, gambata sincrona simmetrica, respirazione ogni ciclo. <strong>Farfalla:</strong> Posizione orizz. prona, bracciata e gambata simultanee (delfino), respirazione ogni ciclo, elevata complessità coordinativa.</p>
+      
+      <h4>Indicazioni didattiche generali</h4>
+      <ul>
+        <li>Prerequisiti: galleggiamento prono 4-5m senza gambe, ritmo respiratorio corretto</li>
+        <li>Apprendimento globale (intera tecnica), non analitico</li>
+        <li>Dal semplice al complesso</li>
+        <li>Varietà di esercizi per stesso obiettivo</li>
+        <li>Istruttore in acqua nelle prime lezioni</li>
+      </ul>
+      
+      <p><em>Dispense FIN, cap. 4.10</em></p>
+    `
+  },
+
+  {
+    id: '4-11-diversificazioni',
+    title: '4.11 - Diversificazioni didattiche',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Abbandono dell'approccio meccanicistico sequenziale: dalla progressione rigida "step-by-step" verso didattica multilaterale con mappa motoria elastica.</div>
+      
+      <h4>Critica dell'approccio tradizionale</h4>
+      <p><strong>Limite massimo:</strong> creazione di mappa motoria rigida. <strong>Risultati:</strong> gesti standardizzati (tecnicamente corretti ma non necessariamente efficaci), ridotto bagaglio esperienziale, difficoltà ad affinare tecnica secondo proprie capacità.</p>
+      <p><strong>Utenza:</strong> appaga fetta ristretta (chi vuole nuotare tecnica pura); altri utenti persi dopo raggiungimento obiettivo.</p>
+      
+      <h4>Nuova cultura dell'acqua</h4>
+      <p><strong>Obiettivo primario:</strong> pieno benessere in acqua degli allievi. <strong>Metodo:</strong> sviluppo mappa motoria elastica tramite bagaglio esperienziale ampio e vario.</p>
+      <p><strong>Didattica evoluta:</strong> Non progressione step-by-step, ma acquisizione dei quattro stili come punta dell'iceberg. <strong>Focus:</strong> parte sommersa = percorso multilaterale con massima varietà stimoli (spaziali, temporali, metodologici).</p>
+      
+      <h4>Vantaggi dell'approccio multilaterale</h4>
+      <ul>
+        <li>Elasticità motoria e capacità di adattamento</li>
+        <li>Maggiore motivazione e varietà didattica per istruttore</li>
+        <li>Utenza più ampia e fedele</li>
+        <li>Sviluppo complessivo competenze acquatiche</li>
+      </ul>
+      
+      <p><em>Dispense FIN, cap. 4.11</em></p>
+    `
+  },
+
+  {
+    id: '4-12-tecnica-didattica',
+    title: '4.12 - Tecnica e didattica delle quattro nuotate regolamentari',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Nuotare non è solo spostarsi da A a B, ma acquisire competenze specifiche tramite percorso di apprendimento naturale, spontaneo e individuale.</div>
+      
+      <h4>Riconsiderazione della tecnica e didattica</h4>
+      <p><strong>Importanza:</strong> vivere ambiente acquatico con entusiasmo, esplorazione continua, mondo magico e affascinante. <strong>Percorso:</strong> naturale e spontaneo, non rigidi schemi preimpostati.</p>
+      <p><strong>Considerare:</strong> diversi tempi di apprendimento e modalità diverse di cada allievo.</p>
+      
+      <h4>Nuovo approccio didattico</h4>
+      <p><strong>Ripensamento completo:</strong> dall'apprendimento come progetto stereotipato programmato da altri → discente come protagonista attivo del proprio apprendimento.</p>
+      <p><strong>Percorso:</strong> individuale e unico, giorno dopo giorno, lezione dopo lezione. <strong>Acquisizione:</strong> competenze nuove, sempre più stimolanti, con consapevolezza crescente.</p>
+      
+      <h4>Importanza ambientamento</h4>
+      <p>Fase ben condotta è fondamentale per apprendimento corretto. <strong>Problema attuale:</strong> società competitiva e visione sportiva distorta rendono ambientamento visto come perdita di tempo. Scuole nuoto temono perdita consensi.</p>
+      <p><strong>Conseguenza:</strong> Aumento difficoltà successivo, demotivazione allievi, schemi motori irrigiditi.</p>
+      
+      <p><em>Dispense FIN, cap. 4.12</em></p>
+    `
+  },
+
+  {
+    id: '4-13-organizzazione',
+    title: '4.13 - Organizzazione delle attività natatorie',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Organizzazione efficace è elemento decisivo per successo centro natatorio: gruppi omogenei, percorso condiviso, disposizione ottimale, successione turni.</div>
+      
+      <h4>Struttura della lezione (4 fasi)</h4>
+      <p><strong>1. Riscaldamento/ripresa:</strong> Fase breve di attivazione neuromuscolare (non prevenzione trauma). Aiuta allievi a smaltire ipereccitazione, prendere coscienza ambiente, richiamare regole comportamento. Esercizi semplici, finalizzati non ripetitivi.</p>
+      
+      <p><strong>2. Apprendimento:</strong> Massima concentrazione, minore stanchezza allievi. Proposta esercizio qualificante, nuova abilità. Momento ottimale per arricchire conoscenze.</p>
+      
+      <p><strong>3. Consolidamento:</strong> Variazione stimoli, allenamento abilità acquisite, sviluppo aspetti secondari (velocità, resistenza, coordinazione). Esercizi di sviluppo e consolidamento.</p>
+      
+      <p><strong>4. Conclusione:</strong> Fase di ritorno a calma, ripasso breve, rinforzo positivo. Uscita ordinata da vasca, igiene e cambio. Momento saluti e di previsione contenuti lezione successiva.</p>
+      
+      <h4>Inserimento allievi in gruppi</h4>
+      <p><strong>Criteri:</strong> Livello tecnico omogeneo, eventuali disabilità, età psicologica (non solo anagrafica). <strong>Benefici:</strong> Riduce problemi comportamento, facilita gestione, accelera apprendimento.</p>
+      
+      <h4>Disposizione spazi e turni</h4>
+      <p>Ordinata successione turni agevolano lavoro istruttore. Contribuzione di tutti ad ottimale funzionamento meccanismo-piscina.</p>
+      
+      <p><em>Dispense FIN, cap. 4.13</em></p>
+    `
+  },
+
+  {
+    id: '4-14-regolamenti',
+    title: '4.14 - Regolamenti tecnici',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">FIN (Federazione Italiana Nuoto) fondata Como 1899: promuove, organizza, disciplina sport acquatici (nuoto, tuffi, pallanuoto, sincro, fondo, salvamento).</div>
+      
+      <h4>Affiliazione e organizzazione FIN</h4>
+      <p><strong>Società affiliate:</strong> Devono rinnovare affiliazione annualmente per tesserare atleti e partecipare a manifestazioni agonistiche FIN. <strong>Riconoscimento:</strong> Soggetti FIN, dipendenti disciplinarmente e tecnicamente da essa.</p>
+      
+      <p><strong>Composizione FIN:</strong>
+        <ul>
+          <li>Atleti</li>
+          <li>Dirigenti federali (centrali/periferici)</li>
+          <li>Dirigenti societari</li>
+          <li>Tecnici</li>
+          <li>Ufficiali di gara</li>
+          <li>Medici (federali/societari)</li>
+        </ul>
+      </p>
+      
+      <h4>Gruppo Ufficiali Gara (GUG)</h4>
+      <p><strong>Funzione:</strong> Organo tecnico FIN con autonomia funzionale. <strong>Compiti:</strong> Istruzione, nomina, aggiornamento ufficiali gara; designazione giurie; garanzia applicazione regolamenti tecnici e norme federali.</p>
+      
+      <h4>Giuria e manifestazioni</h4>
+      <p><strong>Composizione:</strong> Ufficiali gara convocati da GUG (nazionale/regionale), cronometristi. <strong>Necessaria:</strong> Per regolare omologazione risultati in ogni manifestazione natatoria.</p>
+      
+      <h4>Affiliazione FINA</h4>
+      <p>FIN affiliata a Federazione Internazionale Amatori Nuoto (FINA), di cui riconosce, accetta e applica regolamenti.</p>
+      
+      <p><em>Dispense FIN, cap. 4.14</em></p>
+    `
+  },
+
+  {
+    id: '4-15-pallanuoto',
+    title: '4.15 - Pallanuoto',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Pallanuoto è attività ludica in acqua: apprendimento e sviluppo intellettivo da nascita a preadolescenza evolvono principalmente tramite movimento e gioco.</div>
+      
+      <h4>Importanza del gioco nello sviluppo</h4>
+      <p><strong>Movimento e gioco:</strong> Alla base evoluzione cognitiva. <strong>Ricerche:</strong> Scimmie antropomorfe private di gioco presentano minore sviluppo corteccia frontale.</p>
+      
+      <p><strong>Socialità tramite gioco:</strong> Bambino sviluppa relazioni sociali, coinvolge emozioni, sviluppa capacità relazionali, impara a lavorare insieme.</p>
+      
+      <h4>Finalità di attività ludica sana</h4>
+      <ul>
+        <li>Conoscenza e consapevolezza corporea</li>
+        <li>Miglioramento aspetti fisiologici (irrobustimento generale)</li>
+        <li>Ampliamento bagaglio motorio (qualità/quantità, struttura coordinativa)</li>
+        <li>Miglioramento condizionali di base (forza, resistenza)</li>
+        <li>Sviluppo espressività corporea</li>
+        <li>Coscienza del rapporto tra sé e altro</li>
+        <li>Lavoro comune per fine comune</li>
+        <li>Rispetto regole</li>
+        <li>Accettazione delusioni, controllo gioie</li>
+      </ul>
+      
+      <h4>Gioco libero vs. guidato</h4>
+      <p><strong>Libero:</strong> Espressione creatività bambino. <strong>Guidato:</strong> Orientato a obiettivi formativi specifici, con regole, ruoli, sequenza logica.</p>
+      
+      <div class="definition">
+        <strong>Gioco ludico in acqua:</strong> Esperienza motivante che sviluppa competenze motorie, cognitive e sociali simultaneamente.
+      </div>
+      
+      <p><em>Dispense FIN, cap. 4.15</em></p>
+    `
+  },
+
+  {
+    id: '4-16-sincro',
+    title: '4.16 - Nuoto sincronizzato',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Nuoto sincronizzato evoluzione da spettacolo acquatico (USA anni '20) a disciplina sportiva complessa. Riconosciuto FINA 1952, olimpico dal 1984 (Los Angeles).</div>
+      
+      <h4>Caratteristiche e definizione</h4>
+      <p><strong>Classificazione:</strong> Discipline tecnico-combinatorie. <strong>Prestazione composta da:</strong> Tecnica, coreografia, sincronia, apnea, capacità interpretative, acrobatica.</p>
+      
+      <h4>Requisiti della sincronette</h4>
+      <ul>
+        <li>Grande acquaticità</li>
+        <li>Perfetta conoscenza tecniche natatorie</li>
+        <li>Galleggiamento eccellente</li>
+        <li>Mobilità articolare e estensione</li>
+        <li>Coordinazione e destrezza</li>
+        <li>Senso musica e ritmo</li>
+        <li>Forza e resistenza</li>
+      </ul>
+      
+      <h4>Composizione tecnica syncro</h4>
+      <p>Fusione di elementi da:</p>
+      <ul>
+        <li><strong>Nuotate classiche:</strong> Tecniche propulsive opportunamente adattate</li>
+        <li><strong>Danza e ginnastica:</strong> Posizioni, movimenti, eleganza</li>
+        <li><strong>Elementi acrobatici:</strong> Combinazioni, transizioni, figure</li>
+      </ul>
+      
+      <h4>Evoluzione storica</h4>
+      <p><strong>Primi anni:</strong> Spettacolo con grandi numeri nuotatrici, scenografie teatrali, figure caleidoscopiche. <strong>Oggi:</strong> Disciplina strutturata, tecnica specifica precisa, complessità elevatissima, standard internazionali FINA.</p>
+      
+      <p><em>Dispense FIN, cap. 4.16</em></p>
+    `
+  },
+
+  {
+    id: '4-17-salvamento',
+    title: '4.17 - Nuoto per salvamento',
+    category: 'La scuola nuoto',
+    content: `
+      <div class="key-concept">Tecniche di nuoto per salvamento: indispensabili per salvataggio pericolanti, integrazione efficace in percorso didattico multilaterale, ponte verso corsi assistente bagnanti.</div>
+      
+      <h4>Valore didattico e motivazionale</h4>
+      <p><strong>Benefici:</strong> Efficace integrazione percorso formativo, mantiene interesse preadolescenti/adolescenti che non trovano sbocco in gruppi sportivi. <strong>Pratica:</strong> Abilità inseribili in normale lezione senza accorgimenti o attrezzature sofisticate.</p>
+      
+      <h4>Tecniche di entrata in acqua</h4>
+      <p><strong>Da sponda bassa (&lt;2m, no controllo visivo):</strong> Classico tuffo di partenza. Salvagente lanciato avanti e lateralmente.</p>
+      
+      <p><strong>Entrata classica (&lt;2m, controllo visivo):</strong> Lungo passo avanti, gambe flesse (come scendere gradino). Fase aerea: gambe divaricate piano sagittale, piede avanti a martello, braccia verso fuori-dietro (palmi basso), tronco leggermente inclinato avanti, capo sollevato occhi aperti. Entrata: gambe riunite, braccia basso-avanti, corpo fuori acqua, controllo visivo mantenuto.</p>
+      
+      <h4>Altre tecniche di salvamento</h4>
+      <p><strong>Entrate in acqua:</strong> Variazioni secondo altezza sponda e necessità controllo visivo. <strong>Approcci:</strong> Tecniche di avvicinamento al pericolante. <strong>Trasporto:</strong> Modalità sicura di estrazione. <strong>Rianimazione:</strong> Nozioni base RCP (secondo protocolli).</p>
+      
+      <h4>Integrazione nella didattica</h4>
+      <p>Percorso formativo che valorizza competenze già acquisite (nuoto, immersione, propulsione) applicandole a contesto pratico e motivante. Preparazione per successivo coinvolgimento in attività di soccorso acquatico.</p>
+      
+      <p><em>Dispense FIN, cap. 4.17</em></p>
+    `
+  },
+{
+    id: 'ontogenesi',
+    title: 'Sviluppo Motorio',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">L'organismo vive in equilibrio con l'ambiente circostante, mantenuto attraverso il modello <strong>stimolo-risposta</strong> (input-output). I movimenti sono l'espressione dell'attività vitale e attraverso essi l'organismo interagisce con l'ambiente. <em>(Dispense FIN, cap. 5.1.1)</em></div>
+
+      <h4>Ontogenesi della motricità</h4>
+      <p>L'ontogenesi naturale della motricità si compone di <strong>due fasi</strong>:</p>
+      <div class="definition">1. <strong>Maturazione anatomica</strong> dei substrati nervosi centrali (mielinizzazione, si conclude nel 2°-3° anno di vita)<br>
+      2. <strong>Maturazione funzionale</strong> e ordinamento delle attività dei livelli coordinativi</div>
+
+      <h4>Tappe dello sviluppo</h4>
+      <p>• <strong>Primo semestre</strong>: movimenti massivi, indifferenziati, automatici. Riflessi di prensione e abbrancamento (riflesso di Moro)<br>
+      • <strong>Secondo semestre</strong>: maturazione del livello dell'area spaziale. Periodo pre-locomotorio. Il bambino si siede, si solleva, sta in piedi. Passaggio dalle <strong>sincinesie</strong> (movimenti scoordinati) alle <strong>sinergie</strong> (movimenti coordinati per un compito motorio)<br>
+      • <strong>3-7 anni</strong>: grazia e agilità nei movimenti liberi, ma incapacità di eseguire movimenti precisi (sviluppo incompleto dei meccanismi corticali)<br>
+      • <strong>7-12 anni</strong>: graduale padronanza delle possibilità coordinative. Verso i 10 anni si accumulano movimenti piccoli e precisi<br>
+      • <strong>Pubertà</strong>: riorganizzazione dell'apparato motorio. Si manifestano rigidità, angolosità, carenze coordinative</p>
+
+      <h4>Schemi motori e abilità</h4>
+      <p>La struttura del movimento volontario consta di <strong>schemi motori di base</strong> e <strong>schemi posturali</strong> statico-dinamici. Le possibilità di movimento acquisite durante la vita sono le <strong>abilità motorie</strong>. È l'ambiente che, stimolando il soggetto, influisce sul loro maturarsi, svilupparsi e specializzarsi.</p>
+    `
+  },
+  {
+    id: 'fattori-prestazione',
+    title: 'Fattori della Prestazione',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">I fattori della prestazione sono l'insieme di elementi che concorrono ad effettuare azioni finalizzate a un obiettivo motorio o a raggiungere un risultato sportivo. La tassonomia di Schnabel li sintetizza nelle <strong>"4 C"</strong>. <em>(Dispense FIN, cap. 5.1.2)</em></div>
+
+      <table>
+        <tr><th>Fattore</th><th>Descrizione</th><th>Tipo</th></tr>
+        <tr><td><strong>Costituzione</strong></td><td>Misura dei segmenti corporei, massa, mobilità articolare, processi di trasmissione dell'energia</td><td>Condizioni materiali</td></tr>
+        <tr><td><strong>Condizione</strong></td><td>Metabolismo muscolare, funzionalità dei grandi apparati</td><td>Condizioni materiali</td></tr>
+        <tr><td><strong>Coordinazione</strong></td><td>Controllo e regolazione dei movimenti, controllo dei gradi superflui di libertà</td><td>Condizioni relazionali</td></tr>
+        <tr><td><strong>Controllo</strong></td><td>Processi cognitivi, emotivi e motivazionali che sovraintendono all'esecuzione</td><td>Condizioni relazionali</td></tr>
+      </table>
+
+      <h4>I 5 fattori specifici</h4>
+      <p>Le dispense FIN individuano 5 fattori su cui intervenire:<br>
+      • <strong>Capacità motorie</strong> e <strong>abilità motorie</strong>: obiettivo più importante e delicato della metodologia<br>
+      • <strong>Età biologica</strong> e <strong>caratteristiche antropometriche</strong>: permettono di dosare il carico considerando le reali risposte attese<br>
+      • <strong>Motivazioni</strong>: sfera psichica gestibile attraverso una corretta educazione alla prestazione</p>
+
+      <h4>Differenziazione dell'allenamento per età</h4>
+      <div class="definition"><strong>Allenamento di formazione</strong> (dai 4/5 anni all'età prepuberale): base multilaterale con accento su capacità coordinative, rapidità e resistenza generale<br><br>
+      <strong>Allenamento di costruzione</strong> (dall'età prepuberale all'adolescenza): specializzazione in una disciplina, sviluppo condizionale e tecnico-tattico<br><br>
+      <strong>Allenamento di prestazione</strong> (dopo l'adolescenza): ottimizzazione per la massima forma sportiva</div>
+    `
+  },
+  {
+    id: 'capacita-coordinative',
+    title: 'Capacità Coordinative',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Le capacità coordinative sono legate al <strong>sistema nervoso</strong> e determinano l'apprendimento, l'organizzazione, il controllo e la trasformazione del movimento. Hanno uno sviluppo marcato nella fase prepuberale, in particolare <strong>fra i 6 e i 12 anni</strong>. <em>(Dispense FIN, cap. 5.1.2.1.1)</em></div>
+
+      <h4>Capacità coordinative generali</h4>
+      <div class="definition">Strettamente interdipendenti tra loro:<br>
+      • <strong>Capacità di apprendimento</strong><br>
+      • <strong>Capacità di controllo</strong><br>
+      • <strong>Capacità di adattamento</strong></div>
+
+      <h4>Capacità coordinative speciali</h4>
+      <table>
+        <tr><th>Capacità</th><th>Descrizione dalle dispense</th></tr>
+        <tr><td><strong>Equilibrio</strong></td><td>Legata all'apparato vestibolare e alla differenziazione muscolare, per mantenere la postura utile all'azione</td></tr>
+        <tr><td><strong>Reazione</strong></td><td>Due fasi: elaborazione rapida delle informazioni in entrata + velocità di trasmissione agli organi effettori</td></tr>
+        <tr><td><strong>Combinazione motoria</strong></td><td>Sincronizza azioni secondo parametri di simultaneità, alternanza e successione</td></tr>
+        <tr><td><strong>Orientamento</strong></td><td>Mantiene il giusto rapporto con il campo d'azione e i riferimenti spaziali</td></tr>
+        <tr><td><strong>Differenziazione</strong></td><td>Dosare finemente l'entità della forza per la massima efficacia dell'azione</td></tr>
+        <tr><td><strong>Anticipazione motoria</strong></td><td>Previsione probabilistica di situazioni non ancora verificatesi, basata sulle esperienze</td></tr>
+        <tr><td><strong>Ritmo</strong></td><td>Scelta temporale degli impulsi idonei a realizzare l'azione in modo adeguato</td></tr>
+        <tr><td><strong>Fantasia motoria</strong></td><td>Utilizzare abilità dalla memoria motoria in maniera pratica ed efficace, anche combinandole</td></tr>
+      </table>
+
+      <h4>La coordinazione neuromuscolare</h4>
+      <p>Dal punto di vista neuromuscolare, le capacità coordinative sono l'attivazione combinata di nervi e muscoli. La coordinazione si distingue in: <strong>intramuscolare</strong> (regolazione degli stimoli in un singolo muscolo) e <strong>intermuscolare</strong> (attività sinergica in più muscoli).</p>
+    `
+  },
+  {
+    id: 'analizzatori',
+    title: 'Analizzatori e Sensopercezione',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">I fattori limitanti delle capacità coordinative sono le capacità del soggetto di acquisire ed elaborare le <strong>afferenze</strong> (informazioni) provenienti al SNC. Queste informazioni vengono raccolte dagli <strong>analizzatori</strong>, composti da: recettori specifici, vie nervose afferenti, centri sensoriali, campo primario di proiezione della corteccia. <em>(Dispense FIN, cap. 5.1.2.1.1)</em></div>
+
+      <h4>Classificazione degli analizzatori</h4>
+      <p>Si suddividono in <strong>esterni</strong> (visivo, acustico, tattile) e <strong>interni</strong> (cinestetico, statico-dinamico/vestibolare):</p>
+      <table>
+        <tr><th>Analizzatore</th><th>Funzione (dalle dispense)</th></tr>
+        <tr><td><strong>Visivo</strong> (telerecettore)</td><td>Ricevere un modello di apprendimento, controllare il movimento, visione periferica, raccogliere esperienze motorie</td></tr>
+        <tr><td><strong>Acustico</strong></td><td>Percepisce segnali del processo motorio. Importante nella ricezione di impulsi dinamici e informazioni verbali</td></tr>
+        <tr><td><strong>Tattile</strong></td><td>Informazioni tramite pressocettori, termocettori, nocicettori. Sulla cute. Es: vincere la resistenza e andare in presa nell'acqua</td></tr>
+        <tr><td><strong>Cinestetico</strong></td><td>Propriocettori in muscoli, tendini, articolazioni. Vie di conduzione più veloci. Percepisce variazioni di tensione sin dall'inizio</td></tr>
+        <tr><td><strong>Vestibolare</strong></td><td>Posizione della testa nel campo gravitazionale, accelerazioni e decelerazioni. Regola equilibrio statico e dinamico</td></tr>
+      </table>
+
+      <h4>Sensopercezione</h4>
+      <div class="definition"><strong>Sensazione</strong>: afferenza giunta come stimolo alle aree corticali primarie.<br>
+      <strong>Percezione</strong>: attraverso le aree associative (momento intellettivo) fornisce significato alla sensazione.<br><br>
+      Le capacità senso-percettive sono i presupposti di base per qualsiasi attività consapevole. Dipendono dalla sollecitazione sensoriale, quindi dal <strong>continuo allenamento</strong>: più ci si allena e più si diventa abili.</div>
+
+      <h4>Fasi sensibili</h4>
+      <p>Una fase sensibile è il periodo in cui allenando una capacità si assiste a un <strong>miglioramento più fruttuoso</strong> che se la stessa venisse allenata in un'altra età. Le capacità coordinative presentano la loro fase sensibile tra i <strong>6 e i 12 anni</strong> (Martin, 1982), le condizionali dai <strong>12 ai 18 anni</strong>.</p>
+    `
+  },
+  {
+    id: 'capacita-condizionali',
+    title: 'Capacità Condizionali e Mobilità',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Le capacità condizionali sono legate ai grandi apparati <strong>muscolo-scheletrico e cardio-respiratorio</strong>, determinate dai processi energetici metabolici e plastici. Hanno uno sviluppo accentuato all'inizio della pubertà, <strong>fra i 12 e i 18 anni</strong>. <em>(Dispense FIN, cap. 5.1.2.1.2)</em></div>
+
+      <h4>Capacità di rapidità</h4>
+      <div class="definition">Capacità di compiere azioni nel più breve tempo possibile. Comprende:<br>
+      • <strong>Rapidità di azione</strong>: compiere un movimento volontario nel minor tempo<br>
+      • <strong>Rapidità di reazione</strong>: rispondere a uno stimolo nel minor tempo<br>
+      • <strong>Frequenza dei movimenti</strong>: unione di movimenti rapidi e semplici in azioni complesse</div>
+
+      <h4>Capacità di forza</h4>
+      <div class="definition">Capacità di opporsi a o vincere una resistenza con contrazione muscolare:<br>
+      • <strong>Forza massima</strong>: forza di intensità massima<br>
+      • <strong>Forza rapida</strong>: forza da elevata a massima nel più breve tempo possibile<br>
+      • <strong>Forza resistente</strong>: forza mantenuta nel tempo</div>
+      <p>Tipi di contrazione: <strong>concentrica/isotonica</strong> (capi si avvicinano), <strong>eccentrica</strong> (capi si distanziano), <strong>isometrica</strong> (distanza costante), <strong>isocinetica</strong> (velocità costante, attuabile con macchine).</p>
+
+      <h4>Capacità di resistenza</h4>
+      <p>Capacità di tollerare l'affaticamento. Indispensabile per sopportare impegni più elevati e influisce positivamente sul recupero. Lo sviluppo di forza rapida, coordinazione e rapidità è possibile <strong>solo sulla base di un adeguato sviluppo della resistenza</strong>.</p>
+
+      <h4>Mobilità articolare</h4>
+      <div class="definition">Capacità di muovere articolazioni con la massima escursione, senza limiti e senza dolore. Nel nuoto è unita a coordinative e condizionali come <strong>terzo vertice di un triangolo</strong>. Consente di aumentare l'economia energetica e favorire la precisione. Nell'ambito natatorio l'articolazione <strong>scapolo-omerale</strong> è particolarmente sollecitata. <em>(Cap. 5.1.2.1.3)</em><br><br>
+      Si distingue in: <strong>attiva</strong> (agonisti distendono antagonisti), <strong>passiva</strong> (forza esterna), <strong>mista</strong>.</div>
+    `
+  },
+  {
+    id: 'abilita-motorie',
+    title: 'Abilità Motorie e Apprendimento',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Le abilità motorie sono azioni motorie che, attraverso il <strong>ripetersi sistematico</strong> quanto più vicino al modello proposto, raggiungono la completa <strong>automatizzazione</strong>. Sono potenzialmente infinite: tante quante se ne apprendono. <em>(Dispense FIN, cap. 5.1.2.2)</em></div>
+
+      <h4>Differenza capacità vs abilità (Fleischman, 1964)</h4>
+      <p>L'<strong>abilità</strong> (skill) definisce il livello di perizia in un compito specifico. La <strong>capacità</strong> (ability) si riferisce a un tratto più generale. Sulle capacità motorie si strutturano e affinano le abilità, che rappresentano un grado più complesso di strutturazione del movimento.</p>
+
+      <h4>Le 4 fasi della coordinazione motoria</h4>
+      <div class="definition">1. <strong>Comprensione del compito</strong>: coinvolgimento affettivo, scoperta delle azioni possibili, primi tentativi, modello approssimativo<br><br>
+      2. <strong>Coordinazione grezza</strong>: coinvolgimento cognitivo, prime esecuzioni complete, presa di coscienza del programma motorio, costruzione di un automatismo globale<br><br>
+      3. <strong>Coordinazione fine</strong>: esecuzioni perfezionate, capacità di regolare e controllare l'azione, padronanza dell'azione<br><br>
+      4. <strong>Disponibilità variabile</strong>: automatizzazione resa possibile dall'incremento delle capacità motorie</div>
+
+      <h4>Insegnamento delle abilità</h4>
+      <p>Aspetti rilevanti secondo le dispense:<br>
+      • Verifica delle condizioni dell'apprendimento e della prestazione<br>
+      • Interazione tra tecnico e allievo/atleta<br>
+      • Utilizzo di sussidi cognitivi<br>
+      • Varietà di metodi con <strong>feedback, elogi e rinforzi</strong> e aumento dell'attività autonoma</p>
+      <p>I <strong>fondamentali</strong> (o tecniche sportive) sono azioni motorie automatizzabili che rappresentano le soluzioni ottimali dei compiti motori di quello sport specifico (Rieder, 1983). Il processo di formazione deve essere svolto con il <strong>controllo cosciente e consapevole</strong> dell'allievo.</p>
+    `
+  },
+  {
+    id: 'propulsione',
+    title: 'Propulsione nel Nuoto',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Nel nuoto il rendimento meccanico si riduce al <strong>10-12%</strong> circa, perché l'acqua non offre un punto d'appoggio fisso: circa il 50% dell'energia meccanica viene sprecata per spostare l'acqua stessa. I nuotatori più efficienti hanno uno slittamento minore della mano e percorrono distanze maggiori per ciclo. <em>(Dispense FIN, cap. 5.2.1)</em></div>
+
+      <h4>Teorie sulla propulsione</h4>
+      <p>Le dispense descrivono l'evoluzione delle teorie:</p>
+      <div class="definition">• <strong>Azione-reazione</strong>: poco probabile, l'acqua è incomprimibile e si apre in vortici<br>
+      • <strong>Principio di Bernoulli (lift)</strong>: utile per spostamenti lenti e appoggi stabili, ma improbabile a causa delle grandi accelerazioni<br>
+      • <strong>Teoria dei vortici</strong> (Colwin, 1986): le grandi accelerazioni generano vortici (depressioni) sul dorso della mano che si oppongono allo slittamento<br>
+      • <strong>Bracciata rettilinea</strong>: evidenze sperimentali confermano che la miglior risposta si ha spostando la mano <strong>in linea retta</strong> (massima velocità), con palmo ad angolo retto (massimo Reynolds), alla massima profondità</div>
+
+      <h4>Efficacia vs Efficienza</h4>
+      <p><strong>Efficacia</strong>: capacità di nuotare a velocità elevate, anche a discapito del costo energetico (dote del velocista).<br>
+      <strong>Efficienza</strong>: capacità di sostenere buone velocità per tempi prolungati (requisito del mezzofondista).<br>
+      L'<strong>ampiezza di bracciata</strong> è una buona misura dell'efficienza propulsiva.</p>
+
+      <h4>Tecnica vs Stile</h4>
+      <p><strong>Tecnica</strong>: i fondamentali, l'insieme delle strategie motorie per la massima efficacia ed efficienza.<br>
+      <strong>Stile</strong>: gli adattamenti individuali filtrati attraverso caratteristiche morfologiche, psicologiche e fisiologiche.<br>
+      Non esiste un modello stilistico universale, ma tante <strong>soluzioni individuali</strong> basate su principi fondamentali.</p>
+    `
+  },
+  {
+    id: 'tecnica-nuotate',
+    title: 'Tecnica delle 4 Nuotate',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Ogni nuotata ha dei <strong>fondamentali</strong> comuni: il rollio, la presa a gomito alto, la continuità di applicazione della forza, e una corretta coordinazione braccia-gambe-respirazione. La biodiversità degli stili permette prestazioni simili con soluzioni molto diverse. <em>(Dispense FIN, cap. 5.2.1.3)</em></div>
+
+      <h4>Crawl</h4>
+      <p>Il <strong>rollio</strong> è il fondamentale più importante (dimostrato dalla tecnica di Mark Spitz, 7 ori a Monaco 1972). Vantaggi: dimezza la resistenza, permette intervento dei grandi muscoli del tronco, respirazione più naturale, bracciate più ampie. La prima parte della passata subacquea va a <strong>gomito alto</strong>. Coordinazioni: 6-2, 4-2, 3-2, 2-2. Differenze velocisti/fondisti: i velocisti si sollevano sull'acqua, i fondisti usano il rollio accentuato.</p>
+
+      <h4>Dorso</h4>
+      <p>La <strong>continuità</strong> di applicazione di forza è il tratto dei dorsisti di successo. Si entra con un arto prima che l'altro termini la spinta. Il rollio è ancora più efficace che nel crawl: senza di esso la bracciata sarebbe laterale e inefficace. Coordinazione praticamente sempre 6-2.</p>
+
+      <h4>Rana</h4>
+      <p>Far intervenire i muscoli del <strong>tronco</strong> (gran dorsale e pettorale). Trazione a gomito alto. Respirazione dopo che le mani raggiungono la massima profondità. Recupero gambe durante recupero braccia. La gambata quando le braccia sono distese in avanti. Fase di <strong>scivolamento</strong> dopo la gambata.</p>
+
+      <h4>Farfalla</h4>
+      <p>Prima parte a gomito alto. Il capo si solleva per respirare solo <strong>dopo la massima profondità delle mani</strong>. La seconda battuta (di sostegno) coincide con l'uscita delle mani. La prima battuta coincide con l'entrata: mantiene il corpo in movimento, evitando di ripartire da fermo. Tutto il corpo si muove con moto ondulatorio, ma il <strong>baricentro si muove in linea retta</strong>.</p>
+
+      <h4>Tipi di esercizi coordinativi</h4>
+      <div class="definition">• <strong>Variazione</strong>: si variano situazioni della nuotata completa (es: crawl successivo)<br>
+      • <strong>Esclusione</strong>: si escludono parti del corpo per evidenziarne la funzione (es: pugni chiusi)<br>
+      • <strong>Combinazione</strong>: si combinano elementi di più nuotate (es: braccia crawl + gambe delfino). Non adatte alla fase iniziale</div>
+    `
+  },
+  {
+    id: 'teoria-errore',
+    title: 'Teoria dell\'Errore',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">"Sbagliare è una tappa utile e necessaria del processo di apprendimento: se non si commettono errori, non si fa esperienza, ergo non si apprende." Gli errori tecnici riducono l'<strong>efficienza di propulsione</strong> e fanno aumentare il <strong>costo energetico</strong>. <em>(Dispense FIN, cap. 5.2.2)</em></div>
+
+      <h4>Tipologie e cause di errore</h4>
+      <div class="definition">• <strong>Errori cinematici</strong> (ideomotricità): inadeguata rappresentazione mentale del gesto, esperienza motoria insufficiente<br>
+      • <strong>Errori dinamici</strong> (azione-reazione): si pensa alla geometria del movimento più che all'effetto dell'azione. Applicazione di forza insufficiente<br>
+      • <strong>Errori di coordinazione</strong> (propriocezione): l'allievo non riesce ad attivare la catena cinetica necessaria, feedback inadeguato</div>
+
+      <h4>Cause generali</h4>
+      <p>Gli errori possono essere generati da: scarso livello di attenzione, scarso livello di capacità coordinative/condizionali, inadeguata rappresentazione mentale del gesto, scarsa propriocezione, adattamento per economizzare il gesto. <strong>Quando la causa è un allenamento eccessivo</strong>, gli errori sono conservativi e di difesa, quindi difficilmente correggibili.</p>
+
+      <h4>Procedura di correzione (feedback immediato)</h4>
+      <div class="definition">1. Individuazione dell'errore<br>
+      2. <strong>Destrutturazione del gesto</strong> con variazioni e accentuazione degli effetti dell'errore<br>
+      3. Programma motorio e prima esecuzione<br>
+      4. Feedback e nuovo programma motorio<br>
+      5. Esecuzioni successive e nuovi feedback<br>
+      6. Output di miglior qualità</div>
+
+      <h4>Atleti giovani vs evoluti</h4>
+      <table>
+        <tr><th>Atleti giovani</th><th>Atleti evoluti</th></tr>
+        <tr><td>Multilateralità</td><td>Smontare e rimontare la tecnica</td></tr>
+        <tr><td>Consapevolezza</td><td>Sfruttare l'esperienza come risorsa</td></tr>
+        <tr><td>Motivazione e attenzione</td><td>Amplificare gli effetti degli errori</td></tr>
+        <tr><td>Freschezza fisica e mentale</td><td>Sfruttare la maggiore percezione</td></tr>
+      </table>
+      <p>Con i giovani: <strong>prevenire</strong> gli errori attraverso una solida immagine motoria. Con gli evoluti: <strong>resettare</strong> la tecnica e amplificarne gli effetti.</p>
+    `
+  },
+  {
+    id: 'supercompensazione',
+    title: 'Supercompensazione',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Quando l'equilibrio omeostatico si infrange (le richieste superano le possibilità), l'organismo tende ad aumentare le sue potenzialità <strong>un po' oltre l'attuale bisogno</strong>, per essere attrezzato per future richieste. Questo plus è la <strong>supercompensazione</strong>, possibile solo se esiste una <strong>riserva attuale di adattamento (RAA)</strong>. <em>(Dispense FIN, cap. 5.3.2)</em></div>
+
+      <h4>Dinamica carico-recupero (Jakowlew, 1972)</h4>
+      <p>Quando si somministra un carico, le capacità prestative si abbassano. Terminato il carico, se la RAA lo consente, le capacità vengono prima <strong>recuperate</strong> (compensazione) e poi <strong>superate</strong> (supercompensazione). La curva parte solo se esiste un carico, ma si esaurisce solo in assenza di carico: <strong>pari importanza del carico e del recupero</strong>.</p>
+
+      <h4>Sfere della supercompensazione</h4>
+      <div class="definition">• <strong>Sfera biologica</strong>: efficienza enzimatica e substrati energetici (forza, resistenza, velocità) — supercompensazione certa<br>
+      • <strong>Sfera vegetativa</strong>: adattamenti cardiorespiratori e ormonali — regrediscono in assenza dell'attività<br>
+      • <strong>Sfera coordinativa</strong>: sistema nervoso e trasmissione neuromuscolare — importanza primaria, ancora poco conosciuta</div>
+
+      <h4>Differenze per età</h4>
+      <p>• <strong>Esordienti</strong>: supercompensazione più rapida e abbondante, ma vanno perseguiti gli obiettivi tipici dell'età<br>
+      • <strong>Anziani (master)</strong>: adattamento pigro ma sempre presente e perseguibile<br>
+      • In entrambi il ventre della depressione è meno marcato per l'assenza del meccanismo lattacido</p>
+
+      <h4>Eterocronismo</h4>
+      <p>La supercompensazione avviene in tempi diversi nelle diverse sfere. Il tempo necessario è <strong>inversamente proporzionale all'intensità</strong> dello stimolo: tanto più rapida si instaura, tanto più rapidamente si perde senza ulteriori stimoli.</p>
+    `
+  },
+  {
+    id: 'carico-allenamento',
+    title: 'Carico e Parametri',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">L'insieme degli stimoli dell'allenamento rappresenta il <strong>carico</strong>. Uno stimolo allenante va gestito tenendo sotto controllo 4 parametri: <strong>intensità, densità, volume, specificità</strong>. La distinzione tra insegnamento e allenamento è solo didattica: le due situazioni coesistono sempre. <em>(Dispense FIN, cap. 5.3.4)</em></div>
+
+      <h4>Carico esterno vs interno</h4>
+      <table>
+        <tr><th>Carico esterno</th><th>Carico interno</th></tr>
+        <tr><td>Caratteristiche oggettive decise dall'allenatore</td><td>Effetto reale sull'atleta</td></tr>
+        <tr><td>Misurabile: metri, velocità, tempo</td><td>Dipende dalle capacità massimali dell'atleta</td></tr>
+        <tr><td>Determina il <strong>potenziale allenante</strong></td><td>Determina il <strong>vero effetto allenante</strong></td></tr>
+        <tr><td></td><td>Valutabile con: FC, modalità respiratorie, lattato</td></tr>
+      </table>
+
+      <h4>Effetti cronologici del carico</h4>
+      <div class="definition">• <strong>Effetto immediato</strong>: aspetti biochimici e funzionali (reclutamento fibre muscolari)<br>
+      • <strong>Effetto permanente</strong>: persistenza degli adattamenti immediati per stimoli successivi<br>
+      • <strong>Effetto cumulativo</strong>: susseguirsi di effetti immediati che diventano permanenti = risultato finale del programma</div>
+
+      <h4>Principi fondamentali dell'allenamento</h4>
+      <p>• <strong>Continuità</strong>: gli adattamenti regrediscono in assenza degli stimoli<br>
+      • <strong>Progressività</strong>: stimolo costante perde effetto; aumento graduale "a gradini"<br>
+      • <strong>Multilateralità</strong>: condizionamento rivolto a tutti gli ambiti (fisico, tecnico, psicologico)<br>
+      • <strong>Alternanza ciclica</strong>: distribuzione nel tempo, periodizzazione dell'allenamento<br>
+      • <strong>Individualizzazione</strong>: programmazione precisa con attenzione alle reazioni individuali</p>
+
+      <p><strong>Soglia allenante</strong>: l'intensità che è necessario superare perché lo stimolo rompa l'equilibrio omeostatico e avvii la supercompensazione.</p>
+    `
+  },
+  {
+    id: 'sistemi-energetici',
+    title: 'Sistemi Energetici',
+    category: 'Metodologia',
+    content: `
+      <div class="key-concept">Esistono <strong>tre vie</strong> per produrre energia per il movimento. I tre sistemi lavorano <strong>sempre contemporaneamente</strong>, ma in proporzione diversa secondo la tipologia dell'esercizio. Ciascuno è identificato per la sua <strong>potenza</strong> (velocità di produzione) e <strong>capacità</strong> (quantità totale prima dell'esaurimento). <em>(Dispense FIN, cap. 5.3.4)</em></div>
+
+      <table>
+        <tr><th>Sistema</th><th>Potenza</th><th>Capacità</th><th>Caratteristiche</th></tr>
+        <tr><td><strong>Anaerobico alattacido</strong></td><td>Altissima</td><td>Limitatissima</td><td>Substrato: ATP+CP. Interviene per i primi 10-15 sec. Esaurimento in ~1 min. Ricarica: 50% in 15-30 sec, totale in 2-3 min</td></tr>
+        <tr><td><strong>Anaerobico lattacido</strong></td><td>Media</td><td>Media</td><td>Combustibile: zuccheri. Produce acido lattico. Potenza max in 30-60 sec. Esaurimento in ~10 min. Recupero: 30 sec - 2 min</td></tr>
+        <tr><td><strong>Aerobico</strong></td><td>Modesta</td><td>Grandissima</td><td>Utilizza ossigeno. Energia lenta ma a lungo. Non raggiunge mai esaurimento completo (assicura i processi vitali)</td></tr>
+      </table>
+
+      <h4>Applicazione pratica</h4>
+      <div class="definition"><strong>Lavoro alattacido</strong>: sforzi brevissimi (5-10 sec), recupero ampio (>3 min)<br><br>
+      <strong>Lavoro lattacido</strong>: intensità elevata, durata max 10 min, frazioni da 30-60 sec, recupero 30 sec - 2 min. <strong>Non indicato per atleti prepuberi e puberi</strong> (immaturità metabolica e tecnica)<br><br>
+      <strong>Lavoro aerobico</strong>: lunga durata, frazioni >60 sec, intervalli brevi (5-30 sec), intensità bassa. È <strong>sempre il più presente</strong> nell'allenamento del nuotatore, si sposa con recupero e lavoro tecnico. Fondamentale nella preparazione giovanile.</div>
+
+      <h4>Nota importante</h4>
+      <p>Le dispense sottolineano che il carico fisico è un <strong>reale limite alla possibilità di apprendere</strong>: "tanto più una cosa è faticosa, tanto meno è possibile monetizzarne l'aspetto cognitivo in termini di movimento." Per questo le correzioni tecniche e i nuovi apprendimenti si inseriscono in condizioni di <strong>freschezza fisica e mentale</strong>.</p>
+    `
+  },
+{
+    id: 'dispensa6-gestanti',
+    title: '6.1 Attività per gestanti',
+    category: 'Popolazioni speciali',
+    content: `<div class="key-concept">L'acqua come ambiente terapeutico per la gravidanza</div>
+<h4>Benefici fisici e psicologici</h4>
+<p>L'attività in acqua durante la gravidanza ripristina l'equilibrio psicofisico compromesso dalla quotidianità, donando alla donna un senso di vitalità, leggerezza e pace interiore. L'immersione in acqua riduce il carico gravitazionale sul corpo, alleviando lo stress articolare e muscolare legato ai cambiamenti posturali della gravidanza.</p>
+<h4>Effetti ormonali e preparazione al parto</h4>
+<p>L'attività stimola il rilascio di endorfine, portando buonumore alla futura mamma e favorendo il benessere del feto. Il mantenimento di un fisico allenato incrementa l'agilità e la resistenza muscolare necessarie per affrontare le fatiche del parto.</p>
+<h4>Prevenzione e gestione delle problematiche gravidiche</h4>
+<p>Il corso di benessere psicofisico in gravidanza previene e, in taluni casi, cura le principali problematiche legate alla gestazione, quali dolori lombari, edemi, varici e problemi di circolazione. L'esercizio acquatico migliora la coordinazione neuro-muscolare e prepara il corpo ai cambiamenti che avverranno durante il parto.</p>`
+  },
+  {
+    id: 'dispensa6-neonatale',
+    title: '6.2 Attività neonatale',
+    category: 'Popolazioni speciali',
+    content: `<div class="key-concept">Sviluppo acquatico dei neonati e bambini piccoli</div>
+<h4>Primo contatto con l'acqua</h4>
+<p>L'attività neonatale rappresenta il primo contatto del bambino con l'ambiente acquatico dopo la nascita. Questo momento critico richiede un approccio dolce e graduale per favorire la familiarizzazione con l'acqua senza traumi.</p>
+<h4>Sviluppo neuromotorio in acqua</h4>
+<p>L'attività acquatica nei neonati stimola lo sviluppo delle capacità motorie, del controllo del capo e del corpo. L'acqua offre un ambiente che riduce la gravità, permettendo al bambino di esplorare il movimento in modo naturale e sicuro.</p>
+<h4>Benefici per la relazione genitori-bambino</h4>
+<p>Le lezioni acquatiche per neonati rafforzano il legame affettivo tra genitore e figlio, creando un momento privilegiato di contatto e comunicazione. L'esperienza condivisa in acqua favorisce la sicurezza emotiva del bambino e la fiducia nel genitore.</p>`
+  },
+  {
+    id: 'dispensa6-prescolare',
+    title: '6.3 Attività prescolare',
+    category: 'Popolazioni speciali',
+    content: `<div class="key-concept">Acquisizione delle competenze acquatiche nei bambini 3-6 anni</div>
+<h4>Apprendimento delle abilità motorie acquatiche</h4>
+<p>Nell'età prescolare, il bambino sviluppa le competenze fondamentali per l'acquaticità: ambientamento, galleggiamento, scivolamento e propulsione. Questi elementi costituiscono la base per future abilità natatorie più complesse.</p>
+<h4>Sviluppo della fiducia e dell'autonomia</h4>
+<p>Le attività in acqua permettono al bambino di acquisire fiducia in se stesso attraverso il superamento progressive delle paure e l'acquisizione di nuove abilità. Lo sviluppo dell'autonomia nell'ambiente acquatico favorisce l'autostima e la sicurezza personale.</p>
+<h4>Aspetti sociali e ludici</h4>
+<p>L'attività prescolare integra elementi ludici e sociali che favoriscono l'interazione tra pari e l'apprendimento cooperativo. Il gioco in acqua diventa strumento didattico per sviluppare competenze motorie, cognitive e relazionali.</p>`
+  },
+  {
+    id: 'dispensa6-disabili',
+    title: '6.4 Attività per disabili',
+    category: 'Popolazioni speciali',
+    content: `<div class="key-concept">L'acqua come strumento di inclusione e riabilitazione</div>
+<h4>Proprietà terapeutiche dell'ambiente acquatico</h4>
+<p>L'acqua offre un ambiente neutrale dove la disabilità è meno evidente: il galleggiamento riduce l'effetto della gravità, alleggerendo il carico su articolazioni e muscoli. La resistenza dell'acqua fornisce un feedback propriocettivo naturale che facilita il controllo motorio.</p>
+<h4>Adattamenti per diverse tipologie di disabilità</h4>
+<p>Le attività acquatiche si adattano a disabilità motorie, sensoriali e intellettive attraverso modifiche degli esercizi, del supporto fornito e del contesto didattico. L'uso di ausili acquatici specifici permette al disabile di sperimentare l'autonomia e l'indipendenza nel movimento.</p>
+<h4>Inclusione sociale e qualità della vita</h4>
+<p>Le attività in acqua promuovono l'inclusione della persona disabile in un contesto normalizzante, favorendo l'integrazione sociale e il miglioramento della qualità della vita. L'esperienza acquatica contribuisce al raggiungimento di obiettivi di autonomia personale e benessere psicofisico.</p>`
+  },
+  {
+    id: 'dispensa6-adulti-anziani',
+    title: '6.5 Attività per adulti e terza/quarta età',
+    category: 'Popolazioni speciali',
+    content: `<div class="key-concept">Mantenimento della forma fisica e del benessere nella fase adulta e senile</div>
+<h4>Attività per adulti: prevenzione e fitness</h4>
+<p>Per la popolazione adulta attiva, l'esercizio in acqua rappresenta uno strumento di mantenimento della forma fisica e prevenzione delle patologie legate alla sedentarietà. Il carico ridotto sulla colonna vertebrale rende l'attività acquatica ideale per chi pratica sport ad impatto elevato.</p>
+<h4>Adattamenti per la terza e quarta età</h4>
+<p>Nei soggetti anziani, l'attività acquatica favorisce il mantenimento dell'equilibrio, della forza muscolare e della mobilità articolare. L'esercizio in acqua riduce il rischio di cadute e migliora la capacità cardiorespiratoriaparticolarmente importante per la prevenzione di patologie cardiovascolari.</p>
+<h4>Socializzazione e benessere psicologico</h4>
+<p>Le attività in gruppo in acqua promuovono la socializzazione e combattono l'isolamento sociale spesso presente negli anziani. Il benessere psicologico derivante dall'attività motoria in un contesto accogliente contribuisce significativamente alla qualità della vita nella terza e quarta età.</p>`
+  },
+{
+    id: 'dispensa7-introduzione',
+    title: '7.1 Introduzione al Fitness in acqua',
+    category: 'Fitness in acqua',
+    content: `<div class="key-concept">Definizione e valore del fitness acquatico</div>
+<h4>Cos'è il Fitness in acqua</h4>
+<p>Il fitness acquatico rappresenta il raggiungimento di uno stato di benessere psicofisico generale attraverso la pratica di attività motorie adeguate in ambiente acquatico. Si basa su stimoli variegati e carichi di lavoro che rispettano le caratteristiche biomeccaniche e fisiologiche dell'individuo.</p>
+<h4>Importanza degli aspetti psicologici e relazionali</h4>
+<p>L'attività di fitness in acqua non trascura gli stati psicologici e relazionali, fornendo attraverso ripetizioni organizzate di gesti stimoli continui nel tempo. Il risultato tangibile può essere di tipo fisiologico e/o psicologico, contribuendo a rinforzare l'autostima della persona.</p>
+<h4>Patrimonio di crescita e sviluppo</h4>
+<p>Il fitness acquatico costituisce un patrimonio di sicuro valore e uno strumento di crescita e sviluppo sia per gli operatori che per i fruitori, rappresentando una pratica centrale nel percorso di "stare bene in acqua".</p>`
+  },
+  {
+    id: 'dispensa7-analisi-esercizi',
+    title: '7.2 Analisi degli esercizi e dei loro effetti',
+    category: 'Fitness in acqua',
+    content: `<div class="key-concept">Principi biomeccanici degli esercizi in acqua</div>
+<h4>Caratteristiche delle forze in acqua</h4>
+<p>Gli esercizi in acqua sfruttano le proprietà fisiche dell'ambiente acquatico: galleggiamento, resistenza del mezzo, pressione idrostatica e temperatura. La resistenza aumenta proporzionalmente alla velocità di movimento, richiedendo un adattamento costante dello sforzo motorio.</p>
+<h4>Classificazione degli esercizi</h4>
+<p>Gli esercizi possono essere classificati in base alla posizione del corpo (verticale, orizzontale), alla mobilità articolare coinvolta e al tipo di propulsione utilizzata. La variazione degli esercizi consente di stimolare diversi gruppi muscolari e sistemi energetici.</p>
+<h4>Effetti specifici degli esercizi sul corpo</h4>
+<p>Ogni esercizio produce effetti specifici sul sistema cardiovascolare, muscolare, respiratorio e articolare. L'analisi attenta di questi effetti consente all'istruttore di programmazione attività personalizzate e efficaci per il raggiungimento degli obiettivi didattici.</p>`
+  },
+  {
+    id: 'dispensa7-effetti-fisiologici',
+    title: '7.3 Effetti fisiologici del fitness in acqua',
+    category: 'Fitness in acqua',
+    content: `<div class="key-concept">Risposta dell'organismo all'esercizio acquatico</div>
+<h4>Adattamenti cardiovascolari</h4>
+<p>L'esercizio in acqua produce adattamenti significativi al sistema cardiovascolare: riduzione della frequenza cardiaca a riposo, incremento della portata cardiaca e miglioramento della circolazione periferica. La pressione idrostatica favorisce il ritorno venoso, riducendo il carico sul cuore.</p>
+<h4>Effetti sul sistema respiratorio</h4>
+<p>L'attività in acqua stimola l'apparato respiratorio, migliorando la capacità polmonare e la ventilazione. La resistenza dell'acqua all'inspirazione ed espirazione costituisce un allenamento specifico per i muscoli respiratori.</p>
+<h4>Benefici sul sistema muscoloscheletrico</h4>
+<p>Il carico ridotto sulla colonna vertebrale e sulle articolazioni, combinato con la resistenza fornita dall'acqua, consente il potenziamento muscolare senza stress eccessivo. Questo rende l'attività acquatica particolarmente efficace per il mantenimento della forza muscolare e della densità ossea.</p>`
+  },
+  {
+    id: 'dispensa7-aquafitness',
+    title: '7.4 Aquafitness: programmi e metodologie',
+    category: 'Fitness in acqua',
+    content: `<div class="key-concept">Metodologie di allenamento specifiche per il fitness acquatico</div>
+<h4>Programmazione dell'allenamento acquatico</h4>
+<p>L'aquafitness si basa su programmi strutturati che alternano fasi di riscaldamento, lavoro cardiovascolare, potenziamento muscolare e defaticamento. La variabilità degli esercizi e l'adattamento progressivo dei carichi assicurano un allenamento equilibrato e continuo.</p>
+<h4>Utilizzo di attrezzi e supporti</h4>
+<p>Gli attrezzi specifici per l'aquafitness (cinture di galleggiamento, tavolette, pull-buoys) permettono di variare la resistenza e il supporto, facilitando l'esecuzione corretta degli esercizi e l'adattamento a diversi livelli di preparazione fisica.</p>
+<h4>Intensità e controllo dell'esercizio</h4>
+<p>L'intensità dell'allenamento in acqua può essere modulata attraverso la velocità di movimento, l'ampiezza del movimento e l'utilizzo di attrezzi. Il controllo della frequenza cardiaca e la percezione dello sforzo permettono un allenamento personalizzato e sicuro.</p>`
+  },
+  {
+    id: 'dispensa7-rieducazione-riabilitazione',
+    title: '7.5 Rieducazione e riabilitazione in acqua',
+    category: 'Fitness in acqua',
+    content: `<div class="key-concept">Utilizzo dell'acqua come mezzo terapeutico</div>
+<h4>Proprietà riabilitative dell'ambiente acquatico</h4>
+<p>L'acqua offre un ambiente ideale per la rieducazione e la riabilitazione grazie al galleggiamento che riduce il carico articolare, alla resistenza che facilita il lavoro muscolare e alla temperatura che favorisce il rilassamento. Queste proprietà rendono l'attività in acqua particolarmente indicata per il recupero post-traumatico.</p>
+<h4>Progressione terapeutica in acqua</h4>
+<p>La rieducazione acquatica segue una progressione gradualeche parte da movimenti passivi supportati, evolvendo verso movimenti attivi assistiti e infine verso movimenti completamente autonomi. Questo approccio consente il recupero funzionale in modo sicuro e controllato.</p>
+<h4>Indicazioni cliniche e controindicazioni</h4>
+<p>L'attività riabilitativa in acqua è indicata per lesioni muscoloscheletriche, patologie neurologiche e cardiovascolari, sovrappeso e obesità. Specifiche controindicazioni richiedono valutazione medica prima dell'inizio dell'attività, garantendo la sicurezza del soggetto in riabilitazione.</p>`
+  },
+{
+    id: 'dispensa8-introduzione',
+    title: '8.1 Introduzione alle Mappe Cognitive',
+    category: 'Mappe cognitive',
+    content: `<div class="key-concept">Strumento organizzativo della conoscenza</div>
+<h4>Definizione e utilità</h4>
+<p>Le mappe cognitive rappresentano uno strumento visivo per organizzare e comunicare la struttura concettuale di un ambito conoscitivo. Nel contesto della formazione degli istruttori di nuoto, le mappe cognitive facilitano la visualizzazione delle competenze, dei ruoli e delle responsabilità necessarie per l'esercizio della professione.</p>
+<h4>Organizzazione delle competenze</h4>
+<p>Attraverso una rappresentazione grafica, le mappe cognitive evidenziano i nodi concettuali principali e le loro interrelazioni, permettendo una comprensione olistica della figura professionale e dei compiti affidati all'istruttore.</p>`
+  },
+  {
+    id: 'dispensa8-mappe-cognitive',
+    title: '8.2 Mappe Cognitive: Competenze e Ruolo dell\'istruttore',
+    category: 'Mappe cognitive',
+    content: `<div class="key-concept">Struttura multidimensionale della competenza dell'istruttore</div>
+<h4>Pilastri fondamentali della competenza</h4>
+<p>La competenza dell'istruttore di nuoto si articola su quattro pilastri interconnessi:</p>
+<ul>
+<li><strong>Competenza Tecnica:</strong> Conoscenza approfondita del funzionamento del corpo umano attraverso lo studio degli apparati, della tecnica delle nuotate, dei fattori della prestazione motoria e della biomeccanica acquatica.</li>
+<li><strong>Aspetti Educativi:</strong> Capacità di motivare gli allievi, sviluppare l'autostima, insegnare l'importanza delle regole e favorire la resilienza attraverso un approccio educativo consapevole.</li>
+<li><strong>Didattica:</strong> Competenza nel comunicare efficacemente con gli allievi, nel costruire obiettivi didattici chiari e progressivi, e nell'utilizzare metodologie didattiche appropriate.</li>
+<li><strong>Deontologia:</strong> Conoscenza delle norme professionali, del regolamento, della cultura dell'acqua e dell'etica professionale.</li>
+</ul>
+<h4>Ruolo e responsabilità dell'istruttore</h4>
+<p>L'istruttore assume il ruolo di figura centrale nella formazione e nello sviluppo dell'allievo, integrando competenze tecniche con sensibilità educativa e consapevolezza didattica. La professionalità richiede una costante ricerca dell'eccellenza in tutte le dimensioni della pratica istruttoria.</p>
+<h4>Stabilimento degli obiettivi didattici</h4>
+<p>La definizione degli obiettivi didattici richiede una valutazione accurata di:</p>
+<ul>
+<li><strong>Risorse disponibili:</strong> Competenze dell'allievo, contesto ambientale, tempo a disposizione, strumenti didattici.</li>
+<li><strong>Limiti e ostacoli:</strong> Aspetti morfologici e funzionali dell'allievo, fascia d'età, paure e blocchi psicologici, vincoli ambientali.</li>
+<li><strong>Abilità acquatiche fondamentali:</strong> Ambientamento, galleggiamenti (prono e supino), rotazioni, capovolte, scivolamenti, spostamenti, propulsioni, che costituiscono la base progressiva per l'apprendimento delle nuotate.</li>
+</ul>
+<h4>Integrazione verticale e orizzontale degli apprendimenti</h4>
+<p>Lo sviluppo delle competenze acquatiche segue una progressione sia verticale (approfondimento specialistico) che orizzontale (ampliamento trasversale), garantendo una formazione completa che integra aspetti motori, cognitivi, emotivi e sociali.</p>`
+  }
+];
+
+var _didatticaCats = [];
+var _didatticaCurrentCat = '';
+
+function _getDidatticaCats() {
+  if (_didatticaCats.length) return _didatticaCats;
+  var dispenseNames = {
+    "La cultura dell'acqua": "1",
+    "Psicopedagogia": "2",
+    "Biofisiologia": "3",
+    "La scuola nuoto": "4",
+    "Metodologia": "5",
+    "Popolazioni speciali": "6",
+    "Fitness in acqua": "7",
+    "Mappe cognitive": "8"
+  };
+  didatticaTopics.forEach(function(t) {
+    if (_didatticaCats.indexOf(t.category) === -1) _didatticaCats.push(t.category);
+  });
+  return _didatticaCats;
+}
+
+function showDidattica() {
+  document.getElementById('homePage').classList.remove('visible');
+  document.getElementById('quizPage').style.display = 'none';
+  document.getElementById('statsPage').classList.remove('visible');
+  document.getElementById('didatticaPage').classList.add('visible');
+  _buildDidatticaSidebar();
+  _buildDidatticaMobileNav();
+  // Open first category and select first topic
+  var cats = _getDidatticaCats();
+  if (cats.length) _openSidebarCategory(cats[0], true);
+  window.scrollTo({ top: 0 });
+}
+
+function hideDidattica() {
+  document.getElementById('didatticaPage').classList.remove('visible');
+  document.getElementById('homePage').classList.add('visible');
+  window.scrollTo({ top: 0 });
+}
+
+function _buildDidatticaSidebar() {
+  var sb = document.getElementById('didatticaSidebar');
+  sb.innerHTML = '';
+  var cats = _getDidatticaCats();
+  var num = 1;
+  cats.forEach(function(cat) {
+    var section = document.createElement('div');
+    section.className = 'didattica-sidebar-section';
+    section.dataset.cat = cat;
+
+    var title = document.createElement('div');
+    title.className = 'didattica-sidebar-title';
+    title.innerHTML = '<span>' + num + '. ' + cat + '</span><span class="arrow">&#9654;</span>';
+    title.onclick = function() { _toggleSidebarCategory(cat); };
+    section.appendChild(title);
+
+    var items = document.createElement('div');
+    items.className = 'didattica-sidebar-items';
+    var topics = didatticaTopics.filter(function(t) { return t.category === cat; });
+    topics.forEach(function(t, idx) {
+      var btn = document.createElement('button');
+      btn.className = 'didattica-sidebar-item';
+      btn.dataset.topic = t.id;
+      btn.innerHTML = '<span class="didattica-sidebar-num">' + (num) + '.' + (idx+1) + '</span> ' + t.title;
+      btn.onclick = function() { renderDidatticaTopic(t.id); };
+      items.appendChild(btn);
+    });
+    section.appendChild(items);
+    sb.appendChild(section);
+    num++;
+  });
+}
+
+function _toggleSidebarCategory(cat) {
+  var sections = document.querySelectorAll('.didattica-sidebar-section');
+  sections.forEach(function(sec) {
+    if (sec.dataset.cat === cat) {
+      var title = sec.querySelector('.didattica-sidebar-title');
+      var items = sec.querySelector('.didattica-sidebar-items');
+      var isOpen = items.classList.contains('open');
+      items.classList.toggle('open');
+      title.classList.toggle('open');
+    }
+  });
+}
+
+function _openSidebarCategory(cat, selectFirst) {
+  // Close all, then open the target
+  document.querySelectorAll('.didattica-sidebar-items').forEach(function(el) { el.classList.remove('open'); });
+  document.querySelectorAll('.didattica-sidebar-title').forEach(function(el) { el.classList.remove('open'); });
+  var sections = document.querySelectorAll('.didattica-sidebar-section');
+  sections.forEach(function(sec) {
+    if (sec.dataset.cat === cat) {
+      sec.querySelector('.didattica-sidebar-items').classList.add('open');
+      sec.querySelector('.didattica-sidebar-title').classList.add('open');
+    }
+  });
+  _didatticaCurrentCat = cat;
+  if (selectFirst) {
+    var first = didatticaTopics.find(function(t) { return t.category === cat; });
+    if (first) renderDidatticaTopic(first.id);
+  }
+}
+
+function _buildDidatticaMobileNav() {
+  var mn = document.getElementById('didatticaMobileNav');
+  mn.innerHTML = '';
+  var cats = _getDidatticaCats();
+
+  // Category dropdown
+  var sel = document.createElement('select');
+  sel.className = 'didattica-mobile-select';
+  cats.forEach(function(cat, i) {
+    var opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = (i+1) + '. ' + cat;
+    sel.appendChild(opt);
+  });
+  sel.onchange = function() { _renderMobileTopics(sel.value); };
+  mn.appendChild(sel);
+
+  // Topics container
+  var topicsDiv = document.createElement('div');
+  topicsDiv.className = 'didattica-mobile-topics';
+  topicsDiv.id = 'didatticaMobileTopics';
+  mn.appendChild(topicsDiv);
+
+  // Render first category topics
+  if (cats.length) _renderMobileTopics(cats[0]);
+}
+
+function _renderMobileTopics(cat) {
+  var container = document.getElementById('didatticaMobileTopics');
+  container.innerHTML = '';
+  var topics = didatticaTopics.filter(function(t) { return t.category === cat; });
+  topics.forEach(function(t) {
+    var btn = document.createElement('button');
+    btn.className = 'didattica-mobile-topic-btn';
+    btn.dataset.topic = t.id;
+    btn.textContent = t.title;
+    btn.onclick = function() { renderDidatticaTopic(t.id); };
+    container.appendChild(btn);
+  });
+}
+
+function renderDidatticaTopic(topicId) {
+  var topic = didatticaTopics.find(function(t) { return t.id === topicId; });
+  if (!topic) return;
+
+  // Update sidebar active state
+  document.querySelectorAll('.didattica-sidebar-item').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.topic === topicId);
+  });
+  // Update mobile active state
+  document.querySelectorAll('.didattica-mobile-topic-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.topic === topicId);
+  });
+
+  // Make sure the right category is open in sidebar
+  if (topic.category !== _didatticaCurrentCat) {
+    _openSidebarCategory(topic.category, false);
+  }
+
+  // Render content
+  var contentEl = document.getElementById('didatticaContent');
+  contentEl.innerHTML = '<div class="topic-card"><h3>' + topic.title + '</h3><div class="topic-content">' + topic.content + '</div></div>';
+
+  // Scroll content to top
+  contentEl.scrollTop = 0;
+  // On mobile, scroll the topic into view
+  if (window.innerWidth <= 600) {
+    contentEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// Enter key per login
+document.getElementById('authPassword').addEventListener('keydown', function(e) { if (e.key === 'Enter') handleAuth(); });
+
+// Avvia
+checkSession();
 </script>
-<noscript><meta http-equiv="refresh" content="0;url=/?page=didattica"></noscript>
-<p>Caricamento didattica... <a href="/?page=didattica">Clicca qui</a></p>
-</body></html>
+</body>
+</html>
