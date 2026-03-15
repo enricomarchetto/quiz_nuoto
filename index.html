@@ -169,22 +169,30 @@
   @keyframes spin { to { transform: rotate(360deg); } }
 
   /* DIDATTICA */
-  .didattica-page { display: none; min-height: 100vh; padding: 20px; padding-bottom: 40px; }
-  .didattica-page.visible { display: block; }
-  .didattica-header { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto 20px; flex-wrap: wrap; gap: 10px; }
-  .didattica-title { font-size: 1.4em; font-weight: 700; color: #0077b6; }
-  .didattica-nav { max-width: 800px; margin: 0 auto 20px; display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
-  .didattica-nav::-webkit-scrollbar { height: 4px; }
-  .didattica-nav::-webkit-scrollbar-thumb { background: #cbd5e0; border-radius: 2px; }
-  .didattica-cats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; }
-  .didattica-cat-btn { padding: 6px 14px; border: 2px solid #0077b6; border-radius: 20px; background: white; color: #0077b6; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-  .didattica-cat-btn.active, .didattica-cat-btn:hover { background: #0077b6; color: white; }
-  .didattica-topics-list { display: flex; flex-wrap: wrap; gap: 6px; }
-  .didattica-nav-btn { flex-shrink: 0; padding: 10px 16px; border: 2px solid #e2e8f0; border-radius: 25px; background: white; cursor: pointer; font-size: 0.85em; font-weight: 500; color: #4a5568; transition: all 0.2s; white-space: nowrap; }
-  .didattica-nav-btn:hover { border-color: #90cdf4; background: #f7fafc; }
-  .didattica-nav-btn.active { border-color: #0077b6; background: #ebf8ff; color: #0077b6; font-weight: 600; }
-  .didattica-content { max-width: 800px; margin: 0 auto; }
-  .topic-card { background: white; border-radius: 14px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .didattica-page { display: none; min-height: 100vh; padding: 0; }
+  .didattica-page.visible { display: flex; }
+  .didattica-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: white; border-bottom: 2px solid #e2e8f0; position: sticky; top: 0; z-index: 10; }
+  .didattica-title { font-size: 1.2em; font-weight: 700; color: #0077b6; }
+
+  /* Sidebar */
+  .didattica-sidebar { width: 280px; min-width: 280px; background: white; border-right: 2px solid #e2e8f0; overflow-y: auto; height: calc(100vh - 54px); position: sticky; top: 54px; }
+  .didattica-sidebar-section { border-bottom: 1px solid #f0f0f0; }
+  .didattica-sidebar-title { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; font-size: 0.85em; font-weight: 700; color: #0077b6; cursor: pointer; background: #f8fafc; transition: background 0.15s; user-select: none; }
+  .didattica-sidebar-title:hover { background: #ebf8ff; }
+  .didattica-sidebar-title.active { background: #ebf8ff; }
+  .didattica-sidebar-title .arrow { font-size: 0.7em; transition: transform 0.2s; color: #a0aec0; }
+  .didattica-sidebar-title.open .arrow { transform: rotate(90deg); }
+  .didattica-sidebar-items { display: none; padding: 4px 0; }
+  .didattica-sidebar-items.open { display: block; }
+  .didattica-sidebar-item { display: block; width: 100%; padding: 9px 16px 9px 28px; border: none; background: none; text-align: left; font-size: 0.82em; color: #4a5568; cursor: pointer; transition: all 0.15s; line-height: 1.4; }
+  .didattica-sidebar-item:hover { background: #f7fafc; color: #0077b6; }
+  .didattica-sidebar-item.active { background: #ebf8ff; color: #0077b6; font-weight: 600; border-left: 3px solid #0077b6; padding-left: 25px; }
+  .didattica-sidebar-num { color: #a0aec0; font-size: 0.9em; margin-right: 6px; }
+
+  /* Main content area */
+  .didattica-body { display: flex; flex: 1; overflow: hidden; }
+  .didattica-content { flex: 1; overflow-y: auto; height: calc(100vh - 54px); padding: 24px; }
+  .topic-card { background: white; border-radius: 14px; padding: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); max-width: 800px; margin: 0 auto; }
   .topic-card h3 { font-size: 1.3em; font-weight: 700; color: #0077b6; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #ebf8ff; }
   .topic-card h4 { font-size: 1.05em; font-weight: 700; color: #2d3748; margin: 20px 0 10px; }
   .topic-card p { margin-bottom: 12px; line-height: 1.7; color: #2d3748; }
@@ -199,12 +207,21 @@
   .topic-card table tr:last-child td { border-bottom: none; }
   .topic-card table tr:nth-child(even) td { background: #f7fafc; }
 
+  /* Mobile sidebar becomes a dropdown select */
+  .didattica-mobile-nav { display: none; padding: 12px 16px; background: white; border-bottom: 1px solid #e2e8f0; }
+  .didattica-mobile-select { width: 100%; padding: 10px 14px; border: 2px solid #0077b6; border-radius: 10px; font-size: 0.9em; font-weight: 600; color: #0077b6; background: white; cursor: pointer; appearance: auto; }
+  .didattica-mobile-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .didattica-mobile-topic-btn { padding: 7px 12px; border: 1.5px solid #e2e8f0; border-radius: 8px; background: white; font-size: 0.78em; color: #4a5568; cursor: pointer; text-align: left; line-height: 1.3; }
+  .didattica-mobile-topic-btn.active { border-color: #0077b6; background: #ebf8ff; color: #0077b6; font-weight: 600; }
+
   /* Mobile */
   @media (max-width: 600px) {
-    .didattica-cats { gap: 4px; }
-    .didattica-cat-btn { padding: 5px 10px; font-size: 11px; }
-    .didattica-page { padding: 10px; }
-    .didattica-nav { position: static; width: 100%; max-height: none; }
+    .didattica-page.visible { flex-direction: column; }
+    .didattica-sidebar { display: none; }
+    .didattica-mobile-nav { display: block; }
+    .didattica-content { height: auto; min-height: 0; padding: 12px; }
+    .didattica-body { flex-direction: column; }
+    .topic-card { padding: 18px; }
     .user-bar { padding: 8px 12px; gap: 6px; }
     .user-bar-left { gap: 4px; flex-direction: column; align-items: flex-start; }
     .user-bar-actions { gap: 4px; }
@@ -349,11 +366,14 @@
 <!-- DIDATTICA -->
 <div class="didattica-page" id="didatticaPage">
   <div class="didattica-header">
-    <span class="didattica-title">Didattica — Metodologia</span>
+    <span class="didattica-title">Didattica</span>
     <button class="stats-back" onclick="hideDidattica()">← Torna al quiz</button>
   </div>
-  <div class="didattica-nav" id="didatticaNav"></div>
-  <div class="didattica-content" id="didatticaContent"></div>
+  <div class="didattica-body">
+    <nav class="didattica-sidebar" id="didatticaSidebar"></nav>
+    <div class="didattica-mobile-nav" id="didatticaMobileNav"></div>
+    <div class="didattica-content" id="didatticaContent"></div>
+  </div>
 </div>
 
 <script src="quiz_data.js"></script>
@@ -2769,13 +2789,37 @@ var didatticaTopics = [
   }
 ];
 
+var _didatticaCats = [];
+var _didatticaCurrentCat = '';
+
+function _getDidatticaCats() {
+  if (_didatticaCats.length) return _didatticaCats;
+  var dispenseNames = {
+    "La cultura dell'acqua": "1",
+    "Psicopedagogia": "2",
+    "Biofisiologia": "3",
+    "La scuola nuoto": "4",
+    "Metodologia": "5",
+    "Popolazioni speciali": "6",
+    "Fitness in acqua": "7",
+    "Mappe cognitive": "8"
+  };
+  didatticaTopics.forEach(function(t) {
+    if (_didatticaCats.indexOf(t.category) === -1) _didatticaCats.push(t.category);
+  });
+  return _didatticaCats;
+}
+
 function showDidattica() {
   document.getElementById('homePage').classList.remove('visible');
   document.getElementById('quizPage').style.display = 'none';
   document.getElementById('statsPage').classList.remove('visible');
   document.getElementById('didatticaPage').classList.add('visible');
-  renderDidatticaNav();
-  renderDidatticaTopic(didatticaTopics[0].id);
+  _buildDidatticaSidebar();
+  _buildDidatticaMobileNav();
+  // Open first category and select first topic
+  var cats = _getDidatticaCats();
+  if (cats.length) _openSidebarCategory(cats[0], true);
   window.scrollTo({ top: 0 });
 }
 
@@ -2785,64 +2829,138 @@ function hideDidattica() {
   window.scrollTo({ top: 0 });
 }
 
-function renderDidatticaNav(selectedCat) {
-  var nav = document.getElementById('didatticaNav');
-  nav.innerHTML = '';
-  
-  // Get unique categories in order
-  var cats = [];
-  didatticaTopics.forEach(function(t) {
-    if (cats.indexOf(t.category) === -1) cats.push(t.category);
-  });
-  
-  // Category tabs
-  var tabsDiv = document.createElement('div');
-  tabsDiv.className = 'didattica-cats';
+function _buildDidatticaSidebar() {
+  var sb = document.getElementById('didatticaSidebar');
+  sb.innerHTML = '';
+  var cats = _getDidatticaCats();
+  var num = 1;
   cats.forEach(function(cat) {
-    var tab = document.createElement('button');
-    tab.className = 'didattica-cat-btn' + (cat === selectedCat ? ' active' : '');
-    tab.textContent = cat;
-    tab.onclick = function() { renderDidatticaNav(cat); };
-    tabsDiv.appendChild(tab);
+    var section = document.createElement('div');
+    section.className = 'didattica-sidebar-section';
+    section.dataset.cat = cat;
+
+    var title = document.createElement('div');
+    title.className = 'didattica-sidebar-title';
+    title.innerHTML = '<span>' + num + '. ' + cat + '</span><span class="arrow">&#9654;</span>';
+    title.onclick = function() { _toggleSidebarCategory(cat); };
+    section.appendChild(title);
+
+    var items = document.createElement('div');
+    items.className = 'didattica-sidebar-items';
+    var topics = didatticaTopics.filter(function(t) { return t.category === cat; });
+    topics.forEach(function(t, idx) {
+      var btn = document.createElement('button');
+      btn.className = 'didattica-sidebar-item';
+      btn.dataset.topic = t.id;
+      btn.innerHTML = '<span class="didattica-sidebar-num">' + (num) + '.' + (idx+1) + '</span> ' + t.title;
+      btn.onclick = function() { renderDidatticaTopic(t.id); };
+      items.appendChild(btn);
+    });
+    section.appendChild(items);
+    sb.appendChild(section);
+    num++;
   });
-  nav.appendChild(tabsDiv);
-  
-  // Show topics for selected category
-  var activeCat = selectedCat || cats[0];
-  var topicsDiv = document.createElement('div');
-  topicsDiv.className = 'didattica-topics-list';
-  didatticaTopics.filter(function(t) { return t.category === activeCat; }).forEach(function(t) {
-    var btn = document.createElement('button');
-    btn.className = 'didattica-nav-btn';
-    btn.dataset.topic = t.id;
-    btn.innerHTML = t.title;
-    btn.onclick = function() { renderDidatticaTopic(t.id); };
-    topicsDiv.appendChild(btn);
+}
+
+function _toggleSidebarCategory(cat) {
+  var sections = document.querySelectorAll('.didattica-sidebar-section');
+  sections.forEach(function(sec) {
+    if (sec.dataset.cat === cat) {
+      var title = sec.querySelector('.didattica-sidebar-title');
+      var items = sec.querySelector('.didattica-sidebar-items');
+      var isOpen = items.classList.contains('open');
+      items.classList.toggle('open');
+      title.classList.toggle('open');
+    }
   });
-  nav.appendChild(topicsDiv);
-  
-  // If no topic selected yet, show first of this category
-  if (!document.querySelector('.didattica-nav-btn.active')) {
-    var first = didatticaTopics.find(function(t) { return t.category === activeCat; });
+}
+
+function _openSidebarCategory(cat, selectFirst) {
+  // Close all, then open the target
+  document.querySelectorAll('.didattica-sidebar-items').forEach(function(el) { el.classList.remove('open'); });
+  document.querySelectorAll('.didattica-sidebar-title').forEach(function(el) { el.classList.remove('open'); });
+  var sections = document.querySelectorAll('.didattica-sidebar-section');
+  sections.forEach(function(sec) {
+    if (sec.dataset.cat === cat) {
+      sec.querySelector('.didattica-sidebar-items').classList.add('open');
+      sec.querySelector('.didattica-sidebar-title').classList.add('open');
+    }
+  });
+  _didatticaCurrentCat = cat;
+  if (selectFirst) {
+    var first = didatticaTopics.find(function(t) { return t.category === cat; });
     if (first) renderDidatticaTopic(first.id);
   }
+}
+
+function _buildDidatticaMobileNav() {
+  var mn = document.getElementById('didatticaMobileNav');
+  mn.innerHTML = '';
+  var cats = _getDidatticaCats();
+
+  // Category dropdown
+  var sel = document.createElement('select');
+  sel.className = 'didattica-mobile-select';
+  cats.forEach(function(cat, i) {
+    var opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = (i+1) + '. ' + cat;
+    sel.appendChild(opt);
+  });
+  sel.onchange = function() { _renderMobileTopics(sel.value); };
+  mn.appendChild(sel);
+
+  // Topics container
+  var topicsDiv = document.createElement('div');
+  topicsDiv.className = 'didattica-mobile-topics';
+  topicsDiv.id = 'didatticaMobileTopics';
+  mn.appendChild(topicsDiv);
+
+  // Render first category topics
+  if (cats.length) _renderMobileTopics(cats[0]);
+}
+
+function _renderMobileTopics(cat) {
+  var container = document.getElementById('didatticaMobileTopics');
+  container.innerHTML = '';
+  var topics = didatticaTopics.filter(function(t) { return t.category === cat; });
+  topics.forEach(function(t) {
+    var btn = document.createElement('button');
+    btn.className = 'didattica-mobile-topic-btn';
+    btn.dataset.topic = t.id;
+    btn.textContent = t.title;
+    btn.onclick = function() { renderDidatticaTopic(t.id); };
+    container.appendChild(btn);
+  });
 }
 
 function renderDidatticaTopic(topicId) {
   var topic = didatticaTopics.find(function(t) { return t.id === topicId; });
   if (!topic) return;
 
-  // Update nav active state
-  document.querySelectorAll('.didattica-nav-btn').forEach(function(btn) {
+  // Update sidebar active state
+  document.querySelectorAll('.didattica-sidebar-item').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.topic === topicId);
+  });
+  // Update mobile active state
+  document.querySelectorAll('.didattica-mobile-topic-btn').forEach(function(btn) {
     btn.classList.toggle('active', btn.dataset.topic === topicId);
   });
 
-  var content = document.getElementById('didatticaContent');
-  content.innerHTML = '<div class="topic-card"><h3>' + topic.title + '</h3><div class="topic-content">' + topic.content + '</div></div>';
+  // Make sure the right category is open in sidebar
+  if (topic.category !== _didatticaCurrentCat) {
+    _openSidebarCategory(topic.category, false);
+  }
 
-  // Smooth scroll to top of content on mobile
+  // Render content
+  var contentEl = document.getElementById('didatticaContent');
+  contentEl.innerHTML = '<div class="topic-card"><h3>' + topic.title + '</h3><div class="topic-content">' + topic.content + '</div></div>';
+
+  // Scroll content to top
+  contentEl.scrollTop = 0;
+  // On mobile, scroll the topic into view
   if (window.innerWidth <= 600) {
-    content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    contentEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
