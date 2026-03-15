@@ -881,6 +881,7 @@ function getRealUnseenCount(pool, cat) {
 }
 
 function updateStart() {
+  updateWrongButton();
   var btn = document.getElementById('startBtn');
   if (!amount) { btn.disabled = true; btn.textContent = 'Scegli il numero di domande'; return; }
   var fullPool = category === 'all' ? quizData : quizData.filter(function(q) { return q.category === category; });
@@ -898,7 +899,6 @@ function updateStart() {
     btnRest.style.display = 'none';
     if (btnRest.classList.contains('selected')) btnRest.classList.remove('selected');
   }
-  updateWrongButton();
 }
 
 function shuffle(a) { var b = a.slice(); for (var i = b.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = b[i]; b[i] = b[j]; b[j] = t; } return b; }
