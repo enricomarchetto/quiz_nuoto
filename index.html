@@ -731,14 +731,29 @@ async function resetProgress() {
   if (!isGuestMode && currentUser) {
     try {
       var delAns = await sb.from('user_answers').delete().eq('user_id', currentUser.id);
-      if (delAns.error) console.error('Errore cancellazione risposte:', delAns.error);
-      else console.log('Risposte cancellate dal DB');
+      if (delAns.error) {
+        console.error('Errore cancellazione risposte:', delAns.error);
+        showSaveError('Errore nel reset: impossibile cancellare le risposte. Controlla le policy RLS su Supabase (serve DELETE policy).');
+      } else {
+        console.log('Risposte cancellate dal DB');
+      }
     } catch (err) { console.error('Errore reset risposte:', err); }
     try {
       var delSess = await sb.from('quiz_sessions').delete().eq('user_id', currentUser.id);
-      if (delSess.error) console.error('Errore cancellazione sessioni:', delSess.error);
-      else console.log('Sessioni cancellate dal DB');
+      if (delSess.error) {
+        console.error('Errore cancellazione sessioni:', delSess.error);
+      } else {
+        console.log('Sessioni cancellate dal DB');
+      }
     } catch (err) { console.error('Errore reset sessioni:', err); }
+    // Verifica che la cancellazione sia avvenuta
+    try {
+      var check = await sb.from('user_answers').select('id', { count: 'exact', head: true }).eq('user_id', currentUser.id);
+      if (check.count && check.count > 0) {
+        console.error('ATTENZIONE: dopo il reset ci sono ancora ' + check.count + ' righe in user_answers. Probabile problema di RLS policy (manca DELETE policy).');
+        showSaveError('Reset incompleto: servono le policy DELETE su Supabase. Vai su SQL Editor ed esegui le policy mancanti.');
+      }
+    } catch (e) { console.warn('Verifica post-reset fallita:', e); }
   }
   updateUserStats();
   updateStart();
