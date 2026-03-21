@@ -176,6 +176,25 @@
   .didattica-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: white; border-bottom: 2px solid #e2e8f0; z-index: 10; flex-shrink: 0; }
   .didattica-title { font-size: 1.2em; font-weight: 700; color: #0077b6; }
 
+  /* Search */
+  .didattica-search-wrap { position: relative; flex: 1; max-width: 360px; margin: 0 16px; }
+  .didattica-search-input { width: 100%; padding: 8px 36px 8px 14px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.88em; color: #2d3748; background: #f8fafc; outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+  .didattica-search-input:focus { border-color: #0077b6; box-shadow: 0 0 0 3px rgba(0,119,182,0.12); background: white; }
+  .didattica-search-input::placeholder { color: #a0aec0; }
+  .didattica-search-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #a0aec0; pointer-events: none; font-size: 1em; }
+  .didattica-search-clear { position: absolute; right: 32px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #a0aec0; cursor: pointer; font-size: 1.1em; padding: 2px 4px; display: none; }
+  .didattica-search-clear:hover { color: #e53e3e; }
+  .didattica-search-results { position: absolute; top: calc(100% + 4px); left: 0; right: 0; background: white; border: 2px solid #e2e8f0; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); max-height: 350px; overflow-y: auto; z-index: 100; display: none; }
+  .didattica-search-results.visible { display: block; }
+  .didattica-search-result { display: block; width: 100%; padding: 10px 16px; border: none; background: none; text-align: left; cursor: pointer; transition: background 0.15s; border-bottom: 1px solid #f0f0f0; }
+  .didattica-search-result:last-child { border-bottom: none; }
+  .didattica-search-result:hover { background: #ebf8ff; }
+  .didattica-search-result-title { font-size: 0.88em; font-weight: 600; color: #0077b6; margin-bottom: 2px; }
+  .didattica-search-result-cat { font-size: 0.75em; color: #a0aec0; }
+  .didattica-search-result-snippet { font-size: 0.78em; color: #718096; margin-top: 3px; line-height: 1.4; }
+  .didattica-search-result-snippet mark { background: #fefcbf; color: #744210; padding: 0 2px; border-radius: 2px; }
+  .didattica-search-no-results { padding: 16px; text-align: center; color: #a0aec0; font-size: 0.88em; }
+
   /* Sidebar */
   .didattica-sidebar { width: 280px; min-width: 280px; background: white; border-right: 2px solid #e2e8f0; overflow-y: auto; }
   .didattica-sidebar-section { border-bottom: 1px solid #f0f0f0; }
@@ -245,8 +264,9 @@
     .stat-row { gap: 8px; }
     .stat-box { padding: 12px 6px; }
     .stat-box .stat-num { font-size: 1.4em; }
-    .didattica-header { padding: 0 4px; }
+    .didattica-header { padding: 0 4px; flex-wrap: wrap; gap: 8px; }
     .didattica-title { font-size: 1.15em; }
+    .didattica-search-wrap { max-width: 100%; order: 3; width: 100%; margin: 0 0 8px 0; }
     .didattica-nav { gap: 6px; margin-bottom: 14px; }
     .didattica-cats { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; }
   .didattica-cat-btn { padding: 6px 14px; border: 2px solid #0077b6; border-radius: 20px; background: white; color: #0077b6; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
@@ -373,6 +393,12 @@
 <div class="didattica-page" id="didatticaPage">
   <div class="didattica-header">
     <span class="didattica-title">Didattica</span>
+    <div class="didattica-search-wrap">
+      <input type="text" class="didattica-search-input" id="didatticaSearchInput" placeholder="Cerca negli argomenti..." autocomplete="off">
+      <button class="didattica-search-clear" id="didatticaSearchClear" onclick="clearDidatticaSearch()">&times;</button>
+      <span class="didattica-search-icon">&#128269;</span>
+      <div class="didattica-search-results" id="didatticaSearchResults"></div>
+    </div>
     <button class="stats-back" onclick="hideDidattica()">← Torna al quiz</button>
   </div>
   <div class="didattica-body">
@@ -4572,6 +4598,129 @@ function _renderMobileTopics(cat) {
     btn.onclick = function() { renderDidatticaTopic(t.id); };
     container.appendChild(btn);
   });
+}
+
+// === DIDATTICA SEARCH ===
+var _didatticaSearchTimeout = null;
+
+document.addEventListener('DOMContentLoaded', function() {
+  var searchInput = document.getElementById('didatticaSearchInput');
+  if (!searchInput) return;
+  searchInput.addEventListener('input', function() {
+    clearTimeout(_didatticaSearchTimeout);
+    var query = this.value.trim();
+    document.getElementById('didatticaSearchClear').style.display = query ? 'block' : 'none';
+    if (query.length < 2) {
+      _hideSearchResults();
+      return;
+    }
+    _didatticaSearchTimeout = setTimeout(function() { _performDidatticaSearch(query); }, 200);
+  });
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { clearDidatticaSearch(); }
+  });
+  // Close results when clicking outside
+  document.addEventListener('click', function(e) {
+    var wrap = document.querySelector('.didattica-search-wrap');
+    if (wrap && !wrap.contains(e.target)) _hideSearchResults();
+  });
+});
+
+function _stripHtml(html) {
+  var tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp.textContent || tmp.innerText || '';
+}
+
+function _performDidatticaSearch(query) {
+  var results = [];
+  var q = query.toLowerCase();
+  var words = q.split(/\s+/).filter(function(w) { return w.length > 0; });
+
+  didatticaTopics.forEach(function(topic) {
+    var plainContent = _stripHtml(topic.content);
+    var titleLower = topic.title.toLowerCase();
+    var contentLower = plainContent.toLowerCase();
+
+    // Check if all words match in title or content
+    var allMatch = words.every(function(w) {
+      return titleLower.indexOf(w) !== -1 || contentLower.indexOf(w) !== -1;
+    });
+    if (!allMatch) return;
+
+    // Calculate relevance score (title matches are worth more)
+    var score = 0;
+    words.forEach(function(w) {
+      if (titleLower.indexOf(w) !== -1) score += 10;
+      if (contentLower.indexOf(w) !== -1) score += 1;
+    });
+
+    // Extract snippet around first match in content
+    var snippet = '';
+    var matchIdx = -1;
+    for (var i = 0; i < words.length; i++) {
+      matchIdx = contentLower.indexOf(words[i]);
+      if (matchIdx !== -1) break;
+    }
+    if (matchIdx !== -1) {
+      var start = Math.max(0, matchIdx - 60);
+      var end = Math.min(plainContent.length, matchIdx + 120);
+      snippet = (start > 0 ? '...' : '') + plainContent.substring(start, end) + (end < plainContent.length ? '...' : '');
+      // Highlight matched words in snippet
+      words.forEach(function(w) {
+        var re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        snippet = snippet.replace(re, '<mark>$1</mark>');
+      });
+    }
+
+    results.push({ topic: topic, score: score, snippet: snippet });
+  });
+
+  results.sort(function(a, b) { return b.score - a.score; });
+  _showSearchResults(results, query);
+}
+
+function _showSearchResults(results, query) {
+  var container = document.getElementById('didatticaSearchResults');
+  container.innerHTML = '';
+
+  if (results.length === 0) {
+    container.innerHTML = '<div class="didattica-search-no-results">Nessun risultato per "' + query + '"</div>';
+    container.classList.add('visible');
+    return;
+  }
+
+  results.slice(0, 12).forEach(function(r) {
+    var btn = document.createElement('button');
+    btn.className = 'didattica-search-result';
+    var titleHtml = r.topic.title;
+    var words = query.toLowerCase().split(/\s+/).filter(function(w) { return w.length > 0; });
+    words.forEach(function(w) {
+      var re = new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      titleHtml = titleHtml.replace(re, '<mark>$1</mark>');
+    });
+    btn.innerHTML = '<div class="didattica-search-result-title">' + titleHtml + '</div>' +
+      '<div class="didattica-search-result-cat">' + r.topic.category + '</div>' +
+      (r.snippet ? '<div class="didattica-search-result-snippet">' + r.snippet + '</div>' : '');
+    btn.onclick = function() {
+      renderDidatticaTopic(r.topic.id);
+      clearDidatticaSearch();
+    };
+    container.appendChild(btn);
+  });
+  container.classList.add('visible');
+}
+
+function _hideSearchResults() {
+  var container = document.getElementById('didatticaSearchResults');
+  if (container) container.classList.remove('visible');
+}
+
+function clearDidatticaSearch() {
+  var input = document.getElementById('didatticaSearchInput');
+  if (input) input.value = '';
+  document.getElementById('didatticaSearchClear').style.display = 'none';
+  _hideSearchResults();
 }
 
 function renderDidatticaTopic(topicId) {
