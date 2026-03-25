@@ -15987,8 +15987,8 @@ const quizData = [
       "C": "In ogni livello di scuola nuoto vengono allenate, anche se non nella forma completa, comunque nei singoli elementi che le compongono",
       "D": "Nella scuola nuoto è inutile insegnare le virate in quanto sono un’abilità tipica del nuoto agonistico"
     },
-    "answer": "A",
-    "explanation": "La risposta corretta è A. Si costruiscono su abilità motorie semplici che hanno le loro fondamenta nella fase di ambientamento.",
+    "answer": "D",
+    "explanation": "La risposta corretta è D. Nella scuola nuoto è inutile insegnare le virate in quanto sono un'abilità tipica del nuoto agonistico.",
     "category": "Metodologia",
     "manualPages": [
       12,
